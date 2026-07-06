@@ -1,0 +1,29 @@
+# Local secrets and machine state
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Dependencies and build outputs
+node_modules/
+dist/
+build/
+.cache/
+
+# Large generated packages remain in Drive unless explicitly approved
+*.zip
+*.7z
+*.rar
+*.psd
+*.ai
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.tif
+*.tiff
