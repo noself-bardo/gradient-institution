@@ -1,0 +1,64 @@
+# GFVP Pack A Text Lock Receipt
+
+Status: Approved / Locked Text Packet
+Date: 2026-07-04
+Pack: Pack A
+Theme: Governance and Authority
+Plates: P011-P015
+
+## Decision
+
+Pack A text packet is approved and locked.
+
+This locks the object specifications, object QC sheets, compiled prompts, and compiled prompt QC sheets for:
+
+- P011 Decision
+- P012 Institutional Decision Record
+- P013 Validation Gate
+- P014 Promotion Gate
+- P015 Canon Boundary
+
+## Locked Materials
+
+Object specifications and object QC:
+
+- `11_OBJECT_SPECIFICATIONS/GFVP-OBJ-P011-DECISION_v0-1.md`
+- `11_OBJECT_SPECIFICATIONS/GFVP-OBJ-P011-DECISION_OBJECT_QC_v0-1.md`
+- `11_OBJECT_SPECIFICATIONS/GFVP-OBJ-P012-INSTITUTIONAL-DECISION-RECORD_v0-1.md`
+- `11_OBJECT_SPECIFICATIONS/GFVP-OBJ-P012-INSTITUTIONAL-DECISION-RECORD_OBJECT_QC_v0-1.md`
+- `11_OBJECT_SPECIFICATIONS/GFVP-OBJ-P013-VALIDATION-GATE_v0-1.md`
+- `11_OBJECT_SPECIFICATIONS/GFVP-OBJ-P013-VALIDATION-GATE_OBJECT_QC_v0-1.md`
+- `11_OBJECT_SPECIFICATIONS/GFVP-OBJ-P014-PROMOTION-GATE_v0-1.md`
+- `11_OBJECT_SPECIFICATIONS/GFVP-OBJ-P014-PROMOTION-GATE_OBJECT_QC_v0-1.md`
+- `11_OBJECT_SPECIFICATIONS/GFVP-OBJ-P015-CANON-BOUNDARY_v0-1.md`
+- `11_OBJECT_SPECIFICATIONS/GFVP-OBJ-P015-CANON-BOUNDARY_OBJECT_QC_v0-1.md`
+
+Compiled prompts and compiled prompt QC:
+
+- `12_COMPILER_PROMPTS/GFVP-COMPILED-P011-DECISION_PROMPT_v0-1.md`
+- `12_COMPILER_PROMPTS/GFVP-COMPILED-P011-DECISION_QC_v0-1.md`
+- `12_COMPILER_PROMPTS/GFVP-COMPILED-P012-INSTITUTIONAL-DECISION-RECORD_PROMPT_v0-1.md`
+- `12_COMPILER_PROMPTS/GFVP-COMPILED-P012-INSTITUTIONAL-DECISION-RECORD_QC_v0-1.md`
+- `12_COMPILER_PROMPTS/GFVP-COMPILED-P013-VALIDATION-GATE_PROMPT_v0-1.md`
+- `12_COMPILER_PROMPTS/GFVP-COMPILED-P013-VALIDATION-GATE_QC_v0-1.md`
+- `12_COMPILER_PROMPTS/GFVP-COMPILED-P014-PROMOTION-GATE_PROMPT_v0-1.md`
+- `12_COMPILER_PROMPTS/GFVP-COMPILED-P014-PROMOTION-GATE_QC_v0-1.md`
+- `12_COMPILER_PROMPTS/GFVP-COMPILED-P015-CANON-BOUNDARY_PROMPT_v0-1.md`
+- `12_COMPILER_PROMPTS/GFVP-COMPILED-P015-CANON-BOUNDARY_QC_v0-1.md`
+
+## Boundary
+
+This approval locks text production only.
+
+It does not authorize image generation.
+
+It does not approve any Pack A image.
+
+It does not promote any Pack A object into canon.
+
+## Next Image-Gate Candidate
+
+P011 Decision is the next recommended image-gate candidate.
+
+Image generation requires explicit gate approval for P011 Decision.
+
