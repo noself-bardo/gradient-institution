@@ -6,7 +6,7 @@ Authority: Not canonical
 
 Baseline Commit: `f8aad4f2396cd92be7f53fa220c07797403f3dd4`
 
-Last Refreshed: 2026-07-07 (post-`ca6410e` VIS-001 import; post-`d36444a` folder register housekeeping)
+Last Refreshed: 2026-07-07 (post-`c3154f0` PUB-002 import; migration closeout pass)
 
 Constraint: This plan does not authorize migration, extraction, source promotion, canon change, folder restructuring, external edits, commits, or app/RPC work.
 
@@ -14,7 +14,7 @@ Constraint: This plan does not authorize migration, extraction, source promotion
 
 Complete source inventories before selecting migration candidates — and maintain inventory gates for clusters not yet imported.
 
-**`TG-SRC-VIS-001` source inventory and physical import are complete** (committed `ca6410e` under receipt `TG-REC-MIG-001`). This plan now defines the **next** inventory gates for remaining clusters under the hybrid source-preservation policy. It does not move files, copy source material, create derivative controls, update external systems, or change canonical status.
+**`TG-SRC-VIS-001` and `TG-SRC-PUB-002` inventories and physical imports are complete.** This plan now defines **frozen/deferred** tracks and the **restart gate** for remaining clusters. It does not move files, copy source material, create derivative controls, update external systems, or change canonical status.
 
 ## Inventory Principles
 
@@ -32,7 +32,7 @@ Complete source inventories before selecting migration candidates — and mainta
 |---|---|---|---|---|
 | Drive | `10_inventories/DRIVE_INVENTORY.md` | DRAFT / AGENT-ASSISTED GFVP RECONCILIATION PASS | GFVP batch root observed; source/spec/object/prompt/QC folders classified; receipt/QC/review folders classified; generated/approved output receipt folders identified; duplicate/mirror risks recorded; receipt-to-binary and authority reconciliation summarized | Approved/generated PNG binaries missing from accessible local sync; GFVP zip/export package not found; P009 Notion receipt ambiguity; manifest/roadmap authority conflict |
 | Notion | `10_inventories/NOTION_INVENTORY.md` | DRAFT / READ-ONLY METADATA PASS | Root page, top-level skeleton, active commitments, top-level page URLs, Publishing Constitution pages, Visual Canon/GFVP pages, platform/control references, Codex/automation references, GFVP receipt/QC examples | Full source-location audits for individual clusters, GFVP Notion-to-Drive receipt mapping, possible databases |
-| Local Packages | `10_inventories/LOCAL_PACKAGES_INVENTORY.md` | DRAFT / AGENT-ASSISTED READ-ONLY PASS | Repo now mirrors **248** GFVP source-system md/csv under `06_visual_language/gfvp/` (`ca6410e`); sibling Control Center app out-of-scope; Downloads checked for GFVP binaries/zip with only markdown residue found | Generated image folders, export zip, and Codex/ChatGPT exports outside accessible local paths still unresolved — **`TG-SRC-PUB-002`** |
+| Local Packages | `10_inventories/LOCAL_PACKAGES_INVENTORY.md` | DRAFT / AGENT-ASSISTED READ-ONLY PASS | Repo mirrors **248** GFVP source-system md/csv (`ca6410e`) and **46** PUB-002 md/PNG (`c3154f0`); sibling Control Center app out-of-scope | Zip canonical designation; optional `07_` co-import; Codex/ChatGPT exports outside accessible local paths |
 | Supabase | `10_inventories/SUPABASE_INVENTORY.md` | DEFERRED / NOT YET INVENTORIED | Do-not-touch rule and future inventory requirements documented | Project identity, schemas, tables, functions/RPCs, auth, RLS, policies, migration history, write policy |
 
 ## Source Cluster Inventory Requirements
@@ -41,7 +41,7 @@ Complete source inventories before selecting migration candidates — and mainta
 |---|---|---|---|---|
 | `TG-SRC-PUB-001` | Publishing Constitution eight-volume source cluster | Confirm exact Notion pages, page IDs, source completeness, ratification/status claims, and whether Drive/source exports exist | Notion yes; Drive maybe | Complete source page list and authority/status map before migration-candidate review |
 | `TG-SRC-VIS-001` | GFVP source/spec/object/prompt/QC system | ~~Confirm complete Drive folder map…~~ **Complete** — 248 md/csv imported; post-import audit PASS | Drive yes (done); Notion maybe | **Complete** — imported `ca6410e` under `TG-REC-MIG-001`; PUB-002 excluded |
-| `TG-SRC-PUB-002` | GFVP release/export packages | Identify release/export folders, approved image binaries, zips/PDFs/images, package manifests, and release status evidence | Drive yes | Release/export package inventory separated from source-system inventory |
+| `TG-SRC-PUB-002` | GFVP release/export packages | ~~Identify release/export folders…~~ **Complete** — 46 md/PNG imported; post-import audit PASS | Drive yes (done) | **Complete** — imported `c3154f0` under `TG-REC-MIG-002`; `07_`/zip excluded from default scope |
 | `TG-SRC-KNO-001` | Card System | Confirm Notion source pages, linked Engine Metabolization Template, related GFVP Card/Claim/Relationship/Evidence specs, and status boundaries | Notion yes; Drive maybe | Complete source list and split-reference candidates before derivative controls |
 | `TG-SRC-REG-001` | Engine Registry | Confirm Notion source pages, registry schema/status concepts, related GFVP Engine/Registry/Practice Framework specs, and executable/agent-facing boundaries | Notion yes; Drive maybe | Complete source list before registry import or derivative schema work |
 | `TG-SRC-ARC-001` | Archive of Becoming | Confirm Notion source pages, linked admission/archive pages, GFVP Archive/Book/History/Source specs, and archive/reference boundaries | Notion yes; Drive maybe | Complete source list before archive placement or reference model decision |
@@ -75,8 +75,8 @@ Goal:
 Targets:
 
 - ~~GFVP source/spec/object/prompt/QC folders.~~ **VIS-001 complete** — source system in repo at `06_visual_language/gfvp/`.
-- Approved image locations (`06_`/`08_` PNGs).
-- Text-lock and visual approval receipts (deferred PUB-002 metadata).
+- ~~Approved image locations (`06_`/`08_` PNGs).~~ **PUB-002 complete** — 25 PNG + 21 receipt md imported at `c3154f0`.
+- ~~Text-lock and visual approval receipts (deferred PUB-002 metadata).~~ **Imported** under PUB-002 default scope.
 - Release/export packages, zips, PDFs, images, and package manifests.
 
 Output:
@@ -132,7 +132,7 @@ For each source cluster or package, record:
 
 ## Open Questions
 
-- Which source clusters have complete source locations? **`TG-SRC-VIS-001` complete; `TG-SRC-PUB-002` binaries/zip open; others pending.**
+- Which source clusters have complete source locations? **`TG-SRC-VIS-001` and `TG-SRC-PUB-002` complete for executed scope; others pending.**
 - Which source clusters are still Notion-only? PUB-001, KNO-001, REG-001, ARC-001 — pending Pass 1.
 - Which Drive packages correspond to release/export packages?
 - Which GFVP assets are approved outputs versus source/control files?
@@ -162,34 +162,30 @@ Follow-up receipt-to-binary and authority reconciliation clarified:
 
 ## Post-Import Baseline Update (2026-07-07)
 
-After physical import and commit of `TG-SRC-VIS-001`:
+After physical import and commit of `TG-SRC-VIS-001` and `TG-SRC-PUB-002`:
 
 | Item | Status |
 |---|---|
-| Source inventory | **Complete** — 283 md/csv in Drive package; 248 co-import candidate imported |
-| Exact import manifest | **Executed** — `TG_SRC_VIS_001_EXACT_IMPORT_MANIFEST_DRAFT.md` (IMP-001–248) |
-| Migration receipt | **Executed** — `TG-REC-MIG-001`; filed `11_receipts/TG_REC_MIG_001_VIS_001_IMPORT_RECEIPT_DRAFT.md` |
-| Repo commit | **`ca6410e`** — 248 md/csv + migration control stack |
-| Post-import audit | **PASS** — `TG_SRC_VIS_001_POST_IMPORT_AUDIT_DRAFT.md` |
-| Folder register | Updated **`d36444a`** — VIS-001 recorded in `FOLDER_DECISION_REGISTER.md` |
-| **`TG-SRC-PUB-002`** | **Deferred** — 25 PNGs on Drive; 21 deferred receipt md; zip unlocated |
+| VIS-001 source inventory | **Complete** — 248 co-import candidate imported |
+| VIS-001 commit | **`ca6410e`** — receipt `TG-REC-MIG-001` |
+| PUB-002 release inventory | **Complete** — 46 md/PNG (S1 default scope) |
+| PUB-002 commit | **`c3154f0`** — receipt `TG-REC-MIG-002` |
+| Post-import audits | **PASS** — VIS-001 + PUB-002 audit drafts |
+| Folder register | Updated — both imports recorded |
+| **`07_OUTPUT_QC/` co-import** | **Deferred** — reference-only (S2) |
+| Zip canonical designation | **Deferred** — planning reference only (S3) |
 | Canon promotion | **No** — draft migration workspace only |
 
 ## Recommended Next Gate
 
-**VIS-001 complete.** Choose the next **read-only inventory** track (no import without receipt gate):
+**GFVP migration phase complete.** Migration **paused** until explicitly restarted.
 
-### Option A — `TG-SRC-PUB-002` (recommended if unblocking release track)
+If resuming, recommended next track:
 
-- Read-only inventory of 25 PNGs, deferred receipt md in `06_`/`08_`, zip/export package search.
-- Output: PUB-002 exact import manifest draft (planning only).
-- Rationale: Binaries and zip gaps remain the primary open GFVP blockers.
-
-### Option B — `TG-SRC-PUB-001` Publishing Constitution
+### `TG-SRC-PUB-001` Publishing Constitution (recommended)
 
 - Notion source-location completion for eight-volume cluster.
 - Output: PUB-001 file/page inventory and migration-candidate review draft.
-- Rationale: Natural next source-cluster candidate; partially reviewed already.
 
 Do not import without receipt gate. Do not create derivative controls yet. Do not resume app/RPC work.
 
@@ -201,27 +197,25 @@ What changed:
 - Identified inventory gaps across Drive, Notion, local packages, and Supabase.
 - Proposed read-only inventory passes before migration-candidate selection.
 - Updated gates after Notion metadata pass, GFVP Drive findings, and receipt-to-binary reconciliation.
-- **2026-07-07 refresh:** Marked `TG-SRC-VIS-001` inventory/import **complete** (`ca6410e`, `TG-REC-MIG-001`); removed stale pre-import gates; repointed next gates to PUB-002 and/or PUB-001 inventory.
+- **2026-07-07 closeout refresh:** Marked `TG-SRC-PUB-002` inventory/import **complete** (`c3154f0`, `TG-REC-MIG-002`); migration paused; next gate `TG-SRC-PUB-001`.
 
 What should be locked:
 
 - Inventory planning does not authorize migration, extraction, canon promotion, external edits, commits, or app/RPC work.
-- `TG-SRC-VIS-001` import record: 248 md/csv at `ca6410e`; PUB-002 excluded.
+- `TG-SRC-VIS-001` import record: 248 md/csv at `ca6410e`.
+- `TG-SRC-PUB-002` import record: 46 md/PNG at `c3154f0`.
 - Drive source clusters remain intact; release/export packages remain separate from source systems.
-- `TG-SRC-PUB-002` deferred until separately authorized.
 
 What remains living:
 
-- Read-only inventory authorization for **`TG-SRC-PUB-002`** and/or **`TG-SRC-PUB-001`**.
-- Exact release/export package locations (zip, cloud-only binaries).
-- GFVP receipt-to-binary mapping for deferred PUB-002 payloads.
+- Read-only inventory authorization for **`TG-SRC-PUB-001`** when migration resumes.
+- Zip canonical designation; optional `07_` co-import ratification.
+- `NTN-REC-002` / P009 ambiguity.
 - Inventories for `TG-SRC-ARC-001`, `TG-SRC-REG-001`, `TG-SRC-KNO-001`.
 - Supabase inventory timing.
 
 Concrete next steps:
 
-1. Choose next inventory track: **`TG-SRC-PUB-002`** read-only inventory (recommended) and/or **`TG-SRC-PUB-001`** Publishing Constitution inventory.
-2. Execute authorized read-only pass only — no import, no external edits.
-3. Draft exact import manifest / migration plan after inventory and human ratification (VIS-001 playbook).
-4. Keep `TG-SRC-PUB-002` deferred for physical import until receipt gate satisfied.
-5. Do not move source files, create derivative controls, edit external systems, or resume app/RPC work until explicitly authorized.
+1. Commit migration closeout state when authorized (`MIGRATION_CLOSEOUT_STATE_DRAFT.md` + housekeeping docs).
+2. If resuming: authorize read-only **`TG-SRC-PUB-001`** inventory pass only.
+3. Do not move source files, create derivative controls, edit external systems, or resume app/RPC work until explicitly authorized.

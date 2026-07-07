@@ -21,15 +21,17 @@ These placements are treated as **locked for draft migration planning** until ex
 - Receipts, reviews, and QC summaries map to `11_receipts/`.
 - Platform, app, Supabase, and Control Center work (`TG-PLATFORM-007`) remain **frozen** under `08_platform/`.
 - **`TG-SRC-VIS-001`** physically imported and committed at `ca6410e` under receipt **`TG-REC-MIG-001`** (248 md/csv into `06_visual_language/gfvp/`). Draft migration workspace only — **not canon promotion**.
+- **`TG-SRC-PUB-002`** physically imported and committed at `c3154f0` under receipt **`TG-REC-MIG-002`** (46 md/PNG into `07_publishing/series/gfvp/`). Draft migration workspace only — **not canon promotion**.
 - All other source clusters remain unmigrated. Cursor/Git remains a draft migration workspace only.
 
 ## Completed Physical Imports (Draft Record)
 
 | Source ID | Receipt | Commit | Scope | Notes |
 |---|---|---|---|---|
-| `TG-SRC-VIS-001` | `TG-REC-MIG-001` | `ca6410e` | 248 md/csv → `06_visual_language/gfvp/` | PUB-002 excluded; post-import audit PASS. Not canon promotion. |
+| `TG-SRC-VIS-001` | `TG-REC-MIG-001` | `ca6410e` | 248 md/csv → `06_visual_language/gfvp/` | PUB-002 excluded from VIS-001 scope; post-import audit PASS. Not canon promotion. |
+| `TG-SRC-PUB-002` | `TG-REC-MIG-002` | `c3154f0` | 46 md/PNG → `07_publishing/series/gfvp/` | `07_OUTPUT_QC/` reference-only; zip excluded; VIS-001 boundary preserved; post-import audit PASS. Not canon promotion. |
 
-This table records executed draft migration only. It does not authorize further imports, canon change, or PUB-002 work.
+This table records executed draft migration only. It does not authorize further imports, canon change, or new cluster work without explicit authorization.
 
 ## Decision Table
 
@@ -123,13 +125,14 @@ Do not fetch additional Notion pages unless explicitly authorized for a named in
 - Locked v0.2 draft assumptions for GFVP, inventories, receipts, and frozen platform work.
 - Documented twelve unresolved source areas plus three cross-cutting questions (dual-placement, archive model, v0.1 rename).
 - Applied Initial Decision Logic and high-risk treatment for Archive, Engine Registry, Card System, and Publishing Constitution.
-- **2026-07-06 housekeeping:** Recorded `TG-SRC-VIS-001` physical import committed at `ca6410e` under `TG-REC-MIG-001`; removed stale "no source files migrated" language.
+- **2026-07-07 closeout housekeeping:** Recorded `TG-SRC-PUB-002` physical import committed at `c3154f0` under `TG-REC-MIG-002`; 46 md/PNG into `07_publishing/series/gfvp/`.
 
 ### What should be locked
 
 - v0.2 top-level structure as **draft migration workspace only** — not final ontology.
-- Resolved draft leans: `TG-SRC-VIS-001` → `06_visual_language/gfvp/` (**imported at `ca6410e`**); `TG-SRC-PUB-002` → `07_publishing/series/gfvp/` (deferred); inventories → `10_inventories/`; receipts → `11_receipts/`.
-- `TG-REC-MIG-001` execution record for VIS-001 (248 md/csv; PUB-002 excluded).
+- Resolved draft leans: `TG-SRC-VIS-001` → `06_visual_language/gfvp/` (**imported at `ca6410e`**); `TG-SRC-PUB-002` → `07_publishing/series/gfvp/` (**imported at `c3154f0`**); inventories → `10_inventories/`; receipts → `11_receipts/`.
+- `TG-REC-MIG-001` execution record for VIS-001 (248 md/csv; PUB-002 excluded from VIS-001 scope).
+- `TG-REC-MIG-002` execution record for PUB-002 (46 md/PNG; `07_`/zip excluded).
 - `TG-PLATFORM-007` and all app/RPC work remain paused.
 - No further migration, restructuring, canon promotion, external edits, or commits authorized by this register.
 
@@ -140,13 +143,13 @@ Do not fetch additional Notion pages unless explicitly authorized for a named in
 - Engine Registry dual-placement and archive model questions.
 - v0.1 placeholder folder rename/restructure timing.
 - Medium-risk areas: Book of Becoming, Foundational Lineages, Praxis Domains, Worlds and Case Studies, Community Charters.
-- `TG-SRC-PUB-002` release/export import (deferred).
-- Orphan planning drafts (`SOURCE_TO_DESTINATION_MAP_DRAFT.md`, `INVENTORY_COMPLETION_PLAN_DRAFT.md`) — contain stale pre-import VIS-001 language; update or commit separately when authorized.
+- **`TG-SRC-PUB-001`** Publishing Constitution — recommended next inventory candidate (frozen until authorized).
+- Migration closeout state: `MIGRATION_CLOSEOUT_STATE_DRAFT.md` — pending closeout commit.
 
 ### Concrete next steps
 
-1. Complete source inventories for high-risk clusters before folder decisions (`TG-SRC-ARC-001`, `TG-SRC-REG-001`, `TG-SRC-KNO-001`, `TG-SRC-PUB-001`).
-2. Use Initial Decision Logic during authorized source reviews — do not assign final folders from metadata alone.
-3. Resolve dual-placement and archive model questions only after source review and human ratification where required.
-4. Defer v0.1 → v0.2 physical folder rename until placement decisions and migration authorization are explicit.
-5. Optionally commit this register housekeeping separately; do not bundle with future import commits unless explicitly approved.
+1. **Migration closeout:** Commit `MIGRATION_CLOSEOUT_STATE_DRAFT.md` and register/map/plan housekeeping when authorized — then pause migration until a new track is explicitly authorized.
+2. If resuming: start with read-only **`TG-SRC-PUB-001`** inventory (recommended next cluster).
+3. Use Initial Decision Logic during authorized source reviews — do not assign final folders from metadata alone.
+4. Resolve dual-placement and archive model questions only after source review and human ratification where required.
+5. Defer v0.1 → v0.2 physical folder rename until placement decisions and migration authorization are explicit.
