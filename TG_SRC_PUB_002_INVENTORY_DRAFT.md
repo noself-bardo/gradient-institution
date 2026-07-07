@@ -6,6 +6,8 @@ Authority: Not canonical
 
 Inventory Date: 2026-07-07
 
+Scope Ratification: **Recorded 2026-07-07** — see `TG_SRC_PUB_002_RATIFICATION_PACKET_DRAFT.md` (S1–S5)
+
 Source ID: `TG-SRC-PUB-002`
 
 Related Source ID: `TG-SRC-VIS-001` (source system imported at `ca6410e`; PUB-002 explicitly excluded)
@@ -22,7 +24,7 @@ Constraint: This inventory does **not** authorize migration, extraction, file co
 
 ## Inventory Result
 
-### **`INVENTORY_COMPLETE_FOR_PLANNING`** — import still **not authorized**
+### **`INVENTORY_COMPLETE_FOR_PLANNING`** — scope **ratified 2026-07-07** — physical import **not authorized**
 
 Synced Drive enumeration confirms **25 PNGs** and **21 deferred receipt md** in `06_`/`08_` folders. Export zip candidates located (see §4). Physical import remains deferred until receipt-gated planning identical to VIS-001.
 
@@ -40,9 +42,9 @@ Synced Drive enumeration confirms **25 PNGs** and **21 deferred receipt md** in 
 | Export zip packages | 3 candidates found | **Requires human designation** | Excluded |
 | PDFs | 0 in package | N/A | Excluded |
 
-**Default PUB-002 co-import candidate (planning enumeration):** **46 files** (21 md + 25 PNG) from `06_`/`08_` only.
+**Default PUB-002 co-import candidate (planning enumeration):** **46 files** (21 md + 25 PNG) from `06_`/`08_` only — **ratified S1 2026-07-07**.
 
-**Extended reference set:** 14 md in `07_OUTPUT_QC/` — cite for authority/QC chains; do not co-import unless separately ratified.
+**Extended reference set:** 14 md in `07_OUTPUT_QC/` — cite for authority/QC chains; **reference-only by default (S2)**; do not co-import unless separately ratified.
 
 ---
 
@@ -198,13 +200,10 @@ See `GFVP_RECEIPT_BINARY_AUTHORITY_RECONCILIATION_DRAFT.md` for:
 
 ## Recommended Next Gate
 
-1. **Human review** this inventory draft.
-2. **Ratify PUB-002 scope:**
-   - Default: **46 files** (`06_`/`08_` md + PNG only), or
-   - Extended: include `07_OUTPUT_QC/` md (14) as co-import or reference-only citation.
-3. **Designate authoritative zip** (if any) — recommend evaluating `batch_01_LEVEL_A_CODEX_COMPLETE_v1-0.zip.zip` vs Drive live folders.
-4. **Authorize drafting only:** exact import manifest + migration plan + `TG-REC-MIG-002` (provisional ID) receipt draft.
-5. **Do not import** until full receipt gate satisfied.
+1. ~~Human review this inventory draft.~~ **Done**
+2. ~~Ratify PUB-002 scope (46-file default; `07_` reference-only; zip planning candidate).~~ **Done** — 2026-07-07 (`TG_SRC_PUB_002_RATIFICATION_PACKET_DRAFT.md`)
+3. **Next:** Authorize **`AUTHORIZED — DRAFT TG-SRC-PUB-002 EXACT IMPORT MANIFEST`** only.
+4. Do not import until full receipt gate satisfied (manifest → plan → receipt → execute).
 
 ---
 
