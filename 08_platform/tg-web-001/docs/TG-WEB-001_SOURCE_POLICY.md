@@ -1,6 +1,6 @@
 # TG-WEB-001 — Source Policy
 
-Status: Active Rebuild  
+Status: Baseline Built / Asset Integration Pending  
 Authority: Servant layer policy — subordinate to SOURCE_OF_TRUTH_POLICY.md at repo root
 
 ## Purpose
@@ -54,6 +54,18 @@ Crisis Liturgies are always **companion**, never governing.
 3. Thumbnails live in `assets/img/` — companion artifacts only, not governing authority.
 4. Open PDFs in new tabs with `rel="noopener noreferrer"`.
 5. Distinguish companion from governing at every point of use.
+
+## Crisis Liturgies III — Companion Series Boundary
+
+CL-III (Emergency Objects) has completed print, archive lock, indexing, and frozen release snapshot stages.
+
+For any web or gallery integration:
+
+1. Use source-of-truth order documented in [CLIII_RELEASE_ASSEMBLY_READINESS_RECORD.md](CLIII_RELEASE_ASSEMBLY_READINESS_RECORD.md)
+2. Treat `06_RELEASE_ASSEMBLY/.../CRISIS_LITURGIES_III_EMERGENCY_OBJECTS` as **supporting provenance only**
+3. Do **not** display release-assembly “PDF BUILD NOT STARTED” as current status
+4. Do not rebuild PDFs, regenerate images, alter canon, or modify source artwork
+5. `tools/cl_iii_release_assembly_prep.py` is read-only verification evidence — do not run to overwrite Drive assets
 
 ## Data File Authority
 

@@ -1,6 +1,6 @@
 # TG-WEB-001 — Institutional Record
 
-Status: Active Rebuild  
+Status: Baseline Built / Asset Integration Pending  
 Authority: Implementation / Servant Layer — not canonical
 
 ## Asset Identity
@@ -11,7 +11,7 @@ Authority: Implementation / Servant Layer — not canonical
 | Title | The Gradient Archive Gateway |
 | Parent Institution | The Gradient |
 | Authority Layer | Implementation / Servant Layer |
-| Status | Active Rebuild |
+| Status | Baseline Built / Asset Integration Pending |
 
 ## Institutional Placement
 
@@ -102,6 +102,17 @@ Institutional hierarchy this gateway orients toward:
 - [Interactive HTML Explainer — Canonical Outline](https://app.notion.com/p/7421d8b2f1dd4282aaba122d98732a52)
 - [HTML Explainer Rebuild Plan — Archive Gateway v0.1](https://app.notion.com/p/396deacab3a58199b3b8f5624940f216)
 - [Explainer Revision Directive](https://app.notion.com/p/396deacab3a5818d9e24cb5041b756b3)
+- [CL-III Release Assembly Readiness Record](CLIII_RELEASE_ASSEMBLY_READINESS_RECORD.md) — companion series boundary; do not regress to assembly-stage status
+
+## Companion Series Integration
+
+| Volume | TG-WEB-001 Status |
+|---|---|
+| Crisis Liturgies I | Companion shelf + PDF path (local ingest when present) |
+| Crisis Liturgies II | Companion shelf + PDF path (local ingest when present) |
+| Crisis Liturgies III: Emergency Objects | **Documented only** — not on live Plate Reader; admit from approved release snapshot when intentionally ready |
+
+CL-III controlling archive state: print PDF approved, final archive lock approved, indexing closed, frozen release snapshot complete. Release assembly records are provenance only.
 
 ## Acceptance Criteria
 

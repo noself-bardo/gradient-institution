@@ -162,4 +162,5 @@ Netlify is public distribution only — gateway, not institution, not source of 
 
 - [Institutional Record](docs/TG-WEB-001_INSTITUTIONAL_RECORD.md)
 - [Source Policy](docs/TG-WEB-001_SOURCE_POLICY.md)
+- [CL-III Release Assembly Readiness Record](docs/CLIII_RELEASE_ASSEMBLY_READINESS_RECORD.md)
 - [QA Checklist](docs/TG-WEB-001_QA_CHECKLIST.md)
