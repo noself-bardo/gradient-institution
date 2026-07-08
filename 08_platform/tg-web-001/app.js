@@ -53,6 +53,23 @@ function pdfAction(item, availability, labelOverride) {
   return `<span class="act pending" aria-disabled="true"><span class="mark"></span>READER PDF NEEDED</span>`;
 }
 
+function companionDetailLines(item) {
+  const fields = [
+    ["RANGE", item.range],
+    ["WEB AVAILABILITY", item.webAvailability],
+    ["READER STATUS", item.readerStatus],
+    ["PDF STATUS", item.pdfStatus],
+    ["ARCHIVE NOTE", item.archiveNote],
+    ["BOUNDARY NOTE", item.boundaryNote],
+    ["SOURCE NOTE", item.sourceNote]
+  ];
+
+  return fields
+    .filter(([, value]) => value)
+    .map(([label, value]) => `<div style="margin-top:8px;">${label}: ${esc(value)}</div>`)
+    .join("");
+}
+
 function renderLedger(targetId, items, availability) {
   const el = document.getElementById(targetId);
   if (!el) return;
@@ -73,6 +90,7 @@ function renderLedger(targetId, items, availability) {
         <div style="margin-top:8px;">ROLE: ${esc(it.usedFor || "—")}</div>
         <div style="margin-top:8px;">FORMAT: PDF / PLATE LANGUAGE</div>
         <div style="margin-top:8px;">ACCESS: ${esc(statusLine)}</div>
+        ${companionDetailLines(it)}
       </div>
       <div class="entryActions">
         ${pdfAction(it, availability)}

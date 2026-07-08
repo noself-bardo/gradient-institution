@@ -103,6 +103,7 @@ Institutional hierarchy this gateway orients toward:
 - [HTML Explainer Rebuild Plan — Archive Gateway v0.1](https://app.notion.com/p/396deacab3a58199b3b8f5624940f216)
 - [Explainer Revision Directive](https://app.notion.com/p/396deacab3a5818d9e24cb5041b756b3)
 - [CL-III Release Assembly Readiness Record](CLIII_RELEASE_ASSEMBLY_READINESS_RECORD.md) — companion series boundary; do not regress to assembly-stage status
+- [CL-III Companion Shelf Entry Record](CLIII_COMPANION_SHELF_ENTRY_RECORD.md) — CL-III shelf entry scope and web boundary
 
 ## Companion Series Integration
 
@@ -110,7 +111,7 @@ Institutional hierarchy this gateway orients toward:
 |---|---|
 | Crisis Liturgies I | Companion shelf + PDF path (local ingest when present) |
 | Crisis Liturgies II | Companion shelf + PDF path (local ingest when present) |
-| Crisis Liturgies III: Emergency Objects | **Documented only** — not on live Plate Reader; admit from approved release snapshot when intentionally ready |
+| Crisis Liturgies III: Emergency Objects | **Companion shelf entry added** — archived print release; CL-025 through CL-036; not yet in live plate reader; local PDF ingest pending |
 
 CL-III controlling archive state: print PDF approved, final archive lock approved, indexing closed, frozen release snapshot complete. Release assembly records are provenance only.
 

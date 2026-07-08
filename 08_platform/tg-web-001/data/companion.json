@@ -20,6 +20,22 @@
     "sourceNote": "PRINT PDF — Drive ID 1jQOjrhLlz2t_eEl-fM7JiRKN72yPAseZ (not screen PDF)"
   },
   {
+    "acc": "CL-VOL-III",
+    "title": "Crisis Liturgies III: Emergency Objects",
+    "status": "ARCHIVED PRINT RELEASE",
+    "authority": "COMPANION (NOT GOVERNING)",
+    "usedFor": "Emergency object plates; material relic witness series",
+    "range": "CL-025 through CL-036",
+    "webAvailability": "Companion shelf entry only",
+    "readerStatus": "Not yet in live plate reader",
+    "pdfStatus": "Approved print PDF — frozen release snapshot; local ingest pending",
+    "archiveNote": "Fully archived, indexed, and frozen",
+    "boundaryNote": "Release assembly records are provenance only and predate PDF approval",
+    "pdf": "assets/pdf/CRISIS_LITURGIES_III_EMERGENCY_OBJECTS_v1.0_PRINT.pdf",
+    "actionLabel": "OPEN VOLUME (PDF)",
+    "sourceNote": "PRINT PDF — frozen snapshot 09_RELEASE_SNAPSHOTS/CRISIS_LITURGIES/CRISIS_LITURGIES_III_EMERGENCY_OBJECTS_v1.0 (not release assembly folder)"
+  },
+  {
     "acc": "CL-CANON-1.1",
     "title": "Crisis Liturgies Canon v1.1 — Reader-Facing Source",
     "status": "LOCKED (READER-FACING)",

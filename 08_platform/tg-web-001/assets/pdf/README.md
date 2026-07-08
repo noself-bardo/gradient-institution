@@ -8,8 +8,11 @@ All public sources open as local PDFs integrated into plate language. No Notion.
 |---|---|---|
 | `CRISIS_LITURGIES_COMPLETE_v1.0_PRINT.pdf` | CL-VOL-I | `1BWkZDG1945DTQ15fTS4414NEJZrURevJ` |
 | `CRISIS_LITURGIES_II_PRIVATE_INSTRUMENTS_v1.0_PRINT.pdf` | CL-VOL-II | `1jQOjrhLlz2t_eEl-fM7JiRKN72yPAseZ` |
+| `CRISIS_LITURGIES_III_EMERGENCY_OBJECTS_v1.0_PRINT.pdf` | CL-VOL-III | Frozen snapshot `09_RELEASE_SNAPSHOTS/CRISIS_LITURGIES/CRISIS_LITURGIES_III_EMERGENCY_OBJECTS_v1.0` — **local ingest pending** |
 
 Do not use screen PDF Drive IDs from archived HTML.
+
+CL-III print PDF is **approved** in archive/snapshot layers. Copy from frozen release snapshot when ready for local companion shelf open action — not from release assembly folder.
 
 ## Governing PDFs (`assets/pdf/`) — pending export
 

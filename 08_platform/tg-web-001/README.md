@@ -118,7 +118,7 @@ The active build is a Crisis Liturgies–informed **plate reader** with snap-scr
 
 - Plates TG-000 through TG-011 (entry → living practice → sources → companion → diagnosis → response → organs → loop → modules A–F → boundary vows → reader path → institutional record)
 - All sources open as **local PDFs** in `assets/pdf/` — no Notion dependency
-- Companion artifact thumbnails in `assets/img/`
+- Companion artifact thumbnails in `assets/img/` (Vol I/II only; CL-III gallery ingest not started)
 - Data-driven shelves and modules in `data/*.json`
 - Source lineage archived from Desktop `gradient explainer html` → [docs/source-archive/](docs/source-archive/README.md)
 
@@ -163,4 +163,5 @@ Netlify is public distribution only — gateway, not institution, not source of 
 - [Institutional Record](docs/TG-WEB-001_INSTITUTIONAL_RECORD.md)
 - [Source Policy](docs/TG-WEB-001_SOURCE_POLICY.md)
 - [CL-III Release Assembly Readiness Record](docs/CLIII_RELEASE_ASSEMBLY_READINESS_RECORD.md)
+- [CL-III Companion Shelf Entry Record](docs/CLIII_COMPANION_SHELF_ENTRY_RECORD.md)
 - [QA Checklist](docs/TG-WEB-001_QA_CHECKLIST.md)

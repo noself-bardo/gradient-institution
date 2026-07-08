@@ -158,6 +158,21 @@
     "relatedRooms": ["visual-language", "sources"]
   },
   {
+    "id": "SRC-CL-PDF-III",
+    "title": "Crisis Liturgies III — Emergency Objects Print PDF",
+    "authorityLayer": "Companion / Publication",
+    "status": "companion",
+    "domain": "visual",
+    "url": null,
+    "localPath": "assets/pdf/CRISIS_LITURGIES_III_EMERGENCY_OBJECTS_v1.0_PRINT.pdf",
+    "publicReadable": false,
+    "role": "companion",
+    "summary": "Approved print PDF from frozen release snapshot (CL-025 through CL-036). Companion shelf entry only — not yet in live plate reader; local PDF ingest pending.",
+    "relatedRooms": ["visual-language", "sources"],
+    "archiveStatus": "Print PDF approved; final archive lock approved; indexing closed; frozen release snapshot complete",
+    "webBoundary": "Companion shelf entry only — no artifact gallery ingest yet"
+  },
+  {
     "id": "SRC-EXP-001",
     "title": "Interactive HTML Explainer — Canonical Outline",
     "authorityLayer": "Implementation / Reference",
