@@ -1,0 +1,50 @@
+[
+  {
+    "id": "CS-ISA-001",
+    "title": "Applied ISA Case Study 001 — The Gradient as Counter-System Design",
+    "method": "Interpretive Sovereignty Analysis",
+    "subject": "The Gradient institution itself",
+    "status": "living",
+    "validation": "Demonstrates how interpretive sovereignty could drift toward model, platform, or workflow",
+    "proves": "Counter-system design awareness — the institution examining its own drift boundaries",
+    "sourceUrl": "https://app.notion.com/p/391deacab3a581b192f1e38242e43b36",
+    "relatedEngines": ["ENG-ISA-001"],
+    "relatedRooms": ["case-studies", "engines"]
+  },
+  {
+    "id": "CS-STW-001",
+    "title": "Stewardship Exercise 001 — Fuckification Engine",
+    "method": "Engine Metabolization",
+    "subject": "Controlled Symbolic Mutation as institutional proof",
+    "status": "validated",
+    "validation": "Successful validation event per institutional record — Becoming Event milestone",
+    "proves": "First complete institutional loop — engine metabolization into Card ecosystem",
+    "sourceUrl": "https://app.notion.com/p/391deacab3a58170aa63c1751135e1a8",
+    "relatedEngines": ["ENG-FE-001"],
+    "relatedRooms": ["case-studies", "engines"]
+  },
+  {
+    "id": "CS-SC-001",
+    "title": "Shape Change — Capability Map Integration",
+    "method": "Practice Framework Application",
+    "subject": "Shape Change as validated practice framework",
+    "status": "validated",
+    "validation": "Capability Map v0.3 updated; Master Field Guide reference integrated",
+    "proves": "Practice frameworks can be validated and integrated into capability infrastructure",
+    "sourceUrl": "https://app.notion.com/p/392deacab3a581aa8e7cfc441da6228c",
+    "relatedEngines": ["ENG-SC-001"],
+    "relatedRooms": ["case-studies", "engines"]
+  },
+  {
+    "id": "CS-ARC-001",
+    "title": "Admission Exercise 000 — ISA Archive",
+    "method": "Archive Admission",
+    "subject": "ISA materials as admitted archive reference",
+    "status": "living",
+    "validation": "Archive admission exercise — provenance preserved",
+    "proves": "How material enters the Archive of Becoming without premature canon promotion",
+    "sourceUrl": "https://app.notion.com/p/391deacab3a5812593adfcc369bdc594",
+    "relatedEngines": ["ENG-ISA-001"],
+    "relatedRooms": ["case-studies", "sources"]
+  }
+]

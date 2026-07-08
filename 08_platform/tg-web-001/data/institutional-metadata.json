@@ -1,0 +1,37 @@
+{
+  "assetId": "TG-WEB-001",
+  "title": "The Gradient Archive Gateway",
+  "parentInstitution": "The Gradient",
+  "authorityLayer": "Implementation / Servant Layer",
+  "status": "Baseline Built / Asset Integration Pending",
+  "canonicalBoundary": "This site explains The Gradient. It does not define The Gradient.",
+  "primaryInstitutionalHome": "The Gradient / 10 Implementation",
+  "visualLanguageHome": "The Gradient / 11 Visual Language",
+  "publicFunction": "Orientation and source navigation",
+  "governedBy": [
+    "The Gradient Constitution",
+    "The Gradient Charter",
+    "Institutional Decision Records",
+    "The Gradient Operating System",
+    "Visual Language doctrine",
+    "Explainer Revision Directive"
+  ],
+  "repository": {
+    "preferredName": "the-gradient-archive-gateway",
+    "currentPath": "08_platform/tg-web-001",
+    "parentRepo": "gradient-institution"
+  },
+  "deployment": {
+    "platform": "Netlify",
+    "url": "https://thegradient.netlify.app",
+    "role": "Public gateway — orientation layer only"
+  },
+  "registry": {
+    "supabase": "Pending — document in README until platform_assets write path is available"
+  },
+  "records": {
+    "notion": "TG-WEB-001 — The Gradient Archive Gateway (10 Implementation)",
+    "notionUrl": "https://app.notion.com/p/397deacab3a5813baadfd7954e5397a3",
+    "drive": "TG-WEB-001_ARCHIVE_GATEWAY/ (pending)"
+  }
+}

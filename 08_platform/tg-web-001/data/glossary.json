@@ -1,0 +1,86 @@
+[
+  {
+    "term": "Card",
+    "definition": "The user-facing knowledge object — a bounded, readable unit that presents institutional knowledge to stewards and readers.",
+    "status": "living",
+    "sourceRef": "SRC-KNO-001"
+  },
+  {
+    "term": "Claim",
+    "definition": "The internal reasoning atom — a discrete assertion supported by evidence, used to build and validate Cards.",
+    "status": "living",
+    "sourceRef": "SRC-KNO-001"
+  },
+  {
+    "term": "Relationship",
+    "definition": "The relational grammar connecting Cards, Claims, and institutional objects — replaces folder logic with explicit verbs.",
+    "status": "living",
+    "sourceRef": "SRC-KNO-001"
+  },
+  {
+    "term": "Engine",
+    "definition": "A repeatable transformation object that takes named inputs through an operating rule to produce bounded outputs.",
+    "status": "living",
+    "sourceRef": "SRC-REG-001"
+  },
+  {
+    "term": "Practice Framework",
+    "definition": "Distinct from Engine — guides human attention rather than mechanically transforming material.",
+    "status": "living",
+    "sourceRef": "SRC-REG-001"
+  },
+  {
+    "term": "Archive of Becoming",
+    "definition": "Raw institutional memory — becoming events, revisions, failed ideas, abandoned paths, and contradictions without forced narrative.",
+    "status": "living",
+    "sourceRef": "SRC-ARC-001"
+  },
+  {
+    "term": "Book of Becoming",
+    "definition": "Curated wisdom and steward notes — distinct from the raw Archive of Becoming.",
+    "status": "living",
+    "sourceRef": "SRC-ARC-001"
+  },
+  {
+    "term": "Canon",
+    "definition": "Knowledge that has passed through admission, review, and ratification gates — not everything published or displayed.",
+    "status": "living",
+    "sourceRef": "SRC-CON-001"
+  },
+  {
+    "term": "Living Knowledge",
+    "definition": "Material under active review, revision, or practice — not yet locked, not yet abandoned.",
+    "status": "living",
+    "sourceRef": "SRC-CON-001"
+  },
+  {
+    "term": "Locked Knowledge",
+    "definition": "Material that has passed ratification gates — constitutional, charter, or specification locks apply.",
+    "status": "locked",
+    "sourceRef": "SRC-CON-001"
+  },
+  {
+    "term": "Provenance",
+    "definition": "The trace of where material came from, who stewarded it, and what gates it passed — essential for archive integrity.",
+    "status": "living",
+    "sourceRef": "SRC-ARC-001"
+  },
+  {
+    "term": "Metabolization",
+    "definition": "The process by which an Engine transforms source material into a Card ecosystem — demonstrated by Stewardship Exercise 001.",
+    "status": "validated",
+    "sourceRef": "SRC-REG-001"
+  },
+  {
+    "term": "Servant Layer",
+    "definition": "Implementation infrastructure — software, deployment, APIs — that serves the institution without governing it.",
+    "status": "locked",
+    "sourceRef": "SRC-GOV-002"
+  },
+  {
+    "term": "Companion Source",
+    "definition": "Reader-facing or visual material that explains and accompanies governing doctrine — not itself governing authority.",
+    "status": "living",
+    "sourceRef": "SRC-CL-001"
+  }
+]

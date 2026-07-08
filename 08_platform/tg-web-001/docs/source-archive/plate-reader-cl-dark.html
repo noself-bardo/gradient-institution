@@ -1,0 +1,1432 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>THE GRADIENT — Plate Reader (Public Field Atlas)</title>
+  <style>
+    :root{
+      --bg:#070707;            /* black field first */
+      --ink:#EDEBE7;           /* silvered paper */
+      --muted:#B7B2AA;
+      --faint:rgba(237,235,231,.62);
+      --rule:rgba(237,235,231,.18);
+      --rule2:rgba(237,235,231,.10);
+      --hot:rgba(237,235,231,.92);
+
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+
+      --max: 980px;
+      --pad: 26px;
+    }
+
+    *{ box-sizing:border-box; }
+
+    /* SNAP SCROLL: one plate per scroll */
+    html, body{ height:100%; }
+    html{
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+    body{
+      height: 100%;
+      overflow-y: auto;
+      overscroll-behavior-y: none;
+
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:var(--sans);
+      line-height:1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    a{ color:inherit; }
+    a:hover{ opacity:.85; }
+
+    /* ========== PLATE READER LAYOUT ========== */
+    .reader{
+      width: min(var(--max), calc(100% - 28px));
+      margin: 0 auto;
+      padding: 22px 0 90px;
+    }
+
+    .plate{
+      position:relative;
+      min-height: 100vh;               /* one plate = one screen */
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+
+      border-top: 1px solid var(--rule2);
+      border-bottom: 1px solid var(--rule2);
+      padding: var(--pad) 0;
+      display:flex;
+      align-items:stretch;
+    }
+
+    /* registration marks */
+    .plate .reg{
+      position:absolute;
+      inset: 16px 0 16px 0;
+      pointer-events:none;
+    }
+    .reg .c{
+      position:absolute;
+      width:14px;height:14px;
+      border:1px solid var(--rule);
+      opacity:.9;
+    }
+    .reg .c.tl{ left:0; top:0; border-right:none; border-bottom:none; }
+    .reg .c.tr{ right:0; top:0; border-left:none; border-bottom:none; }
+    .reg .c.bl{ left:0; bottom:0; border-right:none; border-top:none; }
+    .reg .c.br{ right:0; bottom:0; border-left:none; border-top:none; }
+    .reg .cross{
+      position:absolute;
+      left:50%; top:0;
+      transform:translateX(-50%);
+      width:18px;height:18px;
+      opacity:.85;
+    }
+    .reg .cross:before, .reg .cross:after{
+      content:"";
+      position:absolute;
+      left:50%; top:50%;
+      transform:translate(-50%,-50%);
+      background:var(--rule);
+    }
+    .reg .cross:before{ width:18px; height:1px; }
+    .reg .cross:after{ width:1px; height:18px; }
+
+    .plateInner{
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap: 18px;
+    }
+
+    /* corners (metadata) */
+    .corners{
+      display:flex;
+      justify-content:space-between;
+      gap: 16px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing:.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .corners .right{
+      text-align:right;
+      white-space:nowrap;
+    }
+
+    /* central field: ONE CLAIM / ARTIFACT */
+    .field{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding: 22px 0;
+      gap: 18px;
+    }
+
+    .titleBlock{
+      text-align:center;
+      max-width: 82ch;
+    }
+    .bigTitle{
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(44px, 6.2vw, 74px);
+      line-height:1.02;
+      letter-spacing:-0.02em;
+      margin:0;
+      color: var(--hot);
+    }
+    .subTitle{
+      margin-top:10px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing:.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .centralClaim{
+      text-align:center;
+      max-width: 68ch;
+      font-family: var(--mono);
+      font-size: clamp(18px, 2.15vw, 26px);
+      letter-spacing:.06em;
+      line-height: 1.35;
+      color: var(--hot);
+    }
+
+    .inscription{
+      max-width: 86ch;
+      color: var(--faint);
+      font-size: 15px;
+      text-align:center;
+    }
+
+    /* bottom accession block */
+    .accession{
+      border-top: 1px solid var(--rule);
+      padding-top: 14px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 22px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing:.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    @media (max-width: 700px){
+      .accession{ grid-template-columns: 1fr; }
+    }
+    .accLine{ display:flex; gap:10px; }
+    .accKey{ color: var(--muted); min-width: 132px; }
+    .accVal{ color: var(--ink); opacity:.92; }
+
+    /* actions (archive actions, not buttons) */
+    .actions{
+      display:flex;
+      justify-content:center;
+      gap: 18px;
+      flex-wrap:wrap;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing:.14em;
+      text-transform: uppercase;
+      color: var(--hot);
+    }
+    .act{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      text-decoration:none;
+      padding: 6px 0;
+      border-bottom: 1px solid transparent;
+      opacity:.92;
+    }
+    .act:hover{ border-bottom-color: var(--rule); }
+    .act .mark{
+      width:10px;height:10px;
+      border: 1px solid var(--rule);
+      display:inline-block;
+    }
+
+    /* plates with text columns (still plate-like: negative space + single lane) */
+    .lane{
+      width: min(860px, 100%);
+      margin: 0 auto;
+      padding: 0 8px;
+    }
+    .plateLabel{
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing:.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .oneClaim{
+      font-family: var(--serif);
+      font-size: clamp(22px, 2.6vw, 34px);
+      line-height:1.16;
+      letter-spacing:-0.01em;
+      color: var(--hot);
+      margin: 0 0 18px 0;
+    }
+    .copy{
+      color: var(--faint);
+      font-size: 15px;
+      max-width: 88ch;
+    }
+
+    .metaBlock{
+      margin-top: 22px;
+      border-top: 1px solid var(--rule);
+      padding-top: 14px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing:.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 22px;
+    }
+    @media (max-width: 700px){
+      .metaBlock{ grid-template-columns: 1fr; }
+    }
+    .metaItem strong{ color: var(--ink); font-weight: 600; opacity:.92; }
+
+    /* accession ledger entries (no tables) */
+    .ledger{
+      display:flex;
+      flex-direction:column;
+      gap: 18px;
+      margin-top: 14px;
+    }
+    .entry{
+      border-top: 1px solid var(--rule2);
+      border-bottom: 1px solid var(--rule2);
+      padding: 14px 0;
+    }
+    .entryTop{
+      display:flex;
+      justify-content:space-between;
+      gap: 14px;
+      flex-wrap:wrap;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing:.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .entryTitle{
+      margin: 10px 0 10px;
+      font-family: var(--serif);
+      font-size: 24px;
+      letter-spacing:-0.01em;
+      color: var(--hot);
+    }
+    .entryBody{
+      color: var(--faint);
+      font-size: 14px;
+      max-width: 92ch;
+    }
+    .entryActions{
+      margin-top: 12px;
+      display:flex;
+      gap: 18px;
+      flex-wrap:wrap;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing:.14em;
+      text-transform: uppercase;
+      color: var(--hot);
+    }
+
+    /* companion artifacts grid (thumbnails are artifacts, not decoration) */
+    .artifactGrid{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+    @media (max-width: 820px){
+      .artifactGrid{ grid-template-columns: 1fr; }
+    }
+    .artifact{
+      border-top: 1px solid var(--rule2);
+      border-bottom: 1px solid var(--rule2);
+      padding: 14px 0;
+    }
+    .artifactImg{
+      width:100%;
+      display:block;
+      border: 1px solid var(--rule2);
+      background: #000;
+    }
+    .artifactCap{
+      margin-top: 10px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing:.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display:flex;
+      justify-content:space-between;
+      gap: 12px;
+      flex-wrap:wrap;
+    }
+    .artifactNote{
+      margin-top: 10px;
+      color: var(--faint);
+      font-size: 14px;
+      max-width: 90ch;
+    }
+
+    /* module plates */
+    .modulePlate{
+      margin-top: 14px;
+      border-top: 1px solid var(--rule2);
+      border-bottom: 1px solid var(--rule2);
+      padding: 18px 0;
+    }
+    .moduleHead{
+      display:flex;
+      justify-content:space-between;
+      gap: 16px;
+      flex-wrap:wrap;
+      align-items:flex-start;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing:.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .moduleName{
+      margin: 10px 0 12px;
+      font-family: var(--serif);
+      font-size: 30px;
+      line-height:1.12;
+      color: var(--hot);
+    }
+    .moduleTriptych{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .lineItem{
+      padding-left: 12px;
+      border-left: 2px solid var(--rule);
+    }
+    .lineLbl{
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing:.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .lineVal{
+      margin-top: 6px;
+      color: var(--faint);
+      font-size: 15px;
+      max-width: 92ch;
+    }
+
+    /* boundary vows */
+    .vow{
+      border-top: 1px solid var(--rule2);
+      border-bottom: 1px solid var(--rule2);
+      padding: 16px 0;
+      margin-top: 14px;
+    }
+    .vowId{
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing:.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .vowBody{
+      margin-top: 10px;
+      color: var(--faint);
+      font-size: 14px;
+      max-width: 94ch;
+    }
+    .vowBody strong{ color: var(--ink); opacity:.92; font-weight: 600; }
+
+    /* overlay modal for MODULES ONLY (no Crisis Liturgies viewer) */
+    .overlay{
+      position:fixed; inset:0;
+      background: rgba(0,0,0,.72);
+      display:none;
+      align-items:flex-end;
+      justify-content:center;
+      padding: 18px;
+      z-index: 999;
+    }
+    .modal{
+      width: min(1100px, 100%);
+      height: min(88vh, 980px);
+      border: 1px solid var(--rule);
+      background: #0B0B0B;
+      display:flex;
+      flex-direction:column;
+    }
+    .modalTop{
+      display:flex;
+      justify-content:space-between;
+      gap: 14px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--rule2);
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing:.14em;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .modalTop .t{ color: var(--ink); opacity:.92; }
+    .modalActions{ display:flex; gap: 14px; flex-wrap:wrap; justify-content:flex-end; }
+    .modalActions a, .modalActions button{
+      background:transparent;
+      border:none;
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing:.14em;
+      text-transform: uppercase;
+      padding: 0;
+      cursor:pointer;
+      opacity:.92;
+      border-bottom: 1px solid transparent;
+    }
+    .modalActions a:hover, .modalActions button:hover{ border-bottom-color: var(--rule); }
+    .frame{
+      flex:1;
+      background:#000;
+    }
+    .frame iframe{ width:100%; height:100%; border:0; }
+
+    /* helper: small plate nav line */
+    .navLine{
+      display:flex;
+      justify-content:center;
+      gap: 18px;
+      flex-wrap:wrap;
+      margin-top: 10px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing:.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      opacity:.95;
+    }
+    .navLine a{ text-decoration:none; border-bottom: 1px solid transparent; }
+    .navLine a:hover{ border-bottom-color: var(--rule); }
+  </style>
+</head>
+
+<body>
+  <div class="reader">
+
+    <!-- PLATE TG-000 — ENTRY / CONSTITUTIONAL CLAIM -->
+    <section class="plate" id="tg-000">
+      <div class="reg">
+        <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+        <div class="cross"></div>
+      </div>
+
+      <div class="plateInner">
+        <div class="corners">
+          <div>PLATE TG-000 / ENTRY</div>
+          <div class="right">SOURCE STATUS: GOVERNING / ACCESS: PUBLIC</div>
+        </div>
+
+        <div class="field">
+          <div class="titleBlock">
+            <h1 class="bigTitle">THE GRADIENT</h1>
+            <div class="subTitle">CONSTITUTIONAL FIELD ATLAS / SERVANT-LAYER READER</div>
+          </div>
+
+          <div class="centralClaim">
+            THE GRADIENT DOES NOT ELIMINATE UNCERTAINTY.<br>
+            IT MAKES UNCERTAINTY NAVIGABLE.
+          </div>
+
+          <div class="inscription">
+            This page is here to orient, not overwhelm.<br>
+            You do not need to master the institution in one pass.<br>
+            Begin with the claim. Then follow the sources.<br>
+            Interpretation is labeled. Authority remains with the governing documents.
+          </div>
+
+          <div class="actions">
+            <a class="act" href="#tg-001"><span class="mark"></span>ENTER / BEGIN READING</a>
+            <a class="act" href="#tg-002"><span class="mark"></span>GO TO SOURCE ACCESSION SHELF</a>
+            <a class="act" href="#tg-010"><span class="mark"></span>READER PATH / WHAT TO OPEN NEXT</a>
+          </div>
+        </div>
+
+        <div class="accession">
+          <div class="accLine"><div class="accKey">CLASS:</div><div class="accVal">CONSTITUTIONAL KNOWLEDGE ECOLOGY</div></div>
+          <div class="accLine"><div class="accKey">STATUS:</div><div class="accVal">SERVANT-LAYER EXPLAINER</div></div>
+          <div class="accLine"><div class="accKey">AUTHORITY:</div><div class="accVal">GOVERNING DOCUMENTS</div></div>
+          <div class="accLine"><div class="accKey">COMPANION:</div><div class="accVal">CRISIS LITURGIES (VISUAL / INTERPRETIVE ONLY)</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATE TG-001 — WHY THIS EXISTS -->
+    <section class="plate" id="tg-001">
+      <div class="reg">
+        <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+        <div class="cross"></div>
+      </div>
+
+      <div class="plateInner lane">
+        <div class="corners">
+          <div>PLATE TG-001 / ORIENTATION</div>
+          <div class="right">CLASS: LIVING PRACTICE / SRC STATUS: GOVERNING</div>
+        </div>
+
+        <div>
+          <div class="plateLabel">ONE CENTRAL CLAIM</div>
+          <h2 class="oneClaim">The Gradient exists so knowledge can remain usable without becoming flattened, trusted without becoming frozen, and revised without being erased.</h2>
+
+          <div class="copy">
+            <p>Its purpose is not to make the world feel more controlled.</p>
+            <p>Its purpose is to help people steward complexity with better memory, clearer relationships, and more accountable judgment.</p>
+            <p>This is a system for people who need to keep thinking carefully after the first explanation breaks.</p>
+          </div>
+
+          <div class="navLine">
+            <a href="#tg-002">NEXT: SOURCE ACCESSION SHELF</a>
+            <a href="#tg-008">SKIP: MODULE ATLAS</a>
+          </div>
+        </div>
+
+        <div class="metaBlock">
+          <div class="metaItem">ACCESSION / AUTHORITY: <strong>GOVERNING DOCUMENTS</strong></div>
+          <div class="metaItem">READER ACTION: <strong>FOLLOW SOURCES FOR AUTHORITY</strong></div>
+          <div class="metaItem">INTERPRETATION: <strong>LABELED</strong></div>
+          <div class="metaItem">STATUS: <strong>PUBLIC ORIENTATION PLATE</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATE TG-002 — SOURCE ACCESSION SHELF -->
+    <section class="plate" id="tg-002">
+      <div class="reg">
+        <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+        <div class="cross"></div>
+      </div>
+
+      <div class="plateInner lane">
+        <div class="corners">
+          <div>PLATE TG-002 / ACCESSION SHELF</div>
+          <div class="right">GOVERNING MATERIAL / NOT TRACKERS / NOT PRODUCTION STATUS</div>
+        </div>
+
+        <div>
+          <div class="plateLabel">SOURCE ACCESSION SHELF</div>
+          <h2 class="oneClaim">Authority lives in the governing documents. This shelf is the reader’s direct access path.</h2>
+
+          <div class="copy">
+            <p><strong>Ritual rule:</strong> “Open Document” must open readable source material. No release indexes. No dashboards. No handoff pages.</p>
+          </div>
+
+          <div class="ledger" id="governingLedger"></div>
+
+          <div class="navLine">
+            <a href="#tg-003">NEXT: COMPANION SHELF</a>
+            <a href="#tg-004">NEXT: PROBLEM DIAGNOSIS</a>
+          </div>
+        </div>
+
+        <div class="metaBlock">
+          <div class="metaItem">SHELF CLASS: <strong>GOVERNING</strong></div>
+          <div class="metaItem">READER ACTION: <strong>OPEN & READ</strong></div>
+          <div class="metaItem">QUOTE RULE: <strong>VERBATIM</strong></div>
+          <div class="metaItem">STATUS: <strong>SOURCE-OF-TRUTH</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATE TG-003 — COMPANION SHELF / CRISIS LITURGIES -->
+    <section class="plate" id="tg-003">
+      <div class="reg">
+        <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+        <div class="cross"></div>
+      </div>
+
+      <div class="plateInner lane">
+        <div class="corners">
+          <div>PLATE TG-003 / COMPANION SHELF</div>
+          <div class="right">COMPANION SOURCE / VISUAL RHYTHM ONLY / NOT AUTHORITY</div>
+        </div>
+
+        <div>
+          <div class="plateLabel">COMPANION MATERIAL</div>
+          <h2 class="oneClaim">Crisis Liturgies informs plate rhythm, metadata discipline, and reader movement — without governing The Gradient.</h2>
+
+          <div class="copy">
+            <p><strong>Boundary discipline:</strong> visual language can carry authority. This shelf is explicitly labeled companion to prevent drift.</p>
+            <p><strong>Access note:</strong> Volumes open via Google Drive (direct links). No embedded viewer in this site.</p>
+          </div>
+
+          <div class="ledger" id="companionLedger"></div>
+
+          <div class="plateLabel" style="margin-top:28px;">COMPANION SOURCE ARTIFACTS (THUMBNAILS)</div>
+          <div class="artifactGrid">
+            <div class="artifact">
+              <img class="artifactImg" src="01-vol-i-reality-collapse-artifact.png" alt="Crisis Liturgies Vol I — CL-001 Artifact Plate" />
+              <div class="artifactCap">
+                <span>CL VOL I / CL-001 / PAGE 1</span>
+                <span>ARTIFACT PLATE</span>
+              </div>
+              <div class="artifactNote">COMPANION SOURCE / VISUAL RHYTHM ONLY / NOT AUTHORITY</div>
+            </div>
+
+            <div class="artifact">
+              <img class="artifactImg" src="02-vol-i-liturgical-hymn.png" alt="Crisis Liturgies Vol I — CL-001 Liturgical Hymn Plate" />
+              <div class="artifactCap">
+                <span>CL VOL I / CL-001 / PAGE 2</span>
+                <span>LITURGICAL HYMN</span>
+              </div>
+              <div class="artifactNote">COMPANION SOURCE / VISUAL RHYTHM ONLY / NOT AUTHORITY</div>
+            </div>
+
+            <div class="artifact">
+              <img class="artifactImg" src="03-vol-i-doctrine-page.png" alt="Crisis Liturgies Vol I — Gradient Translation / Doctrine Plate" />
+              <div class="artifactCap">
+                <span>CL VOL I / CL-001 / PAGE 3</span>
+                <span>GRADIENT TRANSLATION</span>
+              </div>
+              <div class="artifactNote">COMPANION SOURCE / VISUAL RHYTHM ONLY / NOT AUTHORITY</div>
+            </div>
+
+            <div class="artifact">
+              <img class="artifactImg" src="04-vol-ii-reproductive-calendar-case.png" alt="Crisis Liturgies Vol II — Reproductive Calendar Case Plate" />
+              <div class="artifactCap">
+                <span>CL VOL II / CL-013 / PAGE 1</span>
+                <span>RELIC PRESENTATION</span>
+              </div>
+              <div class="artifactNote">COMPANION SOURCE / VISUAL RHYTHM ONLY / NOT AUTHORITY</div>
+            </div>
+
+            <div class="artifact">
+              <img class="artifactImg" src="05-vol-ii-liturgical-hymn.png" alt="Crisis Liturgies Vol II — Failure Detail Plate" />
+              <div class="artifactCap">
+                <span>CL VOL II / CL-013 / PAGE 2</span>
+                <span>FAILURE DETAIL</span>
+              </div>
+              <div class="artifactNote">COMPANION SOURCE / VISUAL RHYTHM ONLY / NOT AUTHORITY</div>
+            </div>
+
+            <div class="artifact">
+              <img class="artifactImg" src="06-vol-ii-doctrine-page.png" alt="Crisis Liturgies Vol II — Catalog / Measurement / Archive Record" />
+              <div class="artifactCap">
+                <span>CL VOL II / CL-013 / PAGE 3</span>
+                <span>CATALOG RECORD</span>
+              </div>
+              <div class="artifactNote">COMPANION SOURCE / VISUAL RHYTHM ONLY / NOT AUTHORITY</div>
+            </div>
+          </div>
+
+          <div class="navLine" style="margin-top:22px;">
+            <a href="#tg-004">NEXT: PROBLEM DIAGNOSIS</a>
+            <a href="#tg-009">SKIP: BOUNDARY VOWS</a>
+          </div>
+        </div>
+
+        <div class="metaBlock">
+          <div class="metaItem">AUTHORITY: <strong>COMPANION ONLY</strong></div>
+          <div class="metaItem">READER ACTION: <strong>INHERIT RHYTHM, NOT RULES</strong></div>
+          <div class="metaItem">STATUS: <strong>OPENABLE SOURCES</strong></div>
+          <div class="metaItem">DRIFT PROTECTION: <strong>EXPLICIT LABELS</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATE TG-004 — PROBLEM DIAGNOSIS -->
+    <section class="plate" id="tg-004">
+      <div class="reg">
+        <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+        <div class="cross"></div>
+      </div>
+
+      <div class="plateInner lane">
+        <div class="corners">
+          <div>PLATE TG-004 / DIAGNOSIS</div>
+          <div class="right">CLASS: PROBLEM / SRC: WHITE PAPER</div>
+        </div>
+
+        <div>
+          <div class="plateLabel">ONE CENTRAL CLAIM</div>
+          <h2 class="oneClaim">Modern systems can store and retrieve. They struggle to preserve continuity: provenance, context, revision, and accountable judgment.</h2>
+
+          <div class="copy">
+            <p><strong>Interpretation (labeled):</strong> this is not primarily a technical problem. It’s a constitutional optimization problem: what the system implicitly rewards, hides, and erases.</p>
+            <p>When continuity collapses, communities relearn under pressure; contradictory evidence disappears; interpretation detaches from lived reality.</p>
+          </div>
+
+          <div class="navLine">
+            <a href="#tg-005">NEXT: CONSTITUTIONAL RESPONSE</a>
+            <a href="#tg-002">BACK: SOURCE SHELF</a>
+          </div>
+        </div>
+
+        <div class="metaBlock">
+          <div class="metaItem">SOURCE STATUS: <strong>GOVERNING</strong></div>
+          <div class="metaItem">READER ACTION: <strong>READ DIAGNOSIS THEN OPEN SOURCES</strong></div>
+          <div class="metaItem">QUOTE RULE: <strong>VERBATIM WHEN QUOTED</strong></div>
+          <div class="metaItem">INTERPRETATION: <strong>LABELED</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATE TG-005 — CONSTITUTIONAL RESPONSE -->
+    <section class="plate" id="tg-005">
+      <div class="reg">
+        <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+        <div class="cross"></div>
+      </div>
+
+      <div class="plateInner lane">
+        <div class="corners">
+          <div>PLATE TG-005 / RESPONSE</div>
+          <div class="right">CLASS: CONSTITUTIONAL COMMITMENTS / SRC: CONST + WP</div>
+        </div>
+
+        <div>
+          <div class="plateLabel">ONE CENTRAL CLAIM</div>
+          <h2 class="oneClaim">The Gradient governs evolution through commitments: admission, provenance, relationship, permanence of revision, and return‑to‑practice.</h2>
+
+          <div class="copy">
+            <p><strong>Operating commitments (summary):</strong> Admission precedes metabolization. Provenance precedes authority. Relationship precedes classification. Revision remains permanent. Nothing simply disappears. Practice returns to memory.</p>
+            <p><strong>Interpretation (labeled):</strong> these commitments prevent two opposite failures: freezing knowledge into brittle canon, or revising until nothing has lineage.</p>
+          </div>
+
+          <div class="navLine">
+            <a href="#tg-006">NEXT: INSTITUTIONAL ORGANS</a>
+            <a href="#tg-008">SKIP: MODULE ATLAS</a>
+          </div>
+        </div>
+
+        <div class="metaBlock">
+          <div class="metaItem">ACCESSION: <strong>TG-RSP-001</strong></div>
+          <div class="metaItem">AUTHORITY: <strong>GOVERNING DOCUMENTS</strong></div>
+          <div class="metaItem">READER ACTION: <strong>OPEN CONSTITUTION</strong></div>
+          <div class="metaItem">STATUS: <strong>PUBLIC SUMMARY</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATE TG-006 — INSTITUTIONAL ORGANS -->
+    <section class="plate" id="tg-006">
+      <div class="reg">
+        <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+        <div class="cross"></div>
+      </div>
+
+      <div class="plateInner lane">
+        <div class="corners">
+          <div>PLATE TG-006 / ORGANS</div>
+          <div class="right">CLASS: INSTITUTIONAL ANATOMY / SRC: CONST + CHARTER</div>
+        </div>
+
+        <div>
+          <div class="plateLabel">ONE CENTRAL CLAIM</div>
+          <h2 class="oneClaim">The Gradient separates functions into organs so memory, governance, inheritance, and practice do not collapse into one overloaded surface.</h2>
+
+          <div class="copy">
+            <p><strong>Verbatim anchor (quoted elsewhere):</strong> “Nothing is erased. Understanding matures through reclassification.”</p>
+            <p><strong>Interpretation (labeled):</strong> differentiation is drift protection. It prevents the repository from becoming simultaneously law, draft, memory, and propaganda.</p>
+          </div>
+
+          <div class="navLine">
+            <a href="#tg-007">NEXT: OPERATING LOOP</a>
+            <a href="#tg-009">NEXT: BOUNDARY VOWS</a>
+          </div>
+        </div>
+
+        <div class="metaBlock">
+          <div class="metaItem">ORGANS: <strong>CONSTITUTION / ARCHIVE / COMMONS / CHARTERS / STEWARDSHIP</strong></div>
+          <div class="metaItem">READER ACTION: <strong>OPEN CHARTER LOCKED DECISIONS</strong></div>
+          <div class="metaItem">STATUS: <strong>PUBLIC ORIENTATION</strong></div>
+          <div class="metaItem">DRIFT RISK: <strong>MONOLITH REPOSITORY</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATE TG-007 — OPERATING LOOP -->
+    <section class="plate" id="tg-007">
+      <div class="reg">
+        <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+        <div class="cross"></div>
+      </div>
+
+      <div class="plateInner lane">
+        <div class="corners">
+          <div>PLATE TG-007 / LOOP</div>
+          <div class="right">CLASS: FIRST PROOF / SRC: WHITE PAPER</div>
+        </div>
+
+        <div>
+          <div class="plateLabel">ONE CENTRAL CLAIM</div>
+          <h2 class="oneClaim">The Gradient proves itself through one complete institutional loop — not through a feature list.</h2>
+
+          <div class="copy">
+            <p>Reality → Observation → Admission → Relationships → Understanding → Practice → Memory → Future orientation.</p>
+            <p><strong>Interpretation (labeled):</strong> this loop is the minimum institutional prototype. It is the test that the constitution produces continuity.</p>
+          </div>
+
+          <div class="navLine">
+            <a href="#tg-008">NEXT: MODULE ATLAS</a>
+            <a href="#tg-002">BACK: SOURCE SHELF</a>
+          </div>
+        </div>
+
+        <div class="metaBlock">
+          <div class="metaItem">ACCESSION: <strong>TG-LOP-001</strong></div>
+          <div class="metaItem">READER ACTION: <strong>TRACE ONE LOOP IN SOURCES</strong></div>
+          <div class="metaItem">STATUS: <strong>PUBLIC ORIENTATION</strong></div>
+          <div class="metaItem">ANTI-DRIFT: <strong>NOT A DASHBOARD</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATE TG-008 — MODULE ATLAS A–F (plates, not cards) -->
+    <section class="plate" id="tg-008">
+      <div class="reg">
+        <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+        <div class="cross"></div>
+      </div>
+
+      <div class="plateInner lane">
+        <div class="corners">
+          <div>PLATE TG-008 / MODULE ATLAS</div>
+          <div class="right">FIELD PLATES / ONE MODULE AT A TIME</div>
+        </div>
+
+        <div>
+          <div class="plateLabel">ONE CENTRAL CLAIM</div>
+          <h2 class="oneClaim">Modules A–F are not “features.” They are constitutional explanations: identity, organs, architecture, loop, engines, and servant-layer implementation.</h2>
+
+          <div class="copy">
+            <p>Each module plate contains: one quote, one interpretation, one reader instruction, and one source action.</p>
+          </div>
+
+          <div id="modulePlates"></div>
+
+          <div class="navLine" style="margin-top:22px;">
+            <a href="#tg-009">NEXT: BOUNDARY VOWS</a>
+            <a href="#tg-010">NEXT: READER PATH</a>
+          </div>
+        </div>
+
+        <div class="metaBlock">
+          <div class="metaItem">INTERPRETATION: <strong>LABELED</strong></div>
+          <div class="metaItem">AUTHORITY: <strong>SOURCES</strong></div>
+          <div class="metaItem">READER ACTION: <strong>OPEN PRIMARY SOURCES</strong></div>
+          <div class="metaItem">STATUS: <strong>COMPLETE STATIC PLATES</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATE TG-009 — BOUNDARY VOWS -->
+    <section class="plate" id="tg-009">
+      <div class="reg">
+        <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+        <div class="cross"></div>
+      </div>
+
+      <div class="plateInner lane">
+        <div class="corners">
+          <div>PLATE TG-009 / BOUNDARY VOWS</div>
+          <div class="right">OPERATING VOWS / DRIFT PROTECTION</div>
+        </div>
+
+        <div>
+          <div class="plateLabel">VOW SET</div>
+          <h2 class="oneClaim">Boundary vows protect the institution from being mistaken for its interface, its visuals, or its tools.</h2>
+
+          <div class="vow">
+            <div class="vowId">BOUNDARY VOW TG-BND-001</div>
+            <div class="vowBody">
+              <p><strong>Protected:</strong> The institution is not reduced to software.</p>
+              <p><strong>Prevented:</strong> Mistaking a status interface for constitutional memory.</p>
+              <p><strong>Reader instruction:</strong> Read the governing claim first. Use tools second.</p>
+            </div>
+          </div>
+
+          <div class="vow">
+            <div class="vowId">BOUNDARY VOW TG-BND-002</div>
+            <div class="vowBody">
+              <p><strong>Protected:</strong> Governing authority stays with Constitution / White Paper / IDRs / Charter decisions.</p>
+              <p><strong>Prevented:</strong> Treating this explainer as law.</p>
+              <p><strong>Reader instruction:</strong> Use this plate reader for orientation; use sources for authority.</p>
+            </div>
+          </div>
+
+          <div class="vow">
+            <div class="vowId">BOUNDARY VOW TG-BND-003</div>
+            <div class="vowBody">
+              <p><strong>Protected:</strong> Companion sources remain companion.</p>
+              <p><strong>Prevented:</strong> Visual authority overriding constitutional authority.</p>
+              <p><strong>Reader instruction:</strong> Inherit rhythm and discipline from Crisis Liturgies; do not inherit governance.</p>
+            </div>
+          </div>
+
+          <div class="vow">
+            <div class="vowId">BOUNDARY VOW TG-BND-004</div>
+            <div class="vowBody">
+              <p><strong>Protected:</strong> Reader trust in “Open Document” actions.</p>
+              <p><strong>Prevented:</strong> Trackers and production pages masquerading as sources.</p>
+              <p><strong>Reader instruction:</strong> Expect readable sources; reject build-status substitutes.</p>
+            </div>
+          </div>
+
+          <div class="navLine" style="margin-top:22px;">
+            <a href="#tg-010">NEXT: READER PATH</a>
+            <a href="#tg-000">RETURN: ENTRY</a>
+          </div>
+        </div>
+
+        <div class="metaBlock">
+          <div class="metaItem">VOW CLASS: <strong>DRIFT PROTECTION</strong></div>
+          <div class="metaItem">READER ACTION: <strong>FOLLOW VOWS WHEN BUILDING</strong></div>
+          <div class="metaItem">STATUS: <strong>PUBLIC</strong></div>
+          <div class="metaItem">INTERPRETATION: <strong>LABELED</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATE TG-010 — READER PATH / WHAT TO OPEN NEXT -->
+    <section class="plate" id="tg-010">
+      <div class="reg">
+        <div class="c tl"></div><div class="c tr"></div><div class="c bl"></div><div class="c br"></div>
+        <div class="cross"></div>
+      </div>
+
+      <div class="plateInner lane">
+        <div class="corners">
+          <div>PLATE TG-010 / READER PATH</div>
+          <div class="right">WHAT TO OPEN NEXT / PRACTICAL ORDER</div>
+        </div>
+
+        <div>
+          <div class="plateLabel">READER INSTRUCTION</div>
+          <h2 class="oneClaim">You do not need to read everything. Choose one path and follow sources, not summaries.</h2>
+
+          <div class="copy">
+            <p><strong>Suggested order (governing):</strong></p>
+            <ol style="color:var(--faint);">
+              <li>Constitution v0.1 — preamble + early articles (principles, ontology, epistemology, praxis).</li>
+              <li>Founding White Paper v0.1 — the diagnosis + the constitutional framing.</li>
+              <li>IDR-003 — implementation follows institutional design.</li>
+              <li>IDR-002 — relationship grammar; folders rejected.</li>
+              <li>Charter locked decisions — local governance, living vs locked distinctions.</li>
+            </ol>
+            <p><strong>Companion (optional):</strong> open Crisis Liturgies Vol I/II for plate discipline and ritual metadata — not governance.</p>
+          </div>
+
+          <div class="actions" style="justify-content:flex-start; margin-top:18px;">
+            <a class="act" href="https://app.notion.com/p/391deacab3a5814a9e01e3514c0a1678" target="_blank" rel="noopener noreferrer"><span class="mark"></span>OPEN CONSTITUTION v0.1</a>
+            <a class="act" href="https://app.notion.com/p/63add23209cc4afc95255b267bcd2506" target="_blank" rel="noopener noreferrer"><span class="mark"></span>OPEN FOUNDING WHITE PAPER</a>
+            <a class="act" href="https://app.notion.com/p/392deacab3a581648ad5f6d0b56babe0" target="_blank" rel="noopener noreferrer"><span class="mark"></span>OPEN IDR-003</a>
+            <a class="act" href="https://app.notion.com/p/392deacab3a581338d65d28f6f700164" target="_blank" rel="noopener noreferrer"><span class="mark"></span>OPEN IDR-002</a>
+            <a class="act" href="https://app.notion.com/p/391deacab3a581b0a66ecb7ae4b2c525" target="_blank" rel="noopener noreferrer"><span class="mark"></span>OPEN CHARTER LOCKED DECISIONS</a>
+          </div>
+
+          <div class="navLine" style="margin-top:22px;">
+            <a href="#tg-000">RETURN: ENTRY PLATE</a>
+            <a href="#tg-002">RETURN: SOURCE SHELF</a>
+          </div>
+        </div>
+
+        <div class="metaBlock">
+          <div class="metaItem">WARMTH SOURCE: <strong>ORIENTATION COPY</strong></div>
+          <div class="metaItem">ANTI-OVERWHELM: <strong>ONE PATH AT A TIME</strong></div>
+          <div class="metaItem">AUTHORITY: <strong>SOURCES</strong></div>
+          <div class="metaItem">STATUS: <strong>PUBLIC</strong></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Overlay modal (MODULE READER ONLY) -->
+  <div id="overlay" class="overlay" role="dialog" aria-modal="true" aria-label="Module reader">
+    <div class="modal">
+      <div class="modalTop">
+        <div>
+          <div class="t" id="mTitle">MODULE READER</div>
+          <div id="mSub">—</div>
+        </div>
+        <div class="modalActions">
+          <button id="mClose" type="button">CLOSE</button>
+        </div>
+      </div>
+      <div class="frame">
+        <iframe id="mFrame" title="Module reader"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ---------- DATA ----------
+    const GOVERNING = [
+      {
+        acc: "TG-GOV-001",
+        title: "Constitution v0.1",
+        status: "LOCKED",
+        authority: "GOVERNING",
+        usedFor: "Institutional identity + ontology + epistemology + constraints",
+        url: "https://app.notion.com/p/391deacab3a5814a9e01e3514c0a1678"
+      },
+      {
+        acc: "TG-GOV-002",
+        title: "Founding White Paper v0.1",
+        status: "SOURCE",
+        authority: "GOVERNING",
+        usedFor: "Diagnosis + constitutional framing + first proof loop",
+        url: "https://app.notion.com/p/63add23209cc4afc95255b267bcd2506"
+      },
+      {
+        acc: "TG-IDR-002",
+        title: "IDR-002 — Relationships Are Verbs, Not Containers",
+        status: "LOCKED DECISION",
+        authority: "GOVERNING",
+        usedFor: "Relationship grammar; folders rejected",
+        url: "https://app.notion.com/p/392deacab3a581338d65d28f6f700164"
+      },
+      {
+        acc: "TG-IDR-003",
+        title: "IDR-003 — Implementation Follows Institutional Design",
+        status: "LOCKED DECISION",
+        authority: "GOVERNING",
+        usedFor: "Servant-layer doctrine; dashboards cannot govern",
+        url: "https://app.notion.com/p/392deacab3a581648ad5f6d0b56babe0"
+      },
+      {
+        acc: "TG-CHR-001",
+        title: "Charter — Locked Decisions",
+        status: "LOCKED",
+        authority: "GOVERNING",
+        usedFor: "Local governance; living vs locked distinctions",
+        url: "https://app.notion.com/p/391deacab3a581b0a66ecb7ae4b2c525"
+      },
+      {
+        acc: "TG-IDX-001",
+        title: "Canonical Outline / Link Hub",
+        status: "INDEX",
+        authority: "NAVIGATION",
+        usedFor: "Reader navigation spine",
+        url: "https://app.notion.com/p/7421d8b2f1dd4282aaba122d98732a52"
+      }
+    ];
+
+    /* OPTION C IMPLEMENTED:
+       - Crisis Liturgies opens via Google Drive direct links (new tab)
+       - No in-site PDF viewer.
+       - Thumbnails remain as on-site companion artifacts.
+    */
+    const COMPANION = [
+      {
+        acc: "CL-VOL-I",
+        title: "Crisis Liturgies — Volume I",
+        status: "COMPANION SOURCE",
+        authority: "COMPANION (NOT GOVERNING)",
+        usedFor: "Plate rhythm + metadata discipline + reader movement",
+        type: "url",
+        ref: "https://drive.google.com/file/d/15ruF4Onqb4KDLG-bTt9T-qUFVeat1g2B/view?usp=drive_link",
+        actionLabel: "OPEN VOLUME (DRIVE)"
+      },
+      {
+        acc: "CL-VOL-II",
+        title: "Crisis Liturgies — Volume II (Private Instruments)",
+        status: "COMPANION SOURCE",
+        authority: "COMPANION (NOT GOVERNING)",
+        usedFor: "Expanded plate grammar; archival ledger discipline",
+        type: "url",
+        ref: "https://drive.google.com/file/d/10wWqyGGs9pAZrtjqZzQ7MWOAc2mVC3tm/view?usp=drive_link",
+        actionLabel: "OPEN VOLUME (DRIVE)"
+      },
+      {
+        acc: "CL-CANON-1.1",
+        title: "Crisis Liturgies Canon v1.1 — Reader-Facing Source",
+        status: "LOCKED (READER-FACING)",
+        authority: "COMPANION GOVERNANCE (SERIES CANON)",
+        usedFor: "Series boundaries; interpretive constraints; drift protection",
+        type: "url",
+        ref: "https://app.notion.com/p/396deacab3a581ac8233c02e81201baf",
+        actionLabel: "OPEN DOCUMENT"
+      },
+      {
+        acc: "CL-TRN-001",
+        title: "Crisis Liturgy Translation Doctrine",
+        status: "COMPANION DOCTRINE",
+        authority: "COMPANION (NOT GOVERNING)",
+        usedFor: "How plate logic maps into Gradient public field atlas",
+        type: "url",
+        ref: "https://app.notion.com/p/392deacab3a5811ab180d1fd8815d1b5?pvs=1",
+        actionLabel: "OPEN DOCUMENT"
+      }
+    ];
+
+    // Module plates A–F (locked)
+    const MODULES = [
+      {
+        id: "TG-A",
+        short: "WHAT THE GRADIENT IS",
+        title: "Module A — What The Gradient Is",
+        quote: "“Artificial intelligence is understood as one instrument among many. It is neither oracle nor authority.”",
+        interpretation: "Interpretation: The Gradient uses tools to increase legibility, but responsibility for judgment remains human and explicit.",
+        readerInstruction: "Reader instruction: Hold the institution as a constitutional ecology first. Do not mistake the interface for the institution.",
+        sourceAction: { label: "OPEN PRIMARY SOURCE (CONSTITUTION)", ref: "https://app.notion.com/p/391deacab3a5814a9e01e3514c0a1678" },
+        modal: {
+          sub: "Establish The Gradient as constitutional knowledge ecology (not product/platform).",
+          purpose: "Establish The Gradient as a constitutional knowledge ecology, not a product or platform.",
+          why: "This gives newcomers the basic frame before they encounter the architecture.",
+          readNext: "Read next: Founding White Paper v0.1 → then IDR-003.",
+          sources: ["Constitution v0.1","Founding White Paper v0.1","Charter locked decisions"]
+        }
+      },
+      {
+        id: "TG-B",
+        short: "INSTITUTIONAL ANATOMY",
+        title: "Module B — Institutional Anatomy",
+        quote: "“The Archive of Becoming — preserves institutional memory. Nothing is erased. Understanding matures through reclassification.”",
+        interpretation: "Interpretation: The organs exist so memory, governance, and teaching don’t fight for the same surface.",
+        readerInstruction: "Reader instruction: When something feels confusing, ask which organ it belongs to before you decide what it ‘is.’",
+        sourceAction: { label: "OPEN CHARTER (LOCKED DECISIONS)", ref: "https://app.notion.com/p/391deacab3a581b0a66ecb7ae4b2c525" },
+        modal: {
+          sub: "Explain organs preserving memory, governance, inheritance, continuity.",
+          purpose: "Explain the organs that preserve memory, governance, inheritance, and continuity.",
+          why: "The Gradient separates functions so memory, governance, and practice do not collapse into one overloaded system.",
+          readNext: "Read next: Constitution v0.1 ‘Ecology of Memory’ section → then Charter locked decisions.",
+          sources: ["Constitution v0.1","Charter locked decisions","Founding White Paper v0.1"]
+        }
+      },
+      {
+        id: "TG-C",
+        short: "KNOWLEDGE ARCHITECTURE",
+        title: "Module C — Knowledge Architecture",
+        quote: "“Relationships should behave as verbs: supports, contradicts, expands, revises, sources, operationalizes, challenges, returns to.”",
+        interpretation: "Interpretation: This preserves plural belonging and prevents ‘one-folder’ distortions.",
+        readerInstruction: "Reader instruction: When you add knowledge, name the relationship first. Classification comes later.",
+        sourceAction: { label: "OPEN IDR-002", ref: "https://app.notion.com/p/392deacab3a581338d65d28f6f700164" },
+        modal: {
+          sub: "Cards, Claims, and Relationships (folders rejected).",
+          purpose: "Explain Cards, Claims, and Relationships.",
+          why: "The system preserves context by asking how things relate, not just where they are stored.",
+          readNext: "Read next: IDR-002 → then Constitution ‘Card layers’ + ‘Knowledge Architecture’.",
+          sources: ["Constitution v0.1","IDR-002","Knowledge Architecture"]
+        }
+      },
+      {
+        id: "TG-D",
+        short: "OPERATING LOOP",
+        title: "Module D — Operating Loop",
+        quote: "“Admission precedes metabolization. Provenance precedes authority. Relationship precedes classification. Revision remains permanent. Nothing simply disappears.”",
+        interpretation: "Interpretation: The loop protects continuity by forcing traceability before authority.",
+        readerInstruction: "Reader instruction: Trust the loop over the interface. If the loop is broken, the institution is broken.",
+        sourceAction: { label: "OPEN FOUNDING WHITE PAPER", ref: "https://app.notion.com/p/63add23209cc4afc95255b267bcd2506" },
+        modal: {
+          sub: "Admission → review → metabolization → practice → memory.",
+          purpose: "Show how knowledge moves through admission, review, metabolization, practice, and memory.",
+          why: "The Gradient proves itself through one complete loop, not through a feature list.",
+          readNext: "Read next: Founding White Paper ‘First proof’ loop → then IDR-003.",
+          sources: ["Founding White Paper v0.1","Charter locked decisions","IDRs"]
+        }
+      },
+      {
+        id: "TG-E",
+        short: "ENGINES & PRACTICE",
+        title: "Module E — Engines and Practice Frameworks",
+        quote: "“A repeatable method for transforming one form of understanding into another… Engines organize interpretation. They never replace judgment.”",
+        interpretation: "Interpretation: Engines must disclose evidence, blind spots, and failure modes so they don’t become hidden governors.",
+        readerInstruction: "Reader instruction: Treat engines as methods with declared limits, not as authority-generators.",
+        sourceAction: { label: "OPEN ENGINE REGISTRY", ref: "https://app.notion.com/p/391deacab3a5815d9202faf327430ede" },
+        modal: {
+          sub: "Repeatable methods that transform understanding without replacing judgment.",
+          purpose: "Explain engines as repeatable methods that transform understanding without replacing judgment.",
+          why: "This prevents methods, tools, or AI systems from becoming hidden authorities.",
+          readNext: "Read next: Constitution ‘How The Gradient Knows’ (seven questions) → then Engine Registry.",
+          sources: ["Constitution v0.1","Engine Registry","Capability Map"]
+        }
+      },
+      {
+        id: "TG-F",
+        short: "SERVANT LAYER",
+        title: "Module F — Implementation as Servant Layer",
+        quote: "“Implementation follows institutional design.”",
+        interpretation: "Interpretation: Software may assist work, but cannot ratify truth or redefine the institution.",
+        readerInstruction: "Reader instruction: When a tool feels powerful, ask what constitutional commitment constrains it.",
+        sourceAction: { label: "OPEN IDR-003", ref: "https://app.notion.com/p/392deacab3a581648ad5f6d0b56babe0" },
+        modal: {
+          sub: "Why software/dashboards/agents remain downstream.",
+          purpose: "Explain why software, dashboards, agents, and databases remain downstream of institutional design.",
+          why: "This protects The Gradient from becoming just another app.",
+          readNext: "Read next: IDR-003 → then Constitution preamble lines on AI as instrument.",
+          sources: ["IDR-003","Constitution v0.1","Product / Platform doctrine"]
+        }
+      }
+    ];
+
+    // ---------- RENDER ----------
+    const esc = (s) => String(s)
+      .replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;")
+      .replaceAll('"',"&quot;").replaceAll("'","&#039;");
+
+    function renderLedger(targetId, items){
+      const el = document.getElementById(targetId);
+
+      el.innerHTML = items.map(it => {
+        const topRight = it.authority ? `AUTH: ${esc(it.authority)}` : "";
+        const link = it.url || it.ref;
+        const label = it.actionLabel || "OPEN DOCUMENT";
+
+        return `
+          <div class="entry">
+            <div class="entryTop">
+              <div>ACC: ${esc(it.acc || "—")}</div>
+              <div>${topRight}</div>
+            </div>
+            <div class="entryTitle">${esc(it.title)}</div>
+            <div class="entryBody">
+              <div>STATUS: ${esc(it.status || "—")}</div>
+              <div style="margin-top:8px;">ROLE: ${esc(it.usedFor || "—")}</div>
+            </div>
+            <div class="entryActions">
+              <a class="act" href="${esc(link)}" target="_blank" rel="noopener noreferrer"><span class="mark"></span>${esc(label)}</a>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function renderModulePlates(){
+      const host = document.getElementById("modulePlates");
+      host.innerHTML = MODULES.map(m => `
+        <div class="modulePlate">
+          <div class="moduleHead">
+            <div>${esc(m.id)} / ${esc(m.short)}</div>
+            <div>SOURCE STATUS: GOVERNING</div>
+          </div>
+          <div class="moduleName">${esc(m.id)} / ${esc(m.short)}</div>
+
+          <div class="moduleTriptych">
+            <div class="lineItem">
+              <div class="lineLbl">QUOTE (VERBATIM)</div>
+              <div class="lineVal">${esc(m.quote)}</div>
+            </div>
+            <div class="lineItem">
+              <div class="lineLbl">INTERPRETATION (LABELED)</div>
+              <div class="lineVal">${esc(m.interpretation)}</div>
+            </div>
+            <div class="lineItem">
+              <div class="lineLbl">READER INSTRUCTION</div>
+              <div class="lineVal">${esc(m.readerInstruction)}</div>
+            </div>
+          </div>
+
+          <div class="entryActions" style="margin-top:14px;">
+            <a class="act" href="#" data-open-module="${esc(m.id)}" data-title="${esc(m.id)} / ${esc(m.short)}" data-sub="${esc(m.modal.sub)}"><span class="mark"></span>OPEN MODULE (LOCAL)</a>
+            <a class="act" href="${esc(m.sourceAction.ref)}" target="_blank" rel="noopener noreferrer"><span class="mark"></span>${esc(m.sourceAction.label)}</a>
+          </div>
+
+          <div class="metaBlock" style="margin-top:16px;">
+            <div class="metaItem">TITLE: <strong>${esc(m.title)}</strong></div>
+            <div class="metaItem">READ NEXT: <strong>${esc(m.modal.readNext)}</strong></div>
+            <div class="metaItem">STATUS: <strong>READY</strong></div>
+            <div class="metaItem">ACCESSION: <strong>${esc(m.id)}-PLATE</strong></div>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    renderLedger("governingLedger", GOVERNING.map(x => ({
+      ...x,
+      type:"url",
+      ref:x.url,
+      actionLabel:"OPEN DOCUMENT"
+    })));
+
+    renderLedger("companionLedger", COMPANION);
+    renderModulePlates();
+
+    // ---------- MODULE MODAL VIEWER ----------
+    const overlay = document.getElementById("overlay");
+    const mFrame = document.getElementById("mFrame");
+    const mTitle = document.getElementById("mTitle");
+    const mSub = document.getElementById("mSub");
+    const mClose = document.getElementById("mClose");
+
+    function openModule(m){
+      mTitle.textContent = m.id + " / MODULE READER";
+      mSub.textContent = m.modal.sub || "—";
+      mFrame.src = "";
+
+      const escHtml = (s) => String(s)
+        .replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;");
+
+      const doc = `<!doctype html><html><head><meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <style>
+        :root{
+          --bg:#000; --ink:#EEE; --muted:rgba(238,238,238,.70);
+          --rule:rgba(238,238,238,.18);
+          --mono:${getComputedStyle(document.documentElement).getPropertyValue('--mono')};
+          --serif:${getComputedStyle(document.documentElement).getPropertyValue('--serif')};
+          --sans:${getComputedStyle(document.documentElement).getPropertyValue('--sans')};
+        }
+        body{ margin:18px; background:#000; color:var(--ink); font-family:var(--sans); line-height:1.6; }
+        .hdr{ font-family:var(--mono); letter-spacing:.14em; text-transform:uppercase; font-size:12px; color:var(--muted); }
+        h1{ font-family:var(--serif); margin:10px 0 14px; font-size:28px; letter-spacing:-0.01em; }
+        .sec{ border-top:1px solid var(--rule); padding-top:12px; margin-top:12px; }
+        .lbl{ font-family:var(--mono); letter-spacing:.14em; text-transform:uppercase; font-size:12px; color:var(--muted); }
+        .txt{ margin-top:8px; color:rgba(238,238,238,.82); }
+        .quote{ padding-left:12px; border-left:2px solid var(--rule); }
+        ul{ margin:8px 0 0; padding-left:18px; color:rgba(238,238,238,.82); }
+      </style></head><body>
+        <div class="hdr">${escHtml(m.id)} / MODULE MODAL</div>
+        <h1>${escHtml(m.title)}</h1>
+
+        <div class="sec">
+          <div class="lbl">Purpose</div>
+          <div class="txt">${escHtml(m.modal.purpose)}</div>
+        </div>
+
+        <div class="sec">
+          <div class="lbl">Quote (verbatim)</div>
+          <div class="txt quote">${escHtml(m.quote || "(no quote set)")}</div>
+        </div>
+
+        <div class="sec">
+          <div class="lbl">Interpretation (labeled)</div>
+          <div class="txt">${escHtml(m.interpretation || "(no interpretation note set)")}</div>
+        </div>
+
+        <div class="sec">
+          <div class="lbl">What to read next</div>
+          <div class="txt">${escHtml(m.modal.readNext || "(no next-reading line set)")}</div>
+        </div>
+
+        <div class="sec">
+          <div class="lbl">Why this matters</div>
+          <div class="txt">${escHtml(m.modal.why)}</div>
+        </div>
+
+        <div class="sec">
+          <div class="lbl">Sources used</div>
+          <ul>${(m.modal.sources||[]).map(s=>`<li>${escHtml(s)}</li>`).join("")}</ul>
+        </div>
+
+        <div class="sec">
+          <div class="lbl">Servant-layer reminder</div>
+          <div class="txt">Quotes are verbatim. Interpretation is labeled. Governing documents remain authoritative.</div>
+        </div>
+      </body></html>`;
+
+      mFrame.srcdoc = doc;
+      overlay.style.display = "flex";
+      mClose.focus();
+    }
+
+    function closeModal(){
+      overlay.style.display = "none";
+      mFrame.src = "";
+      mFrame.removeAttribute("srcdoc");
+    }
+
+    document.addEventListener("click", (e) => {
+      const mm = e.target.closest("[data-open-module]");
+      if(mm){
+        e.preventDefault();
+        const id = mm.getAttribute("data-open-module");
+        const m = MODULES.find(x => x.id === id);
+        if(m) openModule(m);
+        return;
+      }
+    });
+
+    mClose.addEventListener("click", closeModal);
+    overlay.addEventListener("click", (e) => { if(e.target === overlay) closeModal(); });
+    window.addEventListener("keydown", (e) => { if(e.key === "Escape" && overlay.style.display === "flex") closeModal(); });
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+[
+  {
+    "acc": "CL-VOL-I",
+    "title": "Crisis Liturgies — Volume I",
+    "status": "COMPANION SOURCE",
+    "authority": "COMPANION (NOT GOVERNING)",
+    "usedFor": "Plate rhythm + metadata discipline + reader movement",
+    "pdf": "assets/pdf/CRISIS_LITURGIES_COMPLETE_v1.0_PRINT.pdf",
+    "actionLabel": "OPEN VOLUME (PDF)",
+    "sourceNote": "PRINT PDF — Drive ID 1BWkZDG1945DTQ15fTS4414NEJZrURevJ (not screen PDF)"
+  },
+  {
+    "acc": "CL-VOL-II",
+    "title": "Crisis Liturgies — Volume II (Private Instruments)",
+    "status": "COMPANION SOURCE",
+    "authority": "COMPANION (NOT GOVERNING)",
+    "usedFor": "Expanded plate grammar; archival ledger discipline",
+    "pdf": "assets/pdf/CRISIS_LITURGIES_II_PRIVATE_INSTRUMENTS_v1.0_PRINT.pdf",
+    "actionLabel": "OPEN VOLUME (PDF)",
+    "sourceNote": "PRINT PDF — Drive ID 1jQOjrhLlz2t_eEl-fM7JiRKN72yPAseZ (not screen PDF)"
+  },
+  {
+    "acc": "CL-CANON-1.1",
+    "title": "Crisis Liturgies Canon v1.1 — Reader-Facing Source",
+    "status": "LOCKED (READER-FACING)",
+    "authority": "COMPANION GOVERNANCE (SERIES CANON)",
+    "usedFor": "Series boundaries; interpretive constraints; drift protection",
+    "pdf": "assets/pdf/crisis-liturgies-canon-v1.1.pdf",
+    "actionLabel": "OPEN DOCUMENT (PDF)"
+  },
+  {
+    "acc": "CL-TRN-001",
+    "title": "Crisis Liturgy Translation Doctrine",
+    "status": "COMPANION DOCTRINE",
+    "authority": "COMPANION (NOT GOVERNING)",
+    "usedFor": "How plate logic maps into Gradient public field atlas",
+    "pdf": "assets/pdf/crisis-liturgy-translation-doctrine.pdf",
+    "actionLabel": "OPEN DOCUMENT (PDF)"
+  }
+]

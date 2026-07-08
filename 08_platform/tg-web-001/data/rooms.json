@@ -1,0 +1,82 @@
+[
+  {
+    "id": "orientation",
+    "title": "Orientation Room",
+    "plate": "001",
+    "summary": "The Gradient in plain language — constitutional claim, living practice, and what the institution refuses to become.",
+    "questions": [
+      "What is The Gradient?",
+      "How does it work?",
+      "Where should I enter the archive next?"
+    ]
+  },
+  {
+    "id": "sources",
+    "title": "Source Reading Room",
+    "plate": "002",
+    "summary": "Governing documents, companion sources, public PDFs, and reader-facing pages with honest status labels.",
+    "questions": [
+      "What governs The Gradient?",
+      "Which sources are locked, living, or companion?"
+    ]
+  },
+  {
+    "id": "system-map",
+    "title": "System Map Room",
+    "plate": "003",
+    "summary": "Institutional anatomy — organs, lifecycle, cards, claims, relationships, and memory ecology.",
+    "questions": [
+      "How are the organs separated?",
+      "How does knowledge move without collapsing governance?"
+    ]
+  },
+  {
+    "id": "engines",
+    "title": "Engines Room",
+    "plate": "004",
+    "summary": "Repeatable transformation systems and practice frameworks — status, validation boundaries, and allowed uses.",
+    "questions": [
+      "What engines exist?",
+      "What does each engine prove?"
+    ]
+  },
+  {
+    "id": "case-studies",
+    "title": "Case Studies Room",
+    "plate": "005",
+    "summary": "Applied institutional proof — ISA cases, Shape Change, Stewardship Exercise 001, and admitted world studies.",
+    "questions": [
+      "What has The Gradient actually demonstrated?",
+      "Which cases are validated?"
+    ]
+  },
+  {
+    "id": "visual-language",
+    "title": "Visual Language Room",
+    "plate": "006",
+    "summary": "GFVP, plate taxonomy, master visual grammar, and Crisis Liturgy translation doctrine — inheritance, not authority.",
+    "questions": [
+      "How does The Gradient explain itself visually?",
+      "What visual constraints apply to public explainers?"
+    ]
+  },
+  {
+    "id": "platform",
+    "title": "Platform Room",
+    "plate": "007",
+    "summary": "Implementation stack — registry, APIs, agents, and deployment — clearly marked as servant layer.",
+    "questions": [
+      "Where does software sit in the hierarchy?",
+      "What is implementation, not institution?"
+    ]
+  },
+  {
+    "id": "glossary",
+    "title": "Glossary Room",
+    "plate": "008",
+    "summary": "Defined terms — cards, claims, engines, archive, canon, living knowledge, provenance, metabolization.",
+    "questions": [
+      "What do these terms mean in Gradient context?"
+    ]
+  }
+]

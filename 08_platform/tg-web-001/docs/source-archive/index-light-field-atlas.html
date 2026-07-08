@@ -1,0 +1,1609 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>THE GRADIENT — Constitutional Knowledge Ecology (Field Atlas)</title>
+  <style>
+    :root{
+      /* Crisis Liturgies–informed, but warmer + more readable */
+      --ink:#151514;
+      --muted:#6E6A64;
+      --paper:#FCFBF8;          /* warmer off-white */
+      --paper2:#F3F1EB;         /* plate field */
+      --paper3:#FFFEFC;         /* inner sheets */
+      --line:#E2E0DA;
+
+      --black:#0D0D0D;
+      --silver:#B9B6B0;
+
+      --signal:#2783DE;         /* restrained action color */
+      --signal2:#1F1F1E;        /* ink-like */
+      --warn:#D5803B;
+      --ok:#46A171;
+
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+
+      --max: 1080px;
+      --g: 18px;
+
+      /* geometry */
+      --r: 7px;
+      --r2: 11px;
+      --rule: 1px;
+
+      /* shadows: minimal (avoid SaaS polish) */
+      --shadow: 0 1px 0 rgba(0,0,0,.03);
+    }
+
+    @media (prefers-color-scheme: dark){
+      :root{
+        --ink:#FFFFFF;
+        --muted: rgba(255,255,255,.72);
+        --paper:#131313;
+        --paper2:#1A1A1A;
+        --paper3:#171717;
+        --line: rgba(255,255,255,.18);
+        --black:#0A0A0A;
+        --silver: rgba(255,255,255,.55);
+        --signal:#5E9FE8;
+        --signal2:#FFFFFF;
+        --shadow: 0 1px 0 rgba(255,255,255,.03);
+      }
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family:var(--sans);
+      background:var(--paper);
+      color:var(--ink);
+      line-height:1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+    a{ color: var(--signal); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    code{
+      font-family:var(--mono);
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 999px;
+      border: var(--rule) solid var(--line);
+      background: rgba(0,0,0,.03);
+    }
+    @media (prefers-color-scheme: dark){
+      code{ background: rgba(255,255,255,.06); }
+    }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 26px 18px 92px;
+    }
+
+    /* --- Plate shell --- */
+    .plate{
+      border: var(--rule) solid var(--line);
+      border-radius: var(--r);
+      background: var(--paper2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .plate + .plate{ margin-top: 18px; }
+
+    /* registration marks */
+    .plate::before,
+    .plate::after{
+      content:"";
+      position:absolute;
+      width:10px; height:10px;
+      border: var(--rule) solid var(--line);
+      top: 10px;
+      opacity:.85;
+      pointer-events:none;
+    }
+    .plate::before{ left: 10px; }
+    .plate::after{ right: 10px; }
+
+    .band{
+      background: var(--black);
+      color:#fff;
+      padding: 12px 14px 10px;
+      border-bottom: var(--rule) solid rgba(255,255,255,.14);
+    }
+
+    .bandRow{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 14px;
+    }
+
+    .metaLeft{
+      display:flex;
+      align-items:flex-start;
+      gap: 12px;
+      min-width:0;
+    }
+    .plateNo{
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: .12em;
+      border: var(--rule) solid rgba(255,255,255,.28);
+      padding: 4px 8px;
+      border-radius: 999px;
+      white-space:nowrap;
+    }
+    .bandTitleWrap{ min-width:0; }
+    .bandTitle{
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      opacity:.92;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+    .catalogLine{
+      margin-top: 6px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing:.08em;
+      color: rgba(255,255,255,.72);
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+    }
+    .catItem{ white-space:nowrap; }
+
+    .metaRight{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap: 6px;
+      text-align:right;
+    }
+    .sourceCodes{
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .10em;
+      color: rgba(255,255,255,.74);
+    }
+    .badge{
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      border: var(--rule) solid rgba(255,255,255,.26);
+      padding: 4px 8px;
+      border-radius: 0;
+      background: rgba(255,255,255,.06);
+      white-space:nowrap;
+    }
+    .badge.companion{
+      border-style:dashed;
+      background: rgba(255,255,255,.05);
+    }
+
+    .body{
+      padding: 20px;
+      background: rgba(255,255,255,.44);
+    }
+    @media (prefers-color-scheme: dark){
+      .body{ background: rgba(255,255,255,.04); }
+    }
+
+    .footerStrip{
+      border-top: var(--rule) solid var(--line);
+      background: rgba(0,0,0,.02);
+      padding: 10px 12px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing:.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display:flex;
+      justify-content:space-between;
+      gap: 12px;
+      flex-wrap:wrap;
+    }
+    @media (prefers-color-scheme: dark){
+      .footerStrip{ background: rgba(255,255,255,.03); }
+    }
+    .checksum{
+      font-family: var(--mono);
+      letter-spacing:.08em;
+      opacity:.9;
+      white-space:nowrap;
+    }
+
+    /* --- Hero --- */
+    .heroTitle{
+      font-family: var(--serif);
+      font-size: clamp(38px, 4.8vw, 60px);
+      line-height: 1.02;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .subtitle{
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 88ch;
+    }
+    .thesis{
+      margin-top: 16px;
+      padding: 16px;
+      border: var(--rule) solid var(--line);
+      border-radius: var(--r2);
+      background: rgba(255,255,255,.62);
+    }
+    @media (prefers-color-scheme: dark){
+      .thesis{ background: rgba(255,255,255,.06); }
+    }
+    .thesis .line{
+      margin: 10px 0;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .thesis strong{ color: var(--ink); }
+
+    /* --- Blocks (Quote / Interpretation / Rule / Summary) --- */
+    .block{
+      margin-top: 14px;
+      border: var(--rule) solid var(--line);
+      border-radius: var(--r2);
+      background: var(--paper3);
+      overflow:hidden;
+    }
+    .bhead{
+      padding: 10px 12px;
+      border-bottom: var(--rule) solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap: 12px;
+      background: rgba(0,0,0,.03);
+    }
+    @media (prefers-color-scheme: dark){
+      .bhead{ background: rgba(255,255,255,.06); }
+    }
+    .blabel{
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
+    .dot{
+      width:10px; height:10px;
+      border: var(--rule) solid var(--line);
+      background: transparent;
+    }
+    .dot.quote{ border-color: var(--silver); }
+    .dot.interp{ border-color: var(--signal); }
+    .dot.rule{ border-color: var(--warn); }
+    .dot.summary{ border-color: var(--ok); }
+
+    .bbody{ padding: 12px; }
+    .bbody p{ margin: 10px 0; }
+    .blockquote{
+      margin: 0;
+      padding-left: 12px;
+      border-left: 3px solid var(--silver);
+    }
+    .small{ color: var(--muted); font-size: 13px; }
+
+    /* Findings (replace cards) */
+    .findings{
+      margin-top: 16px;
+      border: var(--rule) solid var(--line);
+      border-radius: var(--r2);
+      background: var(--paper3);
+      overflow:hidden;
+    }
+    .finding{
+      display:grid;
+      grid-template-columns: 210px 1fr;
+      gap: 14px;
+      padding: 14px 12px;
+      border-bottom: var(--rule) solid var(--line);
+      align-items:start;
+    }
+    @media (max-width: 720px){
+      .finding{ grid-template-columns: 1fr; }
+    }
+    .finding:last-child{ border-bottom: none; }
+    .findingLabel{
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      line-height:1.2;
+    }
+    .findingLabel strong{ color: var(--ink); }
+    .findingText{
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 90ch;
+    }
+
+    /* Tables */
+    table{
+      width:100%;
+      border-collapse: collapse;
+      border: var(--rule) solid var(--line);
+      border-radius: var(--r2);
+      overflow:hidden;
+      background: var(--paper3);
+    }
+    th, td{
+      border-bottom: var(--rule) solid var(--line);
+      padding: 10px 10px;
+      vertical-align: top;
+      font-size: 13px;
+      text-align:left;
+    }
+    th{
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: rgba(0,0,0,.03);
+    }
+    @media (prefers-color-scheme: dark){
+      th{ background: rgba(255,255,255,.06); }
+    }
+    tr:last-child td{ border-bottom:none; }
+
+    /* Buttons (reading room) */
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 8px 10px;
+      border-radius: 0;
+      border: var(--rule) solid var(--line);
+      background: transparent;
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing:.12em;
+      text-transform: uppercase;
+      cursor:pointer;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+    .btn:hover{ border-color: var(--signal); }
+    .btn .mark{
+      width:10px; height:10px;
+      border: var(--rule) solid var(--line);
+      background: transparent;
+    }
+
+    /* Module explorer — fully populated (no blanks) */
+    .modules{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--g);
+    }
+    @media (max-width: 980px){ .modules{ grid-template-columns: 1fr; } }
+
+    .moduleCard{
+      border: var(--rule) solid var(--line);
+      background: var(--paper3);
+      border-radius: var(--r);
+      padding: 14px;
+    }
+    .moduleTop{
+      display:flex;
+      justify-content:space-between;
+      gap: 12px;
+      align-items:flex-start;
+    }
+    .moduleId{
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing:.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .moduleStatus{
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing:.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: var(--rule) solid var(--line);
+      padding: 4px 8px;
+      border-radius: 0;
+      background: rgba(0,0,0,.02);
+      white-space:nowrap;
+    }
+    @media (prefers-color-scheme: dark){
+      .moduleStatus{ background: rgba(255,255,255,.06); }
+    }
+    .moduleTitle{
+      margin: 8px 0 8px;
+      font-size: 18px;
+      letter-spacing:-0.01em;
+      font-family: var(--serif);
+    }
+    .purpose{
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0 0 10px;
+      max-width: 90ch;
+    }
+
+    .kList{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .kList li{ margin: 6px 0; }
+
+    .why{
+      margin-top: 12px;
+      padding: 12px;
+      border: var(--rule) solid var(--line);
+      background: rgba(0,0,0,.02);
+      border-radius: var(--r2);
+    }
+    @media (prefers-color-scheme: dark){
+      .why{ background: rgba(255,255,255,.06); }
+    }
+    .whyLabel{
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing:.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .whyText{
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .sourcesLine{
+      margin-top: 12px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing:.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      align-items:center;
+      border-top: var(--rule) solid var(--line);
+      padding-top: 10px;
+    }
+    .sourcesLine strong{ color: var(--ink); font-weight: 600; }
+    .actions{
+      margin-top: 10px;
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    /* Operating loop */
+    .loop{
+      margin-top: 12px;
+      border: var(--rule) solid var(--line);
+      background: var(--paper3);
+      border-radius: var(--r2);
+      padding: 14px;
+      overflow:auto;
+    }
+    .loopRow{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      min-width: 880px;
+    }
+    .step{
+      border: var(--rule) solid var(--line);
+      background: rgba(0,0,0,.02);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 13px;
+      white-space:nowrap;
+    }
+    @media (prefers-color-scheme: dark){
+      .step{ background: rgba(255,255,255,.06); }
+    }
+    .arrow{ color: var(--muted); }
+
+    /* Modal viewer */
+    .overlay{
+      position:fixed; inset:0;
+      background: rgba(0,0,0,.48);
+      display:none;
+      align-items:flex-end;
+      justify-content:center;
+      padding: 16px;
+      z-index: 99;
+    }
+    .modal{
+      width: min(1040px, 100%);
+      height: min(86vh, 980px);
+      background: var(--paper);
+      border: var(--rule) solid var(--line);
+      border-radius: var(--r);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+    }
+    .modalTop{
+      padding: 12px 14px;
+      border-bottom: var(--rule) solid var(--line);
+      display:flex; justify-content:space-between; align-items:flex-start; gap: 12px;
+      background: rgba(0,0,0,.03);
+    }
+    @media (prefers-color-scheme: dark){
+      .modalTop{ background: rgba(255,255,255,.06); }
+    }
+    .modalTop h3{
+      margin:0;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing:.14em;
+      text-transform: uppercase;
+    }
+    .modalTop .sub{ margin-top:6px; color: var(--muted); font-size: 13px; }
+    .modalFrame{ flex:1; background: rgba(0,0,0,.02); }
+    .modalFrame iframe{ width:100%; height:100%; border:0; background: var(--paper); }
+
+    .foot{ margin-top: 12px; color: var(--muted); font-size: 12px; max-width: 92ch; }
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <!-- 1. HERO -->
+  <section class="plate" id="hero">
+    <div class="band">
+      <div class="bandRow">
+        <div class="metaLeft">
+          <div class="plateNo">PLATE 00</div>
+          <div class="bandTitleWrap">
+            <div class="bandTitle">THE GRADIENT — Constitutional Knowledge Ecology</div>
+            <div class="catalogLine">
+              <span class="catItem">CAT: TG</span>
+              <span class="catItem">SERIES: PUBLIC FIELD ATLAS</span>
+              <span class="catItem">MODE: SERVANT-LAYER EXPLAINER</span>
+              <span class="catItem">REV: 0.5</span>
+            </div>
+          </div>
+        </div>
+        <div class="metaRight">
+          <div class="sourceCodes">SRC: CONST / WP / IDR / CHARTER</div>
+          <div class="badge">GOVERNING SOURCE AUTHORITY</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body">
+      <h1 class="heroTitle">THE GRADIENT</h1>
+      <div class="subtitle">
+        A constitutional knowledge ecology for preserving trustworthy knowledge across time.<br>
+        Designed as a constitutional field atlas, informed by the Crisis Liturgies visual language.
+      </div>
+
+      <div class="thesis">
+        <div class="line"><strong>The Gradient does not exist to eliminate uncertainty.</strong><br>It exists to make uncertainty more navigable.</div>
+        <div class="line"><strong>It is not a product, platform, or productivity method.</strong><br>It is an institutional design for admission, provenance, relationship, practice, and memory.</div>
+      </div>
+
+      <div class="block">
+        <div class="bhead">
+          <div class="blabel"><span class="dot quote"></span>Quote</div>
+          <div class="small">verbatim excerpt</div>
+        </div>
+        <div class="bbody">
+          <p class="blockquote">“Artificial intelligence is understood as one instrument among many. It is neither oracle nor authority.”</p>
+          <p class="small">— Constitution v0.1</p>
+        </div>
+      </div>
+
+      <!-- 2. ORIENTATION as FINDINGS -->
+      <div class="findings" id="orientation">
+        <div class="finding">
+          <div class="findingLabel"><strong>FINDING 01</strong><br>PROBLEM</div>
+          <div class="findingText">Knowledge systems lose provenance, context, and continuity as information accelerates and revision outpaces memory.</div>
+        </div>
+        <div class="finding">
+          <div class="findingLabel"><strong>FINDING 02</strong><br>RESPONSE</div>
+          <div class="findingText">The Gradient separates memory, governance, evidence, and practice into constitutional organs so each function can evolve without collapsing the others.</div>
+        </div>
+        <div class="finding">
+          <div class="findingLabel"><strong>FINDING 03</strong><br>PRACTICE</div>
+          <div class="findingText">Ideas move through admission, review, metabolization, practice, and archive — so knowledge remains revisable without being erased.</div>
+        </div>
+      </div>
+
+      <div class="foot">
+        This explainer is designed for newcomers who need a stable frame before they explore the machinery.
+      </div>
+    </div>
+
+    <div class="footerStrip">
+      <span>SERVANT-LAYER EXPLAINER</span>
+      <span>SOURCE MATERIAL REMAINS AUTHORITATIVE</span>
+      <span>INTERPRETATION LABELED</span>
+      <span class="checksum" id="ck0"></span>
+    </div>
+  </section>
+
+  <!-- 2B. LIVING PRACTICE / WHY THIS EXISTS -->
+  <section class="plate" id="living-practice">
+    <div class="band">
+      <div class="bandRow">
+        <div class="metaLeft">
+          <div class="plateNo">PLATE 00A</div>
+          <div class="bandTitleWrap">
+            <div class="bandTitle">WHY THIS EXISTS / LIVING PRACTICE</div>
+            <div class="catalogLine">
+              <span class="catItem">CLASS: ORIENTATION</span>
+              <span class="catItem">TONE: SERIOUS / HUMANE</span>
+              <span class="catItem">USE: STEWARDSHIP</span>
+            </div>
+          </div>
+        </div>
+        <div class="metaRight">
+          <div class="sourceCodes">NOTE: HUMAN-FACING</div>
+          <div class="badge">PUBLIC ORIENTATION</div>
+        </div>
+      </div>
+    </div>
+    <div class="body">
+      <div class="block" style="margin-top:0;">
+        <div class="bhead">
+          <div class="blabel"><span class="dot summary"></span>Summary</div>
+          <div class="small">living practice</div>
+        </div>
+        <div class="bbody">
+          <p>The Gradient exists because knowledge should remain usable without becoming flattened, trusted without becoming frozen, and revised without being erased.</p>
+          <p>Its purpose is not to make the world feel more controlled.</p>
+          <p>Its purpose is to help people steward complexity with better memory, clearer relationships, and more accountable judgment.</p>
+          <p class="small">This is a system for people who need to keep thinking carefully after the first explanation breaks.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footerStrip">
+      <span>SERVANT-LAYER EXPLAINER</span>
+      <span>SOURCE MATERIAL REMAINS AUTHORITATIVE</span>
+      <span>INTERPRETATION LABELED</span>
+      <span class="checksum" id="ck00a"></span>
+    </div>
+  </section>
+
+  <!-- 3. SOURCE LIBRARY (READING ROOM) -->
+  <section class="plate" id="source-library">
+    <div class="band">
+      <div class="bandRow">
+        <div class="metaLeft">
+          <div class="plateNo">PLATE 01</div>
+          <div class="bandTitleWrap">
+            <div class="bandTitle">Source Library — Governing / Institutional Documents</div>
+            <div class="catalogLine">
+              <span class="catItem">SHELF: AUTHORITY</span>
+              <span class="catItem">ACCESS: OPEN</span>
+              <span class="catItem">RULE: QUOTE VERBATIM</span>
+            </div>
+          </div>
+        </div>
+        <div class="metaRight">
+          <div class="sourceCodes">IDX: A/B/C/D/E/F</div>
+          <div class="badge">GOVERNING AUTHORITY</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body">
+      <p class="small">
+        This shelf is the governing source spine. Open documents directly. If the explainer conflicts with these sources, the sources win.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Modules Used</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="governingRows"></tbody>
+      </table>
+
+      <div class="block">
+        <div class="bhead">
+          <div class="blabel"><span class="dot rule"></span>Boundary note — servant layer</div>
+          <div class="small">context</div>
+        </div>
+        <div class="bbody">
+          <p><strong>What is being protected?</strong> The authority of the governing documents.</p>
+          <p><strong>What mistake is being prevented?</strong> Treating a well-designed explainer as the constitution itself.</p>
+          <p><strong>What you should do with this distinction:</strong> Use this page to orient yourself; use the source library to verify, quote, and rely.</p>
+          <p class="small">Rule: Quote verbatim. Interpretation must be labeled. Summary must point back to source material.</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="bhead">
+          <div class="blabel"><span class="dot rule"></span>Boundary note — source material only</div>
+          <div class="small">link hygiene</div>
+        </div>
+        <div class="bbody">
+          <p><strong>What is being protected?</strong> Reader access to sources as sources.</p>
+          <p><strong>What mistake is being prevented?</strong> Sending readers to trackers, status dashboards, prompt handoffs, or internal build notes in place of readable documents.</p>
+          <p><strong>What you should do:</strong> Expect every “Open Document” button to open a clean reader-facing source page or PDF.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footerStrip">
+      <span>SERVANT-LAYER EXPLAINER</span>
+      <span>SOURCE MATERIAL REMAINS AUTHORITATIVE</span>
+      <span>INTERPRETATION LABELED</span>
+      <span class="checksum" id="ck1"></span>
+    </div>
+  </section>
+
+  <!-- 4. COMPANION SOURCE SPINE -->
+  <section class="plate" id="companion-spine">
+    <div class="band">
+      <div class="bandRow">
+        <div class="metaLeft">
+          <div class="plateNo">PLATE 02</div>
+          <div class="bandTitleWrap">
+            <div class="bandTitle">COMPANION SOURCE SPINE / VISUAL + INTERPRETIVE INHERITANCE</div>
+            <div class="catalogLine">
+              <span class="catItem">SHELF: COMPANION</span>
+              <span class="catItem">BOUNDARY: NOT AUTHORITY</span>
+              <span class="catItem">USE: RHYTHM / TONE / PLATE DISCIPLINE</span>
+            </div>
+          </div>
+        </div>
+        <div class="metaRight">
+          <div class="sourceCodes">CL: VOL I / VOL II / CANON / DOCTRINE</div>
+          <div class="badge companion">COMPANION, NOT AUTHORITY</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="block" style="margin-top:0;">
+        <div class="bhead">
+          <div class="blabel"><span class="dot rule"></span>Boundary note — companion, not authority</div>
+          <div class="small">context</div>
+        </div>
+        <div class="bbody">
+          <p>The Crisis Liturgies volumes inform the visual rhythm, plate structure, archival tone, and public-facing gravity of this explainer.</p>
+          <p>They do not govern The Gradient.</p>
+          <p>The governing source spine remains the Constitution, White Paper, IDRs, Charter decisions, and other ratified institutional documents.</p>
+          <p class="small">
+            This distinction matters because visual language can carry authority even when it is not constitutionally authoritative.
+            The explainer may inherit the look of Crisis Liturgies without allowing Crisis Liturgies to override the institution.
+          </p>
+          <p class="small"><strong>Reader instruction:</strong> treat Crisis Liturgies as visual + interpretive inheritance; treat the governing documents as authority.</p>
+        </div>
+      </div>
+
+      <table style="margin-top:14px;">
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Used For</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="companionRows"></tbody>
+      </table>
+
+      <div class="foot">
+        Crisis Liturgies Volume I and II open as local PDFs (place them in the same folder as this HTML).
+        Translation Doctrine and Canon v1.1 open as reader-facing Notion pages.
+      </div>
+    </div>
+
+    <div class="footerStrip">
+      <span>SERVANT-LAYER EXPLAINER</span>
+      <span>SOURCE MATERIAL REMAINS AUTHORITATIVE</span>
+      <span>INTERPRETATION LABELED</span>
+      <span class="checksum" id="ck2"></span>
+    </div>
+  </section>
+
+  <!-- 5. THE PROBLEM -->
+  <section class="plate" id="problem">
+    <div class="band">
+      <div class="bandRow">
+        <div class="metaLeft">
+          <div class="plateNo">PLATE 03</div>
+          <div class="bandTitleWrap">
+            <div class="bandTitle">The Problem — Continuity Scarcity Under Acceleration</div>
+            <div class="catalogLine">
+              <span class="catItem">MODE: ORIENTATION</span>
+              <span class="catItem">CLASS: DIAGNOSIS</span>
+              <span class="catItem">SRC: WP</span>
+            </div>
+          </div>
+        </div>
+        <div class="metaRight">
+          <div class="sourceCodes">SRC: WP</div>
+          <div class="badge">GOVERNING SOURCES</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="block" style="margin-top:0;">
+        <div class="bhead"><div class="blabel"><span class="dot summary"></span>Summary</div><div class="small">orientation</div></div>
+        <div class="bbody">
+          <p>
+            The Gradient begins from a humane claim: continuity is a form of care.
+            If knowledge cannot carry its provenance, context, and revision history, communities are forced to relearn the same lessons under pressure.
+          </p>
+          <p class="small">This is not a story of despair; it’s a design problem: how to preserve trustworthy revision without erasure.</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="bhead"><div class="blabel"><span class="dot quote"></span>Quote</div><div class="small">verbatim excerpt</div></div>
+        <div class="bbody">
+          <p class="blockquote">“The problem is no longer simply one of information management. It is one of knowledge stewardship.”</p>
+          <p class="small">— Founding White Paper</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="bhead"><div class="blabel"><span class="dot interp"></span>Interpretation</div><div class="small">labeled</div></div>
+        <div class="bbody">
+          <p>
+            Stewardship means you can revise without losing memory.
+            It’s the opposite of both “freeze the canon forever” and “rewrite until nothing has lineage.”
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footerStrip">
+      <span>SERVANT-LAYER EXPLAINER</span>
+      <span>SOURCE MATERIAL REMAINS AUTHORITATIVE</span>
+      <span>INTERPRETATION LABELED</span>
+      <span class="checksum" id="ck3"></span>
+    </div>
+  </section>
+
+  <!-- 6. CONSTITUTIONAL RESPONSE -->
+  <section class="plate" id="response">
+    <div class="band">
+      <div class="bandRow">
+        <div class="metaLeft">
+          <div class="plateNo">PLATE 04</div>
+          <div class="bandTitleWrap">
+            <div class="bandTitle">The Constitutional Response — Commitments That Govern Evolution</div>
+            <div class="catalogLine">
+              <span class="catItem">CLASS: OPERATING RULES</span>
+              <span class="catItem">SRC: WP / CONST</span>
+              <span class="catItem">LABELS: RULE / INTERPRETATION</span>
+            </div>
+          </div>
+        </div>
+        <div class="metaRight">
+          <div class="sourceCodes">SRC: WP, CONST</div>
+          <div class="badge">GOVERNING SOURCES</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="block" style="margin-top:0;">
+        <div class="bhead"><div class="blabel"><span class="dot rule"></span>Operating rule</div><div class="small">commitment set</div></div>
+        <div class="bbody">
+          <ul style="margin:0; padding-left: 18px;">
+            <li><strong>Admission precedes metabolization.</strong></li>
+            <li><strong>Provenance precedes authority.</strong></li>
+            <li><strong>Relationship precedes classification.</strong></li>
+            <li><strong>Nothing simply disappears.</strong></li>
+            <li><strong>Practice returns to memory.</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="bhead"><div class="blabel"><span class="dot interp"></span>Interpretation</div><div class="small">labeled</div></div>
+        <div class="bbody">
+          <p>
+            These are commitments that make the system humane:
+            they protect newcomers from accidental canonization, protect communities from amnesia,
+            and keep practice and evidence connected to interpretation.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footerStrip">
+      <span>SERVANT-LAYER EXPLAINER</span>
+      <span>SOURCE MATERIAL REMAINS AUTHORITATIVE</span>
+      <span>INTERPRETATION LABELED</span>
+      <span class="checksum" id="ck4"></span>
+    </div>
+  </section>
+
+  <!-- 7. INSTITUTIONAL ANATOMY -->
+  <section class="plate" id="anatomy">
+    <div class="band">
+      <div class="bandRow">
+        <div class="metaLeft">
+          <div class="plateNo">PLATE 05</div>
+          <div class="bandTitleWrap">
+            <div class="bandTitle">Institutional Anatomy — Constitutional Organs</div>
+            <div class="catalogLine">
+              <span class="catItem">CLASS: ORGANS</span>
+              <span class="catItem">SRC: CONST / CHARTER</span>
+            </div>
+          </div>
+        </div>
+        <div class="metaRight">
+          <div class="sourceCodes">SRC: CONST, CHARTER</div>
+          <div class="badge">GOVERNING SOURCES</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="block" style="margin-top:0;">
+        <div class="bhead"><div class="blabel"><span class="dot summary"></span>Summary</div><div class="small">why organs</div></div>
+        <div class="bbody">
+          <p>
+            The Gradient separates functions into organs so memory, governance, inheritance, and daily practice don’t collapse into one overloaded repository.
+          </p>
+        </div>
+      </div>
+
+      <div class="modules" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="moduleCard">
+          <div class="moduleTop"><div class="moduleId">ORGAN</div><div class="moduleStatus">CONSTITUTION</div></div>
+          <div class="moduleTitle">Constitution</div>
+          <p class="purpose">Preserves purpose and constraint so the institution can evolve without losing identity.</p>
+        </div>
+        <div class="moduleCard">
+          <div class="moduleTop"><div class="moduleId">ORGAN</div><div class="moduleStatus">ARCHIVE</div></div>
+          <div class="moduleTitle">Archive of Becoming</div>
+          <p class="purpose">Preserves history. Nothing is deleted; understanding matures through reclassification.</p>
+        </div>
+        <div class="moduleCard">
+          <div class="moduleTop"><div class="moduleId">ORGAN</div><div class="moduleStatus">COMMONS</div></div>
+          <div class="moduleTitle">Commons</div>
+          <p class="purpose">Carries shared inheritance forward—stewardship rather than ownership.</p>
+        </div>
+        <div class="moduleCard">
+          <div class="moduleTop"><div class="moduleId">ORGAN</div><div class="moduleStatus">CHARTERS</div></div>
+          <div class="moduleTitle">Charter Assembly</div>
+          <p class="purpose">Enables local adaptation without fragmentation or centralization.</p>
+        </div>
+        <div class="moduleCard">
+          <div class="moduleTop"><div class="moduleId">ORGAN</div><div class="moduleStatus">STEWARDSHIP</div></div>
+          <div class="moduleTitle">Stewardship Circle</div>
+          <p class="purpose">Protects continuity and accountability; authority exists only in service to stewardship.</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="bhead"><div class="blabel"><span class="dot rule"></span>Boundary note — not a dashboard</div><div class="small">context</div></div>
+        <div class="bbody">
+          <p><strong>What is being protected?</strong> The institution’s identity as governance + memory + practice.</p>
+          <p><strong>What mistake is being prevented?</strong> Reducing The Gradient to a status UI or tool stack.</p>
+          <p><strong>What you should do:</strong> Read identity/problem/response first; then use explorers, libraries, and tools as aids—not as the institution itself.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footerStrip">
+      <span>SERVANT-LAYER EXPLAINER</span>
+      <span>SOURCE MATERIAL REMAINS AUTHORITATIVE</span>
+      <span>INTERPRETATION LABELED</span>
+      <span class="checksum" id="ck5"></span>
+    </div>
+  </section>
+
+  <!-- 8. OPERATING LOOP -->
+  <section class="plate" id="loop">
+    <div class="band">
+      <div class="bandRow">
+        <div class="metaLeft">
+          <div class="plateNo">PLATE 06</div>
+          <div class="bandTitleWrap">
+            <div class="bandTitle">Operating Loop — The First Proof</div>
+            <div class="catalogLine">
+              <span class="catItem">CLASS: PROCESS</span>
+              <span class="catItem">SRC: WP</span>
+            </div>
+          </div>
+        </div>
+        <div class="metaRight">
+          <div class="sourceCodes">SRC: WP</div>
+          <div class="badge">GOVERNING SOURCES</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body">
+      <p class="small" style="margin-top:0;">
+        The Gradient proves itself through one complete institutional loop—reliably—not through a feature list.
+      </p>
+      <div class="loop">
+        <div class="loopRow">
+          <div class="step">Reality</div><div class="arrow">→</div>
+          <div class="step">Observation</div><div class="arrow">→</div>
+          <div class="step">Admission</div><div class="arrow">→</div>
+          <div class="step">Relationships</div><div class="arrow">→</div>
+          <div class="step">Understanding</div><div class="arrow">→</div>
+          <div class="step">Practice</div><div class="arrow">→</div>
+          <div class="step">Memory</div><div class="arrow">→</div>
+          <div class="step">Future orientation</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footerStrip">
+      <span>SERVANT-LAYER EXPLAINER</span>
+      <span>SOURCE MATERIAL REMAINS AUTHORITATIVE</span>
+      <span>INTERPRETATION LABELED</span>
+      <span class="checksum" id="ck6"></span>
+    </div>
+  </section>
+
+  <!-- 9. MODULE EXPLORER (STATIC, COMPLETE, RELIABLE) -->
+  <section class="plate" id="explore">
+    <div class="band">
+      <div class="bandRow">
+        <div class="metaLeft">
+          <div class="plateNo">PLATE 07</div>
+          <div class="bandTitleWrap">
+            <div class="bandTitle">Module Explorer — Complete, Static (Reliable)</div>
+            <div class="catalogLine">
+              <span class="catItem">RULE: ORIENTATION FIRST</span>
+              <span class="catItem">FALLBACK: STATIC > BROKEN INTERACTION</span>
+            </div>
+          </div>
+        </div>
+        <div class="metaRight">
+          <div class="sourceCodes">IDX: A–F</div>
+          <div class="badge">SECONDARY</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="block" style="margin-top:0;">
+        <div class="bhead"><div class="blabel"><span class="dot summary"></span>Summary</div><div class="small">reader promise</div></div>
+        <div class="bbody">
+          <p>This section is intentionally static so nothing is blank or broken. Each module has purpose, key concepts, why it matters, sources, status, and clear actions.</p>
+        </div>
+      </div>
+
+      <div class="modules" id="moduleCards"></div>
+
+      <div class="foot">
+        Standard:
+        <br>• <code>OPEN MODULE</code> opens the local module reader.
+        <br>• <code>OPEN PRIMARY SOURCE</code> / <code>OPEN IDR</code> / <code>OPEN ENGINE REGISTRY</code> opens the specific source when we have its URL.
+        <br>• <code>#source-library</code> is used only as a fallback for unresolved or grouped sources.
+      </div>
+    </div>
+
+    <div class="footerStrip">
+      <span>SERVANT-LAYER EXPLAINER</span>
+      <span>SOURCE MATERIAL REMAINS AUTHORITATIVE</span>
+      <span>INTERPRETATION LABELED</span>
+      <span class="checksum" id="ck7"></span>
+    </div>
+  </section>
+
+  <!-- 10. APPENDIX / CITATIONS -->
+  <section class="plate" id="appendix">
+    <div class="band">
+      <div class="bandRow">
+        <div class="metaLeft">
+          <div class="plateNo">PLATE 08</div>
+          <div class="bandTitleWrap">
+            <div class="bandTitle">Appendix — Citation Rule & Label Discipline</div>
+            <div class="catalogLine">
+              <span class="catItem">LABELS: QUOTE / SUMMARY / INTERPRETATION / RULE</span>
+            </div>
+          </div>
+        </div>
+        <div class="metaRight">
+          <div class="sourceCodes">RULESET: UI-LABELS</div>
+          <div class="badge">ENFORCED</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="block" style="margin-top:0;">
+        <div class="bhead"><div class="blabel"><span class="dot rule"></span>Citation rule</div><div class="small">enforced</div></div>
+        <div class="bbody">
+          <ul style="margin:0; padding-left: 18px;">
+            <li>Where the UI <strong>quotes</strong>, it quotes verbatim.</li>
+            <li>Where the UI <strong>interprets</strong>, it labels <strong>Interpretation</strong>.</li>
+            <li>Where the UI <strong>summarizes</strong>, it labels <strong>Summary</strong>.</li>
+            <li>Citations support reading; they do not replace the Source Library shelf.</li>
+            <li>Companion works inform rhythm/tone/structure; they do not override governance.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot">
+        Local HTML. Put the Crisis Liturgies PDFs in the same folder as this HTML so “OPEN” works.
+      </div>
+    </div>
+
+    <div class="footerStrip">
+      <span>SERVANT-LAYER EXPLAINER</span>
+      <span>SOURCE MATERIAL REMAINS AUTHORITATIVE</span>
+      <span>INTERPRETATION LABELED</span>
+      <span class="checksum" id="ck8"></span>
+    </div>
+  </section>
+
+</div>
+
+<!-- Document / PDF Viewer Modal -->
+<div id="overlay" class="overlay" role="dialog" aria-modal="true" aria-label="Document viewer">
+  <div class="modal">
+    <div class="modalTop">
+      <div>
+        <h3 id="docTitle">DOCUMENT</h3>
+        <div class="sub" id="docSub"></div>
+      </div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+        <a id="openNewTab" class="btn" href="#" target="_blank" rel="noopener noreferrer"><span class="mark"></span>OPEN IN NEW TAB</a>
+        <button id="closeBtn" class="btn" type="button"><span class="mark"></span>CLOSE</button>
+      </div>
+    </div>
+    <div class="modalFrame">
+      <iframe id="docFrame" title="Document viewer"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Governing sources (authority; reader-facing Notion pages)
+  const GOVERNING = [
+    { name: "Constitution v0.1", role: "Governing authority", status: "Locked", modules: "A, B, C, F", url: "https://app.notion.com/p/391deacab3a5814a9e01e3514c0a1678" },
+    { name: "Founding White Paper v0.1", role: "Foundational theory", status: "Source", modules: "A, B, D", url: "https://app.notion.com/p/63add23209cc4afc95255b267bcd2506" },
+    { name: "IDR-002", role: "Relationship grammar and rejection of folders", status: "Locked decision", modules: "C", url: "https://app.notion.com/p/392deacab3a581338d65d28f6f700164" },
+    { name: "IDR-003", role: "Implementation follows institutional design", status: "Locked decision", modules: "A, F", url: "https://app.notion.com/p/392deacab3a581648ad5f6d0b56babe0" },
+    { name: "Charter Locked Decisions", role: "Local governance and living vs locked distinctions", status: "Locked decisions", modules: "B", url: "https://app.notion.com/p/391deacab3a581b0a66ecb7ae4b2c525" },
+    { name: "Canonical Outline / Link Hub", role: "Navigation spine", status: "Current index", modules: "All", url: "https://app.notion.com/p/7421d8b2f1dd4282aaba122d98732a52" },
+  ];
+
+  // Companion shelf (Volume PDFs + reader-facing Notion sources)
+  const COMPANION_SHELF = [
+    {
+      name: "Crisis Liturgies, Volume I",
+      role: "Visual / interpretive companion",
+      status: "Companion source",
+      usedFor: "Plate language, urgency, explanatory rhythm",
+      type: "pdf",
+      ref: "CRISIS_LITURGIES_COMPLETE_v1.0_PRINT.pdf"
+    },
+    {
+      name: "Crisis Liturgies, Volume II — Private Instruments",
+      role: "Visual / interpretive companion",
+      status: "Companion source",
+      usedFor: "Expanded plate system, public-facing explanatory style",
+      type: "pdf",
+      ref: "CRISIS_LITURGIES_II_PRIVATE_INSTRUMENTS_v1.0_PRINT.pdf"
+    },
+
+    /* Companion Shelf Item — drop-in replacement */
+    {
+      name: "Crisis Liturgies Canon v1.1",
+      role: "Companion governance (series canon)",
+      status: "LOCKED (reader-facing source)",
+      usedFor: "Series boundaries, interpretive constraints, drift protection",
+      type: "url",
+      ref: "https://app.notion.com/p/396deacab3a581ac8233c02e81201baf"
+    },
+
+    {
+      name: "Crisis Liturgy Translation Doctrine",
+      role: "Doctrine (translation into field atlas plates)",
+      status: "Companion doctrine",
+      usedFor: "Structural + information hierarchy inheritance",
+      type: "url",
+      ref: "https://app.notion.com/p/392deacab3a5811ab180d1fd8815d1b5?pvs=1"
+    }
+  ];
+
+  /* Updated Module Fields — full A–F block */
+  const MODULES = [
+    {
+      id: "A",
+      title: "Module A — What The Gradient Is",
+      purpose: "Establish The Gradient as a constitutional knowledge ecology, not a product or platform.",
+      keyConcepts: [
+        "uncertainty made navigable",
+        "human judgment strengthened",
+        "AI as instrument, not authority",
+        "knowledge stewardship",
+        "legibility without reduction"
+      ],
+      why: "This gives newcomers the basic frame before they encounter the architecture. Without this, the institution can be mistaken for software, a dashboard, or a productivity method.",
+      sources: ["Constitution v0.1", "Founding White Paper v0.1", "Charter locked decisions"],
+      status: "READY",
+      open: {
+        type: "url",
+        ref: "https://app.notion.com/p/391deacab3a5814a9e01e3514c0a1678",
+        label: "OPEN PRIMARY SOURCE (CONSTITUTION)"
+      },
+      quote: "“Artificial intelligence is understood as one instrument among many. It is neither oracle nor authority.”",
+      interpretation: "Interpretation: The Gradient uses tools to increase legibility, but responsibility for judgment remains human and explicit.",
+      readNext: "Read next: Founding White Paper v0.1 → then IDR-003."
+    },
+    {
+      id: "B",
+      title: "Module B — Institutional Anatomy",
+      purpose: "Explain the organs that preserve memory, governance, inheritance, and continuity.",
+      keyConcepts: [
+        "Constitution",
+        "Archive of Becoming",
+        "Commons",
+        "Charter Assembly",
+        "Stewardship Circle"
+      ],
+      why: "The Gradient separates functions so memory, governance, and practice do not collapse into one overloaded system.",
+      sources: ["Constitution v0.1", "Charter locked decisions", "Founding White Paper v0.1"],
+      status: "READY",
+      open: {
+        type: "url",
+        ref: "https://app.notion.com/p/391deacab3a581b0a66ecb7ae4b2c525",
+        label: "OPEN CHARTER (LOCKED DECISIONS)"
+      },
+      quote: "“The Archive of Becoming — preserves institutional memory. Nothing is erased. Understanding matures through reclassification.”",
+      interpretation: "Interpretation: The organs exist so memory, governance, and teaching don’t fight for the same surface.",
+      readNext: "Read next: Constitution v0.1 ‘Ecology of Memory’ section → then Charter locked decisions."
+    },
+    {
+      id: "C",
+      title: "Module C — Knowledge Architecture",
+      purpose: "Explain Cards, Claims, and Relationships.",
+      keyConcepts: [
+        "Cards as user-facing knowledge objects",
+        "Claims as reasoning atoms",
+        "relationships as verbs",
+        "folders rejected",
+        "context preserved through relation"
+      ],
+      why: "The system preserves context by asking how things relate, not just where they are stored.",
+      sources: ["Constitution v0.1", "IDR-002", "Knowledge Architecture"],
+      status: "READY",
+      open: {
+        type: "url",
+        ref: "https://app.notion.com/p/392deacab3a581338d65d28f6f700164",
+        label: "OPEN IDR-002"
+      },
+      quote: "“Relationships should behave as verbs: supports, contradicts, expands, revises, sources, operationalizes, challenges, returns to.”",
+      interpretation: "Interpretation: This preserves plural belonging and prevents ‘one-folder’ distortions.",
+      readNext: "Read next: IDR-002 → then Constitution ‘Card layers’ + ‘Knowledge Architecture’."
+    },
+    {
+      id: "D",
+      title: "Module D — Operating Loop",
+      purpose: "Show how knowledge moves through admission, review, metabolization, practice, and memory.",
+      keyConcepts: [
+        "admission before metabolization",
+        "provenance before authority",
+        "relationship before classification",
+        "practice returns to memory",
+        "continuity over extraction"
+      ],
+      why: "The Gradient proves itself through one complete loop, not through a feature list.",
+      sources: ["Founding White Paper v0.1", "Charter locked decisions", "IDRs"],
+      status: "READY",
+      open: {
+        type: "url",
+        ref: "https://app.notion.com/p/63add23209cc4afc95255b267bcd2506",
+        label: "OPEN FOUNDING WHITE PAPER"
+      },
+      quote: "“Admission precedes metabolization. Provenance precedes authority. Relationship precedes classification. Revision remains permanent. Nothing simply disappears.”",
+      interpretation: "Interpretation: The loop protects continuity by forcing traceability before authority.",
+      readNext: "Read next: Founding White Paper ‘First proof’ loop → then IDR-003."
+    },
+    {
+      id: "E",
+      title: "Module E — Engines and Practice Frameworks",
+      purpose: "Explain engines as repeatable methods that transform understanding without replacing judgment.",
+      keyConcepts: [
+        "engines organize interpretation",
+        "blind spots must be named",
+        "failure modes must be visible",
+        "outputs return to the archive",
+        "judgment remains human-accountable"
+      ],
+      why: "This prevents methods, tools, or AI systems from becoming hidden authorities.",
+      sources: ["Constitution v0.1", "Engine Registry", "Capability Map"],
+      status: "READY",
+      open: {
+        type: "url",
+        ref: "https://app.notion.com/p/391deacab3a5815d9202faf327430ede",
+        label: "OPEN ENGINE REGISTRY"
+      },
+      quote: "“A repeatable method for transforming one form of understanding into another… Engines organize interpretation. They never replace judgment.”",
+      interpretation: "Interpretation: Engines must disclose evidence, blind spots, and failure modes so they don’t become hidden governors.",
+      readNext: "Read next: Constitution ‘How The Gradient Knows’ (seven questions) → then Engine Registry."
+    },
+    {
+      id: "F",
+      title: "Module F — Implementation as Servant Layer",
+      purpose: "Explain why software, dashboards, agents, and databases remain downstream of institutional design.",
+      keyConcepts: [
+        "implementation follows institution",
+        "software is not the source of truth",
+        "tools may assist but cannot ratify",
+        "dashboards show status but do not govern",
+        "human stewardship remains accountable"
+      ],
+      why: "This protects The Gradient from becoming just another app.",
+      sources: ["IDR-003", "Constitution v0.1", "Product / Platform doctrine"],
+      status: "READY",
+      open: {
+        type: "url",
+        ref: "https://app.notion.com/p/392deacab3a581648ad5f6d0b56babe0",
+        label: "OPEN IDR-003"
+      },
+      quote: "“Implementation follows institutional design.”",
+      interpretation: "Interpretation: Software may assist work, but cannot ratify truth or redefine the institution.",
+      readNext: "Read next: IDR-003 → then Constitution preamble lines on AI as instrument."
+    }
+  ];
+
+  const $ = (q) => document.querySelector(q);
+  const esc = (s) => String(s).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");
+
+  // --- Source Library rows
+  $("#governingRows").innerHTML = GOVERNING.map(d => `
+    <tr>
+      <td><strong>${esc(d.name)}</strong></td>
+      <td>${esc(d.role)}</td>
+      <td>${esc(d.status)}</td>
+      <td>${esc(d.modules)}</td>
+      <td><a class="btn" href="${esc(d.url)}" target="_blank" rel="noopener noreferrer"><span class="mark"></span>OPEN DOCUMENT</a></td>
+    </tr>
+  `).join("");
+
+  // --- Companion shelf rows
+  function companionAction(c){
+    if(c.type === "url"){
+      return `<a class="btn" href="${esc(c.ref)}" target="_blank" rel="noopener noreferrer"><span class="mark"></span>OPEN</a>`;
+    }
+    return `
+      <button class="btn" type="button"
+        data-open="${esc(c.ref)}"
+        data-title="${esc(c.name)}"
+        data-sub="${esc(c.status)}">
+        <span class="mark"></span>OPEN
+      </button>
+    `;
+  }
+
+  $("#companionRows").innerHTML = COMPANION_SHELF.map(c => `
+    <tr>
+      <td><strong>${esc(c.name)}</strong></td>
+      <td>${esc(c.role)}</td>
+      <td>${esc(c.status)}</td>
+      <td>${esc(c.usedFor)}</td>
+      <td>${companionAction(c)}</td>
+    </tr>
+  `).join("");
+
+  // --- Module cards (complete, no blanks)
+  function renderModuleCards(){
+    const el = $("#moduleCards");
+    el.innerHTML = MODULES.map(m => `
+      <div class="moduleCard">
+        <div class="moduleTop">
+          <div class="moduleId">MODULE ${esc(m.id)}</div>
+          <div class="moduleStatus">${esc(m.status)}</div>
+        </div>
+
+        <div class="moduleTitle">${esc(m.title)}</div>
+        <p class="purpose"><strong>Purpose:</strong> ${esc(m.purpose)}</p>
+
+        <div class="why">
+          <div class="whyLabel">Key concepts</div>
+          <ul class="kList">
+            ${m.keyConcepts.map(x => `<li>${esc(x)}</li>`).join("")}
+          </ul>
+        </div>
+
+        <div class="why">
+          <div class="whyLabel">Why this matters</div>
+          <div class="whyText">${esc(m.why)}</div>
+        </div>
+
+        <div class="sourcesLine">
+          <span><strong>SOURCES USED:</strong></span>
+          ${m.sources.map(s => `<span>${esc(s)}</span>`).join("")}
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="button"
+            data-open-module="${esc(m.id)}"
+            data-title="MODULE ${esc(m.id)} — ${esc(m.title)}"
+            data-sub="${esc(m.purpose)}">
+            <span class="mark"></span>OPEN MODULE
+          </button>
+
+          <a class="btn" href="${esc(m.open.ref)}" target="_blank" rel="noopener noreferrer">
+            <span class="mark"></span>${esc(m.open.label)}
+          </a>
+        </div>
+      </div>
+    `).join("");
+  }
+  renderModuleCards();
+
+  // --- Modal viewer (PDF + module reader)
+  const overlay = $("#overlay");
+  const closeBtn = $("#closeBtn");
+  const docFrame = $("#docFrame");
+  const docTitle = $("#docTitle");
+  const docSub = $("#docSub");
+  const openNewTab = $("#openNewTab");
+
+  function openDoc(ref, title, sub){
+    docTitle.textContent = title || "DOCUMENT";
+    docSub.textContent = sub || "";
+    docFrame.removeAttribute("srcdoc");
+    docFrame.src = ref;
+    openNewTab.href = ref;
+    overlay.style.display = "flex";
+    closeBtn.focus();
+  }
+  function closeDoc(){
+    overlay.style.display = "none";
+    docFrame.src = "";
+    docFrame.removeAttribute("srcdoc");
+    openNewTab.href = "#";
+  }
+
+  // open PDFs
+  document.querySelectorAll("[data-open]").forEach(btn => {
+    btn.addEventListener("click", () => openDoc(btn.dataset.open, btn.dataset.title, btn.dataset.sub));
+  });
+
+  // open module reader (render a small HTML doc into iframe via srcdoc)
+  function moduleSrcDoc(m){
+    const escHtml = (s) => String(s).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;");
+    return `
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  :root{
+    --ink:${getComputedStyle(document.documentElement).getPropertyValue('--ink')};
+    --muted:${getComputedStyle(document.documentElement).getPropertyValue('--muted')};
+    --line:${getComputedStyle(document.documentElement).getPropertyValue('--line')};
+    --paper:${getComputedStyle(document.documentElement).getPropertyValue('--paper3')};
+    --serif:${getComputedStyle(document.documentElement).getPropertyValue('--serif')};
+    --mono:${getComputedStyle(document.documentElement).getPropertyValue('--mono')};
+    --sans:${getComputedStyle(document.documentElement).getPropertyValue('--sans')};
+  }
+  body{font-family:var(--sans); margin:16px; line-height:1.65; color:var(--ink); background:var(--paper);}
+  h1{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; margin:0 0 12px; color:var(--muted);}
+  h2{font-family:var(--serif); margin:0 0 10px; letter-spacing:-0.01em;}
+  .sec{border:1px solid var(--line); padding:12px; margin:12px 0; background:rgba(0,0,0,.02);}
+  .lbl{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted);}
+  ul{margin:10px 0 0; padding-left:18px;}
+</style>
+</head><body>
+  <h1>MODULE ${escHtml(m.id)}</h1>
+  <h2>${escHtml(m.title)}</h2>
+
+  <div class="sec">
+    <div class="lbl">Purpose</div>
+    <div>${escHtml(m.purpose)}</div>
+  </div>
+
+  <div class="sec">
+    <div class="lbl">Key concepts</div>
+    <ul>${(m.keyConcepts||[]).map(x=>`<li>${escHtml(x)}</li>`).join("")}</ul>
+  </div>
+
+  <div class="sec">
+    <div class="lbl">Why this matters</div>
+    <div>${escHtml(m.why)}</div>
+  </div>
+
+  <!-- Modal Renderer Addition -->
+  <div class="sec">
+    <div class="lbl">Quote (verbatim)</div>
+    <div style="padding-left:10px;border-left:3px solid #B9B6B0;">${escHtml(m.quote || "(no quote set)")}</div>
+  </div>
+
+  <div class="sec">
+    <div class="lbl">Interpretation (labeled)</div>
+    <div>${escHtml(m.interpretation || "(no interpretation note set)")}</div>
+  </div>
+
+  <div class="sec">
+    <div class="lbl">What to read next</div>
+    <div>${escHtml(m.readNext || "(no next-reading line set)")}</div>
+  </div>
+
+  <div class="sec">
+    <div class="lbl">Sources used</div>
+    <ul>${(m.sources||[]).map(x=>`<li>${escHtml(x)}</li>`).join("")}</ul>
+  </div>
+
+  <div class="sec">
+    <div class="lbl">Reminder</div>
+    <div>Quotes must be verbatim. Interpretation must be labeled. Governing documents remain authoritative.</div>
+  </div>
+</body></html>`;
+  }
+
+  document.querySelectorAll("[data-open-module]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-open-module");
+      const m = MODULES.find(x => x.id === id);
+      if(!m) return;
+      docTitle.textContent = btn.dataset.title || ("MODULE " + id);
+      docSub.textContent = btn.dataset.sub || "";
+      docFrame.src = "";
+      docFrame.srcdoc = moduleSrcDoc(m);
+      openNewTab.href = "#";
+      overlay.style.display = "flex";
+      closeBtn.focus();
+    });
+  });
+
+  closeBtn.addEventListener("click", closeDoc);
+  overlay.addEventListener("click", (e) => { if(e.target === overlay) closeDoc(); });
+  window.addEventListener("keydown", (e) => { if(e.key === "Escape" && overlay.style.display === "flex") closeDoc(); });
+
+  // --- Checksums (deterministic per plate text)
+  function checksum(str){
+    let h = 2166136261;
+    for(let i=0;i<str.length;i++){
+      h ^= str.charCodeAt(i);
+      h = Math.imul(h, 16777619);
+    }
+    return ("00000000" + (h>>>0).toString(16)).slice(-8).toUpperCase();
+  }
+  const plateIds = ["ck0","ck00a","ck1","ck2","ck3","ck4","ck5","ck6","ck7","ck8"];
+  plateIds.forEach(id => {
+    const el = document.getElementById(id);
+    if(!el) return;
+    const plate = el.closest(".plate");
+    const text = plate ? plate.innerText : id;
+    el.textContent = "CHK:" + checksum(text);
+  });
+</script>
+</body>
+</html>

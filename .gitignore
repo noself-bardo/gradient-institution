@@ -27,3 +27,9 @@ build/
 *.webp
 *.tif
 *.tiff
+
+# TG-WEB-001 — committed public reader assets
+!08_platform/tg-web-001/assets/pdf/
+!08_platform/tg-web-001/assets/pdf/**
+!08_platform/tg-web-001/assets/img/
+!08_platform/tg-web-001/assets/img/**

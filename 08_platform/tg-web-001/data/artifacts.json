@@ -1,0 +1,38 @@
+[
+  {
+    "src": "assets/img/01-vol-i-reality-collapse-artifact.png",
+    "alt": "Crisis Liturgies Vol I — CL-001 Artifact Plate",
+    "capLeft": "CL VOL I / CL-001 / PAGE 1",
+    "capRight": "ARTIFACT PLATE"
+  },
+  {
+    "src": "assets/img/02-vol-i-liturgical-hymn.png",
+    "alt": "Crisis Liturgies Vol I — CL-001 Liturgical Hymn Plate",
+    "capLeft": "CL VOL I / CL-001 / PAGE 2",
+    "capRight": "LITURGICAL HYMN"
+  },
+  {
+    "src": "assets/img/03-vol-i-doctrine-page.png",
+    "alt": "Crisis Liturgies Vol I — Gradient Translation / Doctrine Plate",
+    "capLeft": "CL VOL I / CL-001 / PAGE 3",
+    "capRight": "GRADIENT TRANSLATION"
+  },
+  {
+    "src": "assets/img/04-vol-ii-reproductive-calendar-case.png",
+    "alt": "Crisis Liturgies Vol II — Reproductive Calendar Case Plate",
+    "capLeft": "CL VOL II / CL-013 / PAGE 1",
+    "capRight": "RELIC PRESENTATION"
+  },
+  {
+    "src": "assets/img/05-vol-ii-liturgical-hymn.png",
+    "alt": "Crisis Liturgies Vol II — Failure Detail Plate",
+    "capLeft": "CL VOL II / CL-013 / PAGE 2",
+    "capRight": "FAILURE DETAIL"
+  },
+  {
+    "src": "assets/img/06-vol-ii-doctrine-page.png",
+    "alt": "Crisis Liturgies Vol II — Catalog / Measurement / Archive Record",
+    "capLeft": "CL VOL II / CL-013 / PAGE 3",
+    "capRight": "CATALOG RECORD"
+  }
+]
