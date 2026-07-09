@@ -69,6 +69,8 @@ Do not generate, crop, or substitute images.
 
 **Do not start until priorities 1–3 are satisfied or explicitly waived by steward.**
 
+CL-III must **not** appear in live `data/companion.json` until this checklist completes.
+
 Admission checklist:
 
 - [ ] Copy `CRISIS_LITURGIES_III_EMERGENCY_OBJECTS_v1.0_PRINT.pdf` from `09_RELEASE_SNAPSHOTS/CRISIS_LITURGIES/CRISIS_LITURGIES_III_EMERGENCY_OBJECTS_v1.0`
@@ -80,6 +82,24 @@ Admission checklist:
 - [ ] Do **not** ingest CL-025–CL-036 PNG gallery in same pass unless separately approved
 
 CL-III may be referenced in docs as **approved print release, inactive on live Plate Reader** until this checklist completes.
+
+---
+
+## Live companion status (current)
+
+| Volume | Live shelf | Deploy PDF |
+|---|---|---|
+| CL-I | Yes | Deploy-only |
+| CL-II | Yes | Deploy-only |
+| CL-IV | Yes | Deploy-only |
+| CL-III | No — documented only | Pending admission |
+| CL-V | No — future only | Not admitted |
+
+---
+
+## Future — CL-V Companion Admission
+
+Crisis Liturgies V is expected as a future companion reader asset. Do not add to live companion shelf until the reader-facing PDF is complete, public-safe, and intentionally admitted.
 
 ---
 

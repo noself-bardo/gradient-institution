@@ -118,12 +118,13 @@ Approved print PDFs differ from governing PDFs in **role label and shelf**, not 
 
 ## 6. Current Asset Inventory & Public Safety
 
-### 6.1 Crisis Liturgies Vol I / II (live companion shelf)
+### 6.1 Crisis Liturgies Vol I / II / IV (live companion shelf)
 
-| File | Deploy path | In Git (5d91582) | Size | Public-safe? |
+| File | Deploy path | In Git | Size | Public-safe? |
 |---|---|---|---|---|
-| `CRISIS_LITURGIES_COMPLETE_v1.0_PRINT.pdf` | `assets/pdf/...` | Yes | ~135 MB | **Yes — companion PRINT** |
-| `CRISIS_LITURGIES_II_PRIVATE_INSTRUMENTS_v1.0_PRINT.pdf` | `assets/pdf/...` | Yes | ~70 MB | **Yes — companion PRINT** |
+| `CRISIS_LITURGIES_COMPLETE_v1.0_PRINT.pdf` | `assets/pdf/...` | No (deploy-only) | ~135 MB | **Yes — companion PRINT** |
+| `CRISIS_LITURGIES_II_PRIVATE_INSTRUMENTS_v1.0_PRINT.pdf` | `assets/pdf/...` | No (deploy-only) | ~70 MB | **Yes — companion PRINT** |
+| `CRISIS_LITURGIES_IV_DEPRESSIVE_INFRASTRUCTURE_v1.0_PRINT.pdf` | `assets/pdf/...` | No (deploy-only) | ~92 MB | **Yes — companion PRINT** |
 
 PRINT Drive IDs (manifest reference only — not public links):
 
@@ -164,6 +165,8 @@ UI correctly shows **READER PDF NEEDED** via HEAD probe until files are placed.
 | May be referenced in docs now? | **Yes — as approved print release, inactive on live reader** |
 
 CL-III may be documented as an approved print release **without** companion shelf JSON changes or live buttons until intentional admission pass.
+
+CL-V is expected as a future companion reader asset and must not appear in live `data/companion.json` until intentionally admitted.
 
 ---
 

@@ -66,8 +66,24 @@ For any web or gallery integration:
 3. Do **not** display release-assembly “PDF BUILD NOT STARTED” as current status
 4. Do not rebuild PDFs, regenerate images, alter canon, or modify source artwork
 5. `tools/cl_iii_release_assembly_prep.py` is read-only verification evidence — do not run to overwrite Drive assets
+6. Do **not** add CL-III to live `data/companion.json` until separately admitted
 
 Public PDF distribution is governed by [TG-WEB-001_PUBLIC_PDF_STRATEGY.md](TG-WEB-001_PUBLIC_PDF_STRATEGY.md). Public buttons use relative `assets/pdf/` paths on the deploy origin only — never Drive or Notion URLs.
+
+## Crisis Liturgies IV — Live Companion Reader Asset
+
+CL-IV (Depressive Infrastructure) is an intended **live** companion reader asset:
+
+- Public href: `/assets/pdf/CRISIS_LITURGIES_IV_DEPRESSIVE_INFRASTRUCTURE_v1.0_PRINT.pdf`
+- Deploy-only — not committed to Git
+- HEAD-probed before OPEN PDF
+- Companion, not governing authority
+
+## Crisis Liturgies V — Future Only
+
+Crisis Liturgies V is expected as a future companion reader asset. It should not appear in the live companion shelf until the reader-facing PDF is complete, public-safe, and intentionally admitted.
+
+Do not add CL-V to `data/companion.json`, live shelf UI, or `assets/pdf/README.md` as a deployed asset until that admission pass.
 
 ## Data File Authority
 

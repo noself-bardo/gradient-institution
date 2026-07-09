@@ -118,7 +118,9 @@ The active build is a Crisis Liturgies–informed **plate reader** with snap-scr
 
 - Plates TG-000 through TG-011 (entry → living practice → sources → companion → diagnosis → response → organs → loop → modules A–F → boundary vows → reader path → institutional record)
 - All sources open as **local PDFs** in `assets/pdf/` — no Notion dependency
-- Companion artifact thumbnails in `assets/img/` (Vol I/II only; CL-III gallery ingest not started)
+- Companion artifact thumbnails in `assets/img/` (Vol I/II only; CL-III/CL-V gallery ingest not started)
+- Live companion reader PDFs: CL-I, CL-II, CL-IV (deploy-only under `assets/pdf/`; HEAD-probed)
+- CL-III documented only; CL-V reserved as future only
 - Data-driven shelves and modules in `data/*.json`
 - Source lineage archived from Desktop `gradient explainer html` → [docs/source-archive/](docs/source-archive/README.md)
 

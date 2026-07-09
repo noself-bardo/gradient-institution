@@ -111,11 +111,15 @@ Institutional hierarchy this gateway orients toward:
 
 | Volume | TG-WEB-001 Status |
 |---|---|
-| Crisis Liturgies I | Companion shelf + PDF path (local ingest when present) |
-| Crisis Liturgies II | Companion shelf + PDF path (local ingest when present) |
-| Crisis Liturgies III: Emergency Objects | **Companion shelf entry added** — archived print release; CL-025 through CL-036; not yet in live plate reader; local PDF ingest pending |
+| Crisis Liturgies I | **Live** companion reader asset — `/assets/pdf/...` · HEAD-probed · deploy-only |
+| Crisis Liturgies II | **Live** companion reader asset — `/assets/pdf/...` · HEAD-probed · deploy-only |
+| Crisis Liturgies III: Emergency Objects | **Documented only** — not in live `data/companion.json` until separately admitted |
+| Crisis Liturgies IV — Depressive Infrastructure | **Live** companion reader asset — `/assets/pdf/CRISIS_LITURGIES_IV_DEPRESSIVE_INFRASTRUCTURE_v1.0_PRINT.pdf` · HEAD-probed · deploy-only · not committed to Git |
+| Crisis Liturgies V | **Future only** — expected later; do not add to live companion shelf until reader-facing PDF is complete, public-safe, and intentionally admitted |
 
 CL-III controlling archive state: print PDF approved, final archive lock approved, indexing closed, frozen release snapshot complete. Release assembly records are provenance only.
+
+Crisis Liturgies volumes are visual / interpretive companions, not governing authority.
 
 ## Acceptance Criteria
 

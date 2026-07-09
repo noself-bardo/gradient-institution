@@ -10,10 +10,11 @@ Canonical steward copies remain in Drive / release snapshots.
 
 ## Deploy-only companion PRINT files (local / Netlify bundle)
 
-| File | Accession |
-|---|---|
-| `CRISIS_LITURGIES_COMPLETE_v1.0_PRINT.pdf` | CL-VOL-I |
-| `CRISIS_LITURGIES_II_PRIVATE_INSTRUMENTS_v1.0_PRINT.pdf` | CL-VOL-II |
+| File | Accession | Notes |
+|---|---|---|
+| `CRISIS_LITURGIES_COMPLETE_v1.0_PRINT.pdf` | CL-VOL-I | Public companion reader PDF · Deploy-only · Not committed to Git |
+| `CRISIS_LITURGIES_II_PRIVATE_INSTRUMENTS_v1.0_PRINT.pdf` | CL-VOL-II | Public companion reader PDF · Deploy-only · Not committed to Git |
+| `CRISIS_LITURGIES_IV_DEPRESSIVE_INFRASTRUCTURE_v1.0_PRINT.pdf` | CL-VOL-IV | Public companion reader PDF · Deploy-only · Not committed to Git |
 
 Copy these into this folder for local preview and Netlify deploy. Do not commit them.
 
@@ -31,4 +32,9 @@ Place steward-approved reader PDFs here when ready. Missing files show **READER 
 | `crisis-liturgies-canon-v1.1.pdf` | CL-CANON-1.1 |
 | `crisis-liturgy-translation-doctrine.pdf` | CL-TRN-001 |
 
-CL-III print PDF admission is deferred — see `docs/CLIII_RELEASE_ASSEMBLY_READINESS_RECORD.md`.
+## Not live on this mount
+
+| Volume | Status |
+|---|---|
+| CL-III Emergency Objects | Documented only — not in live companion shelf until separately admitted |
+| CL-V Dual Power Domestics | Future companion reader asset — do not list as deployed until intentionally admitted |
