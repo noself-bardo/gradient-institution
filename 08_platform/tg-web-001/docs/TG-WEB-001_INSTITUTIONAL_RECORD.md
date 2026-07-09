@@ -104,6 +104,8 @@ Institutional hierarchy this gateway orients toward:
 - [Explainer Revision Directive](https://app.notion.com/p/396deacab3a5818d9e24cb5041b756b3)
 - [CL-III Release Assembly Readiness Record](CLIII_RELEASE_ASSEMBLY_READINESS_RECORD.md) — companion series boundary; do not regress to assembly-stage status
 - [CL-III Companion Shelf Entry Record](CLIII_COMPANION_SHELF_ENTRY_RECORD.md) — CL-III shelf entry scope and web boundary
+- [Public PDF Strategy](TG-WEB-001_PUBLIC_PDF_STRATEGY.md) — deploy-bundle PDF model; approved with non-blocking gaps
+- [Next Actions](TG-WEB-001_NEXT_ACTIONS.md) — pre-push and CL-III admission checklist
 
 ## Companion Series Integration
 

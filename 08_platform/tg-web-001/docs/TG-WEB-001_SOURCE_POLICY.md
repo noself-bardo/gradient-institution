@@ -67,6 +67,8 @@ For any web or gallery integration:
 4. Do not rebuild PDFs, regenerate images, alter canon, or modify source artwork
 5. `tools/cl_iii_release_assembly_prep.py` is read-only verification evidence — do not run to overwrite Drive assets
 
+Public PDF distribution is governed by [TG-WEB-001_PUBLIC_PDF_STRATEGY.md](TG-WEB-001_PUBLIC_PDF_STRATEGY.md). Public buttons use relative `assets/pdf/` paths on the deploy origin only — never Drive or Notion URLs.
+
 ## Data File Authority
 
 JSON data files in `/data/` are implementation convenience. They do not govern the institution. When data conflicts with Notion or constitutional sources, the higher layer wins per source-of-truth order.
