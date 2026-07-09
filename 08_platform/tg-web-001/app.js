@@ -1,6 +1,10 @@
 /**
  * TG-WEB-001 — The Gradient Archive Gateway
  * Plate Reader — Public Field Atlas
+ *
+ * Public PDF buttons use relative /assets/pdf/ paths only.
+ * HEAD probe: 200 → OPEN PDF; fail/404 → READER PDF NEEDED.
+ * No Drive, Notion, snapshot, or tracker fallbacks.
  */
 
 const esc = (s) => String(s)
@@ -16,37 +20,40 @@ async function loadJSON(path) {
   return res.json();
 }
 
-async function probePdf(path) {
+async function publicAssetAvailable(href) {
   try {
-    const res = await fetch(path, { method: "HEAD" });
+    const res = await fetch(href, { method: "HEAD" });
     return res.ok;
   } catch {
     return false;
   }
 }
 
+function assetHref(item) {
+  return item.href || item.pdf || item.sourceAction?.href || item.sourceAction?.pdf || null;
+}
+
 async function buildAvailabilityMap(paths) {
   const unique = [...new Set(paths.filter(Boolean))];
-  const entries = await Promise.all(unique.map(async (path) => [path, await probePdf(path)]));
+  const entries = await Promise.all(unique.map(async (path) => [path, await publicAssetAvailable(path)]));
   return Object.fromEntries(entries);
 }
 
-function collectPdfPaths(governing, companion, modules, readerPath) {
+function collectAssetHrefs(governing, companion, modules, readerPath) {
   const paths = [];
-  governing.forEach((item) => paths.push(item.pdf));
-  companion.forEach((item) => paths.push(item.pdf));
-  modules.forEach((item) => paths.push(item.sourceAction?.pdf));
-  readerPath.forEach((item) => paths.push(item.pdf));
+  governing.forEach((item) => paths.push(assetHref(item)));
+  companion.forEach((item) => paths.push(assetHref(item)));
+  modules.forEach((item) => paths.push(assetHref(item.sourceAction || item)));
+  readerPath.forEach((item) => paths.push(assetHref(item)));
   return paths;
 }
 
 function pdfAction(item, availability, labelOverride) {
   const label = labelOverride || item.actionLabel || "OPEN DOCUMENT (PDF)";
-  const path = item.pdf || item;
-  const available = typeof path === "string" ? availability[path] : availability[item.pdf];
+  const href = assetHref(item);
+  const available = href ? availability[href] : false;
 
-  if (available) {
-    const href = typeof path === "string" ? path : item.pdf;
+  if (available && href) {
     return `<a class="act" href="${esc(href)}" target="_blank" rel="noopener noreferrer"><span class="mark"></span>${esc(label)}</a>`;
   }
 
@@ -75,19 +82,21 @@ function renderLedger(targetId, items, availability) {
   if (!el) return;
 
   el.innerHTML = items.map((it) => {
-    const available = availability[it.pdf];
+    const href = assetHref(it);
+    const available = href ? availability[href] : false;
     const statusLine = available ? "AVAILABLE" : "PENDING — READER PDF NEEDED";
+    const roleLine = it.role || it.usedFor || "—";
 
     return `
     <div class="entry">
       <div class="entryTop">
-        <div>ACC: ${esc(it.acc || "—")}</div>
+        <div>ACC: ${esc(it.acc || it.id || "—")}</div>
         <div>${it.authority ? `AUTH: ${esc(it.authority)}` : ""}</div>
       </div>
       <div class="entryTitle">${esc(it.title)}</div>
       <div class="entryBody">
         <div>STATUS: ${esc(it.status || "—")}</div>
-        <div style="margin-top:8px;">ROLE: ${esc(it.usedFor || "—")}</div>
+        <div style="margin-top:8px;">ROLE: ${esc(roleLine)}</div>
         <div style="margin-top:8px;">FORMAT: PDF / PLATE LANGUAGE</div>
         <div style="margin-top:8px;">ACCESS: ${esc(statusLine)}</div>
         ${companionDetailLines(it)}
@@ -146,7 +155,7 @@ function renderModulePlates(modules, availability) {
       </div>
       <div class="entryActions" style="margin-top:14px;">
         <button type="button" class="act" data-open-module="${esc(m.id)}"><span class="mark"></span>OPEN MODULE (LOCAL)</button>
-        ${pdfAction({ pdf: m.sourceAction.pdf, actionLabel: m.sourceAction.label }, availability)}
+        ${pdfAction({ href: assetHref(m.sourceAction || {}), actionLabel: m.sourceAction?.label }, availability)}
       </div>
       <div class="metaBlock" style="margin-top:16px;">
         <div class="metaItem">TITLE: <strong>${esc(m.title)}</strong></div>
@@ -163,7 +172,7 @@ function renderReaderPath(items, availability) {
   if (!host) return;
 
   host.innerHTML = items.map((item) =>
-    pdfAction({ pdf: item.pdf, actionLabel: item.label }, availability)
+    pdfAction({ href: assetHref(item), actionLabel: item.label }, availability)
   ).join("");
 }
 
@@ -261,7 +270,7 @@ async function init() {
     ]);
 
     const availability = await buildAvailabilityMap(
-      collectPdfPaths(governing, companion, modules, readerPath)
+      collectAssetHrefs(governing, companion, modules, readerPath)
     );
 
     renderLedger("governingLedger", governing, availability);

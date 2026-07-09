@@ -8,7 +8,7 @@
     "readerInstruction": "Reader instruction: Hold the institution as a constitutional ecology first. Do not mistake the interface for the institution.",
     "sourceAction": {
       "label": "OPEN PRIMARY SOURCE (CONSTITUTION PDF)",
-      "pdf": "assets/pdf/constitution-v0.1.pdf"
+      "href": "/assets/pdf/constitution-v0.1.pdf"
     },
     "modal": {
       "sub": "Establish The Gradient as constitutional knowledge ecology (not product/platform).",
@@ -27,7 +27,7 @@
     "readerInstruction": "Reader instruction: When something feels confusing, ask which organ it belongs to before you decide what it is.",
     "sourceAction": {
       "label": "OPEN CHARTER (LOCKED DECISIONS PDF)",
-      "pdf": "assets/pdf/charter-locked-decisions-v0.1.pdf"
+      "href": "/assets/pdf/charter-locked-decisions-v0.1.pdf"
     },
     "modal": {
       "sub": "Explain organs preserving memory, governance, inheritance, continuity.",
@@ -46,7 +46,7 @@
     "readerInstruction": "Reader instruction: When you add knowledge, name the relationship first. Classification comes later.",
     "sourceAction": {
       "label": "OPEN IDR-002 (PDF)",
-      "pdf": "assets/pdf/idr-002-relationships.pdf"
+      "href": "/assets/pdf/idr-002-relationships.pdf"
     },
     "modal": {
       "sub": "Cards, Claims, and Relationships (folders rejected).",
@@ -65,7 +65,7 @@
     "readerInstruction": "Reader instruction: Trust the loop over the interface. If the loop is broken, the institution is broken.",
     "sourceAction": {
       "label": "OPEN FOUNDING WHITE PAPER (PDF)",
-      "pdf": "assets/pdf/founding-white-paper-v0.1.pdf"
+      "href": "/assets/pdf/founding-white-paper-v0.1.pdf"
     },
     "modal": {
       "sub": "Admission → review → metabolization → practice → memory.",
@@ -84,7 +84,7 @@
     "readerInstruction": "Reader instruction: Treat engines as methods with declared limits, not as authority-generators.",
     "sourceAction": {
       "label": "OPEN ENGINE REGISTRY (PDF)",
-      "pdf": "assets/pdf/engine-registry.pdf"
+      "href": "/assets/pdf/engine-registry.pdf"
     },
     "modal": {
       "sub": "Repeatable methods that transform understanding without replacing judgment.",
@@ -103,7 +103,7 @@
     "readerInstruction": "Reader instruction: When a tool feels powerful, ask what constitutional commitment constrains it.",
     "sourceAction": {
       "label": "OPEN IDR-003 (PDF)",
-      "pdf": "assets/pdf/idr-003-implementation.pdf"
+      "href": "/assets/pdf/idr-003-implementation.pdf"
     },
     "modal": {
       "sub": "Why software, dashboards, and agents remain downstream.",
