@@ -117,48 +117,27 @@ TG-WEB-001: add source registry
 The active build is a Crisis Liturgies–informed **plate reader** with snap-scroll field atlas layout:
 
 - Plates TG-000 through TG-011 (entry → living practice → sources → companion → diagnosis → response → organs → loop → modules A–F → boundary vows → reader path → institutional record)
-- All sources open as **local PDFs** in `assets/pdf/` — no Notion dependency
-- Companion artifact thumbnails in `assets/img/` (Vol I/II only; CL-III/CL-V gallery ingest not started)
-- Live companion reader PDFs: CL-I, CL-II, CL-IV (deploy-only under `assets/pdf/`; HEAD-probed)
+- Public reader PDFs: **external public reader asset host** (GitHub Releases preferred; Supabase Storage fallback) — not Netlify PDF upload
+- Live companion shelf entries: CL-I, CL-II, CL-IV (`href` pending host → READER PDF NEEDED until filled)
 - CL-III documented only; CL-V reserved as future only
+- `assets/pdf/` is optional local preview cache only — not the public deployment source
 - Data-driven shelves and modules in `data/*.json`
 - Source lineage archived from Desktop `gradient explainer html` → [docs/source-archive/](docs/source-archive/README.md)
 
 ## Asset Checklist Before Deploy
 
-Copy PDFs and PNGs per:
-
-- [assets/pdf/README.md](assets/pdf/README.md)
-- [assets/img/README.md](assets/img/README.md)
-
-## Local Development
-
-```bash
-cd 08_platform/tg-web-001
-python -m http.server 8080
-```
-
-Open `http://localhost:8080`. No build step required.
+1. Host CL-I / CL-II / CL-IV PRINT PDFs on GitHub Releases (`tg-web-pdf-assets`) or Supabase Storage
+2. Fill companion `href` values with public URLs
+3. Deploy Netlify **site only** from `08_platform/tg-web-001` (no PDF upload)
+4. See [assets/pdf/README.md](assets/pdf/README.md) for local cache notes only
 
 ## Netlify Deployment (thegradient.netlify.app)
 
-**Option A — from this repo (quick PoC):**
+Netlify hosts the **explainer site only**. Do not upload large print PDFs through Netlify manual deploy.
 
-1. Connect `gradient-institution` to Netlify
-2. Set **Publish directory** to `08_platform/tg-web-001`
-3. Deploy
+**Publish directory:** `08_platform/tg-web-001`
 
-**Option B — standalone repo (preferred long-term):**
-
-Extract `tg-web-001/` to `the-gradient-archive-gateway` and deploy from repo root.
-
-```bash
-# If netlify CLI is installed:
-cd 08_platform/tg-web-001
-netlify deploy --prod --dir .
-```
-
-Netlify is public distribution only — gateway, not institution, not source of truth.
+Netlify is public distribution for the gateway UI — not the PDF asset host, not the institution, not the source of truth.
 
 ## Documentation
 

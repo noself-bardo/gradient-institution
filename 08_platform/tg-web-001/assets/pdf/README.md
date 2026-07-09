@@ -1,40 +1,42 @@
-# Reader PDF Assets
+# Reader PDF Assets — Local Preview Cache Only
 
-This folder is the public Netlify reader-asset mount.
+This folder is an **optional local preview cache**. It is **not** the public deployment source for reader PDFs.
 
-Large print PDFs are deploy-only assets and are intentionally not committed to Git.
+## Policy (TG-WEB-004)
 
-Public UI hrefs may point to `/assets/pdf/<filename>.pdf`.
+Public reader PDFs are served from a **public object/release asset URL**. Netlify hosts the explainer site only. Large print PDFs are not committed to Git and are not uploaded through Netlify manual deploy.
 
-Canonical steward copies remain in Drive / release snapshots.
+The UI may link only to reader-facing public PDF URLs and must HEAD-probe them before enabling OPEN PDF.
 
-## Deploy-only companion PRINT files (local / Netlify bundle)
-
-| File | Accession | Notes |
-|---|---|---|
-| `CRISIS_LITURGIES_COMPLETE_v1.0_PRINT.pdf` | CL-VOL-I | Public companion reader PDF · Deploy-only · Not committed to Git |
-| `CRISIS_LITURGIES_II_PRIVATE_INSTRUMENTS_v1.0_PRINT.pdf` | CL-VOL-II | Public companion reader PDF · Deploy-only · Not committed to Git |
-| `CRISIS_LITURGIES_IV_DEPRESSIVE_INFRASTRUCTURE_v1.0_PRINT.pdf` | CL-VOL-IV | Public companion reader PDF · Deploy-only · Not committed to Git |
-
-Copy these into this folder for local preview and Netlify deploy. Do not commit them.
-
-## Governing / companion exports (pending)
-
-Place steward-approved reader PDFs here when ready. Missing files show **READER PDF NEEDED** via HEAD probe.
-
-| File | Accession |
+| Layer | Role |
 |---|---|
-| `constitution-v0.1.pdf` | TG-GOV-001 |
-| `founding-white-paper-v0.1.pdf` | TG-GOV-002 |
-| `idr-002-relationships.pdf` | TG-IDR-002 |
-| `idr-003-implementation.pdf` | TG-IDR-003 |
-| `charter-locked-decisions-v0.1.pdf` | TG-CHR-001 |
-| `crisis-liturgies-canon-v1.1.pdf` | CL-CANON-1.1 |
-| `crisis-liturgy-translation-doctrine.pdf` | CL-TRN-001 |
+| **Netlify** | HTML / CSS / JS site only |
+| **Public reader asset host** | Preferred: GitHub Releases · Fallback: Supabase Storage public bucket |
+| **`assets/pdf/` (this folder)** | Optional local cache for steward preview — not public href source |
+| **Drive / release snapshots** | Canonical steward-copy sources — never public hrefs |
+| **Git** | Code, data, docs, `.gitkeep`, this README — never `*.pdf` |
 
-## Not live on this mount
+## Preferred public URL pattern
+
+```text
+https://github.com/<OWNER>/<REPO>/releases/download/tg-web-pdf-assets/<FILENAME>.pdf
+```
+
+Until release assets exist, companion `href` values remain empty and the UI shows **READER PDF NEEDED**.
+
+## Intended live companion filenames (host when ready)
+
+| File | Accession | Live shelf |
+|---|---|---|
+| `CRISIS_LITURGIES_COMPLETE_v1.0_PRINT.pdf` | CL-VOL-I | Yes — once hosted |
+| `CRISIS_LITURGIES_II_PRIVATE_INSTRUMENTS_v1.0_PRINT.pdf` | CL-VOL-II | Yes — once hosted |
+| `CRISIS_LITURGIES_IV_DEPRESSIVE_INFRASTRUCTURE_v1.0_PRINT.pdf` | CL-VOL-IV | Yes — once hosted |
+
+## Not live
 
 | Volume | Status |
 |---|---|
-| CL-III Emergency Objects | Documented only — not in live companion shelf until separately admitted |
-| CL-V Dual Power Domestics | Future companion reader asset — do not list as deployed until intentionally admitted |
+| CL-III Emergency Objects | Documented only — separate admission required |
+| CL-V Dual Power Domestics | Future only — do not admit until intentionally ready |
+
+Keep `.gitkeep` and this README tracked. Do not commit PDFs.

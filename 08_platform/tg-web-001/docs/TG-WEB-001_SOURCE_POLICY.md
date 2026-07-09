@@ -49,11 +49,16 @@ Crisis Liturgies are always **companion**, never governing.
 
 ## Link Rules
 
-1. Every public action must open a readable **local PDF** in `assets/pdf/`.
-2. Do not link to Notion, Google Drive, release trackers, or production handoff pages.
-3. Thumbnails live in `assets/img/` — companion artifacts only, not governing authority.
+1. Every public action must open a readable **public reader PDF URL** (GitHub Releases preferred, Supabase Storage fallback) — or show **READER PDF NEEDED**.
+2. Do not link to Notion, Google Drive, release trackers, production handoff pages, or Netlify-hosted large PDFs.
+3. Thumbnails live in `assets/img/` — companion artifacts only, not governing authority (optional local cache).
 4. Open PDFs in new tabs with `rel="noopener noreferrer"`.
 5. Distinguish companion from governing at every point of use.
+6. Empty `href` → READER PDF NEEDED. Non-empty `href` → HEAD-probe before OPEN PDF.
+
+Public PDF distribution is governed by [TG-WEB-001_PUBLIC_PDF_STRATEGY.md](TG-WEB-001_PUBLIC_PDF_STRATEGY.md).
+
+**TG-WEB-004:** Netlify hosts the explainer site only. Large print PDFs are not committed to Git and are not uploaded through Netlify manual deploy.
 
 ## Crisis Liturgies III — Companion Series Boundary
 
@@ -68,14 +73,14 @@ For any web or gallery integration:
 5. `tools/cl_iii_release_assembly_prep.py` is read-only verification evidence — do not run to overwrite Drive assets
 6. Do **not** add CL-III to live `data/companion.json` until separately admitted
 
-Public PDF distribution is governed by [TG-WEB-001_PUBLIC_PDF_STRATEGY.md](TG-WEB-001_PUBLIC_PDF_STRATEGY.md). Public buttons use relative `assets/pdf/` paths on the deploy origin only — never Drive or Notion URLs.
+Public PDF distribution is governed by [TG-WEB-001_PUBLIC_PDF_STRATEGY.md](TG-WEB-001_PUBLIC_PDF_STRATEGY.md). Public buttons use public reader asset host URLs only — never Drive, Notion, or Netlify PDF uploads.
 
 ## Crisis Liturgies IV — Live Companion Reader Asset
 
 CL-IV (Depressive Infrastructure) is an intended **live** companion reader asset:
 
-- Public href: `/assets/pdf/CRISIS_LITURGIES_IV_DEPRESSIVE_INFRASTRUCTURE_v1.0_PRINT.pdf`
-- Deploy-only — not committed to Git
+- Public href: GitHub Releases / Supabase Storage URL when hosted (currently empty → READER PDF NEEDED)
+- Not committed to Git; not uploaded via Netlify
 - HEAD-probed before OPEN PDF
 - Companion, not governing authority
 
@@ -83,7 +88,7 @@ CL-IV (Depressive Infrastructure) is an intended **live** companion reader asset
 
 Crisis Liturgies V is expected as a future companion reader asset. It should not appear in the live companion shelf until the reader-facing PDF is complete, public-safe, and intentionally admitted.
 
-Do not add CL-V to `data/companion.json`, live shelf UI, or `assets/pdf/README.md` as a deployed asset until that admission pass.
+Do not add CL-V to `data/companion.json`, live shelf UI, or `assets/pdf/README.md` as a hosted asset until that admission pass.
 
 ## Data File Authority
 

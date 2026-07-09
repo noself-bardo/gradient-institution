@@ -111,11 +111,13 @@ Institutional hierarchy this gateway orients toward:
 
 | Volume | TG-WEB-001 Status |
 |---|---|
-| Crisis Liturgies I | **Live** companion reader asset — `/assets/pdf/...` · HEAD-probed · deploy-only |
-| Crisis Liturgies II | **Live** companion reader asset — `/assets/pdf/...` · HEAD-probed · deploy-only |
+| Crisis Liturgies I | **Live** companion shelf entry — public reader asset host pending (`href` empty → READER PDF NEEDED) |
+| Crisis Liturgies II | **Live** companion shelf entry — public reader asset host pending |
 | Crisis Liturgies III: Emergency Objects | **Documented only** — not in live `data/companion.json` until separately admitted |
-| Crisis Liturgies IV — Depressive Infrastructure | **Live** companion reader asset — `/assets/pdf/CRISIS_LITURGIES_IV_DEPRESSIVE_INFRASTRUCTURE_v1.0_PRINT.pdf` · HEAD-probed · deploy-only · not committed to Git |
+| Crisis Liturgies IV — Depressive Infrastructure | **Live** companion shelf entry — public reader asset host pending · not committed to Git · not Netlify-hosted |
 | Crisis Liturgies V | **Future only** — expected later; do not add to live companion shelf until reader-facing PDF is complete, public-safe, and intentionally admitted |
+
+**PDF hosting (TG-WEB-004):** Netlify hosts the site only. Public reader PDFs move to GitHub Releases (preferred) or Supabase Storage (fallback). Drive / snapshots remain steward-copy sources, not public hrefs.
 
 CL-III controlling archive state: print PDF approved, final archive lock approved, indexing closed, frozen release snapshot complete. Release assembly records are provenance only.
 
