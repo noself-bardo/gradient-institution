@@ -17,7 +17,7 @@ TG-WEB-001 PDF STRATEGY APPROVED WITH NON-BLOCKING GAPS
 
 | # | Action | Owner | Blocker? |
 |---|---|---|---|
-| 1 | **Remediate Vol I Git size (~135 MB > GitHub 100 MB limit)** — Git LFS for `assets/pdf/*.pdf`, OR remove print PDFs from Git and deploy via Netlify-only asset bundle | Steward + implementer | **Yes — push blocked without this** |
+| 1 | **Vol I remediation: DEPLOY-ONLY NETLIFY ASSETS** (chosen) — PDFs untracked from Git; keep local/Netlify deploy bundle only. Do not use Git LFS. | Steward + implementer | In progress |
 | 2 | Add `08_platform/tg-web-001/.gitattributes` with `*.pdf binary` | Implementer | Recommended |
 | 3 | Decide deploy repo: standalone `the-gradient-archive-gateway` vs `gradient-institution` subpath | Steward | Yes — affects Netlify config |
 | 4 | Run pre-push QA grep — no `notion.com`, `drive.google` in `data/`, `index.html`, `app.js` | Implementer | Yes |

@@ -28,8 +28,16 @@ build/
 *.tif
 *.tiff
 
-# TG-WEB-001 — committed public reader assets
+# TG-WEB-001 — deploy-only reader PDF mount (structure in Git; PDFs are not)
 !08_platform/tg-web-001/assets/pdf/
-!08_platform/tg-web-001/assets/pdf/**
+!08_platform/tg-web-001/assets/pdf/.gitkeep
+!08_platform/tg-web-001/assets/pdf/README.md
+08_platform/tg-web-001/assets/pdf/*.pdf
+
+# TG-WEB-001 — image mount (structure only until steward-approved thumbnails)
 !08_platform/tg-web-001/assets/img/
 !08_platform/tg-web-001/assets/img/**
+08_platform/tg-web-001/assets/img/*.png
+08_platform/tg-web-001/assets/img/*.jpg
+08_platform/tg-web-001/assets/img/*.jpeg
+08_platform/tg-web-001/assets/img/*.webp
