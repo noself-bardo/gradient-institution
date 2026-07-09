@@ -2,9 +2,10 @@
  * TG-WEB-001 — The Gradient Archive Gateway
  * Plate Reader — Public Field Atlas
  *
- * Public PDF buttons use relative /assets/pdf/ paths only.
- * HEAD probe: 200 → OPEN PDF; fail/404 → READER PDF NEEDED.
- * No Drive, Notion, snapshot, or tracker fallbacks.
+ * Public PDF buttons use public reader asset host URLs (GitHub Releases preferred).
+ * Empty href → READER PDF NEEDED.
+ * Non-empty href → HEAD probe: 200 → OPEN PDF; fail/404 → READER PDF NEEDED.
+ * No Drive, Notion, snapshot, Netlify-PDF, or tracker fallbacks.
  */
 
 const esc = (s) => String(s)
@@ -30,7 +31,9 @@ async function publicAssetAvailable(href) {
 }
 
 function assetHref(item) {
-  return item.href || item.pdf || item.sourceAction?.href || item.sourceAction?.pdf || null;
+  const raw = item.href || item.pdf || item.sourceAction?.href || item.sourceAction?.pdf || null;
+  if (typeof raw === "string" && raw.trim() === "") return null;
+  return raw;
 }
 
 async function buildAvailabilityMap(paths) {
