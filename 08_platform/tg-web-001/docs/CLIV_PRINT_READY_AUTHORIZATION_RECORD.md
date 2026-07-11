@@ -2,13 +2,14 @@
 
 **Collection:** Crisis Liturgies IV — Depressive Infrastructure / Domestic Collapse Cycle  
 **Date:** 2026-07-11  
-**Status:** **WEB PREVIEW VALIDATION PASS — PENDING COMMIT AND DEPLOY**  
+**Status:** **WEB COMMIT COMPLETE — DEPLOY PENDING (NETLIFY SITE NOT WIRED FOR TG-WEB-001)**  
 **Review document:** `CLIV_PRINT_READY_AUTHORIZATION_REVIEW_v1.0.md`  
 **Public reader prep:** `CL-IV_PUBLIC_READER_PDF_PREP_v1.0.md` (Drive)  
 **Public release:** `CLIV_PUBLIC_RELEASE_AUTHORIZATION_v1.0.md`  
 **Public upload:** `CLIV_PUBLIC_ASSET_UPLOAD_v1.0.md`  
 **Web patch:** `CLIV_WEB_PUBLICATION_PATCH_v1.0.md`  
 **Preview validation:** `CLIV_WEB_PREVIEW_VALIDATION_v1.0.md`  
+**Commit/deploy:** `CLIV_WEB_COMMIT_AND_DEPLOY_v1.0.md`  
 
 ---
 
@@ -73,7 +74,7 @@
 | Image generation | **CLOSED** |
 | Website / hosting | **PATCHED** (companion registry) |
 | Local preview validation | **PASS** |
-| Commit / deploy | **PENDING** |
+| Commit / deploy | **COMMIT COMPLETE** (`cbf914c`) · **DEPLOY PENDING** |
 
 ---
 
@@ -86,13 +87,13 @@
 
 ---
 
-## Next Actions (Pending Commit and Deploy)
+## Next Actions (Pending Netlify Deploy)
 
-1. Commit `data/companion.json` + validation records
-2. Deploy site when authorized
+1. Wire Netlify to publish `08_platform/tg-web-001`
+2. Run live publication verification
 3. Optional: `SRC-CL-PDF-IV` in `sources.json`
 
-**Preview validation complete. See `CLIV_WEB_PREVIEW_VALIDATION_v1.0.md`.**
+**Commit complete. See `CLIV_WEB_COMMIT_AND_DEPLOY_v1.0.md`.**
 
 ---
 

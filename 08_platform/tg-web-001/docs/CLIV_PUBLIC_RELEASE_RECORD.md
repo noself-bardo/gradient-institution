@@ -2,11 +2,12 @@
 
 **Collection:** Crisis Liturgies IV — Depressive Infrastructure / Domestic Collapse Cycle  
 **Date:** 2026-07-11  
-**Status:** **WEB PREVIEW VALIDATION PASS — PENDING COMMIT AND DEPLOY**  
+**Status:** **WEB COMMIT COMPLETE — DEPLOY PENDING (NETLIFY SITE NOT WIRED FOR TG-WEB-001)**  
 **Review document:** `CLIV_PUBLIC_RELEASE_AUTHORIZATION_v1.0.md`  
 **Upload document:** `CLIV_PUBLIC_ASSET_UPLOAD_v1.0.md`  
 **Patch document:** `CLIV_WEB_PUBLICATION_PATCH_v1.0.md`  
 **Preview validation:** `CLIV_WEB_PREVIEW_VALIDATION_v1.0.md`  
+**Commit/deploy:** `CLIV_WEB_COMMIT_AND_DEPLOY_v1.0.md`  
 
 ---
 
@@ -19,7 +20,8 @@
 | Upload performed | **YES** |
 | Public URL | `https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/crisis-liturgies-iv-depressive-infrastructure-v1.0-screen.pdf` |
 | Website patched | **YES** (`data/companion.json` `CL-VOL-IV`) |
-| Deploy performed | NO |
+| Deploy performed | **NO** (Netlify not wired for TG-WEB-001) |
+| Git commit | **YES** (`cbf914c` on `main`) |
 | Local preview validation | **PASS** |
 | Image gate | CLOSED |
 
@@ -55,6 +57,7 @@
 | PUBLIC RELEASE AUTHORIZATION APPROVED — PENDING PUBLIC ASSET UPLOAD | **PUBLIC ASSET UPLOAD COMPLETE — PENDING WEBSITE PATCH** | 2026-07-11 |
 | PUBLIC ASSET UPLOAD COMPLETE — PENDING WEBSITE PATCH | **WEB PUBLICATION PATCH COMPLETE — PENDING LOCAL PREVIEW VALIDATION** | 2026-07-11 |
 | WEB PUBLICATION PATCH COMPLETE — PENDING LOCAL PREVIEW VALIDATION | **WEB PREVIEW VALIDATION PASS — PENDING COMMIT AND DEPLOY** | 2026-07-11 |
+| WEB PREVIEW VALIDATION PASS — PENDING COMMIT AND DEPLOY | **WEB COMMIT COMPLETE — DEPLOY PENDING (NETLIFY SITE NOT WIRED FOR TG-WEB-001)** | 2026-07-11 |
 
 ---
 
@@ -71,8 +74,8 @@
 | Public asset upload | **COMPLETE** |
 | Website patch | **COMPLETE** |
 | Local preview validation | **PASS** |
-| Commit | **PENDING** |
-| Deploy | **PENDING** |
+| Commit | **COMPLETE** (`cbf914c`) |
+| Deploy | **PENDING / BLOCKED** (Netlify not wired) |
 | Image generation | CLOSED |
 
 ---
@@ -83,21 +86,24 @@
 - `companion.json` `CL-VOL-IV` patched with screen filename and public URL
 - JPEG screen compression acceptable for browser delivery
 - HEAD-probe verified at upload and patch validation
+- Commit/push complete; Netlify TG-WEB-001 host not wired (`thegradient.netlify.app` serves Field Atlas)
 
 ---
 
-## Next Actions (After Commit Authorization)
+## Next Actions (After Netlify Wiring)
 
-1. Commit `data/companion.json` patch + CL-IV validation records
-2. Deploy site (Netlify HTML/CSS/JS only) when authorized
+1. Wire Netlify publish directory to `08_platform/tg-web-001` (or CLI deploy)
+2. Run live publication verification
 3. Optional: add `SRC-CL-PDF-IV` to `sources.json`
 
-**Local preview validation complete. Deploy not performed.**
+**Commit complete (`cbf914c`). Deploy pending. Publication not marked live.**
 
 ---
 
 ## References
 
+- `CLIV_WEB_COMMIT_AND_DEPLOY_v1.0.md`
+- `CLIV_WEB_DEPLOY_REGISTER_v1.0.md`
 - `CLIV_WEB_PREVIEW_VALIDATION_v1.0.md`
 - `CLIV_WEB_PREVIEW_VALIDATION_REGISTER_v1.0.md`
 - `CLIV_WEB_PUBLICATION_PATCH_v1.0.md`

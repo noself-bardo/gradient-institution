@@ -11,9 +11,9 @@
 
 # WEB PREVIEW VALIDATION PASS
 
-**Authorized status:** WEB PREVIEW VALIDATION PASS — PENDING COMMIT AND DEPLOY
+**Authorized status:** WEB COMMIT COMPLETE — DEPLOY PENDING (NETLIFY SITE NOT WIRED FOR TG-WEB-001)
 
-Local preview validation confirms the patched `CL-VOL-IV` companion shelf entry renders correctly with an active `OPEN READER PDF` CTA pointing to the authorized public screen PDF. Commit and deploy remain blocked until separately authorized.
+Local preview validation confirms the patched `CL-VOL-IV` companion shelf entry renders correctly with an active `OPEN READER PDF` CTA pointing to the authorized public screen PDF. Commit is complete (`cbf914c`); Netlify deploy remains pending.
 
 ---
 
@@ -130,24 +130,26 @@ Local preview validation confirms the patched `CL-VOL-IV` companion shelf entry 
 | Public asset upload | COMPLETE |
 | Website patch | COMPLETE |
 | **Local preview validation** | **PASS** |
-| Commit | **PENDING** |
-| Deploy | **PENDING** |
+| Commit | **COMPLETE** (`cbf914c`) |
+| Deploy | **PENDING / BLOCKED** (Netlify not wired) |
 | Publication live | **NOT MARKED** |
 
 ---
 
-## Next Actions (After Commit Authorization)
+## Next Actions (After Netlify Wiring)
 
-1. Commit `data/companion.json` patch + validation records
-2. Deploy site (Netlify HTML/CSS/JS only) when authorized
+1. Deploy TG-WEB-001 via Netlify (publish directory `08_platform/tg-web-001`)
+2. Run live publication verification
 3. Optional: add `SRC-CL-PDF-IV` to `sources.json` in separate pass
 
-**Deploy and publication-live marking not performed in this validation gate.**
+**Commit complete. See `CLIV_WEB_COMMIT_AND_DEPLOY_v1.0.md`.**
 
 ---
 
 ## References
 
+- `CLIV_WEB_COMMIT_AND_DEPLOY_v1.0.md`
+- `CLIV_WEB_DEPLOY_REGISTER_v1.0.md`
 - `CLIV_WEB_PREVIEW_VALIDATION_REGISTER_v1.0.md`
 - `CLIV_WEB_PUBLICATION_PATCH_v1.0.md`
 - `CLIV_PUBLIC_ASSET_UPLOAD_v1.0.md`
