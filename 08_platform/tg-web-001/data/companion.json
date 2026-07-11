@@ -35,14 +35,14 @@
     "title": "Crisis Liturgies IV — Depressive Infrastructure",
     "role": "Visual / interpretive companion",
     "authority": "Companion, not authority",
-    "status": "Reader PDF needed",
-    "href": "",
+    "status": "Reader PDF hosted",
+    "href": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/crisis-liturgies-iv-depressive-infrastructure-v1.0-screen.pdf",
     "assetType": "pdf",
     "publicSafe": true,
-    "usedFor": "Expanded plate system, infrastructure grief, public-facing explanatory rhythm",
-    "actionLabel": "OPEN VOLUME (PDF)",
-    "hostNote": "Public reader asset host pending — preferred GitHub Releases tag tg-web-pdf-assets; filename CRISIS_LITURGIES_IV_DEPRESSIVE_INFRASTRUCTURE_v1.0_PRINT.pdf",
-    "sourceNote": "Steward copy from 09_RELEASE_SNAPSHOTS/CRISIS_LITURGIES/CRISIS_LITURGIES_IV_DEPRESSIVE_INFRASTRUCTURE_v1.0 (not a public link)"
+    "usedFor": "Expanded plate system, infrastructure grief, public-facing explanatory rhythm — 12 issues, 48 pages, screen reader PDF",
+    "actionLabel": "OPEN READER PDF",
+    "hostNote": "GitHub Releases tag tg-web-pdf-assets; filename crisis-liturgies-iv-depressive-infrastructure-v1.0-screen.pdf",
+    "sourceNote": "Steward copy remains in Drive / release snapshots (not a public link)"
   },
   {
     "id": "cl-canon-1-1",
