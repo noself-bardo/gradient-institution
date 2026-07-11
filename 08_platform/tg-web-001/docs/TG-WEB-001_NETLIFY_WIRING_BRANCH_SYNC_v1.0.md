@@ -78,8 +78,12 @@ cbf914c Publish CL-IV reader PDF entry           ← preserved
 |-------|-------|
 | Remote | `origin` |
 | Branch | `main` |
+| Push range | `caa07d1..786799c` |
 | Wiring commit on main | `bac10cb` |
+| Sync record commit | `786799c` |
+| Tip of `origin/main` | `786799c` |
 | Source local commit | `6bb2463` (master; cherry-picked) |
+| Push result | **SUCCESS** |
 
 ---
 
