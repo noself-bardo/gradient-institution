@@ -17,7 +17,7 @@
   {
     "id": "cl-vol-ii",
     "acc": "CL-VOL-II",
-    "title": "Crisis Liturgies, Volume II — Private Instruments",
+    "title": "Crisis Liturgies, Volume II \u2014 Private Instruments",
     "role": "Visual / interpretive companion",
     "authority": "Companion, not authority",
     "status": "Reader PDF hosted",
@@ -30,16 +30,31 @@
     "sourceNote": "Steward copy remains in Drive / release snapshots (not a public link)"
   },
   {
+    "id": "cl-vol-iii",
+    "acc": "CL-VOL-III",
+    "title": "Crisis Liturgies III \u2014 Emergency Objects",
+    "role": "Visual / interpretive companion",
+    "authority": "Companion, not authority",
+    "status": "Reader PDF hosted",
+    "href": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/crisis-liturgies-iii-emergency-objects-v1.0-screen.pdf",
+    "assetType": "pdf",
+    "publicSafe": true,
+    "usedFor": "Emergency objects, crisis adaptation, and public-facing explanatory rhythm \u2014 12 issues, 48 pages, screen reader PDF",
+    "actionLabel": "OPEN READER PDF",
+    "hostNote": "GitHub Releases tag tg-web-pdf-assets; filename crisis-liturgies-iii-emergency-objects-v1.0-screen.pdf",
+    "sourceNote": "Steward copy remains in Drive / release snapshots; private Drive source is not exposed publicly"
+  },
+  {
     "id": "cl-vol-iv",
     "acc": "CL-VOL-IV",
-    "title": "Crisis Liturgies IV — Depressive Infrastructure",
+    "title": "Crisis Liturgies IV \u2014 Depressive Infrastructure",
     "role": "Visual / interpretive companion",
     "authority": "Companion, not authority",
     "status": "Reader PDF hosted",
     "href": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/crisis-liturgies-iv-depressive-infrastructure-v1.0-screen.pdf",
     "assetType": "pdf",
     "publicSafe": true,
-    "usedFor": "Expanded plate system, infrastructure grief, public-facing explanatory rhythm — 12 issues, 48 pages, screen reader PDF",
+    "usedFor": "Expanded plate system, infrastructure grief, public-facing explanatory rhythm \u2014 12 issues, 48 pages, screen reader PDF",
     "actionLabel": "OPEN READER PDF",
     "hostNote": "GitHub Releases tag tg-web-pdf-assets; filename crisis-liturgies-iv-depressive-infrastructure-v1.0-screen.pdf",
     "sourceNote": "Steward copy remains in Drive / release snapshots (not a public link)"
@@ -47,7 +62,7 @@
   {
     "id": "cl-canon-1-1",
     "acc": "CL-CANON-1.1",
-    "title": "Crisis Liturgies Canon v1.1 — Reader-Facing Source",
+    "title": "Crisis Liturgies Canon v1.1 \u2014 Reader-Facing Source",
     "role": "Companion governance (series canon)",
     "usedFor": "Series boundaries; interpretive constraints; drift protection",
     "authority": "Companion, not authority",
