@@ -1,0 +1,17 @@
+[build]
+  publish = "08_platform/tg-web-001"
+  command = ""
+
+# TG-WEB-001 — The Gradient Archive Gateway
+# Publish directory is the static site root (HTML/CSS/JS + data/).
+# Large PDFs remain on GitHub Releases (tg-web-pdf-assets), not in this publish tree.
+#
+# Nested config also exists at 08_platform/tg-web-001/netlify.toml for
+# folder-scoped CLI deploys (publish = "."). Root config governs repo-linked sites.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
