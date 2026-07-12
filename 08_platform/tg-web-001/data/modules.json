@@ -8,14 +8,13 @@
     "readerInstruction": "Reader instruction: Hold the institution as a constitutional ecology first. Do not mistake the interface for the institution.",
     "sourceAction": {
       "label": "OPEN PRIMARY SOURCE (CONSTITUTION PDF)",
-      "href": "/assets/pdf/constitution-v0.1.pdf"
+      "href": ""
     },
     "modal": {
-      "sub": "Establish The Gradient as constitutional knowledge ecology (not product/platform).",
-      "purpose": "Establish The Gradient as a constitutional knowledge ecology, not a product or platform.",
-      "why": "This gives newcomers the basic frame before they encounter the architecture.",
-      "readNext": "Read next: Founding White Paper v0.1 → then IDR-003.",
-      "sources": ["Constitution v0.1", "Founding White Paper v0.1", "Charter locked decisions"]
+      "sub": "Why The Gradient is not a chatbot, a feed, or a tool collection.",
+      "why": "This sets the institution apart from a product. A product sells. An institution explains itself and remains accountable.",
+      "readNext": "Read next: Constitution preamble → then Knowledge Architecture.",
+      "sources": ["Constitution v0.1", "IDR-002", "Knowledge Architecture"]
     }
   },
   {
@@ -27,14 +26,13 @@
     "readerInstruction": "Reader instruction: When something feels confusing, ask which organ it belongs to before you decide what it is.",
     "sourceAction": {
       "label": "OPEN CHARTER (LOCKED DECISIONS PDF)",
-      "href": "/assets/pdf/charter-locked-decisions-v0.1.pdf"
+      "href": ""
     },
     "modal": {
-      "sub": "Explain organs preserving memory, governance, inheritance, continuity.",
-      "purpose": "Explain the organs that preserve memory, governance, inheritance, and continuity.",
-      "why": "The Gradient separates functions so memory, governance, and practice do not collapse into one overloaded system.",
-      "readNext": "Read next: Constitution v0.1 Ecology of Memory section → then Charter locked decisions.",
-      "sources": ["Constitution v0.1", "Charter locked decisions", "Founding White Paper v0.1"]
+      "sub": "Why the institution is structured as organs rather than a flat library.",
+      "why": "Separating memory, governance, and teaching lets each organ stay legible. A single shared surface makes them compete and corrupt one another.",
+      "readNext": "Read next: Charter locked decisions → then Operating Loop.",
+      "sources": ["Charter — Locked Decisions", "Operating Loop doctrine"]
     }
   },
   {
@@ -46,14 +44,13 @@
     "readerInstruction": "Reader instruction: When you add knowledge, name the relationship first. Classification comes later.",
     "sourceAction": {
       "label": "OPEN IDR-002 (PDF)",
-      "href": "/assets/pdf/idr-002-relationships.pdf"
+      "href": ""
     },
     "modal": {
-      "sub": "Cards, Claims, and Relationships (folders rejected).",
-      "purpose": "Explain Cards, Claims, and Relationships.",
-      "why": "The system preserves context by asking how things relate, not just where they are stored.",
-      "readNext": "Read next: IDR-002 → then Constitution Card layers + Knowledge Architecture.",
-      "sources": ["Constitution v0.1", "IDR-002", "Knowledge Architecture"]
+      "sub": "Why knowledge is organized by relationship, not by folder.",
+      "why": "Folders are containers; relationships are verbs. Once a piece of knowledge can only live in one folder, you have erased the rest of its meaning.",
+      "readNext": "Read next: IDR-002 → then Operating Loop.",
+      "sources": ["IDR-002", "Knowledge Architecture doctrine"]
     }
   },
   {
@@ -65,14 +62,13 @@
     "readerInstruction": "Reader instruction: Trust the loop over the interface. If the loop is broken, the institution is broken.",
     "sourceAction": {
       "label": "OPEN FOUNDING WHITE PAPER (PDF)",
-      "href": "/assets/pdf/founding-white-paper-v0.1.pdf"
+      "href": ""
     },
     "modal": {
-      "sub": "Admission → review → metabolization → practice → memory.",
-      "purpose": "Show how knowledge moves through admission, review, metabolization, practice, and memory.",
-      "why": "The Gradient proves itself through one complete loop, not through a feature list.",
-      "readNext": "Read next: Founding White Paper First proof loop → then IDR-003.",
-      "sources": ["Founding White Paper v0.1", "Charter locked decisions", "IDRs"]
+      "sub": "Why the institution runs on a four-step loop rather than a feature roadmap.",
+      "why": "The loop makes provenance a precondition for authority. Without it, speed becomes indistinguishable from drift.",
+      "readNext": "Read next: Founding White Paper → then Servant Layer.",
+      "sources": ["Founding White Paper v0.1", "Operating Loop doctrine"]
     }
   },
   {
@@ -84,14 +80,13 @@
     "readerInstruction": "Reader instruction: Treat engines as methods with declared limits, not as authority-generators.",
     "sourceAction": {
       "label": "OPEN ENGINE REGISTRY (PDF)",
-      "href": "/assets/pdf/engine-registry.pdf"
+      "href": ""
     },
     "modal": {
-      "sub": "Repeatable methods that transform understanding without replacing judgment.",
-      "purpose": "Explain engines as repeatable methods that transform understanding without replacing judgment.",
-      "why": "This prevents methods, tools, or AI systems from becoming hidden authorities.",
-      "readNext": "Read next: Constitution How The Gradient Knows → then Engine Registry.",
-      "sources": ["Constitution v0.1", "Engine Registry", "Capability Map"]
+      "sub": "Why engines are documented as methods with limits rather than as autonomous systems.",
+      "why": "An engine that hides its evidence and its failure modes becomes a hidden governor. The Gradient refuses that move.",
+      "readNext": "Read next: Engine Registry → then Servant Layer.",
+      "sources": ["Engine Registry", "Practice Frameworks"]
     }
   },
   {
@@ -103,11 +98,10 @@
     "readerInstruction": "Reader instruction: When a tool feels powerful, ask what constitutional commitment constrains it.",
     "sourceAction": {
       "label": "OPEN IDR-003 (PDF)",
-      "href": "/assets/pdf/idr-003-implementation.pdf"
+      "href": ""
     },
     "modal": {
-      "sub": "Why software, dashboards, and agents remain downstream.",
-      "purpose": "Explain why software, dashboards, agents, and databases remain downstream of institutional design.",
+      "sub": "Why software, dashboards, and agents remain downstream of institutional design.",
       "why": "This protects The Gradient from becoming just another app.",
       "readNext": "Read next: IDR-003 → then Constitution preamble lines on AI as instrument.",
       "sources": ["IDR-003", "Constitution v0.1", "Product / Platform doctrine"]

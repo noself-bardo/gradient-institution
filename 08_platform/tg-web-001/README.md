@@ -118,7 +118,7 @@ The active build is a Crisis Liturgies–informed **plate reader** with snap-scr
 
 - Plates TG-000 through TG-011 (entry → living practice → sources → companion → diagnosis → response → organs → loop → modules A–F → boundary vows → reader path → institutional record)
 - Public reader PDFs: **external public reader asset host** (GitHub Releases preferred; Supabase Storage fallback) — not Netlify PDF upload
-- Live companion shelf entries: CL-I, CL-II, CL-IV (`href` pending host → READER PDF NEEDED until filled)
+- Live companion shelf entries: CL-I, CL-II, CL-III, CL-IV (all four hosted on GitHub Releases; CL Canon and Translation Doctrine are unpublished and render as plain text "NOT YET PUBLISHED" with no button)
 - CL-III documented only; CL-V reserved as future only
 - `assets/pdf/` is optional local preview cache only — not the public deployment source
 - Data-driven shelves and modules in `data/*.json`

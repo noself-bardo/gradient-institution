@@ -3,10 +3,13 @@
  * Plate Reader — Public Field Atlas
  *
  * Public PDF buttons use public reader asset host URLs (GitHub Releases preferred).
- * Empty href → READER PDF NEEDED.
- * Non-empty href → HEAD probe: 200 → OPEN PDF; fail/404 → READER PDF NEEDED.
- * No Drive, Notion, snapshot, Netlify-PDF, or tracker fallbacks.
+ * Plain text "NOT YET PUBLISHED" is shown when the document has no public PDF.
+ * Non-empty href → rendered as a working clickable link to the published PDF.
+ * No Drive, Notion, or any other non-public surface is referenced.
+ * No browser-side HEAD probes — cross-origin CORS failures are not an option.
  */
+
+const ASSET_HREF_FIELDS = ["href", "pdfHref", "readerHref", "url"];
 
 const esc = (s) => String(s)
   .replaceAll("&", "&amp;")
@@ -22,16 +25,21 @@ async function loadJSON(path) {
 }
 
 function assetHref(item) {
-  const raw = item.href || item.pdf || item.sourceAction?.href || item.sourceAction?.pdf || null;
-  if (typeof raw === "string" && raw.trim() === "") return null;
-  return raw;
+  if (!item) return "";
+  for (const f of ASSET_HREF_FIELDS) {
+    const v = item[f];
+    if (typeof v === "string" && v.trim().length > 0) return v.trim();
+  }
+  return "";
 }
 
-async function buildAvailabilityMap(paths) {
+function buildAvailabilityMap(paths) {
+  // No browser-side HEAD probes. Truth comes from the data:
+  // a non-empty href means the link is published; an empty href means
+  // the document is not yet published. Any pretense of probing would
+  // reintroduce cross-origin CORS failures.
   const unique = [...new Set(paths.filter(Boolean))];
-  return Object.fromEntries(
-    unique.map((path) => [path, true])
-  );
+  return Object.fromEntries(unique.map((path) => [path, true]));
 }
 
 function collectAssetHrefs(governing, companion, modules, readerPath) {
@@ -46,13 +54,13 @@ function collectAssetHrefs(governing, companion, modules, readerPath) {
 function pdfAction(item, availability, labelOverride) {
   const label = labelOverride || item.actionLabel || "OPEN DOCUMENT (PDF)";
   const href = assetHref(item);
-  const available = href ? availability[href] : false;
+  const available = href ? availability[href] !== false : false;
 
   if (available && href) {
     return `<a class="act" href="${esc(href)}" target="_blank" rel="noopener noreferrer"><span class="mark"></span>${esc(label)}</a>`;
   }
 
-  return `<span class="act pending" aria-disabled="true"><span class="mark"></span>READER PDF NEEDED</span>`;
+  return `<span class="notPublished" role="text" aria-label="Not yet published">NOT YET PUBLISHED</span>`;
 }
 
 function companionDetailLines(item) {
@@ -78,8 +86,8 @@ function renderLedger(targetId, items, availability) {
 
   el.innerHTML = items.map((it) => {
     const href = assetHref(it);
-    const available = href ? availability[href] : false;
-    const statusLine = available ? "AVAILABLE" : "PENDING — READER PDF NEEDED";
+    const available = Boolean(href) && availability[href] !== false;
+    const statusLine = available ? "AVAILABLE" : "NOT YET PUBLISHED";
     const roleLine = it.role || it.usedFor || "—";
 
     return `
