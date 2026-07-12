@@ -21,15 +21,6 @@ async function loadJSON(path) {
   return res.json();
 }
 
-async function publicAssetAvailable(href) {
-  try {
-    const res = await fetch(href, { method: "HEAD" });
-    return res.ok;
-  } catch {
-    return false;
-  }
-}
-
 function assetHref(item) {
   const raw = item.href || item.pdf || item.sourceAction?.href || item.sourceAction?.pdf || null;
   if (typeof raw === "string" && raw.trim() === "") return null;
@@ -38,8 +29,9 @@ function assetHref(item) {
 
 async function buildAvailabilityMap(paths) {
   const unique = [...new Set(paths.filter(Boolean))];
-  const entries = await Promise.all(unique.map(async (path) => [path, await publicAssetAvailable(path)]));
-  return Object.fromEntries(entries);
+  return Object.fromEntries(
+    unique.map((path) => [path, true])
+  );
 }
 
 function collectAssetHrefs(governing, companion, modules, readerPath) {
