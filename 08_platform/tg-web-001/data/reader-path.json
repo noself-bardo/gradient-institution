@@ -1,22 +1,32 @@
 [
   {
-    "label": "OPEN CONSTITUTION v0.1",
-    "href": "/assets/pdf/constitution-v0.1.pdf"
+    "step": "01",
+    "title": "Constitution v0.1",
+    "subtitle": "The constitutional layer that defines the institution.",
+    "href": ""
   },
   {
-    "label": "OPEN FOUNDING WHITE PAPER",
-    "href": "/assets/pdf/founding-white-paper-v0.1.pdf"
+    "step": "02",
+    "title": "Founding White Paper v0.1",
+    "subtitle": "The diagnostic + first proof loop that justified the institution.",
+    "href": ""
   },
   {
-    "label": "OPEN IDR-003",
-    "href": "/assets/pdf/idr-003-implementation.pdf"
+    "step": "03",
+    "title": "IDR-003 — Implementation Follows Institutional Design",
+    "subtitle": "Why software, dashboards, and agents remain downstream of the institution.",
+    "href": ""
   },
   {
-    "label": "OPEN IDR-002",
-    "href": "/assets/pdf/idr-002-relationships.pdf"
+    "step": "04",
+    "title": "IDR-002 — Relationships Are Verbs, Not Containers",
+    "subtitle": "Why knowledge is organized by relationship rather than by folder.",
+    "href": ""
   },
   {
-    "label": "OPEN CHARTER LOCKED DECISIONS",
-    "href": "/assets/pdf/charter-locked-decisions-v0.1.pdf"
+    "step": "05",
+    "title": "Charter — Locked Decisions",
+    "subtitle": "Local governance and the living vs. locked distinction.",
+    "href": ""
   }
 ]

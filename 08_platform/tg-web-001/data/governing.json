@@ -5,7 +5,7 @@
     "status": "LOCKED",
     "authority": "GOVERNING",
     "usedFor": "Institutional identity + ontology + epistemology + constraints",
-    "href": "/assets/pdf/constitution-v0.1.pdf",
+    "href": "",
     "actionLabel": "OPEN DOCUMENT (PDF)"
   },
   {
@@ -14,7 +14,7 @@
     "status": "SOURCE",
     "authority": "GOVERNING",
     "usedFor": "Diagnosis + constitutional framing + first proof loop",
-    "href": "/assets/pdf/founding-white-paper-v0.1.pdf",
+    "href": "",
     "actionLabel": "OPEN DOCUMENT (PDF)"
   },
   {
@@ -23,7 +23,7 @@
     "status": "LOCKED DECISION",
     "authority": "GOVERNING",
     "usedFor": "Relationship grammar; folders rejected",
-    "href": "/assets/pdf/idr-002-relationships.pdf",
+    "href": "",
     "actionLabel": "OPEN DOCUMENT (PDF)"
   },
   {
@@ -32,7 +32,7 @@
     "status": "LOCKED DECISION",
     "authority": "GOVERNING",
     "usedFor": "Servant-layer doctrine; dashboards cannot govern",
-    "href": "/assets/pdf/idr-003-implementation.pdf",
+    "href": "",
     "actionLabel": "OPEN DOCUMENT (PDF)"
   },
   {
@@ -41,7 +41,7 @@
     "status": "LOCKED",
     "authority": "GOVERNING",
     "usedFor": "Local governance; living vs locked distinctions",
-    "href": "/assets/pdf/charter-locked-decisions-v0.1.pdf",
+    "href": "",
     "actionLabel": "OPEN DOCUMENT (PDF)"
   }
 ]

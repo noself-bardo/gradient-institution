@@ -22,7 +22,7 @@ The UI may link only to reader-facing public PDF URLs and must HEAD-probe them b
 https://github.com/<OWNER>/<REPO>/releases/download/tg-web-pdf-assets/<FILENAME>.pdf
 ```
 
-Until release assets exist, companion `href` values remain empty and the UI shows **READER PDF NEEDED**.
+Companion `href` values are filled when a document has a public PDF. Empty `href` values render as plain text "NOT YET PUBLISHED" (no button, no link).
 
 ## Intended live companion filenames (host when ready)
 
