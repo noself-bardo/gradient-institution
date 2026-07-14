@@ -1,0 +1,14 @@
+{
+  "record_id": "CL-PHASE-01-FINAL",
+  "status": "CLOSED_PASS",
+  "date": "2026-07-13",
+  "death_bit_profile": {
+    "disposition": "DEFERRED",
+    "current_state": "WORKING_ASSEMBLY",
+    "active_template_authorized": false
+  },
+  "next_phase": "CL-PHASE-02",
+  "phase_02_scope": "PLANNING_ONLY",
+  "physical_migration_authorized": false,
+  "generated_at": "2026-07-13T15:24:44.556748+00:00"
+}

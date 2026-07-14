@@ -1,0 +1,109 @@
+{
+  "registry_id": "CL-COLLECTION-STATE-MAP-001",
+  "version": "1.0",
+  "status": "LOCKED",
+  "authority": "CL-PHASE-01-E",
+  "effective_date": "2026-07-13",
+  "dimensions": [
+    "specification_state",
+    "production_state",
+    "qc_state",
+    "release_state",
+    "print_state",
+    "publication_state",
+    "archive_state",
+    "dispute_state"
+  ],
+  "collections": {
+    "CL-I": {
+      "specification_state": "HISTORICAL_REFERENCE",
+      "production_state": "COMPLETE_HISTORICAL",
+      "qc_state": "HISTORICAL_PASS_EVIDENCE",
+      "release_state": "FROZEN_RELEASE",
+      "print_state": "PRINT_DERIVATIVE_EXISTS",
+      "publication_state": "UNKNOWN_WITH_EVIDENCE_GAP",
+      "archive_state": "ADMITTED_HISTORICAL_RELEASE",
+      "dispute_state": "NONE"
+    },
+    "CL-II": {
+      "specification_state": "HISTORICAL_REFERENCE",
+      "production_state": "COMPLETE_HISTORICAL",
+      "qc_state": "HISTORICAL_PASS_EVIDENCE",
+      "release_state": "FROZEN_RELEASE",
+      "print_state": "PRINT_DERIVATIVE_EXISTS",
+      "publication_state": "UNKNOWN_WITH_EVIDENCE_GAP",
+      "archive_state": "ADMITTED_HISTORICAL_RELEASE",
+      "dispute_state": "NONE"
+    },
+    "CL-III": {
+      "specification_state": "SPECIFICATION_FROZEN",
+      "production_state": "COMPLETE",
+      "qc_state": "FROZEN_ARCHIVE_EVIDENCE",
+      "release_state": "FROZEN_RELEASE",
+      "print_state": "RELEASE_EVIDENCE_EXISTS",
+      "publication_state": "UNKNOWN_WITH_EVIDENCE_GAP",
+      "archive_state": "ARCHIVE_ADMITTED",
+      "dispute_state": "NONE"
+    },
+    "CL-IV": {
+      "specification_state": "SPECIFICATION_FROZEN",
+      "production_state": "COMPLETE_FROZEN_SNAPSHOT",
+      "qc_state": "PRINT_QC_INCOMPLETE",
+      "release_state": "NONE_VERIFIED",
+      "print_state": "NOT_PRINT_READY",
+      "publication_state": "PUBLIC_AVAILABILITY_NOT_AUTHORITY",
+      "archive_state": "SNAPSHOT_PRESERVED",
+      "dispute_state": "QUALIFIED_STATE_REQUIRED"
+    },
+    "CL-V": {
+      "specification_state": "SPECIFICATION_FROZEN",
+      "production_state": "COMPLETE",
+      "qc_state": "QC_PASSED_PER_RELEASE_RECORDS",
+      "release_state": "FROZEN_RELEASE",
+      "print_state": "PRINT_READY",
+      "publication_state": "UNKNOWN_WITH_EVIDENCE_GAP",
+      "archive_state": "RELEASE_SNAPSHOT_AND_STORAGE_MIRROR_VERIFIED",
+      "dispute_state": "NONE"
+    },
+    "CL-VI": {
+      "specification_state": "NONE",
+      "production_state": "NONE",
+      "qc_state": "NONE",
+      "release_state": "NONE",
+      "print_state": "NONE",
+      "publication_state": "NONE",
+      "archive_state": "NONE",
+      "dispute_state": "DESIGNATION_UNASSIGNED"
+    },
+    "CL-VII": {
+      "specification_state": "UNKNOWN_WITH_EVIDENCE_GAP",
+      "production_state": "NOT_VERIFIED",
+      "qc_state": "NONE_VERIFIED",
+      "release_state": "NONE",
+      "print_state": "NONE",
+      "publication_state": "NONE",
+      "archive_state": "NONE",
+      "dispute_state": "QUARANTINED"
+    },
+    "CL-EV-001": {
+      "specification_state": "SUBSTANTIAL_NOT_FINAL_RECONCILED",
+      "production_state": "SUBSTANTIAL",
+      "qc_state": "RETURN_FOR_REVISION",
+      "release_state": "NONE",
+      "print_state": "NO_ACCEPTED_PRINT_READY_RELEASE",
+      "publication_state": "NOT_AUTHORIZED",
+      "archive_state": "NOT_ADMITTED",
+      "dispute_state": "STATE_AND_DEPENDENCY_RECONCILIATION_REQUIRED"
+    },
+    "THE_DEATH_OF_THE_BIT": {
+      "specification_state": "SUBSTANTIAL_SPECIAL_VOLUME_CANDIDATE",
+      "production_state": "WORKING_ASSEMBLY",
+      "qc_state": "INCOMPLETE_OR_CONFLICTING",
+      "release_state": "NONE",
+      "print_state": "WORKING_PROOF_ONLY",
+      "publication_state": "NOT_AUTHORIZED",
+      "archive_state": "NOT_ADMITTED",
+      "dispute_state": "BOOT_HYMM_AND_EDITORIAL_ARCHITECTURE_UNRESOLVED"
+    }
+  }
+}

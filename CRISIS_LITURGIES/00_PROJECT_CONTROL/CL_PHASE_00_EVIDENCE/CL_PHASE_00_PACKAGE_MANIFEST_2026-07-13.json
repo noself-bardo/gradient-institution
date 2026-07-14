@@ -1,0 +1,58 @@
+{
+  "package_id": "CL-PHASE-00-EVIDENCE-FREEZE-2026-07-13",
+  "date": "2026-07-13",
+  "generated_at": "2026-07-13T12:40:35.157930+00:00",
+  "status": "PASS_WITH_OPEN_LOCAL_DISK_ACCESS_GAPS",
+  "files": [
+    {
+      "file": "CL_PHASE_00_CURSOR_READONLY_INVENTORY_PACKET_2026-07-13.md",
+      "bytes": 4990,
+      "sha256": "98ebaec3f432ebf4d3cf34daf0e1fd8b40ac3bc6c0a29a9a3d8f377a9962dffe"
+    },
+    {
+      "file": "CL_PHASE_00_EVIDENCE_FREEZE_COMPLETION_REPORT_2026-07-13.md",
+      "bytes": 2060,
+      "sha256": "66eef2386e14a8602738e7f9cc5f3cfd3c83cf50ba218ff043de7ea684e6967c"
+    },
+    {
+      "file": "CL_PHASE_00_MASTER_CONFLICT_LEDGER_2026-07-13.json",
+      "bytes": 10531,
+      "sha256": "6017f61299c9aa11319ef25fa505098dec4e0729800917f04e73da9c29115609"
+    },
+    {
+      "file": "CL_PHASE_00_MASTER_CONFLICT_LEDGER_2026-07-13.md",
+      "bytes": 4336,
+      "sha256": "af019314861256545b691307d9593f62f260e92c62c05c7b39c07cec18506228"
+    },
+    {
+      "file": "CL_PHASE_00_MASTER_EVIDENCE_REGISTER_2026-07-13.json",
+      "bytes": 24954,
+      "sha256": "ef53e1a4342cec06abd78ca04de2ee911a42809c0054f38a1a6916bd7f983434"
+    },
+    {
+      "file": "CL_PHASE_00_MASTER_EVIDENCE_REGISTER_2026-07-13.md",
+      "bytes": 11517,
+      "sha256": "e4caeaba165b32f76022b8194c68d3b3cc6c2d327376fe94db35044630a8ff29"
+    },
+    {
+      "file": "CL_PHASE_00_QUARANTINE_REGISTER_2026-07-13.json",
+      "bytes": 8606,
+      "sha256": "39723cf4cabfd16ccb106c4f4fd3ef106bce5a49760d91be7f1cef03de34cad1"
+    },
+    {
+      "file": "CL_PHASE_00_QUARANTINE_REGISTER_2026-07-13.md",
+      "bytes": 3635,
+      "sha256": "dad4f5dd49b9c685e903e4a7a516ab328e81501a4a29f334843dbc6c7348f87f"
+    },
+    {
+      "file": "CL_PHASE_00_SOURCE_ROOT_MAP_2026-07-13.json",
+      "bytes": 7454,
+      "sha256": "45d67bd14c4684ba88e4913061b2ea353c6bbb79cd2a92113fee9cc85957cfea"
+    },
+    {
+      "file": "CL_PHASE_00_SOURCE_ROOT_MAP_2026-07-13.md",
+      "bytes": 4717,
+      "sha256": "a1551a3cd2a0c8003e9475917acb2a214592da04e85e1595262502d8d0c54a4f"
+    }
+  ]
+}

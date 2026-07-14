@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thegradient.local/schemas/cl-external-binary-reference.schema.v1.1.json",
+  "title": "CL_EXTERNAL_BINARY_REFERENCE",
+  "description": "v1.1 \u2014 multiple locators; >=1 portable; absolute path cannot be sole locator.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "reference_id",
+    "collection_id",
+    "role",
+    "filename",
+    "sha256",
+    "byte_size",
+    "storage_system",
+    "locators",
+    "relationship_class",
+    "recovery_route",
+    "immutable",
+    "do_not_delete"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.1"
+    },
+    "reference_id": {
+      "type": "string",
+      "pattern": "^CL-XBIN-[A-Z0-9_-]+$"
+    },
+    "collection_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "PRINT_PDF",
+        "SCREEN_PDF",
+        "PAGE_PNG",
+        "THUMBNAIL",
+        "LAYOUT_SOURCE",
+        "FONT_BINARY",
+        "RELEASE_PAYLOAD",
+        "WORKING_PROOF",
+        "QC_ARTIFACT",
+        "OTHER"
+      ]
+    },
+    "filename": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "byte_size": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "media_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "storage_system": {
+      "type": "string",
+      "enum": [
+        "GOOGLE_DRIVE_THE_GRADIENT",
+        "GOOGLE_DRIVE_OTHER",
+        "LOCAL_REGISTERED_MIRROR",
+        "GITHUB_RELEASE_ASSET",
+        "OTHER_REGISTERED"
+      ]
+    },
+    "locators": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind",
+          "value",
+          "portable"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "ABSOLUTE_PATH",
+              "DRIVE_RELATIVE_PATH",
+              "DRIVE_FILE_ID",
+              "URL",
+              "GITHUB_RELEASE_ASSET"
+            ]
+          },
+          "value": {
+            "type": "string",
+            "minLength": 1
+          },
+          "portable": {
+            "type": "boolean"
+          },
+          "root_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "relationship_class": {
+      "type": "string",
+      "enum": [
+        "CANONICAL_ACTIVE_SOURCE",
+        "FROZEN_RELEASE",
+        "REGISTERED_MIRROR",
+        "STORAGE_MIRROR",
+        "BACKUP",
+        "PUBLICATION_DERIVATIVE",
+        "WORKING_COPY",
+        "SUPERSEDED_WORKING_COPY",
+        "ORPHANED_DUPLICATE",
+        "QUARANTINE"
+      ]
+    },
+    "source_root_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recovery_route": {
+      "type": "string",
+      "minLength": 1
+    },
+    "immutable": {
+      "type": "boolean"
+    },
+    "do_not_delete": {
+      "type": "boolean",
+      "const": true
+    },
+    "state_dimensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "specification_state": {
+          "type": "string"
+        },
+        "production_state": {
+          "type": "string"
+        },
+        "qc_state": {
+          "type": "string"
+        },
+        "release_state": {
+          "type": "string"
+        },
+        "print_state": {
+          "type": "string"
+        },
+        "publication_state": {
+          "type": "string"
+        },
+        "archive_state": {
+          "type": "string"
+        },
+        "dispute_state": {
+          "type": "string"
+        }
+      }
+    },
+    "known_mirrors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "locator",
+          "sha256_match",
+          "relationship_class"
+        ],
+        "properties": {
+          "locator": {
+            "type": "string"
+          },
+          "sha256_match": {
+            "type": "boolean"
+          },
+          "relationship_class": {
+            "type": "string",
+            "enum": [
+              "CANONICAL_ACTIVE_SOURCE",
+              "FROZEN_RELEASE",
+              "REGISTERED_MIRROR",
+              "STORAGE_MIRROR",
+              "BACKUP",
+              "PUBLICATION_DERIVATIVE",
+              "WORKING_COPY",
+              "SUPERSEDED_WORKING_COPY",
+              "ORPHANED_DUPLICATE",
+              "QUARANTINE"
+            ]
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

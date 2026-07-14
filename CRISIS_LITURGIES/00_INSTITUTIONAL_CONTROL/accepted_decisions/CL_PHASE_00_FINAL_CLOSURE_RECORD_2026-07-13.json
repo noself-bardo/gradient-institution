@@ -1,0 +1,30 @@
+{
+  "record_id": "CL-PHASE-00-FINAL",
+  "status": "CLOSED_PASS_WITH_DOCUMENTED_DERIVED_DATA_EXCEPTION",
+  "date": "2026-07-13",
+  "reported_final_package": {
+    "name": "CL_PHASE_00_DISK_INVENTORY_20260713_FINAL.zip",
+    "sha256": "252df4e57f0b8fe41eb755e53967d258a33627a51881cae75389a38100e8cea1",
+    "sha256sums_verification": "PASS"
+  },
+  "safety": {
+    "files_changed_outside_output": 0,
+    "files_moved": 0,
+    "files_deleted": 0,
+    "git_commits": 0
+  },
+  "derived_data_exception": {
+    "csv_changed": false,
+    "source_files_reread": false,
+    "source_files_rehashed": false,
+    "source_hashes_changed": false,
+    "changed_outputs": [
+      "collection candidates",
+      "conflict output",
+      "receipt note"
+    ],
+    "materiality": "NON_MATERIAL_TO_SOURCE_HASH_INTEGRITY"
+  },
+  "next_phase": "CL-PHASE-01",
+  "migration_authorized": false
+}

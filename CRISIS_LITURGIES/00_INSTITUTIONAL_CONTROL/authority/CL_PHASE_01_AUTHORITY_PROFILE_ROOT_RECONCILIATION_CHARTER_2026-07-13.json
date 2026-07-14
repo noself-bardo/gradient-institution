@@ -1,0 +1,22 @@
+{
+  "record_id": "CL-PHASE-01-CHARTER",
+  "status": "AUTHORIZED",
+  "date_opened": "2026-07-13",
+  "migration_authorized": false,
+  "workstreams": [
+    "GOVERNANCE_RECONCILIATION",
+    "RELEASE_PROFILE_DECISION",
+    "CANONICAL_ROOT_DECISION_CRITERIA",
+    "MIRROR_AND_DUPLICATE_DOCTRINE",
+    "STATE_LANGUAGE_NORMALIZATION"
+  ],
+  "exit_conditions": [
+    "governance cross-reference complete",
+    "release profile disposition complete",
+    "authority hierarchy unambiguous",
+    "canonical root recommendation produced",
+    "mirror and duplicate roles defined",
+    "collection state language normalized",
+    "no migration performed"
+  ]
+}

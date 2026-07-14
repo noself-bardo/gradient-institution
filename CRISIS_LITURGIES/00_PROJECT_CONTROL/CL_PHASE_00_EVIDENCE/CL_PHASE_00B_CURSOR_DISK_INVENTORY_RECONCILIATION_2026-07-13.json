@@ -1,0 +1,130 @@
+{
+  "receipt": {
+    "record_id": "CL-PHASE-00B-001",
+    "title": "Cursor Disk Inventory Reconciliation Addendum",
+    "date": "2026-07-13",
+    "source": "User-provided execution receipt for CL-PHASE-00-005",
+    "verification_level": "RECEIPT_INGESTED / ARTIFACT_PACKAGE_NOT_YET_INDEPENDENTLY_INSPECTED",
+    "cursor_verdict": "PASS WITH ACCESS GAPS",
+    "safety": {
+      "files_changed_outside_output": 0,
+      "files_moved": 0,
+      "files_deleted": 0,
+      "git_commits": 0
+    },
+    "roots": [
+      {
+        "root": "The Gradient",
+        "files": 3706,
+        "approx_size": "3.66 GB"
+      },
+      {
+        "root": "gradient-institution",
+        "files": 1445,
+        "approx_size": "2.24 GB"
+      },
+      {
+        "root": "My Drive\\\\CL_DEATH_OF_THE_BIT",
+        "files": 22,
+        "approx_size": "1.5 MB"
+      }
+    ],
+    "totals": {
+      "files_hashed": 5173,
+      "duplicate_hash_groups": 1276
+    },
+    "checksum_tests": {
+      "CL-V final PDF": {
+        "result": "MATCH",
+        "expected_sha256": "a86f13005aee1eecba61f80b87f72fbb6b258edad3ec5c79971c7f21559a4a46",
+        "locations": 3
+      },
+      "CL-I screen PDF": {
+        "result": "MATCH",
+        "expected_sha256": "68f9e6cd5ef3046be3bcf505e9d697a7d74ade4d0e63c9c81ef810be125cbc86"
+      },
+      "CL-II screen PDF": {
+        "result": "MATCH",
+        "expected_sha256": "7e8a9291f4cbd2d1366fed8d9e232a4683440ee746bafccc22f08c5ee55cd9ea"
+      }
+    },
+    "collection_findings": {
+      "CL-I": "LOCATED_HIGH_CONFIDENCE",
+      "CL-II": "LOCATED_HIGH_CONFIDENCE",
+      "CL-III": "LOCATED_HIGH_CONFIDENCE",
+      "CL-IV": "LOCATED_HIGH_CONFIDENCE",
+      "CL-V": "LOCATED_HIGH_CONFIDENCE_TREE_GAP_CLOSED",
+      "CL-VI": "NOT_FOUND",
+      "CL-VII": "DISPUTED_ONE_HANDOFF_ONLY",
+      "CL-EV-001": "LOCATED_HIGH_CONFIDENCE",
+      "THE_DEATH_OF_THE_BIT": "LOCATED_HIGH_CONFIDENCE"
+    },
+    "scope_notes": [
+      ".git, node_modules, .venv, __pycache__, and .cursor were excluded from file hashing.",
+      "Git state was collected through Git commands instead.",
+      "Roman numeral path matching was corrected after the initial pass because word-boundary matching does not split on underscore.",
+      "The CSV or package checksums were not recomputed after the correction; exact interpretation requires artifact inspection."
+    ]
+  },
+  "conflict_updates": [
+    {
+      "conflict_id": "CF-001",
+      "new_status": "RESOLVED_BY_DIRECT_DISK_EVIDENCE",
+      "new_disposition": "VERIFIED_FROZEN_RELEASE_TREE",
+      "basis": "Live root located under gradient-institution; final PDF found at three mirrored paths; all three match the known SHA-256.",
+      "remaining_work": "Classify one path as canonical release and the others as registered mirrors; do not delete duplicates."
+    },
+    {
+      "conflict_id": "CF-002",
+      "new_status": "RESOLVED_NEGATIVE_FINDING",
+      "new_disposition": "NO_VERIFIED_COLLECTION / NUMBER_UNASSIGNED",
+      "basis": "No CL-VI collection candidate found across the scanned roots.",
+      "remaining_work": "Preserve the designation as unassigned until explicit Founder action."
+    },
+    {
+      "conflict_id": "CF-003",
+      "new_status": "OPEN_CONFIRMED_DISPUTE",
+      "new_disposition": "ONE_HANDOFF_STATUS_FILE_ONLY / NO VERIFIED COLLECTION TREE",
+      "basis": "Disk inventory found only one initiation/status handoff and no high-confidence collection tree.",
+      "remaining_work": "Keep CL-VII quarantined."
+    },
+    {
+      "conflict_id": "CF-014",
+      "new_status": "OPEN_QUANTIFIED",
+      "new_disposition": "1,276 DUPLICATE-HASH GROUPS REQUIRE RELATIONSHIP CLASSIFICATION",
+      "basis": "Disk inventory directly quantified exact duplicate groups.",
+      "remaining_work": "Classify canonical, mirror, release duplicate, copied working file, and unknown groups before migration."
+    },
+    {
+      "conflict_id": "CF-015",
+      "new_status": "OPEN_ROOTS_MAPPED",
+      "new_disposition": "THREE PRIMARY LEGACY ROOTS VERIFIED",
+      "basis": "The Gradient, gradient-institution, and My Drive Death Bit roots were scanned.",
+      "remaining_work": "Choose the canonical operational root only after duplicate and authority mapping."
+    }
+  ],
+  "phase_status": {
+    "phase": "PHASE_00",
+    "status": "SUBSTANTIVELY_COMPLETE_WITH_ONE_INGESTION_GATE",
+    "institutional_verdict": "PASS WITH ACCESS GAPS",
+    "closed_gaps": [
+      "CL-V tree existence",
+      "CL-V final checksum",
+      "CL-I screen checksum",
+      "CL-II screen checksum",
+      "CL-VI negative finding",
+      "primary local root discovery",
+      "duplicate-group quantification"
+    ],
+    "open_gaps": [
+      "Independent inspection of the seven returned artifacts",
+      "Clarification and regeneration of package checksums after Roman-numeral matcher correction",
+      "CL-VII later-work reconciliation",
+      "Canonical-versus-mirror classification",
+      "Pygmalion state and dependency reconciliation",
+      "CCR-CL-003 decision"
+    ],
+    "next_phase": "PHASE_00C_ARTIFACT_INGESTION_AND_PACKAGE_INTEGRITY_PATCH",
+    "phase_01_entry_condition": "The returned disk inventory artifacts are uploaded and independently inspected, and the post-correction output package has an internally consistent checksum manifest."
+  }
+}
