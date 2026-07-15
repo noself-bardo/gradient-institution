@@ -1,0 +1,619 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thegradient.local/schemas/cl-migration-manifest.schema.v1.2.json",
+  "title": "CL_MIGRATION_MANIFEST",
+  "description": "v1.2 \u2014 adds portable authority bundle refs, provenance_locators, collection_state_map refs, deferred_batches; keeps PLAN/DRY_RUN copy_authorized=false.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest_version",
+    "batch_id",
+    "batch_class",
+    "mode",
+    "created_at",
+    "canonical_repo_root",
+    "canonical_cl_namespace",
+    "copy_authorized",
+    "deletion_authorized",
+    "rename_source_authorized",
+    "builder_authorized",
+    "commit_authorized",
+    "items",
+    "exclusions",
+    "rollback",
+    "written_targets"
+  ],
+  "properties": {
+    "manifest_version": {
+      "type": "string",
+      "enum": [
+        "1.1",
+        "1.2"
+      ]
+    },
+    "batch_id": {
+      "type": "string",
+      "pattern": "^CL-MIG-[0-9]{3}(-[A-Z0-9_]+)?$"
+    },
+    "batch_class": {
+      "type": "string",
+      "enum": [
+        "GOVERNANCE_AND_REGISTRIES",
+        "HISTORICAL_RELEASE_REFERENCE",
+        "FROZEN_RELEASE",
+        "QUALIFIED_FROZEN_SNAPSHOT",
+        "RETURN_FOR_REVISION",
+        "WORKING_ASSEMBLY",
+        "QUARANTINE_EVIDENCE",
+        "MIXED_CONTROLLED"
+      ]
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "PLAN",
+        "DRY_RUN",
+        "COPY",
+        "VERIFY",
+        "ROLLBACK"
+      ]
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "canonical_repo_root": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canonical_cl_namespace": {
+      "type": "string",
+      "minLength": 1
+    },
+    "archive_drive_root": {
+      "type": "string"
+    },
+    "copy_authorized": {
+      "type": "boolean"
+    },
+    "deletion_authorized": {
+      "type": "boolean",
+      "const": false
+    },
+    "rename_source_authorized": {
+      "type": "boolean",
+      "const": false
+    },
+    "builder_authorized": {
+      "type": "boolean",
+      "const": false
+    },
+    "commit_authorized": {
+      "type": "boolean"
+    },
+    "human_authorization_record": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "preconditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stop_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/migration_item"
+      }
+    },
+    "duplicate_groups_in_scope": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sha256",
+          "relationship_class",
+          "paths"
+        ],
+        "properties": {
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          },
+          "relationship_class": {
+            "type": "string",
+            "enum": [
+              "CANONICAL_ACTIVE_SOURCE",
+              "FROZEN_RELEASE",
+              "REGISTERED_MIRROR",
+              "STORAGE_MIRROR",
+              "BACKUP",
+              "PUBLICATION_DERIVATIVE",
+              "WORKING_COPY",
+              "SUPERSEDED_WORKING_COPY",
+              "ORPHANED_DUPLICATE",
+              "QUARANTINE"
+            ]
+          },
+          "paths": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "written_targets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rollback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method",
+        "source_untouched",
+        "target_removal_scope",
+        "written_targets_ref"
+      ],
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "DELETE_WRITTEN_TARGETS_ONLY",
+            "RESTORE_FROM_PREBATCH_SNAPSHOT",
+            "MANIFEST_REVERSAL"
+          ]
+        },
+        "source_untouched": {
+          "type": "boolean",
+          "const": true
+        },
+        "target_removal_scope": {
+          "type": "string",
+          "enum": [
+            "MANIFEST_WRITTEN_FILES_ONLY",
+            "MANIFEST_WRITTEN_TREES_ONLY"
+          ]
+        },
+        "written_targets_ref": {
+          "type": "string",
+          "const": "written_targets"
+        },
+        "prebatch_snapshot_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "properties": {
+        "checksum_tool": {
+          "type": "string"
+        },
+        "schema_validator": {
+          "type": "string"
+        },
+        "path_reference_scan_ref": {
+          "type": "string"
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    },
+    "blocked_items": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "deferred_batches": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "portable_authority_bundle": {
+      "type": "object"
+    },
+    "collection_state_map_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "collection_state_map_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-fA-F0-9]{64}$"
+    }
+  },
+  "$defs": {
+    "relationship_class": {
+      "type": "string",
+      "enum": [
+        "CANONICAL_ACTIVE_SOURCE",
+        "FROZEN_RELEASE",
+        "REGISTERED_MIRROR",
+        "STORAGE_MIRROR",
+        "BACKUP",
+        "PUBLICATION_DERIVATIVE",
+        "WORKING_COPY",
+        "SUPERSEDED_WORKING_COPY",
+        "ORPHANED_DUPLICATE",
+        "QUARANTINE"
+      ]
+    },
+    "artifact_role": {
+      "type": "string",
+      "enum": [
+        "AUTHORITY_RECORD",
+        "ACCEPTED_DECISION",
+        "RELEASE_PROFILE",
+        "STATE_RECORD",
+        "REGISTRY",
+        "SCHEMA",
+        "EVIDENCE_REFERENCE",
+        "EXTERNAL_BINARY_REFERENCE",
+        "HANDOFF_RECORD",
+        "QUARANTINE_RECORD"
+      ]
+    },
+    "state_dimensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "specification_state",
+        "production_state",
+        "qc_state",
+        "release_state",
+        "print_state",
+        "publication_state",
+        "archive_state",
+        "dispute_state"
+      ],
+      "properties": {
+        "specification_state": {
+          "type": "string"
+        },
+        "production_state": {
+          "type": "string"
+        },
+        "qc_state": {
+          "type": "string"
+        },
+        "release_state": {
+          "type": "string"
+        },
+        "print_state": {
+          "type": "string"
+        },
+        "publication_state": {
+          "type": "string"
+        },
+        "archive_state": {
+          "type": "string"
+        },
+        "dispute_state": {
+          "type": "string"
+        }
+      }
+    },
+    "migration_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "item_id",
+        "collection_id",
+        "item_kind",
+        "source_path",
+        "target_path",
+        "source_exists",
+        "artifact_role",
+        "relationship_class",
+        "batch_class",
+        "copy_method",
+        "verification_method",
+        "rollback_method",
+        "destination_occupancy",
+        "status"
+      ],
+      "properties": {
+        "item_id": {
+          "type": "string",
+          "pattern": "^MIG-[0-9]{4}$"
+        },
+        "collection_id": {
+          "type": "string"
+        },
+        "item_kind": {
+          "type": "string",
+          "enum": [
+            "COPY_FILE",
+            "AUTHOR_NEW_RECORD",
+            "EXTERNAL_REFERENCE_ONLY",
+            "BLOCKED",
+            "DEFERRED"
+          ]
+        },
+        "source_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target_path": {
+          "type": "string"
+        },
+        "source_exists": {
+          "type": "boolean"
+        },
+        "byte_count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-fA-F0-9]{64}$"
+        },
+        "authority_source_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "authority_source_sha256": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-fA-F0-9]{64}$"
+        },
+        "output_schema": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "artifact_role": {
+          "$ref": "#/$defs/artifact_role"
+        },
+        "relationship_class": {
+          "$ref": "#/$defs/relationship_class"
+        },
+        "batch_class": {
+          "type": "string"
+        },
+        "state_dimensions": {
+          "$ref": "#/$defs/state_dimensions"
+        },
+        "destination_occupancy": {
+          "type": "string",
+          "enum": [
+            "ABSENT",
+            "FILE_EXISTS_STOP",
+            "DIRECTORY_EXISTS_INSPECT",
+            "PARENT_ABSENT",
+            "UNKNOWN"
+          ]
+        },
+        "copy_method": {
+          "type": "string",
+          "enum": [
+            "COPY_FILE",
+            "AUTHOR_NEW_RECORD",
+            "WRITE_EXTERNAL_REFERENCE_ONLY",
+            "SKIP_LEAVE_IN_PLACE",
+            "NONE_BLOCKED"
+          ]
+        },
+        "verification_method": {
+          "type": "string",
+          "enum": [
+            "SHA256_MATCH",
+            "SCHEMA_VALIDATE",
+            "HUMAN_SPOT_CHECK",
+            "MANIFEST_PRESENCE",
+            "NONE_PLAN_ONLY",
+            "NONE_BLOCKED"
+          ]
+        },
+        "rollback_method": {
+          "type": "string",
+          "enum": [
+            "DELETE_TARGET",
+            "RESTORE_PREBATCH_SNAPSHOT",
+            "NO_OP_SOURCE_ONLY",
+            "NONE_PLAN_ONLY",
+            "NONE_BLOCKED"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "PLANNED",
+            "BLOCKED",
+            "DEFERRED",
+            "EXCLUDED"
+          ]
+        },
+        "block_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        },
+        "provenance_locators": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "kind",
+              "value"
+            ],
+            "additionalProperties": true
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "item_kind": {
+                "const": "COPY_FILE"
+              }
+            },
+            "required": [
+              "item_kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "byte_count",
+              "sha256"
+            ],
+            "properties": {
+              "source_exists": {
+                "const": true
+              },
+              "byte_count": {
+                "type": "integer"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-fA-F0-9]{64}$"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "item_kind": {
+                "const": "AUTHOR_NEW_RECORD"
+              }
+            },
+            "required": [
+              "item_kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "authority_source_path",
+              "authority_source_sha256",
+              "output_schema"
+            ],
+            "properties": {
+              "copy_method": {
+                "const": "AUTHOR_NEW_RECORD"
+              },
+              "verification_method": {
+                "const": "SCHEMA_VALIDATE"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "enum": [
+              "PLAN",
+              "DRY_RUN"
+            ]
+          }
+        },
+        "required": [
+          "mode"
+        ]
+      },
+      "then": {
+        "properties": {
+          "copy_authorized": {
+            "const": false
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "COPY"
+          }
+        },
+        "required": [
+          "mode"
+        ]
+      },
+      "then": {
+        "properties": {
+          "copy_authorized": {
+            "const": true
+          },
+          "human_authorization_record": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "human_authorization_record"
+        ]
+      }
+    }
+  ],
+  "manifest_version_const_note": "runtime uses manifest_version 1.2"
+}

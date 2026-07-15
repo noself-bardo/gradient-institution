@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thegradient.local/schemas/cl-phase-02c-external-binary-reference.schema.json",
+  "title": "CL_PHASE_02C_EXTERNAL_BINARY_REFERENCE",
+  "description": "Stable reference to a binary or large evidence object that remains outside Git. Does not admit publication or archive by itself.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "stable_reference_id",
+    "source_location",
+    "storage_surface",
+    "filename",
+    "bytes",
+    "sha256",
+    "mime_type",
+    "authority_state",
+    "lifecycle_state",
+    "access_state",
+    "retention_requirement",
+    "replacement_policy"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "2.0-02C"
+    },
+    "stable_reference_id": {
+      "type": "string",
+      "pattern": "^CL-XBIN-[A-Z0-9_-]+$"
+    },
+    "source_location": {
+      "type": "string",
+      "minLength": 1
+    },
+    "storage_surface": {
+      "type": "string",
+      "enum": [
+        "GOOGLE_DRIVE_THE_GRADIENT",
+        "GOOGLE_DRIVE_OTHER",
+        "LOCAL_REGISTERED_MIRROR",
+        "GITHUB_RELEASE_ASSET",
+        "OTHER_REGISTERED"
+      ]
+    },
+    "filename": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bytes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "mime_type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authority_state": {
+      "type": "string",
+      "enum": [
+        "UNRESOLVED",
+        "PENDING_HUMAN_RATIFICATION",
+        "REGISTERED_EXTERNAL",
+        "REJECTED"
+      ]
+    },
+    "lifecycle_state": {
+      "type": "string",
+      "minLength": 1
+    },
+    "access_state": {
+      "type": "string",
+      "enum": [
+        "READABLE",
+        "UNREADABLE",
+        "RESTRICTED",
+        "UNKNOWN"
+      ]
+    },
+    "retention_requirement": {
+      "type": "string",
+      "enum": [
+        "KEEP_INDEFINITELY",
+        "KEEP_UNTIL_SUPERSEDED",
+        "KEEP_PER_BATCH_RECEIPT",
+        "HUMAN_REVIEW_REQUIRED"
+      ]
+    },
+    "replacement_policy": {
+      "type": "string",
+      "enum": [
+        "NO_SILENT_REPLACE",
+        "REPLACE_ONLY_WITH_NEW_REFERENCE_ID",
+        "HASH_MUST_CHANGE_WITH_NEW_ID",
+        "HUMAN_AUTHORIZATION_REQUIRED"
+      ]
+    },
+    "collection_id": {
+      "type": "string"
+    },
+    "recovery_route": {
+      "type": "string"
+    },
+    "immutable": {
+      "type": "boolean"
+    },
+    "do_not_delete": {
+      "type": "boolean",
+      "const": true
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

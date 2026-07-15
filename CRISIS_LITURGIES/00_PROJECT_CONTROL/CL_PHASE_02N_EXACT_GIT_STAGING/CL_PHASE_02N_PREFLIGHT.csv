@@ -1,0 +1,15 @@
+field,value
+current_working_directory,C:/Users/steve/Projects/gradient-institution
+repository_root,C:/Users/steve/Projects/gradient-institution
+current_branch,main
+HEAD_commit,f61e6bcd0f8d6d872967b245f4ff67ffb2f1af0f
+working_tree_status,DIRTY_PERMITTED
+phase_02m_change_scope_exists,YES
+phase_02m_authorization_packet_exists,YES
+phase_02m_change_scope_sha256,1e9871d77474c5292e633bee20384d8646f55ce6b1baf6936b3df14a299dbec7
+output_folder_exists,NO_BEFORE_CREATE
+preexisting_staged_path_count,0
+preexisting_staged_paths,NONE
+authorized_HEAD_from_phase_02m,f61e6bcd0f8d6d872967b245f4ff67ffb2f1af0f
+HEAD_matches_phase_02m_packet,YES
+stop_verdict,STOPPED — ALLOWLIST PATH CHANGED

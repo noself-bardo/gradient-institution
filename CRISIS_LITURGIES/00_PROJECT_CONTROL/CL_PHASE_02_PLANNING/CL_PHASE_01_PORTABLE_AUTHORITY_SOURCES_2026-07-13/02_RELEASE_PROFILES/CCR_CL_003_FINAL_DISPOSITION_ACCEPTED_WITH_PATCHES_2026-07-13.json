@@ -1,0 +1,20 @@
+{
+  "record_id": "CCR-CL-003",
+  "final_disposition": "ACCEPTED_WITH_PATCHES",
+  "ratified_date": "2026-07-13",
+  "ratifying_authority": "Human Founder",
+  "effective": true,
+  "patches": [
+    "CCR-CL-003-P01",
+    "CCR-CL-003-P02",
+    "CCR-CL-003-P03",
+    "CCR-CL-003-P04",
+    "CCR-CL-003-P05",
+    "CCR-CL-003-P06",
+    "CCR-CL-003-P07"
+  ],
+  "migration_authorized": false,
+  "rendering_authorized": false,
+  "publication_authorized": false,
+  "generated_at": "2026-07-13T14:48:14.332097+00:00"
+}

@@ -1,0 +1,37 @@
+{
+  "record_id": "CL-MIG-001-CLOSE",
+  "status": "PASS_CL_MIG_001_VERIFIED_AND_CLOSED",
+  "date": "2026-07-13",
+  "batch": "CL-MIG-001",
+  "evidence_package": "CL_MIG_001_POST_COPY_VERIFICATION_2026-07-13.zip.zip",
+  "evidence_package_sha256": "f04d746c91e463e4ffebeab35ea27fe8d7708e7edae185434bff322107100e5a",
+  "verified": {
+    "schema_errors": 0,
+    "planned_items": 38,
+    "deferred_items": 1,
+    "deferred_item_ids": [
+      "MIG-0039"
+    ],
+    "destinations_created_and_verified": "38/38",
+    "sources_retained_unchanged": "38/38",
+    "duplicate_targets": 0,
+    "overwrites": 0,
+    "exceptions": 0,
+    "path_stop": 0,
+    "path_warn": 27,
+    "created_leaf_parents": 9,
+    "created_ancestor_directories": 4,
+    "created_directories_total": 13,
+    "commits": 0,
+    "rollback_executed": false
+  },
+  "permissions_after_closure": {
+    "source_retirement": false,
+    "delete": false,
+    "rollback": false,
+    "commit": false,
+    "next_batch_execution": false,
+    "chachipti_classification": false
+  },
+  "generated_at": "2026-07-14T12:11:17.520707+00:00"
+}

@@ -1,0 +1,335 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thegradient.local/schemas/cl-phase-02c-migration-manifest.schema.json",
+  "title": "CL_PHASE_02C_MIGRATION_MANIFEST",
+  "description": "Crisis Liturgies migration batch manifest (Phase 02C repaired). PLAN/DRY_RUN/COPY modes; deletion never authorized by this schema. Repository remains a candidate until separately ratified.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest_version",
+    "batch_id",
+    "mode",
+    "created_at",
+    "repository_posture",
+    "copy_authorized",
+    "deletion_authorized",
+    "builder_authorized",
+    "items",
+    "exclusions",
+    "rollback"
+  ],
+  "properties": {
+    "manifest_version": {
+      "type": "string",
+      "const": "2.0-02C"
+    },
+    "batch_id": {
+      "type": "string",
+      "pattern": "^CL-MIG-[0-9]{3}[A-Z]?(-[A-Z0-9_]+)?$"
+    },
+    "batch_class": {
+      "type": "string",
+      "enum": [
+        "PROGRAM_GOVERNANCE_AND_REGISTRIES",
+        "BUILDER_SCHEMAS",
+        "HISTORICAL_RELEASE_REFERENCE",
+        "FROZEN_RELEASE",
+        "WORKING_ASSEMBLY",
+        "QUARANTINE_EVIDENCE",
+        "EXTERNAL_REFERENCE_ONLY",
+        "MIXED_CONTROLLED"
+      ]
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "PLAN",
+        "DRY_RUN",
+        "COPY",
+        "VERIFY",
+        "ROLLBACK"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "repository_posture": {
+      "type": "string",
+      "enum": [
+        "REPOSITORY_CANDIDATE",
+        "RATIFIED_ACTIVE_REPOSITORY"
+      ],
+      "description": "Must remain REPOSITORY_CANDIDATE until institutional ratification."
+    },
+    "canonical_repo_root": {
+      "type": "string"
+    },
+    "program_namespace": {
+      "type": "string"
+    },
+    "copy_authorized": {
+      "type": "boolean"
+    },
+    "deletion_authorized": {
+      "type": "boolean",
+      "const": false
+    },
+    "builder_authorized": {
+      "type": "boolean",
+      "const": false
+    },
+    "commit_authorized": {
+      "type": "boolean",
+      "default": false
+    },
+    "human_authorization_record": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/migration_item"
+      }
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rollback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "doctrine",
+        "deletion_allowed",
+        "method"
+      ],
+      "properties": {
+        "doctrine": {
+          "type": "string",
+          "const": "NON_DESTRUCTIVE_EVIDENCE_DRIVEN"
+        },
+        "deletion_allowed": {
+          "type": "boolean",
+          "const": false
+        },
+        "method": {
+          "type": "string",
+          "enum": [
+            "FREEZE_MARK_DISPUTED_PRESERVE_BOTH",
+            "REVERSE_ROUTING_ONLY",
+            "QUARANTINE_LABEL_WITHOUT_DELETE"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "migration_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "item_id",
+        "source_identity",
+        "source_hash",
+        "source_parent",
+        "record_type",
+        "lifecycle_state",
+        "authority_state",
+        "authority_evidence",
+        "target_identity",
+        "target_parent",
+        "parent_validation",
+        "occupancy_state",
+        "collision_type",
+        "path_validation",
+        "rollback_reference",
+        "copy_receipt",
+        "post_copy_hash",
+        "verification_state",
+        "human_authorization"
+      ],
+      "properties": {
+        "item_id": {
+          "type": "string",
+          "pattern": "^MIG-[0-9]{4}$"
+        },
+        "source_identity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_hash": {
+          "$ref": "#/$defs/sha256"
+        },
+        "source_parent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "record_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lifecycle_state": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authority_state": {
+          "type": "string",
+          "enum": [
+            "UNRESOLVED",
+            "PENDING_HUMAN_RATIFICATION",
+            "PROGRAM_CANDIDATE",
+            "RATIFIED_PROGRAM_CONTROL",
+            "EXTERNAL_REFERENCE_ONLY",
+            "REJECTED",
+            "PROHIBITED"
+          ]
+        },
+        "authority_evidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target_identity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target_parent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parent_validation": {
+          "type": "string",
+          "enum": [
+            "PARENT_EXISTS",
+            "PARENT_ABSENT",
+            "PARENT_NOT_AUTHORIZED",
+            "PATH_INVALID"
+          ]
+        },
+        "occupancy_state": {
+          "type": "string",
+          "enum": [
+            "ABSENT",
+            "EMPTY",
+            "OCCUPIED",
+            "PARENT_ABSENT",
+            "TYPE_MISMATCH"
+          ]
+        },
+        "collision_type": {
+          "type": "string",
+          "enum": [
+            "NONE",
+            "DESTINATION_OCCUPIED",
+            "SAME_FILENAME_DIFFERENT_HASH",
+            "SAME_FILENAME_IDENTICAL_HASH",
+            "FILE_VERSUS_FOLDER",
+            "CASE_INSENSITIVE",
+            "DUPLICATE_TARGET_IN_MANIFEST",
+            "PARENT_ABSENT"
+          ]
+        },
+        "path_validation": {
+          "type": "string",
+          "enum": [
+            "OK",
+            "PATH_LENGTH_WARN",
+            "PATH_LENGTH_RISK",
+            "INVALID_CHARS",
+            "RESERVED_NAME",
+            "PATH_INVALID"
+          ]
+        },
+        "rollback_reference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "copy_receipt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "post_copy_hash": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^([a-fA-F0-9]{64})?$"
+        },
+        "verification_state": {
+          "type": "string",
+          "enum": [
+            "NOT_STARTED",
+            "DRY_RUN_FAIL",
+            "DRY_RUN_PASS",
+            "COPIED_UNVERIFIED",
+            "VERIFIED",
+            "DISPUTED",
+            "SUPERSEDED"
+          ]
+        },
+        "human_authorization": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "external_reference_required": {
+          "type": "boolean",
+          "default": false
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mode": {
+            "const": "COPY"
+          }
+        },
+        "required": [
+          "mode"
+        ]
+      },
+      "then": {
+        "properties": {
+          "copy_authorized": {
+            "const": true
+          },
+          "human_authorization_record": {
+            "type": "string",
+            "minLength": 1
+          },
+          "repository_posture": {
+            "const": "REPOSITORY_CANDIDATE"
+          }
+        },
+        "required": [
+          "human_authorization_record"
+        ]
+      }
+    }
+  ]
+}

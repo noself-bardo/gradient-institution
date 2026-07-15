@@ -1,0 +1,73 @@
+{
+  "registry_id": "CL-RELEASE-PROFILES-001",
+  "version": "1.0",
+  "status": "LOCKED_FRAMEWORK_WITH_PROVISIONAL_SPECIAL_PROFILE",
+  "effective_date": "2026-07-13",
+  "authority": "CCR-CL-003",
+  "invariant_functions": [
+    "RELIC_ENTRY",
+    "WITNESS_RECORD",
+    "SYSTEM_TRANSLATION",
+    "ARCHIVE_DISPOSITION"
+  ],
+  "profiles": [
+    {
+      "profile_id": "CL-PROFILE-ARCHIVE-RELIC",
+      "version": "1.0",
+      "status": "ADMITTED",
+      "page_count": 4,
+      "mapping": {
+        "RELIC_ENTRY": "Identity",
+        "WITNESS_RECORD": "Primary Observation",
+        "SYSTEM_TRANSLATION": "Failure Record",
+        "ARCHIVE_DISPOSITION": "Archive Closure"
+      }
+    },
+    {
+      "profile_id": "CL-PROFILE-READER-FACING-LITURGY",
+      "version": "1.0",
+      "status": "ADMITTED",
+      "page_count": 4,
+      "mapping": {
+        "RELIC_ENTRY": "Artifact",
+        "WITNESS_RECORD": "Liturgical Hymn",
+        "SYSTEM_TRANSLATION": "Gradient Translation",
+        "ARCHIVE_DISPOSITION": "Archive Commentary"
+      }
+    },
+    {
+      "profile_id": "CL-PROFILE-EXPANSION-VOLUME",
+      "version": "1.0",
+      "status": "ADMITTED",
+      "page_count": 4,
+      "mapping": {
+        "RELIC_ENTRY": "Encounter",
+        "WITNESS_RECORD": "Mechanism-Witness",
+        "SYSTEM_TRANSLATION": "Institution-Expansion",
+        "ARCHIVE_DISPOSITION": "Residue-Turn"
+      }
+    },
+    {
+      "profile_id": "CL-PROFILE-SPECIAL-LONGFORM",
+      "version": "0.1",
+      "status": "FRAMEWORK_ADMITTED_PROFILE_INSTANCE_REQUIRES_RATIFICATION",
+      "page_count": "VARIABLE",
+      "requirements": [
+        "declare full page sequence",
+        "map invariant functions at issue or movement level",
+        "declare additional page functions",
+        "declare recurrence or distribution of invariant functions",
+        "receive separate human ratification"
+      ],
+      "current_candidate": "The Death of the Bit"
+    }
+  ],
+  "builder_stop_conditions": [
+    "missing release profile",
+    "missing function mapping",
+    "ambiguous function mapping",
+    "unratified special-volume profile",
+    "attempted retroactive rename of frozen release",
+    "profile inferred from path or title"
+  ]
+}

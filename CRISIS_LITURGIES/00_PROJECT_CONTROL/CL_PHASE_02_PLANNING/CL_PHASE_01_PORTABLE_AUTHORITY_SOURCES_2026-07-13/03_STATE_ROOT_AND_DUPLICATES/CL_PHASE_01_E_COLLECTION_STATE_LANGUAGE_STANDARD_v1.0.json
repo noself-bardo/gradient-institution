@@ -1,0 +1,24 @@
+{
+  "record_id": "CL-PHASE-01-E",
+  "title": "Collection State Language Standard",
+  "version": "1.0",
+  "status": "RATIFIED_ACCEPTED_WITH_PATCHES",
+  "ratified_date": "2026-07-13",
+  "ratifying_authority": "Human Founder",
+  "patches": [
+    "CL-PHASE-01-E-P01",
+    "CL-PHASE-01-E-P02",
+    "CL-PHASE-01-E-P03",
+    "CL-PHASE-01-E-P04",
+    "CL-PHASE-01-E-P05",
+    "CL-PHASE-01-E-P06",
+    "CL-PHASE-01-E-P07"
+  ],
+  "permissions": {
+    "migration_authorized": false,
+    "rendering_authorized": false,
+    "publication_authorized": false,
+    "archive_admission_authorized": false
+  },
+  "generated_at": "2026-07-13T15:23:17.386546+00:00"
+}

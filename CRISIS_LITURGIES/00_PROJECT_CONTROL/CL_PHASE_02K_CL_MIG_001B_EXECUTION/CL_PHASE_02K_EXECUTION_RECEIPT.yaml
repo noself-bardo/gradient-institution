@@ -1,0 +1,140 @@
+record_id: CL-PHASE-02K-001-RECEIPT
+phase: CL_PHASE_02K
+title: CL-MIG-001B Controlled Copy and Verification
+mode: AUTHORIZED_SOURCE_COPY_ONLY
+executed_at_utc: 2026-07-14T12:20:59Z
+repository_root: C:\Users\steve\Projects\gradient-institution
+repository_posture: ACTIVE_REPOSITORY_CANDIDATE_PERMANENT_INSTITUTIONAL_AUTHORITY_NOT_RATIFIED
+current_branch: main
+HEAD_commit: 2a434e89025dbd6d204f91e84a7a950d70f31c50
+working_tree_status: DIRTY
+current_working_directory: C:\Users\steve\Projects\gradient-institution
+authorization_id: AUTH-COPY-CL-MIG-001B
+batch_id: CL-MIG-001B
+human_authorization: AUTHORIZE_COPY_CL-MIG-001B_ONLY
+source_records_read_only:
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02H_FILE_AUTHORITY_ADJUDICATION
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02I_AUTHORITY_RATIFICATION_AND_COPY_PREFLIGHT
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02J_COMPLETE_EXECUTION_BUNDLE
+phase_02j_sources_of_truth:
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02J_COMPLETE_EXECUTION_BUNDLE\CL_PHASE_02J_COMPLETE_DESTINATION_ARTIFACT_REGISTER.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02J_COMPLETE_EXECUTION_BUNDLE\CL_PHASE_02J_CL_MIG_001B_FINAL_AUTHORIZATION_PACKET.md
+output_folder: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02K_CL_MIG_001B_EXECUTION
+output_collision: false
+phases_not_edited:
+  - CL_PHASE_02_PLANNING
+  - CL_PHASE_02B_PLANNING_QC
+  - CL_PHASE_02C_PLANNING_REPAIR
+  - CL_PHASE_02D_RATIFICATION_AND_PARENT_PLAN
+  - CL_PHASE_02E_PARENT_AUTHORIZATION_REVIEW
+  - CL_PHASE_02F_PARENT_MATERIALIZATION
+  - CL_PHASE_02G_POST_MATERIALIZATION_DRY_RUN
+  - CL_PHASE_02H_FILE_AUTHORITY_ADJUDICATION
+  - CL_PHASE_02I_AUTHORITY_RATIFICATION_AND_COPY_PREFLIGHT
+  - CL_PHASE_02J_COMPLETE_EXECUTION_BUNDLE
+approved_field_interpretation:
+  canonical_repo_root: The Crisis Liturgies program root within the active repository candidate. It does not declare permanent Gradient repository authority.
+preflight:
+  phase_02j_bundle_exists: YES
+  phase_02j_destination_register_exists: YES
+  phase_02j_authorization_packet_exists: YES
+  authorized_destination_parent_exists: YES
+  authorized_destination_parent_type: DIRECTORY
+  authorized_destination_parent_direct_child_count: 0
+  output_folder_exists_before_create: NO
+authorized_destination_parent: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\05_BUILDER_CONTRACTS
+execution_set:
+  selected_row_count: 2
+  selected_rows:
+    - destination_artifact_id: DEST-ART-036
+      authorization_id: AUTH-COPY-CL-MIG-001B
+      batch_id: CL-MIG-001B
+      artifact_type: SOURCE_COPY
+      ratification_decision_id: RAT-FILE-CL-020
+      execution_status_before: NOT AUTHORIZED
+      creation_sequence: 36
+    - destination_artifact_id: DEST-ART-037
+      authorization_id: AUTH-COPY-CL-MIG-001B
+      batch_id: CL-MIG-001B
+      artifact_type: SOURCE_COPY
+      ratification_decision_id: RAT-FILE-CL-021
+      execution_status_before: NOT AUTHORIZED
+      creation_sequence: 37
+  admission_sidecar_rows_selected: 0
+  CL_MIG_001A_rows_selected: 0
+  deferred_rows_selected: 0
+copy_order:
+  - RAT-FILE-CL-020
+  - RAT-FILE-CL-021
+files_copied:
+  - execution_record_id: DEST-ART-036
+    ratification_decision_id: RAT-FILE-CL-020
+    source_absolute_path: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR\CL_PHASE_02C_MIGRATION_MANIFEST_SCHEMA.json
+    exact_destination_path: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\05_BUILDER_CONTRACTS\CL_PHASE_02C_MIGRATION_MANIFEST_SCHEMA.json
+    authorized_source_sha256: 661ceb80321000c9c69313c66c2b1b64c07efbe3ba16fbe23900c82bf030dc3b
+    destination_sha256: 661ceb80321000c9c69313c66c2b1b64c07efbe3ba16fbe23900c82bf030dc3b
+    source_bytes: 7746
+    destination_bytes: 7746
+    copy_status: VERIFIED_COPY
+  - execution_record_id: DEST-ART-037
+    ratification_decision_id: RAT-FILE-CL-021
+    source_absolute_path: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR\CL_PHASE_02C_EXTERNAL_BINARY_REFERENCE_SCHEMA.json
+    exact_destination_path: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\05_BUILDER_CONTRACTS\CL_PHASE_02C_EXTERNAL_BINARY_REFERENCE_SCHEMA.json
+    authorized_source_sha256: c4b4ddd98e3ee9f98d72f67270ba95db71bb751c14ff128105601beb5c04f491
+    destination_sha256: c4b4ddd98e3ee9f98d72f67270ba95db71bb751c14ff128105601beb5c04f491
+    source_bytes: 2690
+    destination_bytes: 2690
+    copy_status: VERIFIED_COPY
+destination_parent_after_state:
+  path: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\05_BUILDER_CONTRACTS
+  direct_child_count: 2
+  direct_folder_count: 0
+  direct_file_count: 2
+  filenames:
+    - CL_PHASE_02C_MIGRATION_MANIFEST_SCHEMA.json
+    - CL_PHASE_02C_EXTERNAL_BINARY_REFERENCE_SCHEMA.json
+migration_boundary:
+  CL_MIG_001B_source_files_copied: 2
+  CL_MIG_001B_admission_sidecars_created: 0
+  CL_MIG_001A_source_files_copied: 0
+  CL_MIG_001A_admission_sidecars_created: 0
+  additional_destination_files_created: 0
+  additional_destination_parents_created: 0
+verdict: 'PASS — CL-MIG-001B COPIED AND VERIFIED'
+control_files_created:
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02K_CL_MIG_001B_EXECUTION\CL_PHASE_02K_HUMAN_COPY_AUTHORIZATION_RECORD.md
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02K_CL_MIG_001B_EXECUTION\CL_PHASE_02K_PREFLIGHT.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02K_CL_MIG_001B_EXECUTION\CL_PHASE_02K_BEFORE_STATE.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02K_CL_MIG_001B_EXECUTION\CL_PHASE_02K_COPY_RECEIPT.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02K_CL_MIG_001B_EXECUTION\CL_PHASE_02K_AFTER_STATE.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02K_CL_MIG_001B_EXECUTION\CL_PHASE_02K_SCHEMA_VALIDATION.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02K_CL_MIG_001B_EXECUTION\CL_PHASE_02K_EXECUTION_RECEIPT.yaml
+safety_receipt:
+  authorized_source_files_copied: 2
+  authorized_destination_files_created: 2
+  unauthorized_source_files_copied: 0
+  unauthorized_destination_files_created: 0
+  admission_sidecars_created: 0
+  destination_parents_created: 0
+  source_files_modified: 0
+  source_files_moved: 0
+  source_files_renamed: 0
+  source_files_deleted: 0
+  destination_files_overwritten: 0
+  destination_files_deleted: 0
+  CL_MIG_001A_files_copied: 0
+  CL_MIG_001B_files_copied: 2
+  git_files_staged: 0
+  git_commits: 0
+  network_git_operations: 0
+  renders: 0
+  publishes: 0
+  deployments: 0
+notes:
+  - Exactly two CL-MIG-001B SOURCE_COPY artifacts were copied and SHA-256 verified.
+  - No admission sidecars were created.
+  - CL-MIG-001A was not executed.
+  - Source files were preserved unchanged at original locations.
+  - No overwrite, move, rename, or delete occurred.
+  - No files were staged or committed.
+  - ROLLBACK IS NOT DELETION.

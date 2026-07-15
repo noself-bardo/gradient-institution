@@ -1,0 +1,3 @@
+execution_record_id,ratification_decision_id,exact_destination_path,valid_json,valid_json_schema,schema_id_present,schema_version_present,content_identical_to_source,validation_status
+DEST-ART-036,RAT-FILE-CL-020,C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\05_BUILDER_CONTRACTS\CL_PHASE_02C_MIGRATION_MANIFEST_SCHEMA.json,YES,YES,YES,YES,YES,PASS
+DEST-ART-037,RAT-FILE-CL-021,C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\05_BUILDER_CONTRACTS\CL_PHASE_02C_EXTERNAL_BINARY_REFERENCE_SCHEMA.json,YES,YES,YES,YES,YES,PASS

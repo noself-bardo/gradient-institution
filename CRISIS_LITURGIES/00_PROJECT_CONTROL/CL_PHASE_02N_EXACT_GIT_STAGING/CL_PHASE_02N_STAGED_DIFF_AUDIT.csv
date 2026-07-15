@@ -1,0 +1,2 @@
+staged_additions,staged_modifications,staged_deletions,staged_renames,staged_copies,staged_type_changes,staged_submodules,staged_symlinks,staged_binary_files,staged_unmerged_entries,unexpected_generated_files,RAT_FILE_CL_002_present,Phase_02N_control_in_diff,audit_result,notes
+0,0,0,0,0,0,0,0,0,0,0,0,0,NOT_PERFORMED_STAGING_STOPPED,Staging halted before git add due to 18 allowlist path status changes

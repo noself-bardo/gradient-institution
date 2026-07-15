@@ -1,0 +1,16 @@
+field,value
+current_working_directory,C:\Users\steve\Projects\gradient-institution
+repository_root,C:\Users\steve\Projects\gradient-institution
+current_branch,main
+HEAD_commit,2a434e89025dbd6d204f91e84a7a950d70f31c50
+working_tree_status,DIRTY
+phase_02g_candidate_register_exists,YES
+phase_02g_dry_run_exists,YES
+authorized_parent_01_exists,YES
+authorized_parent_03_exists,YES
+authorized_parent_05_exists,YES
+output_folder_exists,YES
+output_folder_existed_before_create,NO
+output_folder_was_empty_at_start,YES
+source_hash_mismatches,0
+docket_records_reconstructed,21

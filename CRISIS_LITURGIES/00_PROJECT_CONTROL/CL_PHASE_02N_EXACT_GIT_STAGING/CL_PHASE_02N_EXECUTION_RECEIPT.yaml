@@ -1,0 +1,101 @@
+phase: CL_PHASE_02N
+title: Exact Git Staging and Staged-Diff Verification
+recorded_utc: 2026-07-14T18:47:22Z
+verdict: "STOPPED — ALLOWLIST PATH CHANGED"
+repository_root: C:/Users/steve/Projects/gradient-institution
+branch: main
+HEAD_commit: f61e6bcd0f8d6d872967b245f4ff67ffb2f1af0f
+authorized_HEAD_from_phase_02m: f61e6bcd0f8d6d872967b245f4ff67ffb2f1af0f
+phase_02m_change_scope_sha256: 1e9871d77474c5292e633bee20384d8646f55ce6b1baf6936b3df14a299dbec7
+allowlist:
+  authorized_allowlist_paths: 236
+  unique_allowlist_paths: 236
+  excluded_unrelated_paths: 1026
+  blocked_by_status_change: 18
+preflight:
+  preexisting_staged_path_count: 0
+  output_folder_collision: NO
+secret_scan:
+  real_literal_secret_hits: 0
+staging:
+  method: NOT_EXECUTED
+  git_add_exit_code: N/A
+  stop_before_staging: YES
+  stop_reason: "STOPPED — ALLOWLIST PATH CHANGED"
+staged_set:
+  staged_paths: 0
+  missing_authorized_paths: 236
+  extra_staged_paths: 0
+  duplicate_staged_paths: 0
+staged_diff:
+  audit_result: NOT_PERFORMED_STAGING_STOPPED
+worktree_separation:
+  staged_authorized_path_count: 0
+  excluded_unrelated_path_count: 1026
+  Phase_02N_control_files_created: 10
+  Phase_02N_control_files_staged: 0
+  unrelated_count_delta_note: "Phase 02N control folder adds 10 new untracked control files; previously excluded unrelated path count remains 1026."
+fingerprint:
+  staged_tree_object_if_available: UNAVAILABLE
+  staged_path_manifest_sha256: NOT_COMPUTED
+  staged_name_status_manifest_sha256: NOT_COMPUTED
+commit_authorization_candidate:
+  authorization_id: AUTH-COMMIT-CL-PHASE-02-CLOSEOUT
+  recommended_decision: NOT_READY_SCOPE_CHANGE
+  commit_authorized: NO
+  push_authorized: NO
+  status: PENDING HUMAN COMMIT AUTHORIZATION
+safety_receipt:
+  authorized_paths_staged: 0
+  unauthorized_paths_staged: 0
+  missing_authorized_paths: 236
+  extra_staged_paths: 0
+  preexisting_staged_paths_modified: 0
+  working_tree_files_modified: 0
+  working_tree_files_created_outside_authorized_control_output: 0
+  working_tree_files_moved: 0
+  working_tree_files_renamed: 0
+  working_tree_files_deleted: 0
+  RAT_FILE_CL_002_staged: 0
+  deferred_registry_records_staged: 0
+  unclassified_Chachipti_records_staged: 0
+  unrelated_paths_staged: 0
+  Phase_02N_control_files_created: 10
+  Phase_02N_control_files_staged: 0
+  git_files_staged: 0
+  git_commits: 0
+  git_pushes: 0
+  network_git_operations: 0
+  git_reset_operations: 0
+  git_restore_operations: 0
+  git_clean_operations: 0
+  git_stash_operations: 0
+  source_cleanup_actions: 0
+  renders: 0
+  publishes: 0
+  deployments: 0
+blocked_paths:
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_EXCEPTIONS.csv
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_EXECUTION_LEDGER.csv
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_EXECUTION_RECEIPT.md
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_EXECUTION_REPORT.md
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CREATED_DIRECTORIES.csv
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_PATH_REFERENCE_POST_COPY.csv
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_POST_COPY_VERIFICATION.csv
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_ROLLBACK_MANIFEST.json
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_SOURCE_RETENTION_CHECK.csv
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/SHA256SUMS_CL_MIG_001_EXECUTION.txt
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COMMIT_CONTROL/CL_MIGRATION_MANIFEST.schema.v1.2.json
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COMMIT_CONTROL/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COMMIT_CONTROL/CL_MIG_001_ISOLATED_COMMIT_ALLOWLIST.json
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COMMIT_CONTROL/CL_MIG_001_ISOLATED_COMMIT_AUTHORIZATION_RECORD_v1.0.md
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COMMIT_CONTROL/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md
+  - CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt
+
+post_audit_observation:
+  audit_time_HEAD: f61e6bcd0f8d6d872967b245f4ff67ffb2f1af0f
+  observed_HEAD_after_control_write: 70c3a6024d0ce6cda57a65514b83aeaa12f3c5ee
+  this_phase_commits: 0
+  this_phase_caused_HEAD_move: NO

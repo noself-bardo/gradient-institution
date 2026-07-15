@@ -1,0 +1,93 @@
+CRISIS_LITURGIES/
+├── 00_PROJECT_CONTROL/
+│   ├── CL_PHASE_00_*/
+│   ├── CL_PHASE_01_*/
+│   ├── CL_PHASE_02_PLANNING/          # THIS PACKAGE (authorized write)
+│   └── CL_MIG_*/                      # future batch authorizations (empty until approved)
+├── 00_INSTITUTIONAL_CONTROL/
+│   ├── authority/
+│   ├── accepted_decisions/
+│   ├── state_machine/
+│   ├── registries/
+│   │   ├── mirrors/
+│   │   ├── duplicates/
+│   │   └── external_binaries/
+│   └── current_status/
+├── 01_CANON/
+│   ├── canon/
+│   ├── doctrines/
+│   ├── symbol_system/
+│   └── historical_versions/
+├── 02_PRODUCTION_STANDARDS/
+│   ├── generation_standard/
+│   ├── print_standard/
+│   ├── archive_standard/
+│   ├── naming_standard/
+│   ├── qc_standard/
+│   └── corrective_lane/
+├── 03_RELEASE_PROFILES/
+│   ├── CCR-CL-003/
+│   ├── archive_relic/
+│   ├── reader_facing_liturgy/
+│   ├── expansion_volume/
+│   └── deferred/
+│       └── CL_DEATH_OF_THE_BIT_SPECIAL_PROFILE/
+├── 04_COLLECTION_REGISTRY/
+│   ├── CL_COLLECTION_STATE_MAP.json
+│   ├── CL_COLLECTION_STATE_LANGUAGE_STANDARD.md
+│   └── per_collection/
+│       ├── CL-I/
+│       ├── CL-II/
+│       ├── CL-III/
+│       ├── CL-IV/
+│       ├── CL-V/
+│       ├── CL-EV-001/
+│       └── CL_DEATH_OF_THE_BIT/
+│       # NOTE: no CL-VI/
+├── 05_VOLUMES/
+│   ├── CL-V_DUAL_POWER_DOMESTICS/
+│   ├── CL-EV-001_THE_PYGMALION_MACHINE/   # RETURN_FOR_REVISION
+│   └── CL_DEATH_OF_THE_BIT/              # WORKING_ASSEMBLY only
+├── 06_BUILDER/
+│   ├── schemas/
+│   ├── compiler/
+│   ├── validators/
+│   ├── render_adapters/
+│   ├── layout/
+│   ├── qc/
+│   ├── release/
+│   └── tests/
+├── 07_ACTIVE_RUNS/
+├── 08_CORRECTIVE_LANES/
+├── 09_RELEASE_CANDIDATES/
+├── 10_FROZEN_RELEASES/
+│   ├── CL-I/
+│   ├── CL-II/
+│   ├── CL-III/
+│   ├── CL-IV/                            # qualified: NOT PRINT-READY
+│   └── CL-V/
+├── 11_PUBLICATION/
+├── 12_ARCHIVE/
+│   ├── superseded/
+│   ├── historical/
+│   ├── rejected/
+│   └── provenance/
+├── 13_HANDOFFS/
+│   ├── cursor/
+│   ├── codex/
+│   └── external/
+├── 90_QUARANTINE/
+│   ├── CL-VII/                           # evidence only; no production tree
+│   ├── chachipti_governance_claims/
+│   └── disputed_state_claims/
+└── 99_TEMP/
+
+# EXISTING LIVE PATHS (pre-migration; not part of approved final layout)
+# CRISIS_LITURGIES/00_CHACHIPTI_PRODUCTION_LANE/
+# CRISIS_LITURGIES/EXPANSION_VOLUMES/CL-EV-001_THE_PYGMALION_MACHINE/
+# CRISIS_LITURGIES/00_CHACHIPTI_PRODUCTION_LANE.zip
+# ../CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/   (repo sibling; migration source)
+
+# FORBIDDEN
+# 05_VOLUMES/CL-VI_*/
+# 05_VOLUMES/CL-VII_*/   (VII stays in 90_QUARANTINE only)

@@ -1,0 +1,107 @@
+﻿record_id: CL-PHASE-02F-001-RECEIPT
+phase: CL_PHASE_02F
+title: Controlled Minimal Parent Materialization
+mode: AUTHORIZED_EMPTY_PARENT_CREATION_ONLY
+executed_at_utc: 2026-07-13T20:41:47Z
+repository_root: C:\Users\steve\Projects\gradient-institution
+repository_posture: ACTIVE_REPOSITORY_CANDIDATE_PERMANENT_INSTITUTIONAL_AUTHORITY_NOT_RATIFIED
+current_branch: main
+HEAD_commit: 2a434e89025dbd6d204f91e84a7a950d70f31c50
+working_tree_status: DIRTY_UNRELATED_CHANGES_PRESENT
+current_working_directory: C:\Users\steve\Projects\gradient-institution
+source_records_read_only:
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02D_RATIFICATION_AND_PARENT_PLAN
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02E_PARENT_AUTHORIZATION_REVIEW
+output_folder: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02F_PARENT_MATERIALIZATION
+output_collision: false
+phases_not_edited:
+  - CL_PHASE_02_PLANNING
+  - CL_PHASE_02B_PLANNING_QC
+  - CL_PHASE_02C_PLANNING_REPAIR
+  - CL_PHASE_02D_RATIFICATION_AND_PARENT_PLAN
+  - CL_PHASE_02E_PARENT_AUTHORIZATION_REVIEW
+preflight:
+  authorized_control_parent_exists: true
+  phase_02d_record_exists: true
+  phase_02e_record_exists: true
+  phase_02f_output_exists_before_create: false
+  direct_parent_child_count_before: 7
+  direct_parent_listing_hash_before: 5b07af23270ebe55a70d1908069c8789cd738d574a97aa849ebf89d71e6eaa5e
+authorization_verified:
+  - authorization_id: HAD-001
+    exact_path: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\01_PROGRAM_GOVERNANCE
+    authorization_record_found: YES
+    path_validation_status: PASS
+    authorization_status: HUMAN_AUTHORIZED_PHASE_02F
+  - authorization_id: HAD-002
+    exact_path: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\03_PHASE_EVIDENCE
+    authorization_record_found: YES
+    path_validation_status: PASS
+    authorization_status: HUMAN_AUTHORIZED_PHASE_02F
+  - authorization_id: HAD-003
+    exact_path: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\05_BUILDER_CONTRACTS
+    authorization_record_found: YES
+    path_validation_status: PASS
+    authorization_status: HUMAN_AUTHORIZED_PHASE_02F
+parents_created:
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\01_PROGRAM_GOVERNANCE
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\03_PHASE_EVIDENCE
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\05_BUILDER_CONTRACTS
+creation_order:
+  - HAD-001
+  - HAD-002
+  - HAD-003
+post_creation:
+  direct_parent_child_count_after: 11
+  direct_parent_listing_hash_after: 1391c4ff463de1e6ecfcdb69508ebc3aeb11de2eef720c22455fa97cf6d7b26c
+  new_direct_children:
+    - 01_PROGRAM_GOVERNANCE
+    - 03_PHASE_EVIDENCE
+    - 05_BUILDER_CONTRACTS
+    - CL_PHASE_02F_PARENT_MATERIALIZATION
+  unauthorized_new_paths: []
+migration_boundary:
+  files_inside_01_PROGRAM_GOVERNANCE: 0
+  files_inside_03_PHASE_EVIDENCE: 0
+  files_inside_05_BUILDER_CONTRACTS: 0
+  CL_MIG_001A_files_copied: 0
+  CL_MIG_001B_files_copied: 0
+  mapping_status_changed: false
+  authority_state_changed: false
+  chachipti_classification_changed: false
+  source_records_edited: false
+  migration_batch_executed: false
+verdict: 'PASS — THREE AUTHORIZED PARENTS MATERIALIZED AND VERIFIED'
+files_created:
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02F_PARENT_MATERIALIZATION\CL_PHASE_02F_AUTHORIZATION_RECORD.md
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02F_PARENT_MATERIALIZATION\CL_PHASE_02F_BEFORE_STATE.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02F_PARENT_MATERIALIZATION\CL_PHASE_02F_MATERIALIZATION_RECEIPT.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02F_PARENT_MATERIALIZATION\CL_PHASE_02F_AFTER_STATE.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02F_PARENT_MATERIALIZATION\CL_PHASE_02F_EXECUTION_RECEIPT.yaml
+safety_receipt:
+  authorized_destination_parents_created: 3
+  unauthorized_destination_parents_created: 0
+  subfolders_created_inside_authorized_parents: 0
+  placeholder_files_created: 0
+  source_files_modified: 0
+  source_files_copied: 0
+  source_files_moved: 0
+  source_files_renamed: 0
+  source_files_deleted: 0
+  migration_actions: 0
+  CL_MIG_001A_files_copied: 0
+  CL_MIG_001B_files_copied: 0
+  git_files_staged: 0
+  git_commits: 0
+  network_git_operations: 0
+  renders: 0
+  publishes: 0
+  deployments: 0
+notes:
+  - Exactly three empty destination parents were created.
+  - Phase 02, 02B, 02C, 02D, and 02E records were not edited.
+  - No file copy, move, rename, or delete occurred.
+  - CL-MIG-001A and CL-MIG-001B were not executed.
+  - No files were staged or committed.
+  - A pass does not authorize file copying.
+  - ROLLBACK IS NOT DELETION.

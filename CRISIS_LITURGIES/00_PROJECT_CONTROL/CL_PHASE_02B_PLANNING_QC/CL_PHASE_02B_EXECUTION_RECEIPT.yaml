@@ -1,0 +1,59 @@
+record_id: CL-PHASE-02B-001-RECEIPT
+phase: CL_PHASE_02B
+title: Planning Packet QC and File-Level Manifest Build
+mode: CONTROL-RECORD_WRITES_ONLY
+executed_at_utc: 2026-07-13T20:03:48Z
+repository_root: C:\Users\steve\Projects\gradient-institution
+repository_posture: CANDIDATE_NOT_RATIFIED
+current_working_directory: C:\Users\steve\Projects\gradient-institution
+current_branch: main
+HEAD_commit: 2a434e89025dbd6d204f91e84a7a950d70f31c50
+working_tree_dirty_entries: 8
+planning_folder: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02_PLANNING
+planning_artifact_count: 10
+output_folder: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02B_PLANNING_QC
+verdict: 'PASS WITH PATCHES — MANIFEST BUILT, EXECUTION REMAINS BLOCKED'
+preflight:
+  planning_folder_exists: true
+  output_folder_created: true
+  migration_prohibited: true
+manifest_summary:
+  total_files_considered: 54
+  eligible_for_dry_run: 21
+  excluded: 28
+  blocked: 5
+  missing_hashes: 0
+  authority_gaps_blocking: 7
+  destination_collisions: 0
+  path_failures: 0
+dry_run_batch_result: 'FAIL — STOP RESULTS PRESENT'
+rollback_verdict: 'ROLLBACK_READY_WITH_PATCHES'
+files_created:
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02B_PLANNING_QC\CL_PHASE_02B_ARTIFACT_REGISTER.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02B_PLANNING_QC\CL_PHASE_02B_PLANNING_PACKET_QC.md
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02B_PLANNING_QC\CL_PHASE_02B_DESTINATION_OCCUPANCY.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02B_PLANNING_QC\CL_MIG_001_BATCH_SCOPE.md
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02B_PLANNING_QC\CL_MIG_001_FILE_LEVEL_MANIFEST.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02B_PLANNING_QC\CL_MIG_001_COLLISION_MATRIX.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02B_PLANNING_QC\CL_MIG_001_AUTHORITY_EXCEPTION_LEDGER.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02B_PLANNING_QC\CL_MIG_001_ROLLBACK_VALIDATION.md
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02B_PLANNING_QC\CL_MIG_001_ZERO_WRITE_DRY_RUN.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02B_PLANNING_QC\CL_PHASE_02B_EXECUTION_RECEIPT.yaml
+safety_receipt:
+  source_files_modified: 0
+  source_files_copied: 0
+  source_files_moved: 0
+  source_files_renamed: 0
+  source_files_deleted: 0
+  target_folders_created: 0
+  migration_actions: 0
+  git_files_staged: 0
+  git_commits: 0
+  network_git_operations: 0
+  renders: 0
+  publishes: 0
+  deployments: 0
+notes:
+  - Created only the authorized output folder CL_PHASE_02B_PLANNING_QC.
+  - Did not edit Phase 02 planning artifacts.
+  - Did not create proposed migration destination topology folders.

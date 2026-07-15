@@ -1,0 +1,18 @@
+{
+  "admission_sidecar_id": "ADMIT-SC-002",
+  "associated_destination_path": "C:\\Users\\steve\\Projects\\gradient-institution\\CRISIS_LITURGIES\\00_PROJECT_CONTROL\\01_PROGRAM_GOVERNANCE\\CL_PROD_ARCH_001A_RATIFICATION_AND_NAMED_PATCH_RECORD_2026-07-13.md",
+  "associated_filename": "CL_PROD_ARCH_001A_RATIFICATION_AND_NAMED_PATCH_RECORD_2026-07-13.md",
+  "associated_source_sha256": "275202a24950daea7ffc0a2a370448f424ace8e9e4b698b48447e13242073fd8",
+  "authority_state": "OPERATIVE_PROGRAM_AUTHORITY",
+  "copy_authorized": false,
+  "created_by_execution_receipt": "CL-PHASE-02J-001-RECEIPT",
+  "migration_batch": "CL-MIG-001A",
+  "operative_status": "OPERATIVE_WITH_REPOSITORY_CANDIDATE_LIMITATION",
+  "ratification_decision_id": "RAT-FILE-CL-004",
+  "ratification_set": "FILE-AUTHORITY-SET-CL-001",
+  "repository_status": "REPOSITORY_CANDIDATE — PERMANENT INSTITUTIONAL AUTHORITY NOT RATIFIED",
+  "required_status_label": "REPOSITORY_CANDIDATE — PERMANENT INSTITUTIONAL AUTHORITY NOT RATIFIED",
+  "schema": "crisis-liturgies-admission-sidecar",
+  "schema_version": "1.0",
+  "source_content_modified": false
+}

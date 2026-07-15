@@ -1,0 +1,2 @@
+staging_method,pathspec_path_external,pathspec_bytes,pathspec_sha256,pathspec_entry_count,pathspec_unique_entry_count,pathspec_removed_after_use,git_add_exit_code,staged_path_count,unique_staged_path_count,staging_timestamp_utc,stop_reason,blocked_path_count
+NOT_EXECUTED,NOT_CREATED,0,NOT_CREATED,0,0,N/A,N/A,0,0,2026-07-14T18:47:22Z,STOPPED — ALLOWLIST PATH CHANGED,18

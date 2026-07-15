@@ -1,0 +1,4 @@
+﻿authorization_id,exact_path,exists_before,filesystem_type_before,direct_parent_child_count_before,direct_parent_listing_hash_before,creation_required
+HAD-001,C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\01_PROGRAM_GOVERNANCE,NO,ABSENT,7,5b07af23270ebe55a70d1908069c8789cd738d574a97aa849ebf89d71e6eaa5e,YES
+HAD-002,C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\03_PHASE_EVIDENCE,NO,ABSENT,7,5b07af23270ebe55a70d1908069c8789cd738d574a97aa849ebf89d71e6eaa5e,YES
+HAD-003,C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\05_BUILDER_CONTRACTS,NO,ABSENT,7,5b07af23270ebe55a70d1908069c8789cd738d574a97aa849ebf89d71e6eaa5e,YES

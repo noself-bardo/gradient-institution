@@ -1,0 +1,16 @@
+{
+  "batch_id": "CL-MIG-001",
+  "scanned_at": "2026-07-13T20:10:48Z",
+  "stop_count": 0,
+  "warn_count": 33,
+  "none_count": 0,
+  "files_scanned": 21,
+  "summary": [
+    "files_scanned=21",
+    "hits=33",
+    "STOP=0",
+    "WARN=33",
+    "Dry-run gate: zero unresolved STOP required before COPY.",
+    "WARN hits are historical/path prose; do not rewrite sources in place."
+  ]
+}

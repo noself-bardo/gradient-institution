@@ -1,0 +1,242 @@
+{
+  "record_id": "CL-PHASE-00-004",
+  "status": "ACTIVE_PROTECTIVE_HOLD",
+  "date": "2026-07-13",
+  "items": [
+    {
+      "id": "Q-001",
+      "item": "Original Chachipti packet as an active constitution",
+      "source": "00_CHACHIPTI_PRODUCTION_LANE.zip",
+      "reason": "Overbroad authority, conflicting builder gate and universal page vocabulary.",
+      "classification": "GOVERNANCE_CLAIMS_QUARANTINED / COMPONENTS_ADMITTED",
+      "allowed_actions": [
+        "read",
+        "hash",
+        "extract reusable corrective and Cursor packet structures",
+        "rewrite as v0.2"
+      ],
+      "forbidden_actions": [
+        "use as top-level constitution",
+        "grant archive/publication authority",
+        "run unpatched builder gate"
+      ],
+      "release_condition": "Chachipti v0.2 passes conformance against CL-OPS-001 and CL-PROD-ARCH-001A."
+    },
+    {
+      "id": "Q-002",
+      "item": "Pygmalion PUBLICATION_CONFORMANCE_COMPLETE and unconditional archive-lock claims",
+      "source": "Chat and referenced run-state records",
+      "reason": "Conflict with later RETURN FOR REVISION and withheld archive/publication QC.",
+      "classification": "DISPUTED_STATE_CLAIMS",
+      "allowed_actions": [
+        "preserve as provenance",
+        "inspect referenced files",
+        "compare timestamps and approvals"
+      ],
+      "forbidden_actions": [
+        "declare final",
+        "publish replacement",
+        "overwrite existing artifacts"
+      ],
+      "release_condition": "State reconciliation signed by Founder and recorded by Archivist."
+    },
+    {
+      "id": "Q-003",
+      "item": "Current 48-page Pygmalion export as final Crisis Liturgies art",
+      "source": "Latest QC packet",
+      "reason": "Wrong canvas and white editorial shell; systems pages require reconstruction.",
+      "classification": "RECONSTRUCTION_INPUT_ONLY",
+      "allowed_actions": [
+        "use as diagnostic evidence",
+        "extract approved copy and asset references"
+      ],
+      "forbidden_actions": [
+        "archive admission",
+        "publication authorization",
+        "treat as profile reference"
+      ],
+      "release_condition": "Reconstructed pilot and volume pass institutional QC."
+    },
+    {
+      "id": "Q-004",
+      "item": "CL-V release claims pending direct tree verification",
+      "source": "CL-V chat records",
+      "reason": "High-confidence human record but omitted from Codex handoff and absent from connected Drive search.",
+      "classification": "PROVISIONAL_RELEASE_EVIDENCE",
+      "allowed_actions": [
+        "search",
+        "inventory",
+        "checksum"
+      ],
+      "forbidden_actions": [
+        "move",
+        "delete",
+        "rebuild",
+        "renumber"
+      ],
+      "release_condition": "Known final checksum and 103-file payload are verified."
+    },
+    {
+      "id": "Q-005",
+      "item": "CL-VI designation",
+      "source": "Numbering inference and unrelated Volume VI references",
+      "reason": "No verified Crisis Liturgies collection exists.",
+      "classification": "RESERVED_UNASSIGNED",
+      "allowed_actions": [
+        "reference as unresolved gap"
+      ],
+      "forbidden_actions": [
+        "invent title",
+        "invent roster",
+        "create production state"
+      ],
+      "release_condition": "Explicit Founder designation backed by collection specification."
+    },
+    {
+      "id": "Q-006",
+      "item": "CL-VII production materials",
+      "source": "Codex initiation status and later chat evidence",
+      "reason": "Current state and governing source conflict.",
+      "classification": "FULL_LANE_QUARANTINE",
+      "allowed_actions": [
+        "locate",
+        "hash",
+        "inventory",
+        "preserve quarantined renders"
+      ],
+      "forbidden_actions": [
+        "render",
+        "approve",
+        "assign roster",
+        "publish"
+      ],
+      "release_condition": "Lineage and current state reconciled."
+    },
+    {
+      "id": "Q-007",
+      "item": "CL-IV legacy restart prompts with open image gate",
+      "source": "CL-IV_48_PAGE_EXPANDED_PRODUCTION_PROMPTS_v1.0",
+      "reason": "Superseded by completed proof registers and closed gate.",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "allowed_actions": [
+        "preserve for provenance"
+      ],
+      "forbidden_actions": [
+        "use as current run instruction"
+      ],
+      "release_condition": "Never returned to active authority; migration marks supersession."
+    },
+    {
+      "id": "Q-008",
+      "item": "CL-IV unqualified final/public state",
+      "source": "Mixed snapshot, print QC and screen derivative records",
+      "reason": "Qualified state must remain FROZEN SNAPSHOT COMPLETE \u2014 NOT PRINT-READY.",
+      "classification": "STATE_LANGUAGE_QUARANTINE",
+      "allowed_actions": [
+        "describe qualified derivative states"
+      ],
+      "forbidden_actions": [
+        "call universally print-ready or fully released"
+      ],
+      "release_condition": "Single qualified state record is ratified."
+    },
+    {
+      "id": "Q-009",
+      "item": "The Death of the Bit Boot Hymm requirement",
+      "source": "Codex handoff, execution assets and Notion Archive Control",
+      "reason": "Required-versus-optional conflict.",
+      "classification": "SPECIFICATION_FIELD_UNRESOLVED",
+      "allowed_actions": [
+        "preserve all existing Boot Hymm assets",
+        "prepare decision comparison"
+      ],
+      "forbidden_actions": [
+        "delete Boot Hymm pages",
+        "require them in final schema without decision"
+      ],
+      "release_condition": "Founder decision recorded in release profile."
+    },
+    {
+      "id": "Q-010",
+      "item": "The Death of the Bit working editorial layouts",
+      "source": "120-page working proof",
+      "reason": "Founder rejected generic document architecture.",
+      "classification": "WORKING_PROOF_ONLY",
+      "allowed_actions": [
+        "use copy and sequence as source",
+        "diagnose layout"
+      ],
+      "forbidden_actions": [
+        "archive as final",
+        "use as canonical page design"
+      ],
+      "release_condition": "Black-field/silver-plate editorial reconstruction passes QC."
+    },
+    {
+      "id": "Q-011",
+      "item": "Duplicate Drive registry and CL-IV register files",
+      "source": "Multiple Drive IDs with identical titles",
+      "reason": "Canonical-versus-mirror relationship unknown.",
+      "classification": "DUPLICATE_HOLD",
+      "allowed_actions": [
+        "fetch",
+        "compare content/checksum",
+        "classify mirror"
+      ],
+      "forbidden_actions": [
+        "delete",
+        "rename",
+        "select by title alone"
+      ],
+      "release_condition": "Duplicate comparison and path map completed."
+    },
+    {
+      "id": "Q-012",
+      "item": "Legacy production roots outside future canonical root",
+      "source": "Pygmalion, Death Bit and numbered Drive paths",
+      "reason": "Multiple active roots violate ratified direction but must be preserved non-destructively.",
+      "classification": "MIGRATION_HOLD",
+      "allowed_actions": [
+        "read-only scan",
+        "copy after manifest",
+        "checksum"
+      ],
+      "forbidden_actions": [
+        "move/delete before validation",
+        "continue unregistered production"
+      ],
+      "release_condition": "Canonical root prototype passes and replacement paths are verified."
+    },
+    {
+      "id": "Q-013",
+      "item": "Chat-only state claims",
+      "source": "Both Gradient project chat histories",
+      "reason": "Chat is provenance, not machine-readable operational state.",
+      "classification": "PROVENANCE_ONLY",
+      "allowed_actions": [
+        "extract explicit human ratifications",
+        "link supporting artifacts"
+      ],
+      "forbidden_actions": [
+        "drive builds directly",
+        "silently override repository state"
+      ],
+      "release_condition": "Claim captured in correct institutional record."
+    },
+    {
+      "id": "Q-014",
+      "item": "Public URL or HTTP success as proof of institutional publication",
+      "source": "Web deployment and GitHub release evidence",
+      "reason": "Availability does not prove publication authorization or current canonical status.",
+      "classification": "PUBLICATION_AUDIT_REQUIRED",
+      "allowed_actions": [
+        "verify URL",
+        "record checksum and deployment source"
+      ],
+      "forbidden_actions": [
+        "infer archive admission"
+      ],
+      "release_condition": "Publication record links approval, manifest, artifact and URL."
+    }
+  ]
+}

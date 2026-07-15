@@ -1,0 +1,218 @@
+{
+  "record_id": "CL-PROD-ARCH-001A",
+  "title": "Ratification and Named Patch Record",
+  "status": "ACCEPTED_LOCKED_WITH_NAMED_PATCHES",
+  "ratification_date": "2026-07-13",
+  "ratifying_authority": "HUMAN_FOUNDER",
+  "parent_document": "CL-PROD-ARCH-001_v0.1",
+  "scope": {
+    "ratified_locks": [
+      "L-001",
+      "L-002",
+      "L-003",
+      "L-004",
+      "L-005",
+      "L-006",
+      "L-007",
+      "L-008",
+      "L-009",
+      "L-010",
+      "L-011",
+      "L-012",
+      "L-013",
+      "L-014",
+      "L-015",
+      "L-016"
+    ],
+    "complete_parent_architecture_ratified": false,
+    "implementation_details_provisional": true
+  },
+  "locks": [
+    {
+      "id": "L-001",
+      "text": "One canonical Crisis Liturgies operational root.",
+      "status": "LOCKED"
+    },
+    {
+      "id": "L-002",
+      "text": "No production from accumulated chat history.",
+      "status": "LOCKED"
+    },
+    {
+      "id": "L-003",
+      "text": "Frozen specifications govern all builds.",
+      "status": "LOCKED"
+    },
+    {
+      "id": "L-004",
+      "text": "Frozen releases are immutable.",
+      "status": "LOCKED"
+    },
+    {
+      "id": "L-005",
+      "text": "Corrections create namespaced candidates.",
+      "status": "LOCKED"
+    },
+    {
+      "id": "L-006",
+      "text": "All production execution remains inside the canonical project.",
+      "status": "LOCKED"
+    },
+    {
+      "id": "L-007",
+      "text": "Chachipti is a compiler and corrective packet engine.",
+      "status": "LOCKED"
+    },
+    {
+      "id": "L-008",
+      "text": "Cursor and Codex are execution systems, not institutional authorities.",
+      "status": "LOCKED"
+    },
+    {
+      "id": "L-009",
+      "text": "Notion is the human-facing registry, not the sole runtime source.",
+      "status": "LOCKED"
+    },
+    {
+      "id": "L-010",
+      "text": "Drive is the frozen-release and distribution mirror.",
+      "status": "LOCKED"
+    },
+    {
+      "id": "L-011",
+      "text": "The repository is the machine-readable operational source.",
+      "status": "LOCKED"
+    },
+    {
+      "id": "L-012",
+      "text": "Production human gates are CONCEPT_APPROVED and APPROVED_FOR_RENDER.",
+      "status": "LOCKED"
+    },
+    {
+      "id": "L-013",
+      "text": "Interactive ChatGPT image authorization is a separate interface convention.",
+      "status": "LOCKED"
+    },
+    {
+      "id": "L-014",
+      "text": "Every frozen release requires manifests, checksums, QC, and provenance.",
+      "status": "LOCKED"
+    },
+    {
+      "id": "L-015",
+      "text": "Disputed state must be reconciled, never inferred.",
+      "status": "LOCKED"
+    },
+    {
+      "id": "L-016",
+      "text": "No agent may grant itself archive or publication authority.",
+      "status": "LOCKED"
+    }
+  ],
+  "named_patches": [
+    {
+      "patch_id": "NP-001",
+      "name": "Canonical Root and Controlled Mirrors",
+      "affects": [
+        "L-001",
+        "L-006",
+        "L-010",
+        "L-011"
+      ],
+      "text": "One logical canonical operational root governs active Crisis Liturgies production. Read-only release mirrors, storage mirrors, backups, temporary registered run workspaces, and publication derivatives are permitted only when their relationship to the canonical root is explicit, manifest-backed, and incapable of becoming a competing active production root."
+    },
+    {
+      "patch_id": "NP-002",
+      "name": "Institutional Authority Preservation",
+      "affects": [
+        "L-003",
+        "L-007",
+        "L-011"
+      ],
+      "text": "The repository is the machine-readable operational source, but it does not supersede Crisis Liturgies Canon, accepted Canon Change Reports, or locked production standards. Chachipti and the builder must compile and execute higher authority rather than reinterpret it."
+    },
+    {
+      "patch_id": "NP-003",
+      "name": "Bounded Chachipti Authority",
+      "affects": [
+        "L-007",
+        "L-016"
+      ],
+      "text": "Chachipti is ratified only as a specification compiler and corrective packet engine. It may validate, normalize, compile, and stop. It may not invent unresolved content, change approved copy, grant render authorization, admit an artifact to the archive, declare publication, or silently resolve authority conflicts."
+    },
+    {
+      "patch_id": "NP-004",
+      "name": "Tool-Agnostic Execution",
+      "affects": [
+        "L-008"
+      ],
+      "text": "Cursor and Codex are the current preferred execution environments. Their names and present responsibilities are operational choices, not permanent constitutional dependencies. A future executor may replace either tool if it conforms to the same bounded contracts, path rules, validation requirements, and authority limits."
+    },
+    {
+      "patch_id": "NP-005",
+      "name": "Registry and Mirror Boundaries",
+      "affects": [
+        "L-009",
+        "L-010",
+        "L-011"
+      ],
+      "text": "Notion communicates ratified status and institutional context. Drive preserves and distributes frozen artifacts and derivatives. The repository carries machine-readable active production state. None of these systems may silently create a new state merely because a file, page, or folder appears there."
+    },
+    {
+      "patch_id": "NP-006",
+      "name": "Dual Image-Authorization Domains",
+      "affects": [
+        "L-012",
+        "L-013"
+      ],
+      "text": "The durable builder uses CONCEPT_APPROVED and APPROVED_FOR_RENDER as its production gates. The founder's exact standalone INTIFADA convention remains in force for interactive native ChatGPT image generation. The interactive convention does not interrupt or replace an already authorized deterministic builder run. Archive admission, final visual judgment, and publication authorization remain separate human decisions, not repeated per-asset render gates."
+    },
+    {
+      "patch_id": "NP-007",
+      "name": "Legacy Release Protection",
+      "affects": [
+        "L-004",
+        "L-005",
+        "L-014"
+      ],
+      "text": "Existing frozen releases remain immutable even when their historical documentation predates the new manifest standard. Retrospective manifests, checksums, QC summaries, and provenance records may be attached without altering the frozen binary. A correction must create a namespaced candidate and, if admitted, a new version or successor record."
+    },
+    {
+      "patch_id": "NP-008",
+      "name": "Disputed-State Evidence Threshold",
+      "affects": [
+        "L-015"
+      ],
+      "text": "Conflicting or incomplete state claims must be classified as DISPUTED, UNVERIFIED, or UNKNOWN with evidence and confidence recorded. Absence from one repository is not proof of nonexistence. No agent may promote uncertainty into an affirmative release, archive, or publication state."
+    },
+    {
+      "patch_id": "NP-009",
+      "name": "Recommendation Is Not Ratification",
+      "affects": [
+        "L-016"
+      ],
+      "text": "Agents and automated systems may recommend a state transition and produce supporting evidence. They may not self-ratify. Archive admission and public-release authorization require the recorded human decision and the Archivist's corresponding institutional record."
+    },
+    {
+      "patch_id": "NP-010",
+      "name": "Non-Destructive Migration",
+      "affects": [
+        "L-001",
+        "L-004",
+        "L-006",
+        "L-010",
+        "L-014"
+      ],
+      "text": "No legacy source, release, or mirror may be moved, deleted, renamed, or retired until its checksum, provenance, replacement path, and recovery route have been verified. Migration proceeds by copy, validation, registration, and only then controlled retirement."
+    }
+  ],
+  "next_authorized_phase": "PHASE_00_EVIDENCE_FREEZE_AND_MASTER_CONFLICT_LEDGER",
+  "prohibitions": [
+    "NO_DELETION",
+    "NO_OVERWRITE_OF_FROZEN_RELEASES",
+    "NO_STATE_INFERENCE",
+    "NO_SELF_GRANTED_ARCHIVE_AUTHORITY",
+    "NO_SELF_GRANTED_PUBLICATION_AUTHORITY",
+    "NO_BUILD_FROM_CHAT_HISTORY"
+  ]
+}

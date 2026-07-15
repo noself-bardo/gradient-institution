@@ -1,0 +1,310 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thegradient.local/schemas/cl-migration-manifest.schema.json",
+  "title": "CL_MIGRATION_MANIFEST",
+  "description": "Checksum-verified, reversible Crisis Liturgies migration batch manifest. Planning and execution use the same schema; execution requires human authorization fields.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest_version",
+    "batch_id",
+    "batch_class",
+    "mode",
+    "created_at",
+    "canonical_repo_root",
+    "canonical_cl_namespace",
+    "copy_authorized",
+    "deletion_authorized",
+    "builder_authorized",
+    "items",
+    "exclusions",
+    "rollback"
+  ],
+  "properties": {
+    "manifest_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "batch_id": {
+      "type": "string",
+      "pattern": "^CL-MIG-[0-9]{3}(-[A-Z0-9_]+)?$"
+    },
+    "batch_class": {
+      "type": "string",
+      "enum": [
+        "GOVERNANCE_AND_REGISTRIES",
+        "HISTORICAL_RELEASE_REFERENCE",
+        "FROZEN_RELEASE",
+        "QUALIFIED_FROZEN_SNAPSHOT",
+        "RETURN_FOR_REVISION",
+        "WORKING_ASSEMBLY",
+        "QUARANTINE_EVIDENCE",
+        "MIXED_CONTROLLED"
+      ]
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["PLAN", "DRY_RUN", "COPY", "VERIFY", "ROLLBACK"]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "canonical_repo_root": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canonical_cl_namespace": {
+      "type": "string",
+      "minLength": 1
+    },
+    "archive_drive_root": {
+      "type": "string"
+    },
+    "copy_authorized": {
+      "type": "boolean"
+    },
+    "deletion_authorized": {
+      "type": "boolean",
+      "const": false
+    },
+    "rename_source_authorized": {
+      "type": "boolean",
+      "default": false
+    },
+    "builder_authorized": {
+      "type": "boolean",
+      "const": false
+    },
+    "commit_authorized": {
+      "type": "boolean",
+      "default": false
+    },
+    "human_authorization_record": {
+      "type": ["string", "null"],
+      "description": "Path or ID of explicit human copy authorization. Required when mode is COPY."
+    },
+    "preconditions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "stop_conditions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/migration_item" }
+    },
+    "duplicate_groups_in_scope": {
+      "type": "array",
+      "description": "Only duplicate-hash groups touched by this batch. Do not require global 1,276 classification.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["sha256", "relationship_class", "paths"],
+        "properties": {
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          },
+          "relationship_class": {
+            "type": "string",
+            "enum": [
+              "CANONICAL_RELEASE",
+              "REGISTERED_MIRROR",
+              "RELEASE_DUPLICATE",
+              "COPIED_WORKING_FILE",
+              "UNKNOWN",
+              "QUARANTINE_EVIDENCE"
+            ]
+          },
+          "paths": {
+            "type": "array",
+            "minItems": 2,
+            "items": { "type": "string" }
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "exclusions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "rollback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "source_untouched", "target_removal_scope"],
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "DELETE_WRITTEN_TARGETS_ONLY",
+            "RESTORE_FROM_PREBATCH_SNAPSHOT",
+            "MANIFEST_REVERSAL"
+          ]
+        },
+        "source_untouched": {
+          "type": "boolean",
+          "const": true
+        },
+        "target_removal_scope": {
+          "type": "string",
+          "enum": ["MANIFEST_WRITTEN_FILES_ONLY", "MANIFEST_WRITTEN_TREES_ONLY"]
+        },
+        "prebatch_snapshot_ref": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "properties": {
+        "checksum_tool": { "type": "string" },
+        "schema_validator": { "type": "string" },
+        "path_reference_scan_ref": { "type": "string" }
+      }
+    },
+    "notes": { "type": "string" }
+  },
+  "$defs": {
+    "migration_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "item_id",
+        "collection_id",
+        "source_path",
+        "target_path",
+        "source_relationship_class",
+        "target_relationship_class",
+        "copy_method",
+        "verification_method",
+        "rollback_method"
+      ],
+      "properties": {
+        "item_id": {
+          "type": "string",
+          "pattern": "^MIG-[0-9]{4}$"
+        },
+        "collection_id": {
+          "type": "string",
+          "description": "Collection or CONTROL/GOVERNANCE identifier. Must not invent CL-VI."
+        },
+        "source_path": { "type": "string" },
+        "target_path": { "type": "string" },
+        "source_relationship_class": {
+          "$ref": "#/$defs/relationship_class"
+        },
+        "target_relationship_class": {
+          "$ref": "#/$defs/relationship_class"
+        },
+        "state_dimensions": {
+          "type": "object",
+          "description": "Multidimensional state; bare FINAL/LOCKED/COMPLETE/PUBLIC/ARCHIVED alone is invalid.",
+          "properties": {
+            "specification_state": { "type": "string" },
+            "production_state": { "type": "string" },
+            "qc_state": { "type": "string" },
+            "release_state": { "type": "string" },
+            "print_state": { "type": "string" },
+            "publication_state": { "type": "string" },
+            "archive_state": { "type": "string" },
+            "dispute_state": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        "file_count": { "type": ["integer", "null"], "minimum": 0 },
+        "byte_count": { "type": ["integer", "null"], "minimum": 0 },
+        "sha256": {
+          "type": ["string", "null"],
+          "pattern": "^[a-fA-F0-9]{64}$"
+        },
+        "external_dependencies": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "path_references": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "copy_method": {
+          "type": "string",
+          "enum": [
+            "COPY_FILE",
+            "COPY_TREE",
+            "AUTHOR_NEW_RECORD",
+            "WRITE_EXTERNAL_REFERENCE_ONLY",
+            "CLASSIFY_THEN_COPY",
+            "SKIP_LEAVE_IN_PLACE"
+          ]
+        },
+        "verification_method": {
+          "type": "string",
+          "enum": [
+            "SHA256_MATCH",
+            "SCHEMA_VALIDATE",
+            "HUMAN_SPOT_CHECK",
+            "MANIFEST_PRESENCE",
+            "NONE_PLAN_ONLY"
+          ]
+        },
+        "rollback_method": {
+          "type": "string",
+          "enum": [
+            "DELETE_TARGET",
+            "RESTORE_PREBATCH_SNAPSHOT",
+            "NO_OP_SOURCE_ONLY",
+            "NONE_PLAN_ONLY"
+          ]
+        },
+        "exclusions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "human_authorization": {
+          "type": ["string", "null"]
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "relationship_class": {
+      "type": "string",
+      "enum": [
+        "AUTHORITATIVE_CONTROL_RECORD",
+        "DERIVED_REGISTRY",
+        "EVIDENCE_REFERENCE",
+        "CANONICAL_RELEASE",
+        "REGISTERED_MIRROR",
+        "RELEASE_DUPLICATE",
+        "HISTORICAL_REFERENCE",
+        "QUALIFIED_FROZEN_SNAPSHOT",
+        "RETURN_FOR_REVISION",
+        "WORKING_ASSEMBLY",
+        "QUARANTINE_EVIDENCE",
+        "QUARANTINE_GOVERNANCE",
+        "SCHEMA",
+        "EXTERNAL_BINARY_REFERENCE",
+        "UNKNOWN",
+        "UNASSIGNED_NO_DIRECTORY"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "mode": { "const": "COPY" } },
+        "required": ["mode"]
+      },
+      "then": {
+        "properties": {
+          "copy_authorized": { "const": true },
+          "human_authorization_record": { "type": "string", "minLength": 1 }
+        },
+        "required": ["human_authorization_record"]
+      }
+    }
+  ]
+}

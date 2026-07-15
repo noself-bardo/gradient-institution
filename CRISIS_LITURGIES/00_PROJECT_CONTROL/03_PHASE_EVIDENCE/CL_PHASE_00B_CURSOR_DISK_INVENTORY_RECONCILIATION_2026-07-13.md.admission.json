@@ -1,0 +1,18 @@
+{
+  "admission_sidecar_id": "ADMIT-SC-015",
+  "associated_destination_path": "C:\\Users\\steve\\Projects\\gradient-institution\\CRISIS_LITURGIES\\00_PROJECT_CONTROL\\03_PHASE_EVIDENCE\\CL_PHASE_00B_CURSOR_DISK_INVENTORY_RECONCILIATION_2026-07-13.md",
+  "associated_filename": "CL_PHASE_00B_CURSOR_DISK_INVENTORY_RECONCILIATION_2026-07-13.md",
+  "associated_source_sha256": "e824bfe6a7f8fc48644318a13f744ba5d2c1aa2e4da86426881c91a2522cef2b",
+  "authority_state": "ADMITTED_PHASE_EVIDENCE",
+  "copy_authorized": false,
+  "created_by_execution_receipt": "CL-PHASE-02J-001-RECEIPT",
+  "migration_batch": "CL-MIG-001A",
+  "operative_status": "NONOPERATIVE",
+  "ratification_decision_id": "RAT-FILE-CL-017",
+  "ratification_set": "FILE-AUTHORITY-SET-CL-001",
+  "repository_status": "REPOSITORY_CANDIDATE — PERMANENT INSTITUTIONAL AUTHORITY NOT RATIFIED",
+  "required_status_label": "ADMITTED PHASE EVIDENCE — NONOPERATIVE\n\nThis record documents a completed planning or evidence phase.\nIt does not establish current program, repository, or institutional authority.",
+  "schema": "crisis-liturgies-admission-sidecar",
+  "schema_version": "1.0",
+  "source_content_modified": false
+}

@@ -1,0 +1,36 @@
+{
+  "record_id": "CL-PHASE-01-D",
+  "title": "Mirror and Duplicate Doctrine",
+  "version": "1.0",
+  "status": "RATIFIED_ACCEPTED_WITH_PATCHES",
+  "ratified_date": "2026-07-13",
+  "ratifying_authority": "Human Founder",
+  "relationship_classes": [
+    "CANONICAL_ACTIVE_SOURCE",
+    "FROZEN_RELEASE",
+    "REGISTERED_MIRROR",
+    "STORAGE_MIRROR",
+    "BACKUP",
+    "PUBLICATION_DERIVATIVE",
+    "WORKING_COPY",
+    "SUPERSEDED_WORKING_COPY",
+    "ORPHANED_DUPLICATE",
+    "QUARANTINE"
+  ],
+  "patches": [
+    "CL-PHASE-01-D-P01",
+    "CL-PHASE-01-D-P02",
+    "CL-PHASE-01-D-P03",
+    "CL-PHASE-01-D-P04",
+    "CL-PHASE-01-D-P05",
+    "CL-PHASE-01-D-P06",
+    "CL-PHASE-01-D-P07"
+  ],
+  "permissions": {
+    "migration_authorized": false,
+    "deletion_authorized": false,
+    "renaming_authorized": false,
+    "rendering_authorized": false
+  },
+  "generated_at": "2026-07-13T14:59:54.655679+00:00"
+}

@@ -1,0 +1,75 @@
+record_id: CL-PHASE-02H-001-RECEIPT
+phase: CL_PHASE_02H
+title: File-Level Authority Adjudication
+mode: AUTHORITY_DOCKET_ONLY_NO_COPY
+executed_at_utc: 2026-07-13T22:07:09Z
+repository_root: C:\Users\steve\Projects\gradient-institution
+repository_posture: ACTIVE_REPOSITORY_CANDIDATE_PERMANENT_INSTITUTIONAL_AUTHORITY_NOT_RATIFIED
+current_branch: main
+HEAD_commit: 2a434e89025dbd6d204f91e84a7a950d70f31c50
+working_tree_status: DIRTY
+current_working_directory: C:\Users\steve\Projects\gradient-institution
+source_records_read_only:
+  - CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR
+  - CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02D_RATIFICATION_AND_PARENT_PLAN
+  - CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02G_POST_MATERIALIZATION_DRY_RUN
+output_folder: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02H_FILE_AUTHORITY_ADJUDICATION
+output_collision: false
+phases_not_edited:
+  - CL_PHASE_02_PLANNING
+  - CL_PHASE_02B_PLANNING_QC
+  - CL_PHASE_02C_PLANNING_REPAIR
+  - CL_PHASE_02D_RATIFICATION_AND_PARENT_PLAN
+  - CL_PHASE_02E_PARENT_AUTHORIZATION_REVIEW
+  - CL_PHASE_02F_PARENT_MATERIALIZATION
+  - CL_PHASE_02G_POST_MATERIALIZATION_DRY_RUN
+docket:
+  expected_size: 21
+  reconstructed_size: 21
+  program_governance_records: 4
+  phase_evidence_records: 15
+  builder_contract_records: 2
+  source_hash_mismatches: 0
+disposition_counts:
+  ADMIT_AS_OPERATIVE_PROGRAM_GOVERNANCE: 3
+  ADMIT_AS_PHASE_EVIDENCE: 15
+  ADMIT_AS_CURRENT_BUILDER_CONTRACT: 2
+  DEFER_CONFLICTING_AUTHORITY: 1
+  REJECT_star: 0
+authority_language_exceptions: 18
+human_file_ratifications_pending: 21
+copy_authorization_packet_created: false
+verdict: PASS WITH DEFERRED OR REJECTED RECORDS
+files_created:
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02H_FILE_AUTHORITY_ADJUDICATION\CL_PHASE_02H_AUTHORITY_DISPOSITION_REGISTER.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02H_FILE_AUTHORITY_ADJUDICATION\CL_PHASE_02H_AUTHORITY_LANGUAGE_EXCEPTIONS.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02H_FILE_AUTHORITY_ADJUDICATION\CL_PHASE_02H_CONTENT_PROVENANCE_REVIEW.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02H_FILE_AUTHORITY_ADJUDICATION\CL_PHASE_02H_EXECUTION_RECEIPT.yaml
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02H_FILE_AUTHORITY_ADJUDICATION\CL_PHASE_02H_FILE_AUTHORITY_DOCKET.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02H_FILE_AUTHORITY_ADJUDICATION\CL_PHASE_02H_FILE_RATIFICATION_REGISTER.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02H_FILE_AUTHORITY_ADJUDICATION\CL_PHASE_02H_PREFLIGHT.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02H_FILE_AUTHORITY_ADJUDICATION\CL_PHASE_02H_RATIFICATION_SUMMARY.md
+safety_receipt:
+  source_files_modified: 0
+  source_files_copied: 0
+  source_files_moved: 0
+  source_files_renamed: 0
+  source_files_deleted: 0
+  destination_parents_created: 0
+  target_files_created: 0
+  authority_states_changed: 0
+  file_authorities_granted: 0
+  copy_authorizations_granted: 0
+  migration_actions: 0
+  git_files_staged: 0
+  git_commits: 0
+  network_git_operations: 0
+  renders: 0
+  publishes: 0
+  deployments: 0
+notes:
+  - File-level authority docket only; no copy occurred.
+  - All 21 source hashes match Phase 02G.
+  - FAR-CL-002 deferred for conflicting authority language.
+  - All RAT-FILE-CL-001..021 remain PENDING HUMAN RATIFICATION.
+  - copy_authorized remains NO for every record.

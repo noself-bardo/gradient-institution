@@ -1,0 +1,62 @@
+record_id: CL-PHASE-02D-001-RECEIPT
+phase: CL_PHASE_02D
+title: Ratification Record and Destination-Parent Materialization Plan
+mode: CONTROL-RECORD_WRITES_ONLY
+executed_at_utc: 2026-07-13T20:17:11Z
+repository_root: C:\Users\steve\Projects\gradient-institution
+repository_posture: REPOSITORY_CANDIDATE_NOT_PERMANENT_INSTITUTIONAL_AUTHORITY
+current_branch: main
+HEAD_commit: 2a434e89025dbd6d204f91e84a7a950d70f31c50
+source_records_read_only:
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR
+output_folder: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02D_RATIFICATION_AND_PARENT_PLAN
+phases_not_edited:
+  - CL_PHASE_02_PLANNING
+  - CL_PHASE_02B_PLANNING_QC
+  - CL_PHASE_02C_PLANNING_REPAIR
+verdict: 'PASS — RATIFICATION RECORDED AND PARENT MANIFEST READY FOR AUTHORIZATION'
+human_ratifications:
+  RAT-CL-001: APPROVED
+  RAT-CL-002: APPROVED WITH LIMITATION — repository remains an active candidate, not permanent institutional authority
+  RAT-CL-003: APPROVED FOR PLANNING ONLY
+  RAT-CL-004: APPROVED FOR PLANNING ONLY
+  RAT-CL-005: APPROVED AND LOCKED — ROLLBACK IS NOT DELETION
+  RAT-CL-006: APPROVED
+  RAT-CL-007: INDIVIDUAL REVIEW RULE APPROVED; AUTHORITY OF FIVE RECORDS DEFERRED
+  RAT-CL-008: CLASSIFY-BEFORE-COPY RULE APPROVED
+counts:
+  ratification_decisions_recorded: 8
+  destination_parents_listed: 18
+  destination_parents_with_materialization_status_not_authorized: 18
+  destination_parents_created: 0
+  occupancy_verifications: 20
+  open_authority_records: 5
+  chachipti_queue_rows: 9
+  chachipti_auto_classifications: 0
+batches_executable: false
+destination_materialization_authorized: false
+files_created:
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02D_RATIFICATION_AND_PARENT_PLAN\CL_PHASE_02D_HUMAN_RATIFICATION_RECORD.md
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02D_RATIFICATION_AND_PARENT_PLAN\CL_PHASE_02D_RATIFICATION_DECISION_REGISTER.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02D_RATIFICATION_AND_PARENT_PLAN\CL_PHASE_02D_DESTINATION_PARENT_MANIFEST.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02D_RATIFICATION_AND_PARENT_PLAN\CL_PHASE_02D_PARENT_OCCUPANCY_VERIFICATION.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02D_RATIFICATION_AND_PARENT_PLAN\CL_PHASE_02D_OPEN_AUTHORITY_REGISTER.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02D_RATIFICATION_AND_PARENT_PLAN\CL_PHASE_02D_CHACHIPTI_CLASSIFICATION_QUEUE.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02D_RATIFICATION_AND_PARENT_PLAN\CL_PHASE_02D_EXECUTION_RECEIPT.yaml
+safety_receipt:
+  source_files_modified: 0
+  source_files_copied: 0
+  source_files_moved: 0
+  source_files_deleted: 0
+  destination_parents_created: 0
+  migration_actions: 0
+  git_files_staged: 0
+  git_commits: 0
+  network_git_operations: 0
+notes:
+  - Phase 02, 02B, and 02C folders were not edited.
+  - Only CL_PHASE_02D_RATIFICATION_AND_PARENT_PLAN was created.
+  - All destination-parent materialization_status values remain NOT AUTHORIZED.
+  - Five AUTHOR_FROM_RATIFICATION records remain authority-deferred.
+  - Nine Chachipti components queued with UNASSIGNED classification.
+  - No files staged or committed.

@@ -1,0 +1,22 @@
+{
+  "record_id": "CL-PHASE-01-C",
+  "title": "Canonical Operational Root Ratification",
+  "version": "1.0",
+  "status": "RATIFIED",
+  "ratified_date": "2026-07-13",
+  "ratifying_authority": "Human Founder",
+  "roots": {
+    "canonical_active_repository": "C:\\Users\\steve\\Projects\\gradient-institution",
+    "canonical_crisis_liturgies_namespace": "C:\\Users\\steve\\Projects\\gradient-institution\\CRISIS_LITURGIES",
+    "archive_frozen_release_controlled_mirror": "C:\\Users\\steve\\My Drive\\The Gradient",
+    "legacy_death_bit_handoff_mirror": "C:\\Users\\steve\\My Drive\\CL_DEATH_OF_THE_BIT"
+  },
+  "permissions": {
+    "migration_authorized": false,
+    "deletion_authorized": false,
+    "renaming_authorized": false,
+    "rendering_authorized": false,
+    "publication_authorized": false
+  },
+  "generated_at": "2026-07-13T14:55:36.416566+00:00"
+}

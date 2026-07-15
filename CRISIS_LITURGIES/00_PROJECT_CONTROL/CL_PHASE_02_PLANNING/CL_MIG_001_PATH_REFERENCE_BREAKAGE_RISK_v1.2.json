@@ -1,0 +1,15 @@
+{
+  "batch_id": "CL-MIG-001",
+  "manifest_version": "1.2",
+  "scanned_at": "2026-07-13T20:41:11Z",
+  "stop_count": 0,
+  "warn_count": 54,
+  "files_scanned": 38,
+  "summary": [
+    "files_scanned=38",
+    "hits=54",
+    "STOP=0",
+    "WARN=54",
+    "Zero unresolved STOP."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "record_id": "CL-MIG-001-AUTH",
+  "status": "AUTHORIZED",
+  "authorized_at": "2026-07-13T22:11:19.050966+00:00",
+  "authorizing_authority": "Human Founder",
+  "authorization_phrase": "Authorize CL-MIG-001 copy-only migration with checksum verification and no source retirement.",
+  "batch": "CL-MIG-001",
+  "scope": {
+    "planned_copy_items": 38,
+    "deferred_items": 1,
+    "deferred_item_ids": [
+      "MIG-0039"
+    ],
+    "required_parent_directories": 9,
+    "overwrite_allowed": false,
+    "source_retirement_allowed": false,
+    "delete_allowed": false,
+    "move_allowed": false,
+    "rename_allowed": false,
+    "build_allowed": false,
+    "render_allowed": false,
+    "publish_allowed": false,
+    "archive_admit_allowed": false,
+    "commit_allowed": false
+  },
+  "manifest": "CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json",
+  "schema": "CL_MIGRATION_MANIFEST.schema.v1.2.json"
+}

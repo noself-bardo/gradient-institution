@@ -1,0 +1,2 @@
+﻿execution_record_id,authorization_id,batch_id,copy_sequence,source_absolute_path,source_sha256,source_bytes,exact_target_parent,exact_target_path,target_must_be_absent,copy_method_requirement,post_copy_hash_required,source_preservation_required,copy_receipt_id,rollback_reference,human_copy_authorization_required,execution_status
+EXEC-02G-NONE,N/A,N/A,0,,,,,,YES,BYTE_IDENTICAL_COPY_ONLY,YES,YES,,,YES,NOT AUTHORIZED — NO WOULD_PASS ROWS

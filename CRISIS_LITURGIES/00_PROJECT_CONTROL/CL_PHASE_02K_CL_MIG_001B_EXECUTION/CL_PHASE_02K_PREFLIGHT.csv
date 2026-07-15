@@ -1,0 +1,19 @@
+field,value
+current_working_directory,C:\Users\steve\Projects\gradient-institution
+repository_root,C:\Users\steve\Projects\gradient-institution
+current_branch,main
+HEAD_commit,2a434e89025dbd6d204f91e84a7a950d70f31c50
+working_tree_status,DIRTY
+phase_02j_bundle_exists,YES
+phase_02j_destination_register_exists,YES
+phase_02j_authorization_packet_exists,YES
+authorized_destination_parent_exists,YES
+authorized_destination_parent_type,DIRECTORY
+authorized_destination_parent_direct_child_count,0
+output_folder_exists,NO
+preflight_result,PASS
+destination_parent_path,C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\05_BUILDER_CONTRACTS
+output_folder_path,C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02K_CL_MIG_001B_EXECUTION
+phase_02h_exists,YES
+phase_02i_exists,YES
+repository_posture,ACTIVE REPOSITORY CANDIDATE — PERMANENT INSTITUTIONAL AUTHORITY NOT RATIFIED

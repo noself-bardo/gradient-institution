@@ -1,0 +1,45 @@
+CRISIS_LITURGIES/
+├── 00_PROJECT_CONTROL/                         # TRANSITIONAL
+│   ├── CL_PHASE_00_EVIDENCE/                   # planned evidence copies / refs
+│   ├── CL_PHASE_02_PLANNING/                   # planning only (this package)
+│   ├── CL_PHASE_02_AUTHORITY/                  # blocked until ZIP members exported
+│   └── CL_MIG_*/                               # future batch control (empty)
+├── 00_INSTITUTIONAL_CONTROL/                   # DURABLE
+│   ├── authority/
+│   ├── accepted_decisions/
+│   ├── state_machine/
+│   └── registries/
+│       ├── mirrors/
+│       ├── duplicates/
+│       └── external_binaries/
+├── 01_CANON/
+├── 02_PRODUCTION_STANDARDS/
+├── 03_RELEASE_PROFILES/
+│   └── deferred/
+│       └── CL_DEATH_OF_THE_BIT_SPECIAL_PROFILE/
+├── 04_COLLECTION_REGISTRY/
+├── 05_VOLUMES/
+│   ├── CL-V_DUAL_POWER_DOMESTICS/              # later batches
+│   ├── CL-EV-001_THE_PYGMALION_MACHINE/        # RETURN_FOR_REVISION (later)
+│   └── CL_DEATH_OF_THE_BIT/                    # WORKING_ASSEMBLY (later)
+├── 06_BUILDER/
+│   └── schemas/
+├── 07_ACTIVE_RUNS/
+├── 08_CORRECTIVE_LANES/
+├── 09_RELEASE_CANDIDATES/
+├── 10_FROZEN_RELEASES/
+├── 11_PUBLICATION/
+├── 12_ARCHIVE/
+├── 13_HANDOFFS/
+├── 90_QUARANTINE/
+│   └── CL-VII/                                 # evidence only
+└── 99_TEMP/
+
+# LIVE PRE-MIGRATION (untouched by MIG-001)
+# 00_CHACHIPTI_PRODUCTION_LANE/   -> CL-MIG-008-CHACHIPTI_CLASSIFICATION
+# 00_CHACHIPTI_PRODUCTION_LANE.zip
+# EXPANSION_VOLUMES/              -> untouched in Phase 02A / MIG-001
+
+# FORBIDDEN
+# 05_VOLUMES/CL-VI_*/
+# 05_VOLUMES/CL-VII_*/ production tree

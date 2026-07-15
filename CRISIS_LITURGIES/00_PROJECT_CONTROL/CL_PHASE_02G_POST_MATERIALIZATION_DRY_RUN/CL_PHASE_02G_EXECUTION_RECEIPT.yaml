@@ -1,0 +1,116 @@
+﻿record_id: CL-PHASE-02G-001-RECEIPT
+phase: CL_PHASE_02G
+title: Post-Materialization Dry Run and Copy Authorization Packet
+mode: ZERO_WRITE_DRY_RUN_ONLY
+executed_at_utc: 2026-07-13T20:52:59Z
+repository_root: C:\Users\steve\Projects\gradient-institution
+repository_posture: ACTIVE_REPOSITORY_CANDIDATE_PERMANENT_INSTITUTIONAL_AUTHORITY_NOT_RATIFIED
+current_branch: main
+HEAD_commit: 2a434e89025dbd6d204f91e84a7a950d70f31c50
+working_tree_status: DIRTY
+current_working_directory: C:\Users\steve\Projects\gradient-institution
+source_records_read_only:
+  - CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02B_PLANNING_QC
+  - CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR
+  - CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02D_RATIFICATION_AND_PARENT_PLAN
+  - CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02E_PARENT_AUTHORIZATION_REVIEW
+  - CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02F_PARENT_MATERIALIZATION
+output_folder: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02G_POST_MATERIALIZATION_DRY_RUN
+output_collision: false
+phases_not_edited:
+  - CL_PHASE_02_PLANNING
+  - CL_PHASE_02B_PLANNING_QC
+  - CL_PHASE_02C_PLANNING_REPAIR
+  - CL_PHASE_02D_RATIFICATION_AND_PARENT_PLAN
+  - CL_PHASE_02E_PARENT_AUTHORIZATION_REVIEW
+  - CL_PHASE_02F_PARENT_MATERIALIZATION
+preflight:
+  phase_02b_manifest_exists: true
+  phase_02c_map_exists: true
+  phase_02f_receipt_exists: true
+  output_folder_existed_before_create: false
+materialized_parents_verified:
+  - authorization_id: HAD-001
+    exact_path: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\01_PROGRAM_GOVERNANCE
+    exists: YES
+    filesystem_type: DIRECTORY
+    is_empty: YES
+    direct_child_count: 0
+  - authorization_id: HAD-002
+    exact_path: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\03_PHASE_EVIDENCE
+    exists: YES
+    filesystem_type: DIRECTORY
+    is_empty: YES
+    direct_child_count: 0
+  - authorization_id: HAD-003
+    exact_path: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\05_BUILDER_CONTRACTS
+    exists: YES
+    filesystem_type: DIRECTORY
+    is_empty: YES
+    direct_child_count: 0
+candidate_summary:
+  files_considered: 56
+  CL_MIG_001A_would_pass: 0
+  CL_MIG_001A_would_stop: 52
+  CL_MIG_001B_would_pass: 0
+  CL_MIG_001B_would_stop: 4
+  CL_MIG_001A_actionable_had_mapped: 19
+  CL_MIG_001B_actionable_had_mapped: 2
+  source_hash_changes: 0
+  authority_blocks: 26
+  classification_blocks: 9
+  collisions: 0
+  rollback_blocks: 0
+authorization_packets:
+  AUTH-COPY-CL-MIG-001A:
+    recommended_decision: NOT_READY_AUTHORITY
+    copy_authorized: NO
+    status: PENDING HUMAN AUTHORIZATION
+    dry_run_pass_count: 0
+    dry_run_stop_count: 19
+  AUTH-COPY-CL-MIG-001B:
+    recommended_decision: NOT_READY_AUTHORITY
+    copy_authorized: NO
+    status: PENDING HUMAN AUTHORIZATION
+    dry_run_pass_count: 0
+    dry_run_stop_count: 2
+execution_manifest_candidate:
+  would_pass_rows: 0
+  execution_status_all: NOT AUTHORIZED
+verdict: 'PASS WITH BLOCKED RECORDS'
+files_created:
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02G_POST_MATERIALIZATION_DRY_RUN\CL_PHASE_02G_PREFLIGHT_AND_PARENT_VERIFICATION.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02G_POST_MATERIALIZATION_DRY_RUN\CL_PHASE_02G_CURRENT_CANDIDATE_REGISTER.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02G_POST_MATERIALIZATION_DRY_RUN\CL_PHASE_02G_CL_MIG_001A_REVIEW.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02G_POST_MATERIALIZATION_DRY_RUN\CL_PHASE_02G_CL_MIG_001B_REVIEW.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02G_POST_MATERIALIZATION_DRY_RUN\CL_PHASE_02G_COLLISION_RECHECK.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02G_POST_MATERIALIZATION_DRY_RUN\CL_PHASE_02G_ROLLBACK_RECHECK.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02G_POST_MATERIALIZATION_DRY_RUN\CL_PHASE_02G_ZERO_WRITE_DRY_RUN.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02G_POST_MATERIALIZATION_DRY_RUN\CL_PHASE_02G_COPY_AUTHORIZATION_PACKETS.md
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02G_POST_MATERIALIZATION_DRY_RUN\CL_PHASE_02G_EXECUTION_MANIFEST_CANDIDATE.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02G_POST_MATERIALIZATION_DRY_RUN\CL_PHASE_02G_EXECUTION_RECEIPT.yaml
+safety_receipt:
+  source_files_modified: 0
+  source_files_copied: 0
+  source_files_moved: 0
+  source_files_renamed: 0
+  source_files_deleted: 0
+  destination_parents_created: 0
+  target_files_created: 0
+  migration_actions: 0
+  CL_MIG_001A_files_copied: 0
+  CL_MIG_001B_files_copied: 0
+  git_files_staged: 0
+  git_commits: 0
+  network_git_operations: 0
+  renders: 0
+  publishes: 0
+  deployments: 0
+notes:
+  - Zero-write dry run only; no file copy occurred.
+  - Materialized HAD-001..HAD-003 parents verified empty.
+  - RAT-CL-003/004 remain APPROVED FOR PLANNING ONLY; copy authority unresolved.
+  - Five authority-deferred registry records remain blocked.
+  - Nine Chachipti records remain unclassified and blocked.
+  - ROLLBACK IS NOT DELETION.
+  - A successful dry run does not authorize copying.

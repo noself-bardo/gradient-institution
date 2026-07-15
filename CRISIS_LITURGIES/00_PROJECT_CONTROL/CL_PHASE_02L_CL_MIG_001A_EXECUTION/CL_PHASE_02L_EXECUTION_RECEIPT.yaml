@@ -1,0 +1,82 @@
+record_id: CL-PHASE-02L-001-RECEIPT
+phase: CL_PHASE_02L
+title: CL-MIG-001A Controlled Copy, Sidecar Creation, and Verification
+mode: AUTHORIZED_COMPLETE_BUNDLE_COPY_AND_SIDECAR
+executed_at_utc: 2026-07-14T17:43:45Z
+repository_root: C:\Users\steve\Projects\gradient-institution
+repository_posture: ACTIVE_REPOSITORY_CANDIDATE_PERMANENT_INSTITUTIONAL_AUTHORITY_NOT_RATIFIED
+current_branch: main
+HEAD_commit: 2a434e89025dbd6d204f91e84a7a950d70f31c50
+working_tree_status: DIRTY
+current_working_directory: C:\Users\steve\Projects\gradient-institution
+authorization_id: AUTH-COPY-CL-MIG-001A
+batch_id: CL-MIG-001A
+human_authorization: AUTHORIZE_COPY_CL-MIG-001A_ONLY
+disputed_artifact_id: 
+last_verified_creation_sequence_number: 70
+completed_destination_artifact_ids: ["DEST-ART-001", "DEST-ART-002", "DEST-ART-003", "DEST-ART-004", "DEST-ART-005", "DEST-ART-006", "DEST-ART-007", "DEST-ART-008", "DEST-ART-009", "DEST-ART-010", "DEST-ART-011", "DEST-ART-012", "DEST-ART-013", "DEST-ART-014", "DEST-ART-015", "DEST-ART-016", "DEST-ART-017", "DEST-ART-018", "DEST-ART-019", "DEST-ART-020", "DEST-ART-021", "DEST-ART-022", "DEST-ART-023", "DEST-ART-024", "DEST-ART-025", "DEST-ART-026", "DEST-ART-027", "DEST-ART-028", "DEST-ART-029", "DEST-ART-030", "DEST-ART-031", "DEST-ART-032", "DEST-ART-033", "DEST-ART-034", "DEST-ART-035"]
+uncreated_destination_artifact_ids: []
+output_folder: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02L_CL_MIG_001A_EXECUTION
+authorized_destination_parents:
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\01_PROGRAM_GOVERNANCE
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\03_PHASE_EVIDENCE
+execution_set:
+  authorized_source_copy_count: 18
+  authorized_sidecar_count: 17
+  authorized_total_destination_artifacts: 35
+  RAT_FILE_CL_002_included: 0
+  RAT_FILE_CL_020_included: 0
+  RAT_FILE_CL_021_included: 0
+  CL_MIG_001B_rows_selected: 0
+source_copies_verified: 18
+sidecars_verified: 17
+destination_parent_final_state:
+  program_governance:
+    authorized_source_copy_count: 3
+    authorized_sidecar_count: 2
+    total_direct_file_count: 5
+    direct_folder_count: 0
+    unexpected_file_count: 0
+    unexpected_folder_count: 0
+  phase_evidence:
+    authorized_source_copy_count: 15
+    authorized_sidecar_count: 15
+    total_direct_file_count: 30
+    direct_folder_count: 0
+    unexpected_file_count: 0
+    unexpected_folder_count: 0
+authority_condition_counts:
+  repository_candidate_limitation_sidecars: 2
+  nonoperative_phase_evidence_sidecars: 15
+  other_sidecars: 0
+verdict: "PASS \u2014 CL-MIG-001A COMPLETE BUNDLE CREATED AND VERIFIED"
+safety_receipt:
+  authorized_source_files_copied: 18
+  authorized_admission_sidecars_created: 17
+  authorized_destination_artifacts_created: 35
+  unauthorized_source_files_copied: 0
+  unauthorized_sidecars_created: 0
+  unauthorized_destination_artifacts_created: 0
+  destination_parents_created: 0
+  destination_subfolders_created: 0
+  placeholder_files_created: 0
+  source_files_modified: 0
+  source_files_moved: 0
+  source_files_renamed: 0
+  source_files_deleted: 0
+  destination_files_overwritten: 0
+  destination_files_deleted: 0
+  RAT_FILE_CL_002_files_copied: 0
+  CL_MIG_001B_files_copied_this_phase: 0
+  Chachipti_classifications_changed: 0
+  deferred_registry_authorities_changed: 0
+  git_files_staged: 0
+  git_commits: 0
+  network_git_operations: 0
+  renders: 0
+  publishes: 0
+  deployments: 0
+notes:
+  - ROLLBACK IS NOT DELETION.
+  - Phase 02 through Phase 02K records were not edited.
+  - No Git staging or commit was performed.

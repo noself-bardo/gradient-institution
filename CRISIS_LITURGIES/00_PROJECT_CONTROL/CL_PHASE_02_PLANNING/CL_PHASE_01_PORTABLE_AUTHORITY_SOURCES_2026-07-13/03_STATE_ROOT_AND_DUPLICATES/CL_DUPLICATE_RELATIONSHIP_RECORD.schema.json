@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "CL_DUPLICATE_RELATIONSHIP_RECORD.schema.json",
+  "title": "Crisis Liturgies Duplicate Relationship Record",
+  "type": "object",
+  "required": [
+    "record_id",
+    "artifact_id",
+    "sha256",
+    "path",
+    "relationship_class",
+    "collection",
+    "state",
+    "authority_status"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string"
+    },
+    "artifact_id": {
+      "type": "string"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "path": {
+      "type": "string"
+    },
+    "relationship_class": {
+      "enum": [
+        "CANONICAL_ACTIVE_SOURCE",
+        "FROZEN_RELEASE",
+        "REGISTERED_MIRROR",
+        "STORAGE_MIRROR",
+        "BACKUP",
+        "PUBLICATION_DERIVATIVE",
+        "WORKING_COPY",
+        "SUPERSEDED_WORKING_COPY",
+        "ORPHANED_DUPLICATE",
+        "QUARANTINE"
+      ]
+    },
+    "authoritative_parent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "collection": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "authority_status": {
+      "type": "string"
+    },
+    "dependency_status": {
+      "type": "string"
+    },
+    "referenced_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "migration_batch": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retirement_eligible": {
+      "type": "boolean"
+    },
+    "retirement_authorized": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

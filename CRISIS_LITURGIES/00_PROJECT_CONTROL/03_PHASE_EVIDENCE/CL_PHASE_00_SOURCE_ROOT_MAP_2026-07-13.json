@@ -1,0 +1,172 @@
+{
+  "record_id": "CL-PHASE-00-002",
+  "status": "CONTROLLED_DISCOVERY",
+  "date": "2026-07-13",
+  "roots": [
+    {
+      "id": "ROOT-001",
+      "name": "The Gradient Google Drive root",
+      "path_or_id": "Drive folder 1TX3Mqp3VadSlWuitS6UcA-HRciXHzO9B",
+      "system": "GOOGLE_DRIVE",
+      "role": "PRIMARY_STORAGE_CANDIDATE",
+      "active_writes": "EXISTING / NOT YET STRUCTURALLY LOCKED",
+      "access": "CONNECTED_READ",
+      "risk": "Multiple active, release, archive and _codex_work trees coexist.",
+      "required_action": "Recursive inventory and classification; no moves yet."
+    },
+    {
+      "id": "ROOT-002",
+      "name": "CL-OPS-001 project control folder",
+      "path_or_id": "Drive folder 1WNA2EhNdj1o3tZv90LGcISkFyodDEfDt",
+      "system": "GOOGLE_DRIVE",
+      "role": "ACTIVE_GOVERNANCE_CONTROL",
+      "active_writes": "AUTHORIZED_FOR_CONTROL_RECORDS",
+      "access": "CONNECTED_READ_WRITE_PENDING_UPLOAD",
+      "risk": "Currently contains only CL-OPS-001 and Chachipti audit.",
+      "required_action": "Store Phase 00 control package and preserve prior files."
+    },
+    {
+      "id": "ROOT-003",
+      "name": "Current local evidence sandbox",
+      "path_or_id": "/mnt/data",
+      "system": "CHATGPT_RUNTIME",
+      "role": "TEMPORARY_EVIDENCE_STAGING",
+      "active_writes": "YES",
+      "access": "DIRECT",
+      "risk": "Ephemeral runtime; not institutional storage.",
+      "required_action": "Hash, package and upload control artifacts."
+    },
+    {
+      "id": "ROOT-004",
+      "name": "Codex repository evidence scope",
+      "path_or_id": "Paths referenced by CRISIS_LITURGIES_MASTER_ARCHIVIST_HANDOFF_2026-07-12.md",
+      "system": "LOCAL_CODEX_REPOSITORY",
+      "role": "REPOSITORY_EVIDENCE",
+      "active_writes": "UNKNOWN",
+      "access": "HANDOFF_ONLY",
+      "risk": "Repository-scoped handoff may omit other roots, including CL-V.",
+      "required_action": "Run read-only recursive inventory from Cursor/Codex."
+    },
+    {
+      "id": "ROOT-005",
+      "name": "Legacy release root",
+      "path_or_id": "09_RELEASES/CRISIS_LITURGIES_RELEASE_v1.0",
+      "system": "DRIVE_SYNCED_OR_LOCAL_REPOSITORY",
+      "role": "FROZEN_HISTORICAL_RELEASE",
+      "active_writes": "MUST_BE_READ_ONLY",
+      "access": "MANIFEST_EVIDENCE",
+      "risk": "Historical structure predates current standards.",
+      "required_action": "Attach retrospective provenance without altering binaries."
+    },
+    {
+      "id": "ROOT-006",
+      "name": "Release snapshot root",
+      "path_or_id": "09_RELEASE_SNAPSHOTS",
+      "system": "DRIVE_SYNCED_OR_LOCAL_REPOSITORY",
+      "role": "FROZEN_SNAPSHOT_STORAGE",
+      "active_writes": "NEW_NAMESPACED_SNAPSHOTS_ONLY",
+      "access": "PARTIAL_EVIDENCE",
+      "risk": "Multiple volume conventions and potentially incomplete indexes.",
+      "required_action": "Inventory folders, manifests and checksums."
+    },
+    {
+      "id": "ROOT-007",
+      "name": "Storage mirror root",
+      "path_or_id": "10_STORAGE_MIRRORS",
+      "system": "LOCAL_OR_DRIVE_SYNCED",
+      "role": "REDUNDANT_PRESERVATION",
+      "active_writes": "CONTROLLED_MIRRORS_ONLY",
+      "access": "CHAT_EVIDENCE_ONLY",
+      "risk": "CL-V mirror is not found in connected Drive search.",
+      "required_action": "Direct disk verification."
+    },
+    {
+      "id": "ROOT-008",
+      "name": "Pygmalion local repository",
+      "path_or_id": "C:\\Users\\steve\\Projects\\gradient-institution\\CRISIS_LITURGIES\\EXPANSION_VOLUMES\\CL-EV-001_THE_PYGMALION_MACHINE",
+      "system": "WINDOWS_LOCAL_GIT",
+      "role": "ACTIVE_OR_HISTORICAL_VOLUME_REPOSITORY",
+      "active_writes": "PAUSED_PENDING_RECONCILIATION",
+      "access": "CHAT_EVIDENCE_ONLY",
+      "risk": "Publication-complete claims conflict with later reconstruction QC.",
+      "required_action": "Read-only inventory of control, source, assets, fonts, QC, manifests and Git state."
+    },
+    {
+      "id": "ROOT-009",
+      "name": "Pygmalion Drive folder",
+      "path_or_id": "Drive folder 1lMC8mH6zmrdI57egqhHpQ0GT2qaMEbpX",
+      "system": "GOOGLE_DRIVE",
+      "role": "VOLUME_STORAGE_AND_EXPORT",
+      "active_writes": "PAUSED_PENDING_RECONCILIATION",
+      "access": "CONNECTED_PARTIAL",
+      "risk": "Direct child listing is insufficient to prove run state.",
+      "required_action": "Recursive tree and checksum comparison against local repository."
+    },
+    {
+      "id": "ROOT-010",
+      "name": "The Death of the Bit local Drive-synced repository",
+      "path_or_id": "C:\\Users\\steve\\My Drive\\The Gradient\\_codex_work\\CL_DEATH_OF_THE_BIT_V07_20260710_145556\\CL_DEATH_OF_THE_BIT",
+      "system": "WINDOWS_LOCAL_AND_DRIVE_SYNC",
+      "role": "ACTIVE_WORKING_VOLUME",
+      "active_writes": "PAUSED_FOR_ARCHITECTURE_RECONCILIATION",
+      "access": "MANIFEST_AND_DRIVE_EVIDENCE",
+      "risk": "Working proof is substantial but not an admitted final release.",
+      "required_action": "Inventory source, proof, editorial and lock records; resolve page profile."
+    },
+    {
+      "id": "ROOT-011",
+      "name": "CL-V frozen snapshot",
+      "path_or_id": "09_RELEASE_SNAPSHOTS/CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS",
+      "system": "LOCAL_OR_DRIVE_SYNCED",
+      "role": "CLAIMED_FROZEN_RELEASE",
+      "active_writes": "MUST_BE_READ_ONLY",
+      "access": "CHAT_EVIDENCE_ONLY",
+      "risk": "Missing from Codex handoff and connected Drive search.",
+      "required_action": "Locate exact root and verify known SHA-256."
+    },
+    {
+      "id": "ROOT-012",
+      "name": "CL-V storage mirror",
+      "path_or_id": "10_STORAGE_MIRRORS/CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS",
+      "system": "LOCAL_OR_DRIVE_SYNCED",
+      "role": "CLAIMED_MIRROR",
+      "active_writes": "MUST_BE_READ_ONLY",
+      "access": "CHAT_EVIDENCE_ONLY",
+      "risk": "Mirror existence not directly inspected.",
+      "required_action": "Compare 103 payload files and metadata-only extras against source snapshot."
+    },
+    {
+      "id": "ROOT-013",
+      "name": "Notion institutional workspace",
+      "path_or_id": "The Gradient workspace; CL-BUILDER-001 and linked records",
+      "system": "NOTION",
+      "role": "HUMAN_READABLE_GOVERNANCE_INDEX",
+      "active_writes": "CONTROLLED",
+      "access": "CONNECTED",
+      "risk": "Parallel or superseded pages may appear equally current.",
+      "required_action": "Create Phase 00 index and mark disputed records explicitly."
+    },
+    {
+      "id": "ROOT-014",
+      "name": "ChatGPT Gradient project corpus",
+      "path_or_id": "Two Gradient projects and Crisis Liturgies chats",
+      "system": "CHATGPT",
+      "role": "PROVENANCE_AND_HUMAN_DECISION_HISTORY",
+      "active_writes": "ONGOING",
+      "access": "SEARCHABLE_CONTEXT / NO_FULL_EXPORT",
+      "risk": "Chat claims can outpace repository and Notion records.",
+      "required_action": "Capture only ratified decisions and evidence references into institutional records."
+    },
+    {
+      "id": "ROOT-015",
+      "name": "GitHub web/publication repositories",
+      "path_or_id": "tg-web-pdf-assets and The Gradient web repository references",
+      "system": "GITHUB",
+      "role": "PUBLICATION_DERIVATIVES",
+      "active_writes": "UNKNOWN",
+      "access": "CHAT_EVIDENCE_ONLY_IN_PHASE_00",
+      "risk": "Web availability may be mistaken for archive admission.",
+      "required_action": "Verify releases and checksums during publication audit, not infer collection state."
+    }
+  ]
+}

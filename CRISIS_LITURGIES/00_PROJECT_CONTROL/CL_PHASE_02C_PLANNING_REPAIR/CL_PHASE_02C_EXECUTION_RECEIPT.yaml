@@ -1,0 +1,55 @@
+record_id: CL-PHASE-02C-001-RECEIPT
+phase: CL_PHASE_02C
+title: Planning Repair and Ratification Packet
+mode: CONTROL-RECORD_WRITES_ONLY
+executed_at_utc: 2026-07-13T20:11:36Z
+repository_root: C:\Users\steve\Projects\gradient-institution
+repository_posture: REPOSITORY_CANDIDATE_INSTITUTIONAL_AUTHORITY_NOT_YET_RATIFIED
+current_branch: main
+HEAD_commit: 2a434e89025dbd6d204f91e84a7a950d70f31c50
+source_records_read_only:
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02_PLANNING
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02B_PLANNING_QC
+output_folder: C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR
+verdict: 'PASS WITH OPEN RATIFICATION ITEMS'
+schema_validation: {"CL_PHASE_02C_MIGRATION_MANIFEST_SCHEMA.json": "PASS_STRUCTURAL_JSONSCHEMA_LIB_UNAVAILABLE", "CL_PHASE_02C_EXTERNAL_BINARY_REFERENCE_SCHEMA.json": "PASS_STRUCTURAL_JSONSCHEMA_LIB_UNAVAILABLE"}
+mapping_rows: 56
+topology_paths: 28
+repair_patches: 12
+ratification_decisions_pending: 8
+batches_defined:
+  - CL-MIG-001A
+  - CL-MIG-001B
+batches_executable: false
+destination_materialization_authorized: false
+files_created:
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR\CL_MIG_001A_PROGRAM_GOVERNANCE_SCOPE.md
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR\CL_MIG_001B_BUILDER_SCHEMA_SCOPE.md
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR\CL_PHASE_02C_EXTERNAL_BINARY_REFERENCE_SCHEMA.json
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR\CL_PHASE_02C_MIGRATION_MANIFEST_SCHEMA.json
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR\CL_PHASE_02C_NON_DESTRUCTIVE_ROLLBACK_DOCTRINE.md
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR\CL_PHASE_02C_RATIFICATION_DECISION_REGISTER.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR\CL_PHASE_02C_REPAIR_REGISTER.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR\CL_PHASE_02C_REVISED_PROGRAM_TOPOLOGY.md
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR\CL_PHASE_02C_REVISED_SOURCE_TARGET_MAP.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR\CL_PHASE_02C_REVISED_TOPOLOGY_REGISTER.csv
+  - C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02C_PLANNING_REPAIR\CL_PHASE_02C_EXECUTION_RECEIPT.yaml
+safety_receipt:
+  source_files_modified: 0
+  source_files_copied: 0
+  source_files_moved: 0
+  source_files_renamed: 0
+  source_files_deleted: 0
+  migration_targets_created: 0
+  migration_actions: 0
+  git_files_staged: 0
+  git_commits: 0
+  network_git_operations: 0
+  renders: 0
+  publishes: 0
+  deployments: 0
+notes:
+  - Phase 02 and 02B folders were not edited.
+  - Only CL_PHASE_02C_PLANNING_REPAIR was created.
+  - No destination topology folders were materialized.
+  - No migration eligibility claimed while authority unresolved.

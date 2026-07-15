@@ -1,0 +1,25 @@
+{
+  "record_id": "CL-EXTREF-PHASE-00-DISK-INVENTORY-001",
+  "artifact_role": "EVIDENCE_REFERENCE",
+  "relationship_class": "REGISTERED_MIRROR",
+  "source_root_id": "ROOT-TG",
+  "package_id": "CL-PHASE-00-DISK-INVENTORY-20260713-FINAL",
+  "package_status": "PASS WITH DOCUMENTED DERIVED-DATA EXCEPTION",
+  "do_not_delete": true,
+  "source_files_hashed": 5173,
+  "duplicate_hash_groups": 1276,
+  "inventory_csv_sha256": "5489fd9e88343b99fbb0bf345752a8dca3829ea6e0518d0c67dd346ae26a7ea5",
+  "locators": [
+    {
+      "type": "DRIVE_RELATIVE_PATH",
+      "value": "The Gradient/00_PROJECT_CONTROL/CL_PHASE_00_DISK_INVENTORY_20260713"
+    },
+    {
+      "type": "WINDOWS_ABSOLUTE_PATH_SECONDARY",
+      "value": "C:\\Users\\steve\\My Drive\\The Gradient\\00_PROJECT_CONTROL\\CL_PHASE_00_DISK_INVENTORY_20260713"
+    }
+  ],
+  "recovery_route": "Recover from the Drive control directory using CL_PHASE_00_PACKAGE_MANIFEST.json and SHA256SUMS.txt.",
+  "authority_note": "Evidence reference only; no migration, deletion, or state inference is authorized.",
+  "generated_at": "2026-07-13T20:22:35.652148+00:00"
+}

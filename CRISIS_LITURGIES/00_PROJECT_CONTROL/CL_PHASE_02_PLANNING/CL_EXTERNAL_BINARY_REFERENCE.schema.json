@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thegradient.local/schemas/cl-external-binary-reference.schema.json",
+  "title": "CL_EXTERNAL_BINARY_REFERENCE",
+  "description": "Repository-side reference to a large binary that remains outside Git (typically on The Gradient Drive or a registered mirror). Does not admit publication or archive by itself.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "reference_id",
+    "collection_id",
+    "role",
+    "sha256",
+    "byte_size",
+    "storage_system",
+    "locator",
+    "relationship_class",
+    "recovery_route",
+    "immutable"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "reference_id": {
+      "type": "string",
+      "pattern": "^CL-XBIN-[A-Z0-9_-]+$"
+    },
+    "collection_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "PRINT_PDF",
+        "SCREEN_PDF",
+        "PAGE_PNG",
+        "THUMBNAIL",
+        "LAYOUT_SOURCE",
+        "FONT_BINARY",
+        "RELEASE_PAYLOAD",
+        "WORKING_PROOF",
+        "QC_ARTIFACT",
+        "OTHER"
+      ]
+    },
+    "filename": {
+      "type": "string"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "byte_size": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "media_type": {
+      "type": ["string", "null"]
+    },
+    "storage_system": {
+      "type": "string",
+      "enum": [
+        "GOOGLE_DRIVE_THE_GRADIENT",
+        "GOOGLE_DRIVE_OTHER",
+        "LOCAL_REGISTERED_MIRROR",
+        "GITHUB_RELEASE_ASSET",
+        "OTHER_REGISTERED"
+      ]
+    },
+    "locator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "value"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "ABSOLUTE_PATH",
+            "DRIVE_RELATIVE_PATH",
+            "DRIVE_FILE_ID",
+            "URL",
+            "GITHUB_RELEASE_ASSET"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        },
+        "root_id": {
+          "type": ["string", "null"],
+          "description": "ROOT-### from Phase 00 source root map when applicable"
+        }
+      }
+    },
+    "relationship_class": {
+      "type": "string",
+      "enum": [
+        "CANONICAL_RELEASE",
+        "REGISTERED_MIRROR",
+        "RELEASE_DUPLICATE",
+        "WORKING_PROOF",
+        "QUARANTINE_EVIDENCE",
+        "PUBLICATION_DERIVATIVE",
+        "UNKNOWN"
+      ]
+    },
+    "recovery_route": {
+      "type": "string",
+      "minLength": 1,
+      "description": "How to reacquire the binary if the primary locator fails."
+    },
+    "immutable": {
+      "type": "boolean",
+      "description": "True for frozen-release binaries. False for working proofs."
+    },
+    "state_dimensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "release_state": { "type": "string" },
+        "print_state": { "type": "string" },
+        "publication_state": { "type": "string" },
+        "archive_state": { "type": "string" },
+        "dispute_state": { "type": "string" }
+      }
+    },
+    "known_mirrors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["locator", "sha256_match"],
+        "properties": {
+          "locator": { "type": "string" },
+          "sha256_match": { "type": "boolean" },
+          "relationship_class": { "type": "string" }
+        }
+      }
+    },
+    "do_not_delete": {
+      "type": "boolean",
+      "const": true
+    },
+    "notes": { "type": "string" }
+  }
+}

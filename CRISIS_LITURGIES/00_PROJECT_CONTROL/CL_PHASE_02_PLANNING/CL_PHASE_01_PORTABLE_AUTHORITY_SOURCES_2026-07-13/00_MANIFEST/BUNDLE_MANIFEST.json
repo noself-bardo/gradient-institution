@@ -1,0 +1,144 @@
+{
+  "bundle_id": "CL-PHASE-01-PORTABLE-AUTHORITY-SOURCES-2026-07-13",
+  "status": "SOURCE_RECOVERY_ONLY",
+  "created_at": "2026-07-13T20:22:35.656683+00:00",
+  "file_count_excluding_manifest_and_sums": 26,
+  "files": [
+    {
+      "relative_path": "00_MANIFEST/README.md",
+      "bytes": 914,
+      "sha256": "f811127e937b8d37625611b39030e23f1020b1467ae33e4f01aa4a25805b10fc"
+    },
+    {
+      "relative_path": "01_GOVERNANCE/CL-OPS-001_Crisis_Liturgies_Role_Separation_and_Execution_Protocol_v1.0.md",
+      "bytes": 6605,
+      "sha256": "ea6ee12742f4a8639a553419b137a726486df7fd7643c3ce070390a288cd2303"
+    },
+    {
+      "relative_path": "01_GOVERNANCE/CL_PHASE_01_A_GOVERNANCE_CROSS_REFERENCE_v1.0.md",
+      "bytes": 3018,
+      "sha256": "87176c9cd2eda0c363484f8b01e9ed9c34016a278642d3720bd0dcf19b32d575"
+    },
+    {
+      "relative_path": "02_RELEASE_PROFILES/CCR_CL_003_FINAL_DISPOSITION_ACCEPTED_WITH_PATCHES_2026-07-13.json",
+      "bytes": 503,
+      "sha256": "5c5309b2cb41cf7e0da6a9900b0ac8f9bf0e466699fc9e8269271689e33213f3"
+    },
+    {
+      "relative_path": "02_RELEASE_PROFILES/CCR_CL_003_FINAL_DISPOSITION_ACCEPTED_WITH_PATCHES_2026-07-13.md",
+      "bytes": 4185,
+      "sha256": "aa7b3b9a9232ba7bde283c52d64806e79ba72dee4fe2fc5dd8e9b5c5b805515d"
+    },
+    {
+      "relative_path": "02_RELEASE_PROFILES/CL_RELEASE_PROFILE_REGISTRY_v1.0.json",
+      "bytes": 2200,
+      "sha256": "b44a2f757b921621bbdebd773dd6c86bf087def6e6f9cdebf89bdf419ac91482"
+    },
+    {
+      "relative_path": "02_RELEASE_PROFILES/CL_RELEASE_PROFILE_REGISTRY_v1.0.md",
+      "bytes": 1732,
+      "sha256": "81bf4038455959335149151a8cb8dc8bc27f4914fc37819135ee84446a52ddbb"
+    },
+    {
+      "relative_path": "03_STATE_ROOT_AND_DUPLICATES/CL_COLLECTION_STATE_MAP_v1.0.json",
+      "bytes": 3815,
+      "sha256": "5e2752d60de8c8d468bf6603b6c545bf90641eed4091d0225c56237ea5c45e57"
+    },
+    {
+      "relative_path": "03_STATE_ROOT_AND_DUPLICATES/CL_DUPLICATE_RELATIONSHIP_RECORD.schema.json",
+      "bytes": 1645,
+      "sha256": "9fe1e54cfc0c61bef3386b9afc38f5d8152e2ded36c79e35bce57c0de6657df5"
+    },
+    {
+      "relative_path": "03_STATE_ROOT_AND_DUPLICATES/CL_PHASE_01_C_CANONICAL_ROOT_DECISION_MATRIX_v0.1.md",
+      "bytes": 3452,
+      "sha256": "6c9a2fa66a4a0f0f46cadf816c97cf8419b589e5c78d46b6e7afccfd57852648"
+    },
+    {
+      "relative_path": "03_STATE_ROOT_AND_DUPLICATES/CL_PHASE_01_C_CANONICAL_ROOT_RATIFICATION_v1.0.json",
+      "bytes": 859,
+      "sha256": "faafcd589eb5b1d979c12fc55718e8d78925e5295f82d24466a46355ccf060be"
+    },
+    {
+      "relative_path": "03_STATE_ROOT_AND_DUPLICATES/CL_PHASE_01_C_CANONICAL_ROOT_RATIFICATION_v1.0.md",
+      "bytes": 3887,
+      "sha256": "37ca57040394817ccf63d90151e7210e2f28ed215a7d88f4a834bae056874d63"
+    },
+    {
+      "relative_path": "03_STATE_ROOT_AND_DUPLICATES/CL_PHASE_01_D_MIRROR_AND_DUPLICATE_DOCTRINE_v1.0.json",
+      "bytes": 899,
+      "sha256": "5b651ed1ddaec6c2e8e60399849289fbed1dcaeba797a710695f207c8cbe351e"
+    },
+    {
+      "relative_path": "03_STATE_ROOT_AND_DUPLICATES/CL_PHASE_01_D_MIRROR_AND_DUPLICATE_DOCTRINE_v1.0.md",
+      "bytes": 7198,
+      "sha256": "b47a0ee2915e3c6238e237a7ed1c2dff8c3ec07aaef9231430f9e3ca65084502"
+    },
+    {
+      "relative_path": "03_STATE_ROOT_AND_DUPLICATES/CL_PHASE_01_E_COLLECTION_STATE_LANGUAGE_STANDARD_v1.0.json",
+      "bytes": 645,
+      "sha256": "a7edf399ff3379e877fab7bee3706843cac96c021ca1409a4b3b7cfc96819fe5"
+    },
+    {
+      "relative_path": "03_STATE_ROOT_AND_DUPLICATES/CL_PHASE_01_E_COLLECTION_STATE_LANGUAGE_STANDARD_v1.0.md",
+      "bytes": 7527,
+      "sha256": "4304183a4a35c87923488a19081346b6d733eaf819e1d6875f946e066d59daa8"
+    },
+    {
+      "relative_path": "04_PHASE_CLOSURES/CL_PHASE_00_FINAL_CLOSURE_RECORD_2026-07-13.json",
+      "bytes": 868,
+      "sha256": "45606d32e44785e4cf679af6458fd55c8b16dee7788fea629e5826e1315e35e4"
+    },
+    {
+      "relative_path": "04_PHASE_CLOSURES/CL_PHASE_00_FINAL_CLOSURE_RECORD_2026-07-13.md",
+      "bytes": 4539,
+      "sha256": "115beb2e38edc0f1cfaae94af2ffd476885251a051e75f261dac0788584b3181"
+    },
+    {
+      "relative_path": "04_PHASE_CLOSURES/CL_PHASE_01_AUTHORITY_PROFILE_ROOT_RECONCILIATION_CHARTER_2026-07-13.json",
+      "bytes": 646,
+      "sha256": "77446f96ed3abfec7307c91dd2084b02a6b22f188e8176c4ff952b3bdebb1113"
+    },
+    {
+      "relative_path": "04_PHASE_CLOSURES/CL_PHASE_01_AUTHORITY_PROFILE_ROOT_RECONCILIATION_CHARTER_2026-07-13.md",
+      "bytes": 4566,
+      "sha256": "f0707d2a7559027b43bb7529d010d88d974ab3c2a5226cf6e7ef582e23ee219c"
+    },
+    {
+      "relative_path": "04_PHASE_CLOSURES/CL_PHASE_01_FINAL_CLOSURE_RECORD_v1.0.json",
+      "bytes": 395,
+      "sha256": "1d5b884355aa84715bd664e33e88f37638120a780b4d8bc4f26afd85d988d790"
+    },
+    {
+      "relative_path": "04_PHASE_CLOSURES/CL_PHASE_01_FINAL_CLOSURE_RECORD_v1.0.md",
+      "bytes": 3168,
+      "sha256": "e2c2be71dc883fc851ce7b4eb2f1b75051ffc68553875463b8c41d496498148a"
+    },
+    {
+      "relative_path": "04_PHASE_CLOSURES/CL_PHASE_01_F_DEATH_BIT_PROFILE_DEFERRAL_v1.0.md",
+      "bytes": 2139,
+      "sha256": "6d404e28e83d6114ba0c4778ca918740d0487ba35fcc501abbafc200902df2e7"
+    },
+    {
+      "relative_path": "04_PHASE_CLOSURES/CL_PHASE_02_CURSOR_MIGRATION_PLANNING_PACKET.md",
+      "bytes": 1984,
+      "sha256": "5d189d45af4200b3daed7be08941a5410ab47fce3cbe00eff7c69040f061edd5"
+    },
+    {
+      "relative_path": "04_PHASE_CLOSURES/CL_PHASE_02_NON_DESTRUCTIVE_MIGRATION_PLANNING_CHARTER_v1.0.md",
+      "bytes": 3564,
+      "sha256": "d720514fb99f60389a6ebf878582696089fdfced8b071eedddce3fe1c6123f30"
+    },
+    {
+      "relative_path": "05_EVIDENCE_REFERENCES/CL_PHASE_00_DISK_INVENTORY_EXTERNAL_REF.json",
+      "bytes": 1102,
+      "sha256": "b78e53f4b45e84b48f2a3be43d23b3469c490462dc88843b2088288d5890777f"
+    }
+  ],
+  "permissions": {
+    "planning_extract_authorized": true,
+    "migration_copy_authorized": false,
+    "delete_authorized": false,
+    "commit_authorized": false
+  }
+}

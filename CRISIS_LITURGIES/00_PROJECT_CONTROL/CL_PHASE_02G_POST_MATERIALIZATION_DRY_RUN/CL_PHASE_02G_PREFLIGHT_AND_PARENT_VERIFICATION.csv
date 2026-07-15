@@ -1,0 +1,13 @@
+﻿row_kind,authorization_id,exact_path,exists,filesystem_type,is_empty,direct_child_count,modified_time_if_available,authorization_reference,materialization_receipt_reference,field,value,preflight_status
+PREFLIGHT,,,,,,,,,,current_working_directory,C:\Users\steve\Projects\gradient-institution,OK
+PREFLIGHT,,,,,,,,,,repository_root,C:\Users\steve\Projects\gradient-institution,OK
+PREFLIGHT,,,,,,,,,,current_branch,main,OK
+PREFLIGHT,,,,,,,,,,HEAD_commit,2a434e89025dbd6d204f91e84a7a950d70f31c50,OK
+PREFLIGHT,,,,,,,,,,working_tree_status,DIRTY,OK
+PREFLIGHT,,,,,,,,,,phase_02b_manifest_exists,YES,OK
+PREFLIGHT,,,,,,,,,,phase_02c_map_exists,YES,OK
+PREFLIGHT,,,,,,,,,,phase_02f_receipt_exists,YES,OK
+PREFLIGHT,,,,,,,,,,output_folder_exists,NO_BEFORE_CREATE_THEN_CREATED,OK
+PARENT,HAD-001,C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\01_PROGRAM_GOVERNANCE,YES,DIRECTORY,YES,0,2026-07-13T20:41:48.2207712Z,C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02F_PARENT_MATERIALIZATION\CL_PHASE_02F_AUTHORIZATION_RECORD.md,C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02F_PARENT_MATERIALIZATION\CL_PHASE_02F_MATERIALIZATION_RECEIPT.csv,,,PASS
+PARENT,HAD-002,C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\03_PHASE_EVIDENCE,YES,DIRECTORY,YES,0,2026-07-13T20:41:48.2227714Z,C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02F_PARENT_MATERIALIZATION\CL_PHASE_02F_AUTHORIZATION_RECORD.md,C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02F_PARENT_MATERIALIZATION\CL_PHASE_02F_MATERIALIZATION_RECEIPT.csv,,,PASS
+PARENT,HAD-003,C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\05_BUILDER_CONTRACTS,YES,DIRECTORY,YES,0,2026-07-13T20:41:48.2227714Z,C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02F_PARENT_MATERIALIZATION\CL_PHASE_02F_AUTHORIZATION_RECORD.md,C:\Users\steve\Projects\gradient-institution\CRISIS_LITURGIES\00_PROJECT_CONTROL\CL_PHASE_02F_PARENT_MATERIALIZATION\CL_PHASE_02F_MATERIALIZATION_RECEIPT.csv,,,PASS
