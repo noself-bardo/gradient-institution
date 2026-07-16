@@ -1,0 +1,2099 @@
+{
+  "review_id": "CL_PHASE_02_DUPLICATE_EXTRACTION_RETIREMENT_REVIEW_2026-07-15_PATCH",
+  "generated_at": "2026-07-15T19:37:06Z",
+  "repository_head": "cc9f1e3a54492bf7434a6b5b672ece58eadb302a",
+  "branch": "main",
+  "mode": "READ_ONLY_RETIREMENT_REVIEW_PATCH_AFTER_PHASE_02_MATERIALIZATION",
+  "patch_reason": "Replace SAFE_TO_RETIRE with preservation-aware dispositions after cc9f1e3 materialization commit",
+  "retirement_authorized": false,
+  "total_artifacts_reviewed": 22,
+  "disposition_counts": {
+    "ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION": 6,
+    "DEFER_PENDING_COUNTERPART_ADMISSION": 12,
+    "RETAIN_AS_EVIDENCE": 3,
+    "REQUIRES_HUMAN_REVIEW": 1
+  },
+  "source_materialization_commit": "cc9f1e3a54492bf7434a6b5b672ece58eadb302a",
+  "source_ledger": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+  "three_way_comparison_report": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_CLV_STATUS_QUEUE_THREE_WAY_COMPARISON.md",
+  "artifacts": [
+    {
+      "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json",
+      "artifact_type": "file",
+      "tracked_status": "tracked",
+      "sha256": "1c54af10792af26c0968fcb5ba2c2623882a95beffcb7b0fb13148fca47b9ba7",
+      "retained_counterpart": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json",
+      "counterpart_tracked": true,
+      "counterpart_sha256": "1c54af10792af26c0968fcb5ba2c2623882a95beffcb7b0fb13148fca47b9ba7",
+      "counterpart_preservation_status": "TRACKED_BYTE_IDENTICAL_COUNTERPART_PRESERVED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_PREFLIGHT.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_ORIGINAL_SCOPE_RECONCILIATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGE_REQUIRED_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGING_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_SECRET_AND_BINARY_REVIEW.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION",
+      "recommended_action": "DELETE_ONLY_AFTER_SEPARATE_EXPLICIT_HUMAN_AUTHORIZATION_AND_EXACT_GIT_DELETION_COMMIT",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md",
+      "artifact_type": "file",
+      "tracked_status": "tracked",
+      "sha256": "8374b32b3c07f1def14dc8225c4d45ee1b515d368b22b14f4ca496f3a8a3c36a",
+      "retained_counterpart": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md",
+      "counterpart_tracked": true,
+      "counterpart_sha256": "8374b32b3c07f1def14dc8225c4d45ee1b515d368b22b14f4ca496f3a8a3c36a",
+      "counterpart_preservation_status": "TRACKED_BYTE_IDENTICAL_COUNTERPART_PRESERVED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_PREFLIGHT.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_ORIGINAL_SCOPE_RECONCILIATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGE_REQUIRED_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGING_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_SECRET_AND_BINARY_REVIEW.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION",
+      "recommended_action": "DELETE_ONLY_AFTER_SEPARATE_EXPLICIT_HUMAN_AUTHORIZATION_AND_EXACT_GIT_DELETION_COMMIT",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt",
+      "artifact_type": "file",
+      "tracked_status": "tracked",
+      "sha256": "4f55e8f9e2de71cc24a048f6180c178a4ed6382ed70a19b48b25c20120b4ffa5",
+      "retained_counterpart": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt",
+      "counterpart_tracked": true,
+      "counterpart_sha256": "4f55e8f9e2de71cc24a048f6180c178a4ed6382ed70a19b48b25c20120b4ffa5",
+      "counterpart_preservation_status": "TRACKED_BYTE_IDENTICAL_COUNTERPART_PRESERVED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_PREFLIGHT.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_ORIGINAL_SCOPE_RECONCILIATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGE_REQUIRED_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGING_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_SECRET_AND_BINARY_REVIEW.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL_MIG_001_CLOSURE/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION",
+      "recommended_action": "DELETE_ONLY_AFTER_SEPARATE_EXPLICIT_HUMAN_AUTHORIZATION_AND_EXACT_GIT_DELETION_COMMIT",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json",
+      "artifact_type": "file",
+      "tracked_status": "tracked",
+      "sha256": "c12385ab19f701a7e6d1623abfb77cc1178981e79ecd71b10e439b2d61a1cb85",
+      "retained_counterpart": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COMMIT_CONTROL/CL_MIGRATION_MANIFEST.schema.v1.2.json",
+      "counterpart_tracked": true,
+      "counterpart_sha256": "c12385ab19f701a7e6d1623abfb77cc1178981e79ecd71b10e439b2d61a1cb85",
+      "counterpart_preservation_status": "TRACKED_BYTE_IDENTICAL_COUNTERPART_PRESERVED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_PREFLIGHT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_ORIGINAL_SCOPE_RECONCILIATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGE_REQUIRED_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGING_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_SECRET_AND_BINARY_REVIEW.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION",
+      "recommended_action": "DELETE_ONLY_AFTER_SEPARATE_EXPLICIT_HUMAN_AUTHORIZATION_AND_EXACT_GIT_DELETION_COMMIT",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md",
+      "artifact_type": "file",
+      "tracked_status": "tracked",
+      "sha256": "c24734895282a1a4415f8a873bda116c637d7ea4aae59e42a21f6c40dbbd9bf2",
+      "retained_counterpart": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COMMIT_CONTROL/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md",
+      "counterpart_tracked": true,
+      "counterpart_sha256": "c24734895282a1a4415f8a873bda116c637d7ea4aae59e42a21f6c40dbbd9bf2",
+      "counterpart_preservation_status": "TRACKED_BYTE_IDENTICAL_COUNTERPART_PRESERVED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_PREFLIGHT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_ORIGINAL_SCOPE_RECONCILIATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGE_REQUIRED_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGING_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_SECRET_AND_BINARY_REVIEW.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION",
+      "recommended_action": "DELETE_ONLY_AFTER_SEPARATE_EXPLICIT_HUMAN_AUTHORIZATION_AND_EXACT_GIT_DELETION_COMMIT",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json",
+      "artifact_type": "file",
+      "tracked_status": "tracked",
+      "sha256": "702ddbb456ee0d83eda6ab796c9586a7420810a09bb2fac9e5a053b8b01c18cc",
+      "retained_counterpart": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COMMIT_CONTROL/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json",
+      "counterpart_tracked": true,
+      "counterpart_sha256": "702ddbb456ee0d83eda6ab796c9586a7420810a09bb2fac9e5a053b8b01c18cc",
+      "counterpart_preservation_status": "TRACKED_BYTE_IDENTICAL_COUNTERPART_PRESERVED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_PREFLIGHT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_ORIGINAL_SCOPE_RECONCILIATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGE_REQUIRED_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGING_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_SECRET_AND_BINARY_REVIEW.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION",
+      "recommended_action": "DELETE_ONLY_AFTER_SEPARATE_EXPLICIT_HUMAN_AUTHORIZATION_AND_EXACT_GIT_DELETION_COMMIT",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/00_CODEX_HANDOFF/CL-V_CODEX_TAKEOVER_PROMPT.md",
+      "artifact_type": "file",
+      "tracked_status": "untracked",
+      "sha256": "f2afab57ae976a9a01d5b5e9e15bdeb5bb551f87c3b9122ee8fda58743d69717",
+      "retained_counterpart": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/00_CODEX_HANDOFF/CL-V_CODEX_TAKEOVER_PROMPT.md",
+      "counterpart_tracked": false,
+      "counterpart_sha256": "f2afab57ae976a9a01d5b5e9e15bdeb5bb551f87c3b9122ee8fda58743d69717",
+      "counterpart_preservation_status": "UNTRACKED_SIBLING_COUNTERPART_NOT_YET_ADMITTED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/00_CODEX_HANDOFF/CL-V_CODEX_TAKEOVER_PROMPT.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/00_CODEX_HANDOFF/CL-V_CODEX_TAKEOVER_PROMPT.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_CURRENT_WORKTREE_SEPARATION.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/00_CODEX_HANDOFF/CL-V_CODEX_TAKEOVER_PROMPT.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/00_CODEX_HANDOFF/CL-V_CODEX_TAKEOVER_PROMPT.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/00_CODEX_HANDOFF/CL-V_CODEX_TAKEOVER_PROMPT.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/00_CODEX_HANDOFF/CL-V_CODEX_TAKEOVER_PROMPT.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/00_CODEX_HANDOFF/CL-V_CODEX_TAKEOVER_PROMPT.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/00_CODEX_HANDOFF/CL-V_CODEX_TAKEOVER_PROMPT.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
+      "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_IMAGE_GATE_PROTOCOL.md",
+      "artifact_type": "file",
+      "tracked_status": "untracked",
+      "sha256": "e9fc51ce5e3dd646ac085619d40a0f88748c8d7034c577c2a8713f800727242f",
+      "retained_counterpart": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_IMAGE_GATE_PROTOCOL.md",
+      "counterpart_tracked": false,
+      "counterpart_sha256": "e9fc51ce5e3dd646ac085619d40a0f88748c8d7034c577c2a8713f800727242f",
+      "counterpart_preservation_status": "UNTRACKED_SIBLING_COUNTERPART_NOT_YET_ADMITTED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_IMAGE_GATE_PROTOCOL.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_IMAGE_GATE_PROTOCOL.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_CURRENT_WORKTREE_SEPARATION.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_IMAGE_GATE_PROTOCOL.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_IMAGE_GATE_PROTOCOL.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_IMAGE_GATE_PROTOCOL.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_IMAGE_GATE_PROTOCOL.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_IMAGE_GATE_PROTOCOL.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_IMAGE_GATE_PROTOCOL.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
+      "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_PRODUCTION_RUN_PROTOCOL.md",
+      "artifact_type": "file",
+      "tracked_status": "untracked",
+      "sha256": "df31a6860e267a1ace4ac02b548ba719893cb128492934b21cc4c0bbc1d3538d",
+      "retained_counterpart": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_PRODUCTION_RUN_PROTOCOL.md",
+      "counterpart_tracked": false,
+      "counterpart_sha256": "df31a6860e267a1ace4ac02b548ba719893cb128492934b21cc4c0bbc1d3538d",
+      "counterpart_preservation_status": "UNTRACKED_SIBLING_COUNTERPART_NOT_YET_ADMITTED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_PRODUCTION_RUN_PROTOCOL.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_PRODUCTION_RUN_PROTOCOL.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_CURRENT_WORKTREE_SEPARATION.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_PRODUCTION_RUN_PROTOCOL.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_PRODUCTION_RUN_PROTOCOL.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_PRODUCTION_RUN_PROTOCOL.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_PRODUCTION_RUN_PROTOCOL.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_PRODUCTION_RUN_PROTOCOL.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_PRODUCTION_RUN_PROTOCOL.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
+      "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/02_ENGINE_CONTRACTS/CL-V_ENGINE_CONTRACTS.md",
+      "artifact_type": "file",
+      "tracked_status": "untracked",
+      "sha256": "6325f4e6590bd7d60f8f476cc8b97d73e5bc25c93eb1a76cb58191364077fd2f",
+      "retained_counterpart": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/02_ENGINE_CONTRACTS/CL-V_ENGINE_CONTRACTS.md",
+      "counterpart_tracked": false,
+      "counterpart_sha256": "6325f4e6590bd7d60f8f476cc8b97d73e5bc25c93eb1a76cb58191364077fd2f",
+      "counterpart_preservation_status": "UNTRACKED_SIBLING_COUNTERPART_NOT_YET_ADMITTED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/02_ENGINE_CONTRACTS/CL-V_ENGINE_CONTRACTS.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/02_ENGINE_CONTRACTS/CL-V_ENGINE_CONTRACTS.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_CURRENT_WORKTREE_SEPARATION.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/02_ENGINE_CONTRACTS/CL-V_ENGINE_CONTRACTS.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/02_ENGINE_CONTRACTS/CL-V_ENGINE_CONTRACTS.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/02_ENGINE_CONTRACTS/CL-V_ENGINE_CONTRACTS.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/02_ENGINE_CONTRACTS/CL-V_ENGINE_CONTRACTS.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/02_ENGINE_CONTRACTS/CL-V_ENGINE_CONTRACTS.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/02_ENGINE_CONTRACTS/CL-V_ENGINE_CONTRACTS.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
+      "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_REMAINING_ISSUE_RISK_MAP.md",
+      "artifact_type": "file",
+      "tracked_status": "untracked",
+      "sha256": "49495a5e614d1a0f5b4c54c59c9b0ee26110d73c9a7bd07292ca14092ee969a0",
+      "retained_counterpart": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_REMAINING_ISSUE_RISK_MAP.md",
+      "counterpart_tracked": false,
+      "counterpart_sha256": "49495a5e614d1a0f5b4c54c59c9b0ee26110d73c9a7bd07292ca14092ee969a0",
+      "counterpart_preservation_status": "UNTRACKED_SIBLING_COUNTERPART_NOT_YET_ADMITTED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_REMAINING_ISSUE_RISK_MAP.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_REMAINING_ISSUE_RISK_MAP.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_CURRENT_WORKTREE_SEPARATION.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_REMAINING_ISSUE_RISK_MAP.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_REMAINING_ISSUE_RISK_MAP.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_REMAINING_ISSUE_RISK_MAP.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_REMAINING_ISSUE_RISK_MAP.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_REMAINING_ISSUE_RISK_MAP.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_REMAINING_ISSUE_RISK_MAP.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
+      "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_CL-051_PROMOTION.md",
+      "artifact_type": "file",
+      "tracked_status": "untracked",
+      "sha256": "de92ce2367afa344b9edc55babb32efe8f10d4b24030b477cbf8b8befa35323a",
+      "retained_counterpart": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_CL-051_PROMOTION.md",
+      "counterpart_tracked": false,
+      "counterpart_sha256": "de92ce2367afa344b9edc55babb32efe8f10d4b24030b477cbf8b8befa35323a",
+      "counterpart_preservation_status": "UNTRACKED_SIBLING_COUNTERPART_NOT_YET_ADMITTED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_CL-051_PROMOTION.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_CL-051_PROMOTION.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_CURRENT_WORKTREE_SEPARATION.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_CL-051_PROMOTION.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_CL-051_PROMOTION.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_CL-051_PROMOTION.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_CL-051_PROMOTION.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_CL-051_PROMOTION.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_CL-051_PROMOTION.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
+      "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_COMPLETE_ISSUE_DIAGNOSTIC_TEMPLATE.md",
+      "artifact_type": "file",
+      "tracked_status": "untracked",
+      "sha256": "7e35de4595d2037c0b2caa806f8aa3fc5397c23248187e86dd2cb7d79c8d64d2",
+      "retained_counterpart": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_COMPLETE_ISSUE_DIAGNOSTIC_TEMPLATE.md",
+      "counterpart_tracked": false,
+      "counterpart_sha256": "7e35de4595d2037c0b2caa806f8aa3fc5397c23248187e86dd2cb7d79c8d64d2",
+      "counterpart_preservation_status": "UNTRACKED_SIBLING_COUNTERPART_NOT_YET_ADMITTED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_COMPLETE_ISSUE_DIAGNOSTIC_TEMPLATE.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_COMPLETE_ISSUE_DIAGNOSTIC_TEMPLATE.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_CURRENT_WORKTREE_SEPARATION.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_COMPLETE_ISSUE_DIAGNOSTIC_TEMPLATE.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_COMPLETE_ISSUE_DIAGNOSTIC_TEMPLATE.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_COMPLETE_ISSUE_DIAGNOSTIC_TEMPLATE.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_COMPLETE_ISSUE_DIAGNOSTIC_TEMPLATE.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_COMPLETE_ISSUE_DIAGNOSTIC_TEMPLATE.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_COMPLETE_ISSUE_DIAGNOSTIC_TEMPLATE.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
+      "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_PREPARE_NEXT_ISSUE_OVERLAY_TEMPLATE.md",
+      "artifact_type": "file",
+      "tracked_status": "untracked",
+      "sha256": "d82de05a25244d6e1c5c3dbd2ae4c5c60ce1c875b4ccc046b08cb396e445dbd0",
+      "retained_counterpart": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_PREPARE_NEXT_ISSUE_OVERLAY_TEMPLATE.md",
+      "counterpart_tracked": false,
+      "counterpart_sha256": "d82de05a25244d6e1c5c3dbd2ae4c5c60ce1c875b4ccc046b08cb396e445dbd0",
+      "counterpart_preservation_status": "UNTRACKED_SIBLING_COUNTERPART_NOT_YET_ADMITTED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_PREPARE_NEXT_ISSUE_OVERLAY_TEMPLATE.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_PREPARE_NEXT_ISSUE_OVERLAY_TEMPLATE.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_CURRENT_WORKTREE_SEPARATION.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_PREPARE_NEXT_ISSUE_OVERLAY_TEMPLATE.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_PREPARE_NEXT_ISSUE_OVERLAY_TEMPLATE.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_PREPARE_NEXT_ISSUE_OVERLAY_TEMPLATE.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_PREPARE_NEXT_ISSUE_OVERLAY_TEMPLATE.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_PREPARE_NEXT_ISSUE_OVERLAY_TEMPLATE.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_PREPARE_NEXT_ISSUE_OVERLAY_TEMPLATE.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
+      "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/05_QC_AND_PROMOTION/CL-V_QC_AND_PROMOTION_PROTOCOL.md",
+      "artifact_type": "file",
+      "tracked_status": "untracked",
+      "sha256": "717b0520077878c8a6fa32c929a4ac05c6a7e23ca84c0eb69154975703fee942",
+      "retained_counterpart": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/05_QC_AND_PROMOTION/CL-V_QC_AND_PROMOTION_PROTOCOL.md",
+      "counterpart_tracked": false,
+      "counterpart_sha256": "717b0520077878c8a6fa32c929a4ac05c6a7e23ca84c0eb69154975703fee942",
+      "counterpart_preservation_status": "UNTRACKED_SIBLING_COUNTERPART_NOT_YET_ADMITTED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/05_QC_AND_PROMOTION/CL-V_QC_AND_PROMOTION_PROTOCOL.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/05_QC_AND_PROMOTION/CL-V_QC_AND_PROMOTION_PROTOCOL.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_CURRENT_WORKTREE_SEPARATION.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/05_QC_AND_PROMOTION/CL-V_QC_AND_PROMOTION_PROTOCOL.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/05_QC_AND_PROMOTION/CL-V_QC_AND_PROMOTION_PROTOCOL.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/05_QC_AND_PROMOTION/CL-V_QC_AND_PROMOTION_PROTOCOL.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/05_QC_AND_PROMOTION/CL-V_QC_AND_PROMOTION_PROTOCOL.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/05_QC_AND_PROMOTION/CL-V_QC_AND_PROMOTION_PROTOCOL.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/05_QC_AND_PROMOTION/CL-V_QC_AND_PROMOTION_PROTOCOL.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
+      "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/06_FAILURE_RECOVERY/CL-V_FAILURE_RECOVERY_PROTOCOL.md",
+      "artifact_type": "file",
+      "tracked_status": "untracked",
+      "sha256": "7cc36cfc37109224a9f2dd57e7f244a1e7b89730ff4e7656059b15e8adbb6587",
+      "retained_counterpart": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/06_FAILURE_RECOVERY/CL-V_FAILURE_RECOVERY_PROTOCOL.md",
+      "counterpart_tracked": false,
+      "counterpart_sha256": "7cc36cfc37109224a9f2dd57e7f244a1e7b89730ff4e7656059b15e8adbb6587",
+      "counterpart_preservation_status": "UNTRACKED_SIBLING_COUNTERPART_NOT_YET_ADMITTED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/06_FAILURE_RECOVERY/CL-V_FAILURE_RECOVERY_PROTOCOL.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/06_FAILURE_RECOVERY/CL-V_FAILURE_RECOVERY_PROTOCOL.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_CURRENT_WORKTREE_SEPARATION.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/06_FAILURE_RECOVERY/CL-V_FAILURE_RECOVERY_PROTOCOL.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/06_FAILURE_RECOVERY/CL-V_FAILURE_RECOVERY_PROTOCOL.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/06_FAILURE_RECOVERY/CL-V_FAILURE_RECOVERY_PROTOCOL.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/06_FAILURE_RECOVERY/CL-V_FAILURE_RECOVERY_PROTOCOL.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/06_FAILURE_RECOVERY/CL-V_FAILURE_RECOVERY_PROTOCOL.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/06_FAILURE_RECOVERY/CL-V_FAILURE_RECOVERY_PROTOCOL.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
+      "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/CL-V_ALL_IN_ONE_CODEX_HANDOFF.md",
+      "artifact_type": "file",
+      "tracked_status": "untracked",
+      "sha256": "3bd43cc7767d45f838d4c697e476b8916659236ca63d70aa0fa6f21e1bed5351",
+      "retained_counterpart": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/CL-V_ALL_IN_ONE_CODEX_HANDOFF.md",
+      "counterpart_tracked": false,
+      "counterpart_sha256": "3bd43cc7767d45f838d4c697e476b8916659236ca63d70aa0fa6f21e1bed5351",
+      "counterpart_preservation_status": "UNTRACKED_SIBLING_COUNTERPART_NOT_YET_ADMITTED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/CL-V_ALL_IN_ONE_CODEX_HANDOFF.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/CL-V_ALL_IN_ONE_CODEX_HANDOFF.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_CURRENT_WORKTREE_SEPARATION.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/CL-V_ALL_IN_ONE_CODEX_HANDOFF.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/CL-V_ALL_IN_ONE_CODEX_HANDOFF.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/CL-V_ALL_IN_ONE_CODEX_HANDOFF.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/CL-V_ALL_IN_ONE_CODEX_HANDOFF.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/CL-V_ALL_IN_ONE_CODEX_HANDOFF.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/CL-V_ALL_IN_ONE_CODEX_HANDOFF.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
+      "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/README_QUICKSTART.md",
+      "artifact_type": "file",
+      "tracked_status": "untracked",
+      "sha256": "b0fbf444d137a3995e85fb75f98bcf28afe0e6774bca4131a44668dce2f2aeac",
+      "retained_counterpart": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/README_QUICKSTART.md",
+      "counterpart_tracked": false,
+      "counterpart_sha256": "b0fbf444d137a3995e85fb75f98bcf28afe0e6774bca4131a44668dce2f2aeac",
+      "counterpart_preservation_status": "UNTRACKED_SIBLING_COUNTERPART_NOT_YET_ADMITTED",
+      "byte_identical": true,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/README_QUICKSTART.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/README_QUICKSTART.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_CURRENT_WORKTREE_SEPARATION.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/README_QUICKSTART.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/README_QUICKSTART.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/README_QUICKSTART.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/README_QUICKSTART.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/README_QUICKSTART.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/README_QUICKSTART.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
+      "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json",
+      "artifact_type": "file",
+      "tracked_status": "tracked",
+      "sha256": "3e42d38d489e262a502b26c6234d9b42e42667fd459477d01dd974f4bc29f5f8",
+      "retained_counterpart": null,
+      "counterpart_tracked": null,
+      "counterpart_sha256": null,
+      "counterpart_preservation_status": "NO_EQUIVALENT_ADMITTED_COUNTERPART",
+      "byte_identical": null,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_PREFLIGHT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_ORIGINAL_SCOPE_RECONCILIATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGE_REQUIRED_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGING_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_SECRET_AND_BINARY_REVIEW.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "RETAIN_AS_EVIDENCE",
+      "recommended_action": "KEEP_UNTIL_SEPARATE_PACKAGE_ARCHIVE_POLICY",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md",
+      "artifact_type": "file",
+      "tracked_status": "tracked",
+      "sha256": "35b0e17586233b2508de840b78bf2053da2d5acb17d67df4fe8f728df4bf5e2f",
+      "retained_counterpart": null,
+      "counterpart_tracked": null,
+      "counterpart_sha256": null,
+      "counterpart_preservation_status": "NO_EQUIVALENT_ADMITTED_COUNTERPART",
+      "byte_identical": null,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_PREFLIGHT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_ORIGINAL_SCOPE_RECONCILIATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGE_REQUIRED_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGING_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_SECRET_AND_BINARY_REVIEW.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "RETAIN_AS_EVIDENCE",
+      "recommended_action": "KEEP_UNTIL_SEPARATE_PACKAGE_ARCHIVE_POLICY",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt",
+      "artifact_type": "file",
+      "tracked_status": "tracked",
+      "sha256": "f83c5c022193c1b0fa01fbb52060321d9c5b97c5943f8ee05f91695009234ccd",
+      "retained_counterpart": null,
+      "counterpart_tracked": null,
+      "counterpart_sha256": null,
+      "counterpart_preservation_status": "NO_EQUIVALENT_ADMITTED_COUNTERPART",
+      "byte_identical": null,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_PREFLIGHT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02N_EXACT_GIT_STAGING/CL_PHASE_02N_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_ORIGINAL_SCOPE_RECONCILIATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGE_REQUIRED_SCOPE.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_REVISED_STAGING_AUTHORIZATION_PACKET.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_SECRET_AND_BINARY_REVIEW.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_ALLOWLIST_VALIDATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_PRESTAGING_PATH_AUDIT.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02P_REVISED_EXACT_GIT_STAGING/CL_PHASE_02P_STAGED_PATH_VERIFICATION.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/",
+            "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "RETAIN_AS_EVIDENCE",
+      "recommended_action": "KEEP_UNTIL_SEPARATE_PACKAGE_ARCHIVE_POLICY",
+      "retirement_authorized": false
+    },
+    {
+      "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_STATUS_AND_TASK_QUEUE.md",
+      "artifact_type": "file",
+      "tracked_status": "untracked",
+      "sha256": "e747bbdcf205ce37eb63ef2ce785c29666e08a97450f5c7c0d318cceab8099de",
+      "retained_counterpart": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_STATUS_AND_TASK_QUEUE.md",
+      "counterpart_tracked": false,
+      "counterpart_sha256": "fb788a7b7f3955d282e5d52c851ec1ecdd6e6b19885c9cab3b022adbf5ccdf7a",
+      "counterpart_preservation_status": "COUNTERPART_EXISTS_BUT_NOT_BYTE_IDENTICAL",
+      "byte_identical": false,
+      "inbound_references_found": [
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02M_MIGRATION_CLOSEOUT/CL_PHASE_02M_GIT_CHANGE_SCOPE.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_STATUS_AND_TASK_QUEUE.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_STATUS_AND_TASK_QUEUE.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02O_HEAD_RECONCILIATION_AND_SCOPE_REPAIR/CL_PHASE_02O_CURRENT_WORKTREE_SEPARATION.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_STATUS_AND_TASK_QUEUE.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_STATUS_AND_TASK_QUEUE.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "CONTENT_REFERENCE",
+          "referencing_tracked": false
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_STATUS_AND_TASK_QUEUE.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_STATUS_AND_TASK_QUEUE.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        },
+        {
+          "referencing_path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_REPORT.md",
+          "matched_needles": [
+            "CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_STATUS_AND_TASK_QUEUE.md",
+            "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_STATUS_AND_TASK_QUEUE.md",
+            "_CODEX_PACKET_EXTRACT/"
+          ],
+          "reference_role": "AUDIT_CLASSIFICATION_LISTING",
+          "referencing_tracked": true
+        }
+      ],
+      "disposition": "REQUIRES_HUMAN_REVIEW",
+      "recommended_action": "COMPLETE_CL_V_STATUS_QUEUE_THREE_WAY_ADJUDICATION_BEFORE_ANY_RETIREMENT",
+      "retirement_authorized": false
+    }
+  ]
+}
