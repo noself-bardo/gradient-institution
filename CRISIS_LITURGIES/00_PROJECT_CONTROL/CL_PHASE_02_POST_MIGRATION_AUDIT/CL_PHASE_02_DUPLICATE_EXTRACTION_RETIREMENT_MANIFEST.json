@@ -1,21 +1,25 @@
 {
-  "review_id": "CL_PHASE_02_DUPLICATE_EXTRACTION_RETIREMENT_REVIEW_2026-07-15_PATCH",
+  "review_id": "CL_PHASE_02_DUPLICATE_EXTRACTION_RETIREMENT_REVIEW_2026-07-16_CLV_RATIFICATION",
   "generated_at": "2026-07-15T19:37:06Z",
-  "repository_head": "cc9f1e3a54492bf7434a6b5b672ece58eadb302a",
+  "updated_at": "2026-07-16T21:48:00Z",
+  "repository_head": "2c76ec5d68286761ba6682fa1dee0793b1711f5a",
   "branch": "main",
-  "mode": "READ_ONLY_RETIREMENT_REVIEW_PATCH_AFTER_PHASE_02_MATERIALIZATION",
-  "patch_reason": "Replace SAFE_TO_RETIRE with preservation-aware dispositions after cc9f1e3 materialization commit",
+  "mode": "READ_ONLY_RETIREMENT_REVIEW_PATCH_AFTER_CLV_STATUS_QUEUE_RATIFICATION",
+  "patch_reason": "Reclassify CL-V status-queue Version A from REQUIRES_HUMAN_REVIEW to RETAIN_AS_EVIDENCE after human ratification commit 2c76ec5; retirement remains unauthorized",
   "retirement_authorized": false,
   "total_artifacts_reviewed": 22,
   "disposition_counts": {
     "ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION": 6,
     "DEFER_PENDING_COUNTERPART_ADMISSION": 12,
-    "RETAIN_AS_EVIDENCE": 3,
-    "REQUIRES_HUMAN_REVIEW": 1
+    "RETAIN_AS_EVIDENCE": 4,
+    "REQUIRES_HUMAN_REVIEW": 0
   },
   "source_materialization_commit": "cc9f1e3a54492bf7434a6b5b672ece58eadb302a",
+  "clv_ratification_commit": "2c76ec5d68286761ba6682fa1dee0793b1711f5a",
   "source_ledger": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_WORKING_TREE_CLASSIFICATION_LEDGER.csv",
   "three_way_comparison_report": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_CLV_STATUS_QUEUE_THREE_WAY_COMPARISON.md",
+  "clv_ratification_record": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_CLV_STATUS_QUEUE_RATIFICATION_RECORD.md",
+  "clv_canonical_current_state_record": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/06_VISUAL_PRODUCTION_QUEUE/CL-V_CANONICAL_STATUS_AND_TASK_QUEUE.md",
   "artifacts": [
     {
       "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json",
@@ -2091,9 +2095,14 @@
           "referencing_tracked": true
         }
       ],
-      "disposition": "REQUIRES_HUMAN_REVIEW",
-      "recommended_action": "COMPLETE_CL_V_STATUS_QUEUE_THREE_WAY_ADJUDICATION_BEFORE_ANY_RETIREMENT",
-      "retirement_authorized": false
+      "disposition": "RETAIN_AS_EVIDENCE",
+      "recommended_action": "RETAIN_AS_HISTORICAL_CLV_PRODUCTION_STATE_EVIDENCE",
+      "retirement_authorized": false,
+      "prior_three_way_conclusion": "MERGE_REQUIRED",
+      "ratification_status": "HUMAN_RATIFICATION_RECORDED",
+      "rationale": "Human ratification recorded 2026-07-16 in commit 2c76ec5d68286761ba6682fa1dee0793b1711f5a. Version A is an earlier historical production snapshot; Versions B and C remain preserved unchanged; canonical current state is CL-V_CANONICAL_STATUS_AND_TASK_QUEUE.md. Deletion and retirement remain unauthorized.",
+      "ratification_record": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_CLV_STATUS_QUEUE_RATIFICATION_RECORD.md",
+      "canonical_current_state_record": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/06_VISUAL_PRODUCTION_QUEUE/CL-V_CANONICAL_STATUS_AND_TASK_QUEUE.md"
     }
   ]
 }

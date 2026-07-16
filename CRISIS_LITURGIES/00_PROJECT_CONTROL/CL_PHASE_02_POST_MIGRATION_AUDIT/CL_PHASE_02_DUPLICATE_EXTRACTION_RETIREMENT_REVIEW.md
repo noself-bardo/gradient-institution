@@ -1,14 +1,17 @@
 # CL Phase 02 Duplicate Extraction Retirement Review (Patched)
 
-**Review ID:** `CL_PHASE_02_DUPLICATE_EXTRACTION_RETIREMENT_REVIEW_2026-07-15_PATCH`
+**Review ID:** `CL_PHASE_02_DUPLICATE_EXTRACTION_RETIREMENT_REVIEW_2026-07-16_CLV_RATIFICATION`
 **Generated at:** `2026-07-15T19:37:06Z`
-**Repository HEAD:** `cc9f1e3a54492bf7434a6b5b672ece58eadb302a`
-**Mode:** READ-ONLY patch after Phase 02 materialization — no deletion/move/stage/commit/push
+**Updated at:** `2026-07-16T21:48:00Z`
+**Repository HEAD:** `2c76ec5d68286761ba6682fa1dee0793b1711f5a`
+**Mode:** READ-ONLY patch after CL-V status-queue human ratification — no deletion/move/stage/commit/push
 **Retirement authorized:** `false`
 
 ## Patch summary
 
 Replaces prior `SAFE_TO_RETIRE` dispositions with a preservation-aware model after materialization commit `cc9f1e3a54492bf7434a6b5b672ece58eadb302a` admitted the Phase 02 program structure (including former copy-authorization package members).
+
+**2026-07-16 update:** After commit `2c76ec5d68286761ba6682fa1dee0793b1711f5a` recorded the CL-V status-queue ratification package, the single `REQUIRES_HUMAN_REVIEW` artifact (Version A status queue) is reclassified to `RETAIN_AS_EVIDENCE`. Human adjudication is complete; Versions A, B, and C remain preserved unchanged; retirement and deletion remain unauthorized.
 
 ## Disposition counts
 
@@ -16,8 +19,8 @@ Replaces prior `SAFE_TO_RETIRE` dispositions with a preservation-aware model aft
 |---|---:|
 | `ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION` | 6 |
 | `DEFER_PENDING_COUNTERPART_ADMISSION` | 12 |
-| `RETAIN_AS_EVIDENCE` | 3 |
-| `REQUIRES_HUMAN_REVIEW` | 1 |
+| `RETAIN_AS_EVIDENCE` | 4 |
+| `REQUIRES_HUMAN_REVIEW` | 0 |
 | **TOTAL** | **22** |
 
 `SAFE_TO_RETIRE` count: **0**
@@ -48,15 +51,16 @@ Replaces prior `SAFE_TO_RETIRE` dispositions with a preservation-aware model aft
 - `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/CL-V_ALL_IN_ONE_CODEX_HANDOFF.md`
 - `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/README_QUICKSTART.md`
 
-### RETAIN_AS_EVIDENCE (3)
+### RETAIN_AS_EVIDENCE (4)
 
 - `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json`
 - `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md`
 - `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt`
-
-### REQUIRES_HUMAN_REVIEW (1)
-
 - `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_STATUS_AND_TASK_QUEUE.md`
+
+### REQUIRES_HUMAN_REVIEW (0)
+
+*(none — CL-V status-queue human review closed by ratification record dated 2026-07-16)*
 
 ## Per-artifact findings
 
@@ -363,18 +367,22 @@ Replaces prior `SAFE_TO_RETIRE` dispositions with a preservation-aware model aft
 - **Counterpart SHA-256:** `fb788a7b7f3955d282e5d52c851ec1ecdd6e6b19885c9cab3b022adbf5ccdf7a`
 - **Counterpart preservation status:** `COUNTERPART_EXISTS_BUT_NOT_BYTE_IDENTICAL`
 - **Byte-identical:** `False`
-- **Disposition:** `REQUIRES_HUMAN_REVIEW`
-- **Recommended action:** `COMPLETE_CL_V_STATUS_QUEUE_THREE_WAY_ADJUDICATION_BEFORE_ANY_RETIREMENT`
-- **Rationale:** A (extract), B (sibling handoff), and C (visual queue) are not mutually identical; at least two contain unique lines. Human merge/admission required; do not auto-select.
+- **Disposition:** `RETAIN_AS_EVIDENCE`
+- **Recommended action:** `RETAIN_AS_HISTORICAL_CLV_PRODUCTION_STATE_EVIDENCE`
+- **Rationale:** Human ratification recorded 2026-07-16 in commit `2c76ec5d68286761ba6682fa1dee0793b1711f5a`. Version A is an earlier historical production snapshot; Versions B and C remain preserved unchanged; canonical current state is the new file `CL-V_CANONICAL_STATUS_AND_TASK_QUEUE.md`. Deletion and retirement remain unauthorized.
 - **retirement_authorized:** `false`
-- **Three-way conclusion:** `MERGE_REQUIRED`
+- **Prior three-way conclusion:** `MERGE_REQUIRED` (closed by human ratification)
+- **Ratification status:** `HUMAN_RATIFICATION_RECORDED`
 - **Three-way report:** `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_CLV_STATUS_QUEUE_THREE_WAY_COMPARISON.md`
+- **Ratification record:** `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_CLV_STATUS_QUEUE_RATIFICATION_RECORD.md`
+- **Canonical current-state record:** `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/06_VISUAL_PRODUCTION_QUEUE/CL-V_CANONICAL_STATUS_AND_TASK_QUEUE.md`
 
 ## Explicit non-actions
 
 - No reviewed artifact or counterpart deleted, moved, renamed, or modified.
-- Nothing staged, committed, or pushed.
+- Versions A, B, and C of the CL-V status queue remain preserved unchanged.
 - Trailing whitespace not repaired.
 - Materialization commit not amended.
 - CL-MIG-002 not begun.
 - Retirement requires a **separate explicit human authorization**.
+- This update records adjudication closure only; it does **not** authorize retirement of Version A or any other reviewed artifact.
