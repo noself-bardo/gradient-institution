@@ -1,0 +1,109 @@
+STATUS: COMPLETED — VERIFIED PARTIAL-SCOPE RETIREMENT
+DATE: 2026-07-16
+RETIREMENT COMMIT: 987571b8f8bc3597c857323a51bebe9108d17318
+RETIRED ARTIFACT COUNT: 6
+ADDITIONAL RETIREMENT AUTHORIZED: NO
+DEFERRED ARTIFACT COUNT: 12
+RETAINED-EVIDENCE ARTIFACT COUNT: 4
+
+# CL Phase 02 Duplicate Extraction Retirement Closeout
+
+## 1. Executive result
+
+A verified partial-scope retirement completed six tracked CL-MIG-001 extraction duplicates.
+Each retired artifact had a byte-identical tracked counterpart that remains present and hash-verified.
+Twelve deferred CL-V extracts and four retained-evidence artifacts remain untouched.
+No additional retirement is authorized.
+
+### Multidimensional state
+
+| Dimension | State |
+|---|---|
+| specification | SPECIFICATION_FROZEN_FOR_SIX_ARTIFACT_SCOPE |
+| production | PARTIAL_SCOPE_RETIREMENT_EXECUTED |
+| QC | PASSED_EXACT_PATH_AND_SHA256_VERIFICATION |
+| release | NOT_APPLICABLE |
+| print | NOT_APPLICABLE |
+| publication | NOT_APPLICABLE |
+| archive | RETAINED_COUNTERPARTS_PRESERVED |
+| dispute | NONE_ON_SIX_RETIRED_PATHS |
+| retirement_execution | PARTIAL_SCOPE_COMPLETED |
+| additional_retirement | NO_ADDITIONAL_RETIREMENT_AUTHORIZED |
+| phase_02_global | NOT_DECLARED_COMPLETE_BY_THIS_CLOSEOUT |
+
+## 2. Governing authorization history
+
+- Preservation-aware retirement review established six `ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION` artifacts with recommended action `DELETE_ONLY_AFTER_SEPARATE_EXPLICIT_HUMAN_AUTHORIZATION_AND_EXACT_GIT_DELETION_COMMIT`.
+- Human authorization authorized retirement of those six tracked duplicates using exact-path and SHA-256 verification, with no other deletion, movement, or modification.
+- Exact six deletions were staged, committed, and pushed as `987571b8f8bc3597c857323a51bebe9108d17318`.
+- This closeout records completion of that transaction and states that no additional retirement is authorized.
+
+## 3-8. Exact six retired paths with hashes and counterparts
+
+| # | Retired path | Original SHA-256 | Retained counterpart | Counterpart SHA-256 | Byte-identical before deletion |
+|---|---|---|---|---|---|
+| 1 | `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json` | `1c54af10792af26c0968fcb5ba2c2623882a95beffcb7b0fb13148fca47b9ba7` | `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.json` | `1c54af10792af26c0968fcb5ba2c2623882a95beffcb7b0fb13148fca47b9ba7` | YES |
+| 2 | `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md` | `8374b32b3c07f1def14dc8225c4d45ee1b515d368b22b14f4ca496f3a8a3c36a` | `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md` | `8374b32b3c07f1def14dc8225c4d45ee1b515d368b22b14f4ca496f3a8a3c36a` | YES |
+| 3 | `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt` | `4f55e8f9e2de71cc24a048f6180c178a4ed6382ed70a19b48b25c20120b4ffa5` | `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt` | `4f55e8f9e2de71cc24a048f6180c178a4ed6382ed70a19b48b25c20120b4ffa5` | YES |
+| 4 | `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json` | `c12385ab19f701a7e6d1623abfb77cc1178981e79ecd71b10e439b2d61a1cb85` | `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COMMIT_CONTROL/CL_MIGRATION_MANIFEST.schema.v1.2.json` | `c12385ab19f701a7e6d1623abfb77cc1178981e79ecd71b10e439b2d61a1cb85` | YES |
+| 5 | `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md` | `c24734895282a1a4415f8a873bda116c637d7ea4aae59e42a21f6c40dbbd9bf2` | `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COMMIT_CONTROL/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md` | `c24734895282a1a4415f8a873bda116c637d7ea4aae59e42a21f6c40dbbd9bf2` | YES |
+| 6 | `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json` | `702ddbb456ee0d83eda6ab796c9586a7420810a09bb2fac9e5a053b8b01c18cc` | `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COMMIT_CONTROL/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json` | `702ddbb456ee0d83eda6ab796c9586a7420810a09bb2fac9e5a053b8b01c18cc` | YES |
+
+## 8. Commit hash and subject
+
+- Commit: `987571b8f8bc3597c857323a51bebe9108d17318`
+- Subject: `chore(crisis-liturgies): retire verified CL-MIG-001 duplicates`
+- Status counts: D=6, A=0, M=0, R=0, C=0
+
+## 9. Post-commit retained-counterpart verification
+
+After commit `987571b8f8bc3597c857323a51bebe9108d17318`:
+
+- Each retired path is absent from the working tree and HEAD.
+- Each retained counterpart remains present.
+- Each retained counterpart SHA-256 matches the pre-retirement recorded value.
+- `retained_counterpart_hash_verified_after_commit` is `true` for all six retired records.
+
+## 10. Remaining twelve deferred artifacts
+
+- `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/00_CODEX_HANDOFF/CL-V_CODEX_TAKEOVER_PROMPT.md` — disposition `DEFER_PENDING_COUNTERPART_ADMISSION`; retirement_authorized `false`; retirement_completed `false`
+- `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_IMAGE_GATE_PROTOCOL.md` — disposition `DEFER_PENDING_COUNTERPART_ADMISSION`; retirement_authorized `false`; retirement_completed `false`
+- `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_PRODUCTION_RUN_PROTOCOL.md` — disposition `DEFER_PENDING_COUNTERPART_ADMISSION`; retirement_authorized `false`; retirement_completed `false`
+- `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/02_ENGINE_CONTRACTS/CL-V_ENGINE_CONTRACTS.md` — disposition `DEFER_PENDING_COUNTERPART_ADMISSION`; retirement_authorized `false`; retirement_completed `false`
+- `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_REMAINING_ISSUE_RISK_MAP.md` — disposition `DEFER_PENDING_COUNTERPART_ADMISSION`; retirement_authorized `false`; retirement_completed `false`
+- `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_CL-051_PROMOTION.md` — disposition `DEFER_PENDING_COUNTERPART_ADMISSION`; retirement_authorized `false`; retirement_completed `false`
+- `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_COMPLETE_ISSUE_DIAGNOSTIC_TEMPLATE.md` — disposition `DEFER_PENDING_COUNTERPART_ADMISSION`; retirement_authorized `false`; retirement_completed `false`
+- `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_PREPARE_NEXT_ISSUE_OVERLAY_TEMPLATE.md` — disposition `DEFER_PENDING_COUNTERPART_ADMISSION`; retirement_authorized `false`; retirement_completed `false`
+- `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/05_QC_AND_PROMOTION/CL-V_QC_AND_PROMOTION_PROTOCOL.md` — disposition `DEFER_PENDING_COUNTERPART_ADMISSION`; retirement_authorized `false`; retirement_completed `false`
+- `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/06_FAILURE_RECOVERY/CL-V_FAILURE_RECOVERY_PROTOCOL.md` — disposition `DEFER_PENDING_COUNTERPART_ADMISSION`; retirement_authorized `false`; retirement_completed `false`
+- `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/CL-V_ALL_IN_ONE_CODEX_HANDOFF.md` — disposition `DEFER_PENDING_COUNTERPART_ADMISSION`; retirement_authorized `false`; retirement_completed `false`
+- `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/README_QUICKSTART.md` — disposition `DEFER_PENDING_COUNTERPART_ADMISSION`; retirement_authorized `false`; retirement_completed `false`
+
+## 11. Remaining four retained-evidence artifacts
+
+- `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json` — disposition `RETAIN_AS_EVIDENCE`; retirement_authorized `false`; retirement_completed `false`
+- `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md` — disposition `RETAIN_AS_EVIDENCE`; retirement_authorized `false`; retirement_completed `false`
+- `CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt` — disposition `RETAIN_AS_EVIDENCE`; retirement_authorized `false`; retirement_completed `false`
+- `CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_STATUS_AND_TASK_QUEUE.md` — disposition `RETAIN_AS_EVIDENCE`; retirement_authorized `false`; retirement_completed `false`
+
+## 12. No additional retirement authorized
+
+Root `retirement_authorized` remains `false` and means `NO_ADDITIONAL_RETIREMENT_AUTHORIZED`.
+`additional_retirement_authorized` is `false`.
+This closeout does not authorize deletion or retirement of the twelve deferred or four retained-evidence artifacts.
+
+## 13. Empty directories not manually deleted
+
+Empty parent directories were not manually deleted as part of the retirement transaction or this closeout.
+
+## 14. Current-state records after this closeout
+
+The retirement review Markdown and JSON manifest, together with this closeout, are the current-state records of the partial-scope retirement.
+
+- `CL_PHASE_02_DUPLICATE_EXTRACTION_RETIREMENT_REVIEW.md`
+- `CL_PHASE_02_DUPLICATE_EXTRACTION_RETIREMENT_MANIFEST.json`
+- `CL_PHASE_02_DUPLICATE_EXTRACTION_RETIREMENT_CLOSEOUT.md`
+
+## 15. CL-MIG-002 has not begun
+
+CL-MIG-002 has not begun.

@@ -1,15 +1,16 @@
 {
-  "review_id": "CL_PHASE_02_DUPLICATE_EXTRACTION_RETIREMENT_REVIEW_2026-07-16_CLV_RATIFICATION",
+  "review_id": "CL_PHASE_02_DUPLICATE_EXTRACTION_RETIREMENT_REVIEW_2026-07-16_CLOSEOUT",
   "generated_at": "2026-07-15T19:37:06Z",
-  "updated_at": "2026-07-16T21:48:00Z",
-  "repository_head": "2c76ec5d68286761ba6682fa1dee0793b1711f5a",
+  "updated_at": "2026-07-16T22:16:00Z",
+  "repository_head": "987571b8f8bc3597c857323a51bebe9108d17318",
   "branch": "main",
-  "mode": "READ_ONLY_RETIREMENT_REVIEW_PATCH_AFTER_CLV_STATUS_QUEUE_RATIFICATION",
-  "patch_reason": "Reclassify CL-V status-queue Version A from REQUIRES_HUMAN_REVIEW to RETAIN_AS_EVIDENCE after human ratification commit 2c76ec5; retirement remains unauthorized",
+  "mode": "RETIREMENT_CLOSEOUT_AFTER_VERIFIED_PARTIAL_SCOPE_EXECUTION",
+  "patch_reason": "Record verified retirement of six ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION artifacts in commit 987571b; no additional retirement authorized",
   "retirement_authorized": false,
   "total_artifacts_reviewed": 22,
   "disposition_counts": {
-    "ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION": 6,
+    "RETIRED_VERIFIED": 6,
+    "ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION": 0,
     "DEFER_PENDING_COUNTERPART_ADMISSION": 12,
     "RETAIN_AS_EVIDENCE": 4,
     "REQUIRES_HUMAN_REVIEW": 0
@@ -167,9 +168,14 @@
           "referencing_tracked": true
         }
       ],
-      "disposition": "ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION",
-      "recommended_action": "DELETE_ONLY_AFTER_SEPARATE_EXPLICIT_HUMAN_AUTHORIZATION_AND_EXACT_GIT_DELETION_COMMIT",
-      "retirement_authorized": false
+      "disposition": "RETIRED_VERIFIED",
+      "recommended_action": "NO_FURTHER_ACTION_RETAIN_VERIFIED_COUNTERPART",
+      "retirement_authorized": true,
+      "retirement_completed": true,
+      "retirement_commit": "987571b8f8bc3597c857323a51bebe9108d17318",
+      "retired_path_present_after_commit": false,
+      "retained_counterpart_present_after_commit": true,
+      "retained_counterpart_hash_verified_after_commit": true
     },
     {
       "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/CL_MIG_001_FINAL_VERIFICATION_AND_CLOSURE_v1.0.md",
@@ -317,9 +323,14 @@
           "referencing_tracked": true
         }
       ],
-      "disposition": "ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION",
-      "recommended_action": "DELETE_ONLY_AFTER_SEPARATE_EXPLICIT_HUMAN_AUTHORIZATION_AND_EXACT_GIT_DELETION_COMMIT",
-      "retirement_authorized": false
+      "disposition": "RETIRED_VERIFIED",
+      "recommended_action": "NO_FURTHER_ACTION_RETAIN_VERIFIED_COUNTERPART",
+      "retirement_authorized": true,
+      "retirement_completed": true,
+      "retirement_commit": "987571b8f8bc3597c857323a51bebe9108d17318",
+      "retired_path_present_after_commit": false,
+      "retained_counterpart_present_after_commit": true,
+      "retained_counterpart_hash_verified_after_commit": true
     },
     {
       "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_CLOSURE/CL_MIG_001_FINAL_CLOSURE_2026-07-13/SHA256SUMS.txt",
@@ -467,9 +478,14 @@
           "referencing_tracked": true
         }
       ],
-      "disposition": "ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION",
-      "recommended_action": "DELETE_ONLY_AFTER_SEPARATE_EXPLICIT_HUMAN_AUTHORIZATION_AND_EXACT_GIT_DELETION_COMMIT",
-      "retirement_authorized": false
+      "disposition": "RETIRED_VERIFIED",
+      "recommended_action": "NO_FURTHER_ACTION_RETAIN_VERIFIED_COUNTERPART",
+      "retirement_authorized": true,
+      "retirement_completed": true,
+      "retirement_commit": "987571b8f8bc3597c857323a51bebe9108d17318",
+      "retired_path_present_after_commit": false,
+      "retained_counterpart_present_after_commit": true,
+      "retained_counterpart_hash_verified_after_commit": true
     },
     {
       "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIGRATION_MANIFEST.schema.v1.2.json",
@@ -617,9 +633,14 @@
           "referencing_tracked": true
         }
       ],
-      "disposition": "ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION",
-      "recommended_action": "DELETE_ONLY_AFTER_SEPARATE_EXPLICIT_HUMAN_AUTHORIZATION_AND_EXACT_GIT_DELETION_COMMIT",
-      "retirement_authorized": false
+      "disposition": "RETIRED_VERIFIED",
+      "recommended_action": "NO_FURTHER_ACTION_RETAIN_VERIFIED_COUNTERPART",
+      "retirement_authorized": true,
+      "retirement_completed": true,
+      "retirement_commit": "987571b8f8bc3597c857323a51bebe9108d17318",
+      "retired_path_present_after_commit": false,
+      "retained_counterpart_present_after_commit": true,
+      "retained_counterpart_hash_verified_after_commit": true
     },
     {
       "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_ONLY_AUTHORIZATION_RECORD_v1.0.md",
@@ -767,9 +788,14 @@
           "referencing_tracked": true
         }
       ],
-      "disposition": "ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION",
-      "recommended_action": "DELETE_ONLY_AFTER_SEPARATE_EXPLICIT_HUMAN_AUTHORIZATION_AND_EXACT_GIT_DELETION_COMMIT",
-      "retirement_authorized": false
+      "disposition": "RETIRED_VERIFIED",
+      "recommended_action": "NO_FURTHER_ACTION_RETAIN_VERIFIED_COUNTERPART",
+      "retirement_authorized": true,
+      "retirement_completed": true,
+      "retirement_commit": "987571b8f8bc3597c857323a51bebe9108d17318",
+      "retired_path_present_after_commit": false,
+      "retained_counterpart_present_after_commit": true,
+      "retained_counterpart_hash_verified_after_commit": true
     },
     {
       "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_MIGRATION_MANIFEST_COPY_v1.2.1.json",
@@ -917,9 +943,14 @@
           "referencing_tracked": true
         }
       ],
-      "disposition": "ELIGIBLE_FOR_SEPARATE_RETIREMENT_AUTHORIZATION",
-      "recommended_action": "DELETE_ONLY_AFTER_SEPARATE_EXPLICIT_HUMAN_AUTHORIZATION_AND_EXACT_GIT_DELETION_COMMIT",
-      "retirement_authorized": false
+      "disposition": "RETIRED_VERIFIED",
+      "recommended_action": "NO_FURTHER_ACTION_RETAIN_VERIFIED_COUNTERPART",
+      "retirement_authorized": true,
+      "retirement_completed": true,
+      "retirement_commit": "987571b8f8bc3597c857323a51bebe9108d17318",
+      "retired_path_present_after_commit": false,
+      "retained_counterpart_present_after_commit": true,
+      "retained_counterpart_hash_verified_after_commit": true
     },
     {
       "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/00_CODEX_HANDOFF/CL-V_CODEX_TAKEOVER_PROMPT.md",
@@ -975,7 +1006,8 @@
       ],
       "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
       "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
-      "retirement_authorized": false
+      "retirement_authorized": false,
+      "retirement_completed": false
     },
     {
       "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_IMAGE_GATE_PROTOCOL.md",
@@ -1031,7 +1063,8 @@
       ],
       "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
       "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
-      "retirement_authorized": false
+      "retirement_authorized": false,
+      "retirement_completed": false
     },
     {
       "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/01_PROTOCOLS/CL-V_PRODUCTION_RUN_PROTOCOL.md",
@@ -1087,7 +1120,8 @@
       ],
       "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
       "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
-      "retirement_authorized": false
+      "retirement_authorized": false,
+      "retirement_completed": false
     },
     {
       "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/02_ENGINE_CONTRACTS/CL-V_ENGINE_CONTRACTS.md",
@@ -1143,7 +1177,8 @@
       ],
       "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
       "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
-      "retirement_authorized": false
+      "retirement_authorized": false,
+      "retirement_completed": false
     },
     {
       "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_REMAINING_ISSUE_RISK_MAP.md",
@@ -1199,7 +1234,8 @@
       ],
       "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
       "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
-      "retirement_authorized": false
+      "retirement_authorized": false,
+      "retirement_completed": false
     },
     {
       "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_CL-051_PROMOTION.md",
@@ -1255,7 +1291,8 @@
       ],
       "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
       "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
-      "retirement_authorized": false
+      "retirement_authorized": false,
+      "retirement_completed": false
     },
     {
       "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_COMPLETE_ISSUE_DIAGNOSTIC_TEMPLATE.md",
@@ -1311,7 +1348,8 @@
       ],
       "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
       "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
-      "retirement_authorized": false
+      "retirement_authorized": false,
+      "retirement_completed": false
     },
     {
       "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/04_CURSOR_COMMANDS/CURSOR_COMMAND_PREPARE_NEXT_ISSUE_OVERLAY_TEMPLATE.md",
@@ -1367,7 +1405,8 @@
       ],
       "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
       "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
-      "retirement_authorized": false
+      "retirement_authorized": false,
+      "retirement_completed": false
     },
     {
       "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/05_QC_AND_PROMOTION/CL-V_QC_AND_PROMOTION_PROTOCOL.md",
@@ -1423,7 +1462,8 @@
       ],
       "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
       "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
-      "retirement_authorized": false
+      "retirement_authorized": false,
+      "retirement_completed": false
     },
     {
       "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/06_FAILURE_RECOVERY/CL-V_FAILURE_RECOVERY_PROTOCOL.md",
@@ -1479,7 +1519,8 @@
       ],
       "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
       "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
-      "retirement_authorized": false
+      "retirement_authorized": false,
+      "retirement_completed": false
     },
     {
       "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/CL-V_ALL_IN_ONE_CODEX_HANDOFF.md",
@@ -1535,7 +1576,8 @@
       ],
       "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
       "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
-      "retirement_authorized": false
+      "retirement_authorized": false,
+      "retirement_completed": false
     },
     {
       "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/README_QUICKSTART.md",
@@ -1591,7 +1633,8 @@
       ],
       "disposition": "DEFER_PENDING_COUNTERPART_ADMISSION",
       "recommended_action": "ADMIT_OR_ARCHIVE_RETAINED_COUNTERPART_BEFORE_RETIRING_EXTRACT_COPY",
-      "retirement_authorized": false
+      "retirement_authorized": false,
+      "retirement_completed": false
     },
     {
       "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_COPY_AUTHORIZATION_REQUIREMENTS.json",
@@ -1741,7 +1784,8 @@
       ],
       "disposition": "RETAIN_AS_EVIDENCE",
       "recommended_action": "KEEP_UNTIL_SEPARATE_PACKAGE_ARCHIVE_POLICY",
-      "retirement_authorized": false
+      "retirement_authorized": false,
+      "retirement_completed": false
     },
     {
       "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/CL_MIG_001_CURSOR_COPY_ONLY_EXECUTION_PACKET.md",
@@ -1891,7 +1935,8 @@
       ],
       "disposition": "RETAIN_AS_EVIDENCE",
       "recommended_action": "KEEP_UNTIL_SEPARATE_PACKAGE_ARCHIVE_POLICY",
-      "retirement_authorized": false
+      "retirement_authorized": false,
+      "retirement_completed": false
     },
     {
       "path": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_MIG_001_COPY_AUTHORIZATION_2026-07-13/SHA256SUMS.txt",
@@ -2041,7 +2086,8 @@
       ],
       "disposition": "RETAIN_AS_EVIDENCE",
       "recommended_action": "KEEP_UNTIL_SEPARATE_PACKAGE_ARCHIVE_POLICY",
-      "retirement_authorized": false
+      "retirement_authorized": false,
+      "retirement_completed": false
     },
     {
       "path": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/11_CURSOR_HANDOFF/_CODEX_PACKET_EXTRACT/CL-V_CODEX_PRODUCTION_HANDOFF_PACKET/03_STATUS_AND_QUEUE/CL-V_STATUS_AND_TASK_QUEUE.md",
@@ -2102,7 +2148,15 @@
       "ratification_status": "HUMAN_RATIFICATION_RECORDED",
       "rationale": "Human ratification recorded 2026-07-16 in commit 2c76ec5d68286761ba6682fa1dee0793b1711f5a. Version A is an earlier historical production snapshot; Versions B and C remain preserved unchanged; canonical current state is CL-V_CANONICAL_STATUS_AND_TASK_QUEUE.md. Deletion and retirement remain unauthorized.",
       "ratification_record": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_CLV_STATUS_QUEUE_RATIFICATION_RECORD.md",
-      "canonical_current_state_record": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/06_VISUAL_PRODUCTION_QUEUE/CL-V_CANONICAL_STATUS_AND_TASK_QUEUE.md"
+      "canonical_current_state_record": "CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS/06_VISUAL_PRODUCTION_QUEUE/CL-V_CANONICAL_STATUS_AND_TASK_QUEUE.md",
+      "retirement_completed": false
     }
-  ]
+  ],
+  "retirement_authorized_meaning": "NO_ADDITIONAL_RETIREMENT_AUTHORIZED",
+  "retirement_execution_status": "PARTIAL_SCOPE_COMPLETED",
+  "retired_verified_count": 6,
+  "additional_retirement_authorized": false,
+  "retirement_execution_commit": "987571b8f8bc3597c857323a51bebe9108d17318",
+  "current_repository_head": "987571b8f8bc3597c857323a51bebe9108d17318",
+  "closeout_record": "CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_POST_MIGRATION_AUDIT/CL_PHASE_02_DUPLICATE_EXTRACTION_RETIREMENT_CLOSEOUT.md"
 }
