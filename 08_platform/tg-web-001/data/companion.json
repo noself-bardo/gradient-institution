@@ -30,21 +30,6 @@
     "sourceNote": "Steward copy remains in Drive / release snapshots (not a public link)"
   },
   {
-    "id": "cl-vol-iii",
-    "acc": "CL-VOL-III",
-    "title": "Crisis Liturgies III — Emergency Objects",
-    "role": "Visual / interpretive companion",
-    "authority": "Companion, not authority",
-    "status": "Reader PDF hosted",
-    "href": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/crisis-liturgies-iii-emergency-objects-v1.0-screen.pdf",
-    "assetType": "pdf",
-    "publicSafe": true,
-    "usedFor": "Emergency objects, crisis adaptation, and public-facing explanatory rhythm — 12 issues, 48 pages, screen reader PDF",
-    "actionLabel": "OPEN READER PDF",
-    "hostNote": "GitHub Releases tag tg-web-pdf-assets; filename crisis-liturgies-iii-emergency-objects-v1.0-screen.pdf",
-    "sourceNote": "Steward copy remains in Drive / release snapshots; private Drive source is not exposed publicly"
-  },
-  {
     "id": "cl-vol-iv",
     "acc": "CL-VOL-IV",
     "title": "Crisis Liturgies IV — Depressive Infrastructure",
