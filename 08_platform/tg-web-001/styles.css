@@ -201,8 +201,55 @@ a:hover { opacity: 0.85; }
 }
 
 @media (max-width: 700px) {
+  :root { --pad: 18px; }
+
+  html { scroll-snap-type: y proximity; }
+
+  body { overflow-x: hidden; }
+
+  .reader {
+    width: calc(100% - 20px);
+    padding-top: 10px;
+  }
+
+  .plate {
+    min-height: 100svh;
+    scroll-snap-stop: normal;
+  }
+
+  .corners {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .corners .right {
+    white-space: normal;
+    text-align: left;
+  }
+
+  .field { padding: 16px 0; }
+
+  .bigTitle { font-size: clamp(38px, 15vw, 56px); }
+
   .accession { grid-template-columns: 1fr; }
-  .corners .right { white-space: normal; text-align: left; }
+
+  .accLine {
+    display: grid;
+    grid-template-columns: minmax(0, 112px) minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .accKey { min-width: 0; }
+
+  .accVal { overflow-wrap: anywhere; }
+
+  .actions,
+  .entryActions,
+  .navLine { justify-content: flex-start; }
+
+  .act { min-height: 44px; }
+
+  .entryTitle { font-size: 22px; }
 }
 
 .accLine { display: flex; gap: 10px; }

@@ -3,7 +3,7 @@
 Institutional Asset ID: TG-WEB-001  
 Parent Institution: The Gradient  
 Authority Layer: Implementation / Servant Layer  
-Status: Recovery Protocol v1.0 Locked / Production Redeploy Pending
+Status: Recovery Protocol v1.0 Locked / Production Live / Live QC Verified
 Canonical Boundary: This site explains The Gradient. It does not define The Gradient.
 
 The Archive Gateway is a public-facing orientation layer for The Gradient institution. It helps readers understand the Constitution, source spine, knowledge architecture, engines, case studies, visual language, and implementation stack without mistaking the interface for the institution.
@@ -16,7 +16,7 @@ The Archive Gateway is a public-facing orientation layer for The Gradient instit
 | Title | The Gradient Archive Gateway |
 | Parent Institution | The Gradient |
 | Authority Layer | Implementation / Servant Layer |
-| Status | Recovery Protocol v1.0 Locked / Production Redeploy Pending |
+| Status | Recovery Protocol v1.0 Locked / Production Live / Live QC Verified |
 | Public Function | Orientation and source navigation |
 | Canonical Boundary | Explainer only; governing documents remain authoritative |
 | Primary Institutional Home | The Gradient → 10 Implementation |
@@ -66,7 +66,7 @@ This implementation lives only within the canonical `gradient-institution` repos
 | Notion | TG-WEB-001 — The Gradient Archive Gateway | Created under 10 Implementation |
 | Google Drive | TG-WEB-001_ARCHIVE_GATEWAY/ | Pending |
 | GitHub | `noself-bardo/gradient-institution` → `08_platform/tg-web-001` | Active / canonical implementation source |
-| Netlify | `thegradient.netlify.app` | Existing site / production redeploy pending |
+| Netlify | `thegradient.netlify.app` | Existing site / production live / live QC verified 2026-07-17 |
 | Supabase Registry | platform_assets entry for TG-WEB-001 | Pending — registry write path not yet active |
 
 ## Structure
@@ -88,7 +88,7 @@ This implementation lives only within the canonical `gradient-institution` repos
     institutional-metadata.json
   /assets
     /pdf
-      (Crisis Liturgies PDFs — pending)
+      (optional ignored local preview cache only)
   /docs
     TG-WEB-001_INSTITUTIONAL_RECORD.md
     TG-WEB-001_SOURCE_POLICY.md
