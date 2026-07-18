@@ -10,7 +10,7 @@
     "inputs": ["Named subject system", "Authority claims", "Visible stewardship signals"],
     "outputs": ["ISA analysis record", "Drift boundary map", "Counter-system design observations"],
     "nextAction": "Continue applied case study development",
-    "sourceUrl": "https://app.notion.com/p/391deacab3a5815d9202faf327430ede",
+    "sourceUrl": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/the-gradient-engine-registry-reader.pdf",
     "relatedRooms": ["engines", "case-studies"]
   },
   {
@@ -24,7 +24,7 @@
     "inputs": ["Named practice context", "Steward attention", "Capability map references"],
     "outputs": ["Practice record", "Capability classification update", "Field guide reference"],
     "nextAction": "Maintain living practice documentation",
-    "sourceUrl": "https://app.notion.com/p/392deacab3a581aa8e7cfc441da6228c",
+    "sourceUrl": null,
     "relatedRooms": ["engines", "case-studies"]
   },
   {
@@ -38,7 +38,7 @@
     "inputs": ["Named symbolic material", "Mutation constraints", "Steward approval gates"],
     "outputs": ["Metabolized card ecosystem", "Engine registry entry", "Validation receipt"],
     "nextAction": "Template extraction for Engine Metabolization Template",
-    "sourceUrl": "https://app.notion.com/p/391deacab3a58170aa63c1751135e1a8",
+    "sourceUrl": null,
     "relatedRooms": ["engines", "case-studies"]
   },
   {
@@ -52,7 +52,7 @@
     "inputs": ["Narrative material", "Visual development constraints"],
     "outputs": ["Visual development artifacts", "Protocol execution record"],
     "nextAction": "Complete source inventory and admission review",
-    "sourceUrl": "https://app.notion.com/p/391deacab3a5815d9202faf327430ede",
+    "sourceUrl": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/the-gradient-engine-registry-reader.pdf",
     "relatedRooms": ["engines"]
   },
   {
@@ -66,7 +66,7 @@
     "inputs": ["Named visual system", "Analysis framework"],
     "outputs": ["Visual systems analysis record"],
     "nextAction": "Complete admission review",
-    "sourceUrl": "https://app.notion.com/p/391deacab3a5815d9202faf327430ede",
+    "sourceUrl": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/the-gradient-engine-registry-reader.pdf",
     "relatedRooms": ["engines"]
   },
   {
@@ -80,7 +80,7 @@
     "inputs": ["Named future scenario", "Constraint field"],
     "outputs": ["Future analysis record"],
     "nextAction": "Complete admission review",
-    "sourceUrl": "https://app.notion.com/p/391deacab3a5815d9202faf327430ede",
+    "sourceUrl": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/the-gradient-engine-registry-reader.pdf",
     "relatedRooms": ["engines"]
   },
   {
@@ -94,7 +94,7 @@
     "inputs": ["Symbolic material", "Production constraints"],
     "outputs": ["Symbolic production artifacts", "Analysis record"],
     "nextAction": "Complete admission review",
-    "sourceUrl": "https://app.notion.com/p/391deacab3a5815d9202faf327430ede",
+    "sourceUrl": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/the-gradient-engine-registry-reader.pdf",
     "relatedRooms": ["engines"]
   },
   {
@@ -108,7 +108,7 @@
     "inputs": ["Registry data", "Institutional metadata"],
     "outputs": ["Visualizer views", "Registry dashboard"],
     "nextAction": "Deferred until repo skeleton and inventories are reviewed",
-    "sourceUrl": "https://app.notion.com/p/38cdeacab3a58189acc6ead3968d558e",
+    "sourceUrl": null,
     "relatedRooms": ["platform", "engines"]
   }
 ]

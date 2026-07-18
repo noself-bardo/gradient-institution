@@ -51,12 +51,12 @@
     "role": "Companion governance (series canon)",
     "usedFor": "Series boundaries; interpretive constraints; drift protection",
     "authority": "Companion, not authority",
-    "status": "Reader PDF needed",
-    "href": "",
+    "status": "Reader PDF hosted",
+    "href": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/crisis-liturgies-canon-v1.1-reader.pdf",
     "assetType": "pdf",
     "publicSafe": true,
     "actionLabel": "OPEN DOCUMENT (PDF)",
-    "hostNote": "Public reader asset host pending when reader-facing export is ready"
+    "hostNote": "Public reader edition served from GitHub Releases tag tg-web-pdf-assets"
   },
   {
     "id": "cl-trn-001",
@@ -65,11 +65,11 @@
     "role": "Companion doctrine",
     "usedFor": "How plate logic maps into Gradient public field atlas",
     "authority": "Companion, not authority",
-    "status": "Reader PDF needed",
-    "href": "",
+    "status": "Reader PDF hosted",
+    "href": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/crisis-liturgy-translation-doctrine-reader.pdf",
     "assetType": "pdf",
     "publicSafe": true,
     "actionLabel": "OPEN DOCUMENT (PDF)",
-    "hostNote": "Public reader asset host pending when reader-facing export is ready"
+    "hostNote": "Public reader edition served from GitHub Releases tag tg-web-pdf-assets"
   }
 ]

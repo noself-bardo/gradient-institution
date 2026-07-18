@@ -8,7 +8,7 @@
     "readerInstruction": "Reader instruction: Hold the institution as a constitutional ecology first. Do not mistake the interface for the institution.",
     "sourceAction": {
       "label": "OPEN PRIMARY SOURCE (CONSTITUTION PDF)",
-      "href": ""
+      "href": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/the-gradient-constitution-v0.1-reader.pdf"
     },
     "modal": {
       "sub": "Why The Gradient is not a chatbot, a feed, or a tool collection.",
@@ -26,7 +26,7 @@
     "readerInstruction": "Reader instruction: When something feels confusing, ask which organ it belongs to before you decide what it is.",
     "sourceAction": {
       "label": "OPEN CHARTER (LOCKED DECISIONS PDF)",
-      "href": ""
+      "href": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/the-gradient-charter-locked-lineage-preamble-v0.1-reader.pdf"
     },
     "modal": {
       "sub": "Why the institution is structured as organs rather than a flat library.",
@@ -44,7 +44,7 @@
     "readerInstruction": "Reader instruction: When you add knowledge, name the relationship first. Classification comes later.",
     "sourceAction": {
       "label": "OPEN IDR-002 (PDF)",
-      "href": ""
+      "href": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/the-gradient-idr-002-relationships-are-verbs-reader.pdf"
     },
     "modal": {
       "sub": "Why knowledge is organized by relationship, not by folder.",
@@ -62,7 +62,7 @@
     "readerInstruction": "Reader instruction: Trust the loop over the interface. If the loop is broken, the institution is broken.",
     "sourceAction": {
       "label": "OPEN FOUNDING WHITE PAPER (PDF)",
-      "href": ""
+      "href": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/the-gradient-founding-white-paper-v0.1-reader.pdf"
     },
     "modal": {
       "sub": "Why the institution runs on a four-step loop rather than a feature roadmap.",
@@ -80,7 +80,7 @@
     "readerInstruction": "Reader instruction: Treat engines as methods with declared limits, not as authority-generators.",
     "sourceAction": {
       "label": "OPEN ENGINE REGISTRY (PDF)",
-      "href": ""
+      "href": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/the-gradient-engine-registry-reader.pdf"
     },
     "modal": {
       "sub": "Why engines are documented as methods with limits rather than as autonomous systems.",
@@ -98,7 +98,7 @@
     "readerInstruction": "Reader instruction: When a tool feels powerful, ask what constitutional commitment constrains it.",
     "sourceAction": {
       "label": "OPEN IDR-003 (PDF)",
-      "href": ""
+      "href": "https://github.com/noself-bardo/gradient-institution/releases/download/tg-web-pdf-assets/the-gradient-idr-003-implementation-follows-institutional-design-reader.pdf"
     },
     "modal": {
       "sub": "Why software, dashboards, and agents remain downstream of institutional design.",
