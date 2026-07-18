@@ -41,3 +41,6 @@ build/
 08_platform/tg-web-001/assets/img/*.jpg
 08_platform/tg-web-001/assets/img/*.jpeg
 08_platform/tg-web-001/assets/img/*.webp
+
+# Local Netlify folder
+.netlify
