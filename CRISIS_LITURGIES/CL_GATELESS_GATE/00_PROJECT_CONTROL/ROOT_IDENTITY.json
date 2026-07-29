@@ -1,0 +1,79 @@
+{
+  "registry_id": "TG-CL-GG-ROOT-001",
+  "record_type": "canonical_project_root",
+  "record_version": "1.1",
+  "registered_at": "2026-07-29T17:13:13-04:00",
+  "project": {
+    "program": "Crisis Liturgies",
+    "name": "The Gateless Gate",
+    "project_key": "CL_GATELESS_GATE",
+    "notion_project_page_id": "3a6deaca-b3a5-811f-9aaf-c922873b73c0",
+    "notion_project_page_url": "https://app.notion.com/p/3a6deacab3a5811f9aafc922873b73c0"
+  },
+  "persistent_root": {
+    "primary_authority": "GOOGLE_DRIVE",
+    "logical_path": "The Gradient/CRISIS_LITURGIES/CL_GATELESS_GATE",
+    "folder_id": "1yrKBoy4TxdbB9HP2bVEHB3TiiBzUpQzq",
+    "canonical_uri": "https://drive.google.com/drive/folders/1yrKBoy4TxdbB9HP2bVEHB3TiiBzUpQzq",
+    "control_folder": {
+      "logical_path": "The Gradient/CRISIS_LITURGIES/CL_GATELESS_GATE/00_PROJECT_CONTROL",
+      "folder_id": "1NqWF9hZDgByUJnNjwH6DNGyjQHD6PyM4",
+      "uri": "https://drive.google.com/drive/folders/1NqWF9hZDgByUJnNjwH6DNGyjQHD6PyM4"
+    },
+    "parent_program_root": {
+      "folder_id": "1TLqSYf3IQc4-WFgsntNBiOzZM3BL7KL9",
+      "uri": "https://drive.google.com/drive/folders/1TLqSYf3IQc4-WFgsntNBiOzZM3BL7KL9"
+    },
+    "institution_root": {
+      "folder_id": "1TX3Mqp3VadSlWuitS6UcA-HRciXHzO9B",
+      "uri": "https://drive.google.com/drive/folders/1TX3Mqp3VadSlWuitS6UcA-HRciXHzO9B"
+    }
+  },
+  "executable_namespace": {
+    "primary_authority": "GITHUB",
+    "repository": "noself-bardo/gradient-institution",
+    "branch": "main",
+    "relative_path": "CRISIS_LITURGIES/CL_GATELESS_GATE",
+    "canonical_uri": "https://github.com/noself-bardo/gradient-institution/tree/main/CRISIS_LITURGIES/CL_GATELESS_GATE",
+    "registered_local_replica": "C:\\Users\\steve\\Projects\\gradient-institution\\CRISIS_LITURGIES\\CL_GATELESS_GATE",
+    "materialization_state": "REGISTERED_UNMATERIALIZED",
+    "materialization_hold": "GitHub integration returned 403 RESOURCE_NOT_ACCESSIBLE_BY_INTEGRATION while creating 00_PROJECT_CONTROL/ROOT_IDENTITY.json on main."
+  },
+  "relative_case_contract": "CASES/CASE_19/{00_SOURCE,01_SPECIFICATION,02_ARTIFACT,03_TRANSCRIPTION,04_COPY,05_SVG_TEXT,06_LAYOUT,07_PROOFS,08_EXPORTS,09_CONTROL}",
+  "recovery_receipt": {
+    "filename": "CL-ARCH-RECOVERY-001_RETURN_v1.1.zip",
+    "sha256": "6d4b1d7d44ae8e68f488360d96d74e377e0ee35748af79d4d2bfb442b12dc872",
+    "size_bytes": 54059837,
+    "case_19_custody_state": "VALIDATED"
+  },
+  "authority_state": {
+    "root_state": "REGISTERED",
+    "compiler_preflight": "BLOCKED_PENDING_REPOSITORY_ROOT_MARKER",
+    "compiler_state": "NOT_LAUNCHED",
+    "manufacturing_eligibility": "NOT_ELIGIBLE",
+    "production_authority": "CLOSED",
+    "image_generation_authorization": "NOT_GRANTED",
+    "layout_authorization": "NOT_GRANTED",
+    "render_authorization": "NOT_GRANTED",
+    "publication_authorization": "NOT_GRANTED",
+    "archive_admission": "NOT_GRANTED"
+  },
+  "boundary": {
+    "allowed_now": [
+      "root identity records",
+      "control receipts",
+      "validated recovery packages"
+    ],
+    "not_authorized_by_this_record": [
+      "compiler implementation",
+      "source transformation",
+      "artifact generation",
+      "page composition",
+      "layout",
+      "rendering",
+      "publication",
+      "archive admission"
+    ],
+    "legacy_roots": "PRESERVED_IN_PLACE / NON_AUTHORITATIVE_FOR_NEW_GATLESS_GATE_WORK"
+  }
+}
