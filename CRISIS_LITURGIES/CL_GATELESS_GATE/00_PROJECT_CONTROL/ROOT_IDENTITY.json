@@ -20,6 +20,14 @@
       "logical_path": "The Gradient/CRISIS_LITURGIES/CL_GATELESS_GATE/00_PROJECT_CONTROL",
       "folder_id": "1NqWF9hZDgByUJnNjwH6DNGyjQHD6PyM4",
       "uri": "https://drive.google.com/drive/folders/1NqWF9hZDgByUJnNjwH6DNGyjQHD6PyM4"
+    },
+    "parent_program_root": {
+      "folder_id": "1TLqSYf3IQc4-WFgsntNBiOzZM3BL7KL9",
+      "uri": "https://drive.google.com/drive/folders/1TLqSYf3IQc4-WFgsntNBiOzZM3BL7KL9"
+    },
+    "institution_root": {
+      "folder_id": "1TX3Mqp3VadSlWuitS6UcA-HRciXHzO9B",
+      "uri": "https://drive.google.com/drive/folders/1TX3Mqp3VadSlWuitS6UcA-HRciXHzO9B"
     }
   },
   "executable_namespace": {
@@ -34,6 +42,7 @@
     "materialization_evidence": {
       "pull_request": "https://github.com/noself-bardo/gradient-institution/pull/7",
       "pull_request_number": 7,
+      "source_commit": "09b0161d25752da253d5e9fec8a5b8abb96de3bc",
       "merge_commit": "514346c826ab8d39dd3da8182534c1ef79e6443b",
       "reconciliation_pull_request": "https://github.com/noself-bardo/gradient-institution/pull/8",
       "reconciliation_pull_request_number": 8,
@@ -43,6 +52,7 @@
     },
     "materialization_hold": "RESOLVED"
   },
+  "relative_case_contract": "CASES/CASE_19/{00_SOURCE,01_SPECIFICATION,02_ARTIFACT,03_TRANSCRIPTION,04_COPY,05_SVG_TEXT,06_LAYOUT,07_PROOFS,08_EXPORTS,09_CONTROL}",
   "recovery_receipt": {
     "filename": "CL-ARCH-RECOVERY-001_RETURN_v1.1.zip",
     "sha256": "6d4b1d7d44ae8e68f488360d96d74e377e0ee35748af79d4d2bfb442b12dc872",
