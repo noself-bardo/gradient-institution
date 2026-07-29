@@ -1,0 +1,10 @@
+{
+  "schema_version":"1.0",
+  "risks":[
+    {"id":"RISK-001","type":"TECHNICAL_PROVENANCE_BLOCK","subject":"Phase 00 evidence register hash drift","next_action":"Recover pre-Git custody source; do not select or modify a copy.","founder_decision_required":false},
+    {"id":"RISK-002","type":"INACCESSIBLE","subject":"Drive asset custody","next_action":"Read-only asset provenance audit when Drive access is available.","founder_decision_required":false},
+    {"id":"RISK-003","type":"INACCESSIBLE","subject":"ChatGPT lane history","next_action":"Treat lane-derived claims as secondary until a durable source record is supplied.","founder_decision_required":false},
+    {"id":"RISK-004","type":"PENDING_HUMAN_GATE","subject":"The Container Never Bursts Founder Gate 8","next_action":"Steven records visual-ruling disposition.","founder_decision_required":true},
+    {"id":"RISK-005","type":"INCOMPLETE","subject":"Crisis Liturgies Dual Power Domestics namespace","next_action":"Recover missing referenced package files before classifying its root relationship.","founder_decision_required":false}
+  ]
+}

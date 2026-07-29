@@ -69,3 +69,11 @@ Excluded: the original Letta ZIP, extracted package, binary archives, credential
 - `CON-004` records Phase 00 evidence-register hash drift: current duplicate Markdown and JSON pairs are internally byte-identical, but each pair conflicts with embedded package-manifest, ratification-register, and admission-sidecar hashes and byte counts.
 - The direct project-local metadata also splits the possible target directories: ratification identifies `03_PHASE_EVIDENCE` as admitted but nonoperative, while a migration map identifies `CL_PHASE_00_EVIDENCE`. This is a technical reconciliation issue, not a founder decision; no file was selected, copied, or modified.
 - Direct Notion read confirms the Institute for Social Reproduction is `RATIFIED / ACTIVE` with limited authority; the Persona Registry remains authoritative for identity only; VonNeumann.os is frozen and non-production; and the exact Mandela Effect Engine name was not located (Mandala Affect Engine is not treated as its alias).
+
+## Closure readiness pass
+
+- Closure packet files: `AUDIT_CLOSURE_READINESS.md`, `FINAL_SOURCE_LOCATION_REGISTER.yaml`, `FINAL_EVIDENCE_SUMMARY.yaml`, and `FINAL_OPEN_RISKS.yaml`.
+- CON-001 is closed as preserved metadata inconsistency; CON-002 is bounded as a historical counting-method difference; CON-003 is decomposed; CON-004 remains a technical provenance block with no founder decision required.
+- The final location register distinguishes repository absence from institutional absence and records Drive/ChatGPT dependencies.
+- Projected closure-commit census: 734 tracked files, consisting of 706 base files plus 28 audit-branch additions, with no base-file deletion.
+- PR #6 should be reviewed as non-authoritative audit infrastructure; validators alone are not merger authority.
