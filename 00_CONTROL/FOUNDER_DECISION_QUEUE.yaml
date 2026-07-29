@@ -4,16 +4,14 @@
     {
       "decision_id": "FDQ-001",
       "subject": "The Container Never Bursts Founder Gate 8",
-      "decision_required": "Determine disposition of the completed review proofs and documented text-overflow observation.",
-      "why_human_gate": "Project-local visual ruling cannot be inferred from candidate completion.",
+      "exact_question": "What disposition should apply to the completed review proofs that expose horizontal text overflow in eleven Stage 09 hymn masters?",
+      "sources_in_conflict": ["CL-RR-2026-07-28 Concept Control: review proofs complete / Founder Gate 8 pending","CL-RR-2026-07-28 Concept Control: no repair was authorized under rendering-only authority"],
+      "operational_consequence": "No master modification, asset admission, rendering, print, publication, or archive admission may proceed until the visual ruling is recorded.",
+      "reversible_options": ["retain the current candidate and close the review with no repair","authorize a separately bounded correction review","decline the candidate and preserve it as review evidence"],
+      "recommended_option": "Record a bounded correction-review decision that preserves the frozen source and keeps all downstream production gates closed.",
+      "unchanged_under_every_option": "The project remains project-local; no general constitutional authority, source reproduction, publication, or archive admission is opened.",
+      "why_human_gate": "The documented source record expressly leaves this visual disposition to Founder Gate 8.",
       "source_refs": ["NOTION:3abdeaca-b3a5-8109-acc7-c6207619df02"]
-    },
-    {
-      "decision_id": "FDQ-002",
-      "subject": "Persona Registry functional disposition",
-      "decision_required": "Decide whether to ratify a disposition layer while preserving the current identity registry.",
-      "why_human_gate": "The inspected crosswalk is a draft with no authority effect.",
-      "source_refs": ["NOTION:3abdeaca-b3a5-8185-abef-d1c7d7d08dcf"]
     }
   ]
 }

@@ -8,6 +8,14 @@
       "current_effect": "No authority or project-state inference may depend on the version label alone.",
       "source_refs": ["SRC-LETTA-HANDOFF-20260729"],
       "supersession_status": "NOT_APPLICABLE"
+    },
+    {
+      "record_id": "SUP-AUDIT-ENGINE-SURFACES",
+      "subject": "Engine Registry source-review and website-data surfaces",
+      "classification": "DIRECT_SOURCE_VERIFIED",
+      "current_effect": "The direct Notion 05 Engine Registry is the primary source for registry status. SOURCE_REVIEW_05_ENGINE_REGISTRY.md is noncanonical review material and website engines.json is a derivative display source.",
+      "source_refs": ["NOTION:391deaca-b3a5-815d-9202-faf327430ede","REPOSITORY_SOURCE_INVENTORY.yaml@b8d34643252ecc65b3dc9c26a2d2d3e4227bbdb3"],
+      "supersession_status": "NO_SILENT_SUPERSESSION"
     }
   ]
 }

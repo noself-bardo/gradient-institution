@@ -29,6 +29,20 @@
       "authority_scope": "Historical consulting source only; no current authority",
       "verification_method": "Copied without modification from checksum-verified handoff package",
       "supersession_check": "NOT_PERFORMED"
+    },
+    {
+      "source_id": "SRC-GITHUB-AUDIT-20260729",
+      "source_system": "GitHub API",
+      "source_title": "noself-bardo/gradient-institution branch and pull-request audit",
+      "stable_source_id": "github:noself-bardo/gradient-institution@b8d34643252ecc65b3dc9c26a2d2d3e4227bbdb3",
+      "source_path_or_url": "https://github.com/noself-bardo/gradient-institution",
+      "inspected_at": "2026-07-29T17:50:00-04:00",
+      "authority_scope": "Current repository branch and pull-request observation only",
+      "verification_method": "GitHub CLI API: branches endpoint, pull-request list, and commit endpoint",
+      "supersession_check": "NOT_APPLICABLE",
+      "branches": ["audit/letta-handoff-repository-baseline-20260729","cl-mig-002-recovery-20260717","main","sprint-001/tg-web-test-001"],
+      "pull_request_head_branches": ["audit/letta-handoff-repository-baseline-20260729","fix/tg-web-001-zero-broken-pdf-actions","fix/tg-web-001-pdf-cors-probe","sprint-001/tg-web-001-vol-iii-publish","sprint-001/tg-web-test-001"],
+      "reconciliation_status": "TEMPORAL_DIFFERENCE_PARTIALLY_RECONCILED"
     }
   ]
 }

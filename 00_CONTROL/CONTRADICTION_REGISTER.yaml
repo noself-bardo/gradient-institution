@@ -13,11 +13,11 @@
     {
       "record_id": "CON-002",
       "title": "GitHub branch-count difference",
-      "classification": "TEMPORAL_DIFFERENCE",
+      "classification": "TEMPORAL_DIFFERENCE_PARTIALLY_RECONCILED",
       "status": "PENDING_VERIFICATION",
-      "description": "Imported material reports seven branches in an earlier audit and three current branches in later API observation.",
-      "source_refs": ["SRC-LETTA-HANDOFF-20260729"],
-      "resolution_rule": "Require timestamp and counting-method reconciliation before treating this as a same-time conflict."
+      "description": "Historical Letta material reports seven branches. Direct GitHub audit observed four current branches and five historical pull-request head-branch names; several merged/closed heads are no longer current branches.",
+      "source_refs": ["SRC-LETTA-HANDOFF-20260729","SRC-GITHUB-AUDIT-20260729"],
+      "resolution_rule": "Treat the difference as temporal until the earlier audit timestamp and counting method account for every historical branch."
     },
     {
       "record_id": "CON-003",
@@ -25,8 +25,8 @@
       "classification": "INCOMPLETE",
       "status": "PENDING_VERIFICATION",
       "description": "Repository scan identified duplicate status vocabularies, split Crisis Liturgies namespaces, duplicate evidence registers, and multiple platform or engine control surfaces.",
-      "source_refs": ["SRC-LETTA-HANDOFF-20260729"],
-      "resolution_rule": "Do not consolidate or infer precedence; verify project-local and current governing records first."
+      "source_refs": ["REPOSITORY_SOURCE_INVENTORY.yaml@b8d34643252ecc65b3dc9c26a2d2d3e4227bbdb3","SRC-LETTA-HANDOFF-20260729"],
+      "resolution_rule": "Direct repository scan identified the paths. Do not consolidate or infer precedence; verify project-local and current governing records first."
     }
   ]
 }

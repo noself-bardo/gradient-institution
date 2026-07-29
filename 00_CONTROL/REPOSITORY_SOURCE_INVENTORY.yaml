@@ -43,7 +43,22 @@
     {"path":"CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_PHASE_01_PORTABLE_AUTHORITY_SOURCES_2026-07-13/01_GOVERNANCE/CL-OPS-001_Crisis_Liturgies_Role_Separation_and_Execution_Protocol_v1.0.md","relative_length":195}
   ],
   "supplemental_read_only_findings": {
-    "repository_file_count_approx": 722,
+    "deterministic_census": {
+      "base_commit": "de444af4aecc8f92c8aa6c4a500e9ecea9f8d5e3",
+      "tracked_files_at_base": 706,
+      "files_added_on_audit_branch_before_current_pass": 22,
+      "total_tracked_files_on_audit_branch": 728,
+      "projected_files_added_after_current_pass_commit": 23,
+      "projected_total_after_current_pass_commit": 729,
+      "root_level_tracked_files": 51,
+      "files_by_top_level": {"00_CONTROL":13,"00_command_center":1,"01_constitution":1,"02_stewardship":1,"03_governance":1,"04_registries":1,"05_knowledge_systems":1,"06_visual_language":250,"07_publishing":47,"08_platform":52,"09_agents":1,"10_inventories":4,"11_receipts":6,"12_archive_refs":1,"90_EXTERNAL_HANDOFFS":3,"CRISIS_LITURGIES":287,"CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS":1,"scripts":6},
+      "binary_file_count": 25,
+      "text_file_count_determined": 703,
+      "symlink_count": 0,
+      "submodule_count": 0,
+      "inaccessible_or_checkout_failed_paths": [],
+      "reconciliation_equation": "51 root-level + 677 files under top-level directories = 728 total tracked files"
+    },
     "near_placeholder_directories": ["00_command_center","01_constitution","02_stewardship","03_governance","05_knowledge_systems","09_agents","12_archive_refs"],
     "additional_competing_surfaces": [
       "00_CONTROL/STATUS_VOCABULARY.yaml and 04_registries/STATUS_VOCABULARY_DRAFT.md",
@@ -55,6 +70,38 @@
     "repository_only_location_results": {
       "not_located_in_dedicated_repository_tree": ["Moon Joe","Signal Keeper","Institute for Social Reproduction","Marisol Vale","Inheritance Fieldwork","VonNeumann.os","Persona Registry","Edgelords","Mandela Effect Engine"],
       "located_as_noncanonical_or_provisional_repository_references": ["Systems Visualizer","Interpretive Sovereignty Analysis","Shape Change","Fuckification Engine","Gradient Operating System","Publishing Constitution","Knowledge Ecology Watch"]
+    },
+    "control_surface_comparisons": {
+      "status_vocabularies": {
+        "operational_audit_vocabulary":"00_CONTROL/STATUS_VOCABULARY.yaml",
+        "repository_draft":"04_registries/STATUS_VOCABULARY_DRAFT.md",
+        "direct_observation":"The repository draft declares DRAFT / FOR REVIEW and explicitly says it is not final institutional policy; the audit vocabulary is operational validation vocabulary, not a ratified registry.",
+        "supersession_checked":"not_ratified"
+      },
+      "phase_00_evidence_registers": {
+        "markdown_copies":[
+          {"path":"CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_00_EVIDENCE/CL_PHASE_00_MASTER_EVIDENCE_REGISTER_2026-07-13.md","bytes":11631,"sha256":"F6E829AA8672A0765912F486AE3CE07084C0AFEDD2BA528D17E036DB4D83903E"},
+          {"path":"CRISIS_LITURGIES/00_PROJECT_CONTROL/03_PHASE_EVIDENCE/CL_PHASE_00_MASTER_EVIDENCE_REGISTER_2026-07-13.md","bytes":11631,"sha256":"F6E829AA8672A0765912F486AE3CE07084C0AFEDD2BA528D17E036DB4D83903E"}
+        ],
+        "json_copies":[
+          {"path":"CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_00_EVIDENCE/CL_PHASE_00_MASTER_EVIDENCE_REGISTER_2026-07-13.json","bytes":25541,"sha256":"33E180E3665A432882C8EC2CA8CD6567DBA54D81804ADEA444BBED3045A8EABB"},
+          {"path":"CRISIS_LITURGIES/00_PROJECT_CONTROL/03_PHASE_EVIDENCE/CL_PHASE_00_MASTER_EVIDENCE_REGISTER_2026-07-13.json","bytes":25541,"sha256":"33E180E3665A432882C8EC2CA8CD6567DBA54D81804ADEA444BBED3045A8EABB"}
+        ],
+        "byte_and_content_identity":"Both Markdown copies are identical; both JSON copies are identical. Identity does not establish canonical authority.",
+        "classification":"MIRRORED_PROJECT_LOCAL_RECORDS_PENDING_AUTHORITY_REVIEW"
+      },
+      "netlify_configurations": {
+        "root":"netlify.toml: repo-linked publish path 08_platform/tg-web-001",
+        "nested":"08_platform/tg-web-001/netlify.toml: folder-scoped publish path .",
+        "direct_observation":"Root configuration explicitly states it governs repo-linked sites; nested configuration is for folder-scoped CLI deploys. No deployment was performed.",
+        "classification":"DISTINCT_DEPLOYMENT_SCOPES_NO_CONFLICT_OBSERVED"
+      },
+      "engine_control_surfaces": {
+        "source_review":"SOURCE_REVIEW_05_ENGINE_REGISTRY.md declares DRAFT / READ-ONLY REVIEW and Authority: Not canonical.",
+        "website_data":"08_platform/tg-web-001/data/engines.json is website data derivative; it contains status claims but cannot serve as primary authority.",
+        "notion_registry":"05 Engine Registry was directly read; it is the human-readable registry source for ISA and Shape Change status claims.",
+        "classification":"NOTION_REGISTRY_PRIMARY_FOR_REGISTRY_STATUS; WEBSITE_JSON_DERIVATIVE"
+      }
     }
   }
 }

@@ -42,7 +42,7 @@ Excluded: the original Letta ZIP, extracted package, binary archives, credential
 
 ## 23–24. Steven decision queue
 
-`00_CONTROL/FOUNDER_DECISION_QUEUE.yaml` contains only two decisions: The Container Never Bursts Founder Gate 8, and whether to ratify a Persona Registry functional-disposition layer.
+`00_CONTROL/FOUNDER_DECISION_QUEUE.yaml` contains one genuine human decision: The Container Never Bursts Founder Gate 8.
 
 **Exact next human gate:** Founder Gate 8 for The Container Never Bursts review proofs.
 
@@ -52,3 +52,14 @@ Excluded: the original Letta ZIP, extracted package, binary archives, credential
 - No Notion or Google Drive write occurred.
 - `main` was not modified, merged, pushed, or checked out for this sprint.
 - The draft pull request remains open and unmerged.
+
+## Source-provenance and repository-census pass
+
+- Direct GitHub evidence now separates the imported seven-branch historical claim from current API evidence: four current branches and five historical pull-request head names. `CON-002` remains `TEMPORAL_DIFFERENCE_PARTIALLY_RECONCILED`.
+- Exact pre-pass census at `b8d3464`: 706 base tracked files + 22 files added on the audit branch = 728 tracked files. It balances as 51 root files + 677 files below top-level directories.
+- Binary/text determination: 25 binary and 703 text files; no submodules, symlinks, inaccessible paths, or clone checkout failures.
+- Status vocabulary draft is explicitly `DRAFT / FOR REVIEW`; the audit vocabulary is operational validation vocabulary, not ratified policy.
+- Phase 00 Markdown copies are byte- and content-identical (`F6E829…903E`); Phase 00 JSON copies are byte- and content-identical (`33E180…EABB`). Identity does not establish canonical authority.
+- Root Netlify configuration governs repo-linked sites; nested configuration supports folder-scoped CLI use. No deployment occurred.
+- The direct Notion Engine Registry is the primary registry source for registry status; source-review Markdown is noncanonical and website JSON is a derivative.
+- Notion search or direct reads located repository-missing systems including the Institute for Social Reproduction, Marisol Vale / Inheritance Fieldwork, VonNeumann.os, Persona Registry, and Edgelords of the Archive. Mandela Effect Engine and Signal Keeper remain `NOT_LOCATED_IN_ACCESSIBLE_SOURCES` under exact-name searches.

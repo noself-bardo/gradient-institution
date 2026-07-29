@@ -17,7 +17,15 @@
   "not_inspected_or_unavailable": [
     {"subject":"Google Drive asset custody","classification":"INACCESSIBLE","reason":"Drive was not accessed."},
     {"subject":"ChatGPT lane history","classification":"INACCESSIBLE","reason":"ChatGPT history was not accessed."},
-    {"subject":"Institute for Social Reproduction page contents","classification":"INCOMPLETE","reason":"No direct page content fetched during this pass."},
-    {"subject":"Signal Keeper","classification":"NOT_LOCATED_IN_ACCESSIBLE_SOURCES","reason":"No direct source was located during this pass."}
+    {"subject":"Signal Keeper","classification":"NOT_LOCATED_IN_ACCESSIBLE_SOURCES","reason":"Search found only a Daily Brief request to recover its authoritative continuity record, not a system control page."}
+  ],
+  "repository_missing_system_searches": [
+    {"system":"Institute for Social Reproduction, Maintenance, and the Everyday","search_terms":["Institute for Social Reproduction Maintenance Everyday"],"repository_classification":"NOT_LOCATED_IN_REPOSITORY","notion_page_id":"3a1deaca-b3a5-817b-b206-e82e36f9491f","notion_status":"RATIFIED / ACTIVE after mirror completion","authority_scope":"limited institutional scope; binding holds not delegated","retrieval":"direct fetch"},
+    {"system":"Marisol Vale / Inheritance Fieldwork","search_terms":["Marisol Vale Inheritance Fieldwork"],"repository_classification":"NOT_LOCATED_IN_REPOSITORY","notion_page_id":"3a9deaca-b3a5-8198-bec4-f1f5c72ecd5a","notion_status":"layered internal ratification; public, clinical, commercial, and publication authority not granted","authority_scope":"separately governed conceptual-development institution","retrieval":"direct fetch"},
+    {"system":"VonNeumann.os","search_terms":["VonNeumann.os"],"repository_classification":"NOT_LOCATED_IN_REPOSITORY","notion_page_id":"3a1deaca-b3a5-8146-8d14-e6ba264dc029","notion_status":"frozen tested semantic reference and candidate technical substrate","authority_scope":"not general Constitution or production authority","retrieval":"direct fetch"},
+    {"system":"Persona Registry","search_terms":["Persona Registry"],"repository_classification":"NOT_LOCATED_IN_REPOSITORY","notion_page_id":"3a8deaca-b3a5-8116-bfbe-c7946f04e168","notion_status":"RATIFIED / LOCKED / ACTIVE; dormant by default under current function notice","authority_scope":"persona identity, jurisdiction, prohibitions, aliases, and replica disposition","retrieval":"direct fetch"},
+    {"system":"Edgelords of the Archive","search_terms":["Edgelords of the Archive"],"repository_classification":"NOT_LOCATED_IN_REPOSITORY","notion_page_id":"39fdeaca-b3a5-8174-b5e1-d040ebe95228","notion_status":"located through program and Persona Registry records","authority_scope":"persona-program identity records; no independent general authority","retrieval":"workspace search"},
+    {"system":"Mandela Effect Engine","search_terms":["Mandela Effect Engine"],"repository_classification":"NOT_LOCATED_IN_REPOSITORY","notion_result":"No exact Mandela Effect Engine page located; Mandala Affect Engine results are not treated as an alias.","classification":"NOT_LOCATED_IN_ACCESSIBLE_SOURCES"},
+    {"system":"Signal Keeper","search_terms":["Signal Keeper"],"repository_classification":"NOT_LOCATED_IN_REPOSITORY","notion_result":"No authoritative Signal Keeper control page located; Daily Brief requests recovery of the record.","classification":"NOT_LOCATED_IN_ACCESSIBLE_SOURCES"}
   ]
 }
