@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "records": [
+    {
+      "record_id": "CON-001",
+      "title": "Imported Matrix version discrepancy",
+      "classification": "METADATA_INCONSISTENCY",
+      "status": "PENDING_VERIFICATION",
+      "description": "Package/handoff identify v0.2 while internal Matrix metadata identifies v0.1.",
+      "source_refs": ["SRC-LETTA-HANDOFF-20260729"],
+      "resolution_rule": "Preserve unchanged; do not infer authority or project state from either label."
+    },
+    {
+      "record_id": "CON-002",
+      "title": "GitHub branch-count difference",
+      "classification": "TEMPORAL_DIFFERENCE",
+      "status": "PENDING_VERIFICATION",
+      "description": "Imported material reports seven branches in an earlier audit and three current branches in later API observation.",
+      "source_refs": ["SRC-LETTA-HANDOFF-20260729"],
+      "resolution_rule": "Require timestamp and counting-method reconciliation before treating this as a same-time conflict."
+    }
+  ]
+}

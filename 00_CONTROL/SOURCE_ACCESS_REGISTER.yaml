@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "source_id": "SRC-LETTA-HANDOFF-20260729",
+      "source_system": "Letta handoff package",
+      "source_title": "Gradient Portfolio and Authority Matrix v0.1 (package/handoff describe v0.2)",
+      "stable_source_id": "sha256:0B9242A4D69BFA3183DC4FB5CA9CE41C3DE59CE46359387583546EDE91607444",
+      "source_path_or_url": "90_EXTERNAL_HANDOFFS/LETTA_2026-07-29/extracted-package/reference/gradient/portfolio-matrix.md",
+      "inspected_at": "2026-07-29T16:05:00-04:00",
+      "authority_scope": "Historical consulting source only; no current authority",
+      "verification_method": "Copied without modification from checksum-verified handoff package",
+      "supersession_check": "NOT_PERFORMED",
+      "archive_reference": {
+        "archival_path": "C:\\Users\\steve\\My Drive\\The Gradient\\90_EXTERNAL_HANDOFFS\\LETTA_2026-07-29",
+        "zip_filename": "gradient-handoff-20260729.zip",
+        "zip_sha256": "042D229B40B951F8DAA75AA634EE8AFFB1AE7B31DE439321207A5DA0FDA3922F",
+        "classification": "HISTORICAL CONSULTING STATE / NON-AUTHORITATIVE OPERATIONAL MIRROR",
+        "intake_date": "2026-07-29"
+      }
+    },
+    {
+      "source_id": "SRC-LETTA-RESTORATION-20260729",
+      "source_system": "Letta handoff package",
+      "source_title": "RESTORATION INSTRUCTIONS FOR CURSOR",
+      "stable_source_id": "sha256:665AE35E02E6D28389B9B0C9E1A5912777D5092B7850627D3C771844C6EAC15E",
+      "source_path_or_url": "90_EXTERNAL_HANDOFFS/LETTA_2026-07-29/extracted-package/handoff-docs/RESTORATION-INSTRUCTIONS.txt",
+      "inspected_at": "2026-07-29T16:05:00-04:00",
+      "authority_scope": "Historical consulting source only; no current authority",
+      "verification_method": "Copied without modification from checksum-verified handoff package",
+      "supersession_check": "NOT_PERFORMED"
+    }
+  ]
+}

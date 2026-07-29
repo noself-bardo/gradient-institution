@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "status_labels": {
+    "IMPORTED_CANDIDATE": "Imported for assessment; not a repository-ratified current state.",
+    "UNCLASSIFIED": "No repository status has been assigned.",
+    "ACTIVE": "Current work is explicitly authorized within the recorded scope.",
+    "DORMANT": "Preserved but not active by default.",
+    "FROZEN": "Further work is explicitly paused or closed.",
+    "CLOSED": "The recorded scope is complete or formally closed.",
+    "PENDING_VERIFICATION": "A current-state conclusion requires source verification.",
+    "PENDING_HUMAN_GATE": "Further action requires explicit human authorization.",
+    "SUPERSEDED": "A later governing record displaces this item for current authority.",
+    "VOID_FOR_PRODUCTION": "Not usable to authorize production activity."
+  },
+  "prohibited_status_inference": [
+    "recency alone",
+    "filenames",
+    "directory placement",
+    "numbering",
+    "document length",
+    "confident language",
+    "locked wording without ratification evidence",
+    "the imported Letta Matrix"
+  ]
+}

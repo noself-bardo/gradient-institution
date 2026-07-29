@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "records": [
+    {
+      "record_id": "SUP-LETTA-MATRIX-VERSION",
+      "subject": "Imported Letta Matrix version labels",
+      "classification": "METADATA_INCONSISTENCY",
+      "current_effect": "No authority or project-state inference may depend on the version label alone.",
+      "source_refs": ["SRC-LETTA-HANDOFF-20260729"],
+      "supersession_status": "NOT_APPLICABLE"
+    }
+  ]
+}

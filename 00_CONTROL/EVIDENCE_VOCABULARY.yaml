@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "evidence_labels": {
+    "DIRECT_SOURCE_VERIFIED": "A field was inspected in an identified primary source.",
+    "SECONDARY_BASELINE": "A field derives from an imported or otherwise secondary record.",
+    "INFERRED": "A field is a reasoned interpretation, not a directly stated fact.",
+    "INCOMPLETE": "Known source material does not establish the field fully.",
+    "INACCESSIBLE": "The relevant source could not be accessed.",
+    "DISPUTED": "Available sources materially conflict and have not been resolved.",
+    "SUPERSEDED_HISTORICAL_RECORD": "A historical source is preserved but displaced for current authority.",
+    "VOID_FOR_PRODUCTION": "The source or field cannot authorize production use.",
+    "PENDING_HUMAN_GATE": "A human authorization is required before reliance or action.",
+    "TEMPORAL_DIFFERENCE": "Observations differ across time without a same-time conflict.",
+    "METADATA_INCONSISTENCY": "Metadata conflicts without establishing a substantive state conflict."
+  },
+  "field_evidence_requirements": [
+    "evidence_label",
+    "source_refs",
+    "supersession_check"
+  ],
+  "source_reference_requirements": [
+    "source_system",
+    "source_title",
+    "stable_source_id",
+    "source_path_or_url",
+    "inspected_at",
+    "authority_scope",
+    "verification_method"
+  ]
+}
