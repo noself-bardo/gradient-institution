@@ -1,8 +1,9 @@
 {
   "registry_id": "TG-CL-GG-ROOT-001",
   "record_type": "canonical_project_root",
-  "record_version": "1.1",
+  "record_version": "1.2",
   "registered_at": "2026-07-29T17:13:13-04:00",
+  "reconciled_at": "2026-07-29T19:26:52-04:00",
   "project": {
     "program": "Crisis Liturgies",
     "name": "The Gateless Gate",
@@ -36,8 +37,17 @@
     "relative_path": "CRISIS_LITURGIES/CL_GATELESS_GATE",
     "canonical_uri": "https://github.com/noself-bardo/gradient-institution/tree/main/CRISIS_LITURGIES/CL_GATELESS_GATE",
     "registered_local_replica": "C:\\Users\\steve\\Projects\\gradient-institution\\CRISIS_LITURGIES\\CL_GATELESS_GATE",
-    "materialization_state": "REGISTERED_UNMATERIALIZED",
-    "materialization_hold": "GitHub integration returned 403 RESOURCE_NOT_ACCESSIBLE_BY_INTEGRATION while creating 00_PROJECT_CONTROL/ROOT_IDENTITY.json on main."
+    "materialization_state": "MATERIALIZED",
+    "materialized_at": "2026-07-29T19:23:57-04:00",
+    "materialization_evidence": {
+      "pull_request": "https://github.com/noself-bardo/gradient-institution/pull/7",
+      "pull_request_number": 7,
+      "source_commit": "09b0161d25752da253d5e9fec8a5b8abb96de3bc",
+      "merge_commit": "514346c826ab8d39dd3da8182534c1ef79e6443b",
+      "root_marker_path": "CRISIS_LITURGIES/CL_GATELESS_GATE/00_PROJECT_CONTROL/ROOT_IDENTITY.json",
+      "root_marker_blob_sha_before_reconciliation": "f6f9cde9b9aab047050f382225b08f48ba003aae"
+    },
+    "materialization_hold": "RESOLVED"
   },
   "relative_case_contract": "CASES/CASE_19/{00_SOURCE,01_SPECIFICATION,02_ARTIFACT,03_TRANSCRIPTION,04_COPY,05_SVG_TEXT,06_LAYOUT,07_PROOFS,08_EXPORTS,09_CONTROL}",
   "recovery_receipt": {
@@ -47,8 +57,8 @@
     "case_19_custody_state": "VALIDATED"
   },
   "authority_state": {
-    "root_state": "REGISTERED",
-    "compiler_preflight": "BLOCKED_PENDING_REPOSITORY_ROOT_MARKER",
+    "root_state": "REGISTERED_AND_MATERIALIZED",
+    "compiler_preflight": "NOT_RUN_NOT_AUTHORIZED",
     "compiler_state": "NOT_LAUNCHED",
     "manufacturing_eligibility": "NOT_ELIGIBLE",
     "production_authority": "CLOSED",
