@@ -8,7 +8,7 @@
 
 The Letta export is preserved at `90_EXTERNAL_HANDOFFS/LETTA_2026-07-29/` as a checksum-verified historical consulting mirror. Its imported records are candidates only: `IMPORTED_CANDIDATE / SECONDARY_BASELINE`.
 
-No external source system was modified. No live Notion, Google Drive, GitHub, or ChatGPT material was read during this intake beyond the supplied package.
+Live Notion was read in the evidence audit and recorded in `NOTION_SOURCE_INVENTORY.yaml`. No external source system was modified. Google Drive and ChatGPT lane history remain inaccessible to this audit.
 
 ## Authority rule
 
@@ -19,3 +19,10 @@ Before a candidate receives a current status, resolve authority in the ordered m
 - 17 legacy Letta records were imported as candidate source records.
 - Crisis Liturgies (`GRAD-009`) is represented by six boundary-preserving candidate records rather than one inherited parent status.
 - Repository-native stable IDs remain unassigned pending verification and boundary review.
+
+## Direct audit findings
+
+- The Current Purpose and Constitutional Kernel is the ratified current general constitutional center; the Founding Constitution is preserved and superseded for current general governance.
+- The Current-State Index is the current primary routing surface. It identifies one active bounded institution-level observational experiment, GPD-001; constitutional-reduction implementation remains closed.
+- The Container Never Bursts is project-local. Its current Concept Control records Stage 09 candidate completion and Founder Gate 8 pending; no rendering, print, publication, or archive admission authority is implied.
+- The Death of the Bit remains separate from The Container Never Bursts. Its Phase 01 closure defers the special-volume profile and permits Phase 02 planning only.

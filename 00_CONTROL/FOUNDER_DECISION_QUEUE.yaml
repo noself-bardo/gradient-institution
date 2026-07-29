@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "decisions": [
+    {
+      "decision_id": "FDQ-001",
+      "subject": "The Container Never Bursts Founder Gate 8",
+      "decision_required": "Determine disposition of the completed review proofs and documented text-overflow observation.",
+      "why_human_gate": "Project-local visual ruling cannot be inferred from candidate completion.",
+      "source_refs": ["NOTION:3abdeaca-b3a5-8109-acc7-c6207619df02"]
+    },
+    {
+      "decision_id": "FDQ-002",
+      "subject": "Persona Registry functional disposition",
+      "decision_required": "Decide whether to ratify a disposition layer while preserving the current identity registry.",
+      "why_human_gate": "The inspected crosswalk is a draft with no authority effect.",
+      "source_refs": ["NOTION:3abdeaca-b3a5-8185-abef-d1c7d7d08dcf"]
+    }
+  ]
+}
