@@ -88,6 +88,15 @@
           {"path":"CRISIS_LITURGIES/00_PROJECT_CONTROL/03_PHASE_EVIDENCE/CL_PHASE_00_MASTER_EVIDENCE_REGISTER_2026-07-13.json","bytes":25541,"sha256":"33E180E3665A432882C8EC2CA8CD6567DBA54D81804ADEA444BBED3045A8EABB"}
         ],
         "byte_and_content_identity":"Both Markdown copies are identical; both JSON copies are identical. Identity does not establish canonical authority.",
+        "embedded_hash_drift":{
+          "recorded_markdown_sha256":"e4caeaba165b32f76022b8194c68d3b3cc6c2d327376fe94db35044630a8ff29",
+          "recorded_markdown_bytes":11517,
+          "recorded_json_sha256":"ef53e1a4342cec06abd78ca04de2ee911a42809c0054f38a1a6916bd7f983434",
+          "recorded_json_bytes":24954,
+          "current_on_disk_matches_recorded":false,
+          "recorded_in":"duplicate package manifests, Phase 02I ratified file authority register, and 03_PHASE_EVIDENCE admission sidecars",
+          "authority_observation":"Ratification targets 03_PHASE_EVIDENCE as ADMITTED_PHASE_EVIDENCE / NONOPERATIVE while a migration map targets CL_PHASE_00_EVIDENCE; copy authorization is false."
+        },
         "classification":"MIRRORED_PROJECT_LOCAL_RECORDS_PENDING_AUTHORITY_REVIEW"
       },
       "netlify_configurations": {

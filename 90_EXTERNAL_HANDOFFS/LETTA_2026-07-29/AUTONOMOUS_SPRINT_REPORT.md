@@ -63,3 +63,9 @@ Excluded: the original Letta ZIP, extracted package, binary archives, credential
 - Root Netlify configuration governs repo-linked sites; nested configuration supports folder-scoped CLI use. No deployment occurred.
 - The direct Notion Engine Registry is the primary registry source for registry status; source-review Markdown is noncanonical and website JSON is a derivative.
 - Notion search or direct reads located repository-missing systems including the Institute for Social Reproduction, Marisol Vale / Inheritance Fieldwork, VonNeumann.os, Persona Registry, and Edgelords of the Archive. Mandela Effect Engine and Signal Keeper remain `NOT_LOCATED_IN_ACCESSIBLE_SOURCES` under exact-name searches.
+
+## Deep-read correction
+
+- `CON-004` records Phase 00 evidence-register hash drift: current duplicate Markdown and JSON pairs are internally byte-identical, but each pair conflicts with embedded package-manifest, ratification-register, and admission-sidecar hashes and byte counts.
+- The direct project-local metadata also splits the possible target directories: ratification identifies `03_PHASE_EVIDENCE` as admitted but nonoperative, while a migration map identifies `CL_PHASE_00_EVIDENCE`. This is a technical reconciliation issue, not a founder decision; no file was selected, copied, or modified.
+- Direct Notion read confirms the Institute for Social Reproduction is `RATIFIED / ACTIVE` with limited authority; the Persona Registry remains authoritative for identity only; VonNeumann.os is frozen and non-production; and the exact Mandela Effect Engine name was not located (Mandala Affect Engine is not treated as its alias).

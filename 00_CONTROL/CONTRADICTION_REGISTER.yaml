@@ -27,6 +27,15 @@
       "description": "Repository scan identified duplicate status vocabularies, split Crisis Liturgies namespaces, duplicate evidence registers, and multiple platform or engine control surfaces.",
       "source_refs": ["REPOSITORY_SOURCE_INVENTORY.yaml@b8d34643252ecc65b3dc9c26a2d2d3e4227bbdb3","SRC-LETTA-HANDOFF-20260729"],
       "resolution_rule": "Direct repository scan identified the paths. Do not consolidate or infer precedence; verify project-local and current governing records first."
+    },
+    {
+      "record_id": "CON-004",
+      "title": "Phase 00 evidence-register hash drift and destination split",
+      "classification": "DISPUTED",
+      "status": "PENDING_VERIFICATION",
+      "description": "Two current Markdown copies are identical and two current JSON copies are identical, but both current pairs differ from hashes and byte counts recorded in duplicate package manifests, ratification registers, and admission sidecars. Ratification and migration maps also target different directories.",
+      "source_refs": ["REPOSITORY_SOURCE_INVENTORY.yaml@b01f68e92b7f2cbe41c6f8b7b2d4b11a7b6d8df8"],
+      "resolution_rule": "Do not copy, overwrite, promote, or select an operative register until the project-local evidence-custody record reconciles recorded and current hashes."
     }
   ]
 }
