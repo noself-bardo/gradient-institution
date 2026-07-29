@@ -41,5 +41,20 @@
     {"path":"CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_PHASE_01_PORTABLE_AUTHORITY_SOURCES_2026-07-13/04_PHASE_CLOSURES/CL_PHASE_01_AUTHORITY_PROFILE_ROOT_RECONCILIATION_CHARTER_2026-07-13.json","relative_length":198},
     {"path":"CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_PHASE_01_PORTABLE_AUTHORITY_SOURCES_2026-07-13/04_PHASE_CLOSURES/CL_PHASE_01_AUTHORITY_PROFILE_ROOT_RECONCILIATION_CHARTER_2026-07-13.md","relative_length":196},
     {"path":"CRISIS_LITURGIES/00_PROJECT_CONTROL/CL_PHASE_02_PLANNING/CL_PHASE_01_PORTABLE_AUTHORITY_SOURCES_2026-07-13/01_GOVERNANCE/CL-OPS-001_Crisis_Liturgies_Role_Separation_and_Execution_Protocol_v1.0.md","relative_length":195}
-  ]
+  ],
+  "supplemental_read_only_findings": {
+    "repository_file_count_approx": 722,
+    "near_placeholder_directories": ["00_command_center","01_constitution","02_stewardship","03_governance","05_knowledge_systems","09_agents","12_archive_refs"],
+    "additional_competing_surfaces": [
+      "00_CONTROL/STATUS_VOCABULARY.yaml and 04_registries/STATUS_VOCABULARY_DRAFT.md",
+      "CRISIS_LITURGIES duplicate Phase 00 evidence-register copies",
+      "CRISIS_LITURGIES namespace and CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS namespace",
+      "root netlify.toml and 08_platform/tg-web-001/netlify.toml",
+      "SOURCE_REVIEW_05_ENGINE_REGISTRY.md and 08_platform/tg-web-001/data/engines.json"
+    ],
+    "repository_only_location_results": {
+      "not_located_in_dedicated_repository_tree": ["Moon Joe","Signal Keeper","Institute for Social Reproduction","Marisol Vale","Inheritance Fieldwork","VonNeumann.os","Persona Registry","Edgelords","Mandela Effect Engine"],
+      "located_as_noncanonical_or_provisional_repository_references": ["Systems Visualizer","Interpretive Sovereignty Analysis","Shape Change","Fuckification Engine","Gradient Operating System","Publishing Constitution","Knowledge Ecology Watch"]
+    }
+  }
 }

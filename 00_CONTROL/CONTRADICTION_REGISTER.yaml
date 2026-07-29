@@ -18,6 +18,15 @@
       "description": "Imported material reports seven branches in an earlier audit and three current branches in later API observation.",
       "source_refs": ["SRC-LETTA-HANDOFF-20260729"],
       "resolution_rule": "Require timestamp and counting-method reconciliation before treating this as a same-time conflict."
+    },
+    {
+      "record_id": "CON-003",
+      "title": "Competing repository control surfaces",
+      "classification": "INCOMPLETE",
+      "status": "PENDING_VERIFICATION",
+      "description": "Repository scan identified duplicate status vocabularies, split Crisis Liturgies namespaces, duplicate evidence registers, and multiple platform or engine control surfaces.",
+      "source_refs": ["SRC-LETTA-HANDOFF-20260729"],
+      "resolution_rule": "Do not consolidate or infer precedence; verify project-local and current governing records first."
     }
   ]
 }
