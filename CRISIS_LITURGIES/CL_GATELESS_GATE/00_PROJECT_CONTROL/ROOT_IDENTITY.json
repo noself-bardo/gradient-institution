@@ -1,9 +1,9 @@
 {
   "registry_id": "TG-CL-GG-ROOT-001",
   "record_type": "canonical_project_root",
-  "record_version": "1.2",
+  "record_version": "1.3",
   "registered_at": "2026-07-29T17:13:13-04:00",
-  "reconciled_at": "2026-07-29T19:26:52-04:00",
+  "reconciled_at": "2026-07-29T19:40:00-04:00",
   "project": {
     "program": "Crisis Liturgies",
     "name": "The Gateless Gate",
@@ -44,8 +44,11 @@
       "pull_request_number": 7,
       "source_commit": "09b0161d25752da253d5e9fec8a5b8abb96de3bc",
       "merge_commit": "514346c826ab8d39dd3da8182534c1ef79e6443b",
+      "reconciliation_pull_request": "https://github.com/noself-bardo/gradient-institution/pull/8",
+      "reconciliation_pull_request_number": 8,
+      "reconciliation_merge_commit": "6802f001134d5f445ddf20313936fb87df4f7111",
       "root_marker_path": "CRISIS_LITURGIES/CL_GATELESS_GATE/00_PROJECT_CONTROL/ROOT_IDENTITY.json",
-      "root_marker_blob_sha_before_reconciliation": "f6f9cde9b9aab047050f382225b08f48ba003aae"
+      "root_marker_blob_sha_observed_at_preflight": "c1cd8055a582b768965fe61c5bc4b7e7c942a1e2"
     },
     "materialization_hold": "RESOLVED"
   },
@@ -56,10 +59,19 @@
     "size_bytes": 54059837,
     "case_19_custody_state": "VALIDATED"
   },
+  "compiler_preflight": {
+    "receipt_id": "CL-COMPILER-PREFLIGHT-001",
+    "performed_at": "2026-07-29T19:40:00-04:00",
+    "mode": "READ_ONLY",
+    "result": "PASS_WITH_CARRIED_HOLDS",
+    "operational_compiler_launched": false,
+    "production_actions_performed": false
+  },
   "authority_state": {
     "root_state": "REGISTERED_AND_MATERIALIZED",
-    "compiler_preflight": "NOT_RUN_NOT_AUTHORIZED",
-    "compiler_state": "NOT_LAUNCHED",
+    "recovery_architecture": "CLOSED_COMPLETE",
+    "compiler_preflight": "PASS_WITH_CARRIED_HOLDS",
+    "compiler_state": "NOT_IMPLEMENTED_NOT_LAUNCHED",
     "manufacturing_eligibility": "NOT_ELIGIBLE",
     "production_authority": "CLOSED",
     "image_generation_authorization": "NOT_GRANTED",
@@ -72,10 +84,12 @@
     "allowed_now": [
       "root identity records",
       "control receipts",
-      "validated recovery packages"
+      "validated recovery packages",
+      "architecture recovery closeout records"
     ],
     "not_authorized_by_this_record": [
       "compiler implementation",
+      "pipeline-proof manufacturing",
       "source transformation",
       "artifact generation",
       "page composition",
