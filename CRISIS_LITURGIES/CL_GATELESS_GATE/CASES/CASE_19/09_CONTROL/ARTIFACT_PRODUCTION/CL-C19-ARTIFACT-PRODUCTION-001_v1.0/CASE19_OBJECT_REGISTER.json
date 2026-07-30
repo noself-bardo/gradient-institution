@@ -1,0 +1,37 @@
+{
+  "register_id": "CL-GG-C19-OBJECT-REGISTER-001",
+  "case_id": "CASE_19",
+  "objects": [
+    {
+      "object_id": "CL-GG-C19-OBJ-001",
+      "name": "Floor plank with arrow cut-through",
+      "definition": "An ordinary load-bearing floor plank whose directional arrow is physically removed from the substance of the board.",
+      "required_views": [
+        {
+          "view_id": "FULL_EVIDENCE",
+          "path": "02_FORENSIC_MASTERS/CL_GG_C19_ARTIFACT_FULL_EVIDENCE_v1.0.png",
+          "state": "FOUNDER_REVIEW_CANDIDATE"
+        },
+        {
+          "view_id": "CONSTRUCTION",
+          "path": "02_FORENSIC_MASTERS/CL_GG_C19_ARTIFACT_CONSTRUCTION_VIEW_v1.0.png",
+          "state": "FOUNDER_REVIEW_CANDIDATE"
+        },
+        {
+          "view_id": "MACRO_INTERVENTION",
+          "path": "02_FORENSIC_MASTERS/CL_GG_C19_ARTIFACT_MACRO_INTERVENTION_v1.0.png",
+          "state": "FOUNDER_REVIEW_CANDIDATE"
+        }
+      ],
+      "visual_constraints": [
+        "black-and-white forensic photography",
+        "material texture and construction legible",
+        "arrow is negative space cut completely through the plank",
+        "no typography or page design",
+        "no road, signpost, landscape, footprints, horizon, or mystical path",
+        "no icon, vector, diagram, illustration, badge, or clip art substitution"
+      ],
+      "assembly_state": "PROHIBITED_UNTIL_FOUNDER_APPROVED"
+    }
+  ]
+}
