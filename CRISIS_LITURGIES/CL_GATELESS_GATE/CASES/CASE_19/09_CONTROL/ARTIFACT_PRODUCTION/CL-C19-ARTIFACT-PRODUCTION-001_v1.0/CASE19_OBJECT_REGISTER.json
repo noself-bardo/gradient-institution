@@ -10,17 +10,17 @@
         {
           "view_id": "FULL_EVIDENCE",
           "path": "02_FORENSIC_MASTERS/CL_GG_C19_ARTIFACT_FULL_EVIDENCE_v1.0.png",
-          "state": "FOUNDER_REVIEW_CANDIDATE"
+          "state": "FOUNDER_APPROVED"
         },
         {
           "view_id": "CONSTRUCTION",
           "path": "02_FORENSIC_MASTERS/CL_GG_C19_ARTIFACT_CONSTRUCTION_VIEW_v1.0.png",
-          "state": "FOUNDER_REVIEW_CANDIDATE"
+          "state": "FOUNDER_APPROVED"
         },
         {
           "view_id": "MACRO_INTERVENTION",
           "path": "02_FORENSIC_MASTERS/CL_GG_C19_ARTIFACT_MACRO_INTERVENTION_v1.0.png",
-          "state": "FOUNDER_REVIEW_CANDIDATE"
+          "state": "FOUNDER_APPROVED"
         }
       ],
       "visual_constraints": [
@@ -31,7 +31,7 @@
         "no road, signpost, landscape, footprints, horizon, or mystical path",
         "no icon, vector, diagram, illustration, badge, or clip art substitution"
       ],
-      "assembly_state": "PROHIBITED_UNTIL_FOUNDER_APPROVED"
+      "assembly_state": "ONE_BOUNDED_ASSEMBLY_REVISION_COMPLETED_FOUNDER_REVIEW_REQUIRED"
     }
   ]
 }
