@@ -1,0 +1,124 @@
+{
+  "registry_id": "TG-CL-GG-ROOT-001",
+  "record_type": "canonical_project_root",
+  "record_version": "1.4",
+  "registered_at": "2026-07-29T17:13:13-04:00",
+  "reconciled_at": "2026-07-29T20:00:51-04:00",
+  "project": {
+    "program": "Crisis Liturgies",
+    "name": "The Gateless Gate",
+    "project_key": "CL_GATELESS_GATE",
+    "notion_project_page_id": "3a6deaca-b3a5-811f-9aaf-c922873b73c0",
+    "notion_project_page_url": "https://app.notion.com/p/3a6deacab3a5811f9aafc922873b73c0"
+  },
+  "persistent_root": {
+    "primary_authority": "GOOGLE_DRIVE",
+    "logical_path": "The Gradient/CRISIS_LITURGIES/CL_GATELESS_GATE",
+    "folder_id": "1yrKBoy4TxdbB9HP2bVEHB3TiiBzUpQzq",
+    "canonical_uri": "https://drive.google.com/drive/folders/1yrKBoy4TxdbB9HP2bVEHB3TiiBzUpQzq",
+    "control_folder": {
+      "logical_path": "The Gradient/CRISIS_LITURGIES/CL_GATELESS_GATE/00_PROJECT_CONTROL",
+      "folder_id": "1NqWF9hZDgByUJnNjwH6DNGyjQHD6PyM4",
+      "uri": "https://drive.google.com/drive/folders/1NqWF9hZDgByUJnNjwH6DNGyjQHD6PyM4"
+    },
+    "parent_program_root": {
+      "folder_id": "1TLqSYf3IQc4-WFgsntNBiOzZM3BL7KL9",
+      "uri": "https://drive.google.com/drive/folders/1TLqSYf3IQc4-WFgsntNBiOzZM3BL7KL9"
+    },
+    "institution_root": {
+      "folder_id": "1TX3Mqp3VadSlWuitS6UcA-HRciXHzO9B",
+      "uri": "https://drive.google.com/drive/folders/1TX3Mqp3VadSlWuitS6UcA-HRciXHzO9B"
+    }
+  },
+  "executable_namespace": {
+    "primary_authority": "GITHUB",
+    "repository": "noself-bardo/gradient-institution",
+    "branch": "main",
+    "relative_path": "CRISIS_LITURGIES/CL_GATELESS_GATE",
+    "canonical_uri": "https://github.com/noself-bardo/gradient-institution/tree/main/CRISIS_LITURGIES/CL_GATELESS_GATE",
+    "registered_local_replica": "C:\\Users\\steve\\Projects\\gradient-institution\\CRISIS_LITURGIES\\CL_GATELESS_GATE",
+    "materialization_state": "MATERIALIZED",
+    "materialized_at": "2026-07-29T19:23:57-04:00",
+    "materialization_evidence": {
+      "pull_request": "https://github.com/noself-bardo/gradient-institution/pull/7",
+      "pull_request_number": 7,
+      "source_commit": "09b0161d25752da253d5e9fec8a5b8abb96de3bc",
+      "merge_commit": "514346c826ab8d39dd3da8182534c1ef79e6443b",
+      "reconciliation_pull_request": "https://github.com/noself-bardo/gradient-institution/pull/8",
+      "reconciliation_pull_request_number": 8,
+      "reconciliation_merge_commit": "6802f001134d5f445ddf20313936fb87df4f7111",
+      "root_marker_path": "CRISIS_LITURGIES/CL_GATELESS_GATE/00_PROJECT_CONTROL/ROOT_IDENTITY.json",
+      "root_marker_blob_sha_observed_at_preflight": "c1cd8055a582b768965fe61c5bc4b7e7c942a1e2"
+    },
+    "materialization_hold": "RESOLVED"
+  },
+  "relative_case_contract": "CASES/CASE_19/{00_SOURCE,01_SPECIFICATION,02_ARTIFACT,03_TRANSCRIPTION,04_COPY,05_SVG_TEXT,06_LAYOUT,07_PROOFS,08_EXPORTS,09_CONTROL}",
+  "recovery_receipt": {
+    "filename": "CL-ARCH-RECOVERY-001_RETURN_v1.1.zip",
+    "sha256": "6d4b1d7d44ae8e68f488360d96d74e377e0ee35748af79d4d2bfb442b12dc872",
+    "size_bytes": 54059837,
+    "case_19_custody_state": "VALIDATED"
+  },
+  "compiler_preflight": {
+    "receipt_id": "CL-COMPILER-PREFLIGHT-001",
+    "performed_at": "2026-07-29T19:40:00-04:00",
+    "mode": "READ_ONLY",
+    "result": "PASS_WITH_CARRIED_HOLDS",
+    "operational_compiler_launched": false,
+    "production_actions_performed": false
+  },
+  "authority_state": {
+    "root_state": "REGISTERED_AND_MATERIALIZED",
+    "recovery_architecture": "CLOSED_COMPLETE",
+    "compiler_preflight": "PASS_WITH_CARRIED_HOLDS",
+    "compiler_state": "READINESS_COMPILER_IMPLEMENTED",
+    "manufacturing_eligibility": "NOT_ELIGIBLE",
+    "production_authority": "CLOSED",
+    "image_generation_authorization": "NOT_GRANTED",
+    "layout_authorization": "NOT_GRANTED",
+    "render_authorization": "NOT_GRANTED",
+    "publication_authorization": "NOT_GRANTED",
+    "archive_admission": "NOT_GRANTED"
+  },
+  "boundary": {
+    "allowed_now": [
+      "root identity records",
+      "control receipts",
+      "validated recovery packages",
+      "architecture recovery closeout records",
+      "Case 19 control-plane pipeline proof records"
+    ],
+    "not_authorized_by_this_record": [
+      "source transformation",
+      "artifact generation",
+      "page composition",
+      "layout",
+      "rendering",
+      "publication",
+      "archive admission",
+      "image generation",
+      "final copy",
+      "SVG typography",
+      "scaling beyond Case 19"
+    ],
+    "legacy_roots": "PRESERVED_IN_PLACE / NON_AUTHORITATIVE_FOR_NEW_GATLESS_GATE_WORK"
+  },
+  "pipeline_proof": {
+    "proof_id": "CL-C19-PIPELINE-PROOF-001",
+    "authorized_at": "2026-07-29T20:00:00-04:00",
+    "mode": "READINESS_ONLY_NO_ASSEMBLY",
+    "result": "PIPELINE_PROOF_PASS_FAIL_CLOSED",
+    "receipt_sha256": "57440ebf7d4cb3c9af93b7f5d85568eb4689691dfa413ac07decbd56af334619",
+    "clean_room_result": "PASS",
+    "registered_assets_verified": 14,
+    "blocked_components": [
+      "CASE19-ARTIFACT-MASTER",
+      "CASE19-ARTIFACT-REVIEW",
+      "CASE19-COPY",
+      "CASE19-SVG-TEXT",
+      "CASE19-LAYOUT"
+    ],
+    "founder_review_gate": "READY",
+    "repository_path": "CRISIS_LITURGIES/CL_GATELESS_GATE/00_PROJECT_CONTROL/PIPELINE_PROOFS/CL-C19-PIPELINE-PROOF-001"
+  }
+}

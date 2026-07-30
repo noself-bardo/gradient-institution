@@ -1,0 +1,73 @@
+{
+  "receipt_id": "CL-COMPILER-PREFLIGHT-001",
+  "receipt_version": "1.0",
+  "performed_at": "2026-07-29T19:40:00-04:00",
+  "mode": "READ_ONLY",
+  "scope": "Architecture recovery closeout only",
+  "root_record": "TG-CL-GG-ROOT-001",
+  "repository": {
+    "name": "noself-bardo/gradient-institution",
+    "branch": "main",
+    "relative_path": "CRISIS_LITURGIES/CL_GATELESS_GATE",
+    "root_marker_path": "CRISIS_LITURGIES/CL_GATELESS_GATE/00_PROJECT_CONTROL/ROOT_IDENTITY.json",
+    "root_marker_blob_sha_observed": "c1cd8055a582b768965fe61c5bc4b7e7c942a1e2",
+    "materialization_state": "MATERIALIZED",
+    "write_permission_observed": true
+  },
+  "persistent_control_root": {
+    "provider": "GOOGLE_DRIVE",
+    "folder_id": "1NqWF9hZDgByUJnNjwH6DNGyjQHD6PyM4",
+    "recovery_package_present": true,
+    "root_identity_v1_2_present": true,
+    "root_manifest_v1_2_present": true
+  },
+  "external_records": {
+    "notion_root_page_id": "3a6deaca-b3a5-811f-9aaf-c922873b73c0",
+    "notion_case_19_page_id": "3a6deaca-b3a5-8197-8ee4-e1c886c16644",
+    "notion_production_page_id": "3a6deaca-b3a5-816c-9534-eb0b3e0bea2a",
+    "materialization_state_agrees": true,
+    "case_19_custody_state_agrees": true,
+    "production_authority_agrees": true
+  },
+  "recovery_package": {
+    "filename": "CL-ARCH-RECOVERY-001_RETURN_v1.1.zip",
+    "expected_sha256": "6d4b1d7d44ae8e68f488360d96d74e377e0ee35748af79d4d2bfb442b12dc872",
+    "observed_sha256": "6d4b1d7d44ae8e68f488360d96d74e377e0ee35748af79d4d2bfb442b12dc872",
+    "checksum_match": true,
+    "baseline_validator": "PASS",
+    "clean_room_result": "CLEAN_ROOM_CUSTODY_VALIDATED",
+    "negative_tests": {
+      "missing_file": "FAIL_CLOSED",
+      "modified_file": "FAIL_CLOSED",
+      "unregistered_file": "FAIL_CLOSED",
+      "broken_recovered_source_link": "FAIL_CLOSED",
+      "illegal_authority_advance": "FAIL_CLOSED",
+      "illegal_case_state_advance": "FAIL_CLOSED"
+    }
+  },
+  "entry_conditions": {
+    "case_19_custody_reconciled": "SATISFIED",
+    "canonical_persistent_root": "SATISFIED",
+    "executable_namespace_materialized": "SATISFIED",
+    "external_record_agreement": "SATISFIED",
+    "production_authority": "CLOSED"
+  },
+  "ruling": "PASS_WITH_CARRIED_HOLDS",
+  "carried_holds": [
+    {
+      "id": "HOLD-HISTORICAL-RASTERIZATION-COMMAND",
+      "effect": "The recovered page-06.jpg remains the controlling immutable intermediate; byte-for-byte re-derivation from the PDF is not claimed."
+    },
+    {
+      "id": "HOLD-OPERATIONAL-COMPILER-NOT-IMPLEMENTED",
+      "effect": "A separate authorization and lane are required before compiler implementation or pipeline proof."
+    },
+    {
+      "id": "HOLD-PRODUCTION-AUTHORITY-CLOSED",
+      "effect": "No source transformation, artifact generation, copy, page composition, layout, rendering, publication, or archive admission may occur."
+    }
+  ],
+  "creative_actions_performed": [],
+  "operational_compiler_launched": false,
+  "production_actions_performed": false
+}

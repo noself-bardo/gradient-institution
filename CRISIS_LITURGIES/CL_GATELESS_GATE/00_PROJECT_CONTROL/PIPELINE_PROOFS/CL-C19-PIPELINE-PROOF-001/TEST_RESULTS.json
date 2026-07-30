@@ -1,0 +1,36 @@
+{
+  "baseline_receipt_sha256": "57440ebf7d4cb3c9af93b7f5d85568eb4689691dfa413ac07decbd56af334619",
+  "clean_room_receipt_sha256": "57440ebf7d4cb3c9af93b7f5d85568eb4689691dfa413ac07decbd56af334619",
+  "proof_id": "CL-C19-PIPELINE-PROOF-001",
+  "result": "PASS",
+  "tests": [
+    {
+      "result": "PASS",
+      "test": "baseline"
+    },
+    {
+      "result": "PASS",
+      "test": "deterministic_receipt"
+    },
+    {
+      "result": "PASS",
+      "test": "correct_missing_component_block"
+    },
+    {
+      "result": "PASS",
+      "test": "illegal_authority_advance"
+    },
+    {
+      "result": "PASS",
+      "test": "illegal_assembly_advance"
+    },
+    {
+      "result": "PASS",
+      "test": "checksum_tamper"
+    },
+    {
+      "result": "PASS",
+      "test": "clean_room"
+    }
+  ]
+}

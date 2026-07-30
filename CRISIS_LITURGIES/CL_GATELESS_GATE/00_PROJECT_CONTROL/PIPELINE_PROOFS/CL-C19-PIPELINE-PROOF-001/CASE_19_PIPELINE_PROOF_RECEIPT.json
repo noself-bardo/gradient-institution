@@ -1,0 +1,162 @@
+{
+  "assembly_attempted": false,
+  "authorization_id": "CL-C19-PIPELINE-PROOF-AUTH-001",
+  "blocked_components": [
+    {
+      "component_id": "CASE19-ARTIFACT-MASTER",
+      "label": "Standalone editable artifact master",
+      "observed_state": "NOT_CREATED",
+      "present": false,
+      "required_state": "FOUNDER_APPROVED"
+    },
+    {
+      "component_id": "CASE19-ARTIFACT-REVIEW",
+      "label": "Artifact review render",
+      "observed_state": "NOT_CREATED",
+      "present": false,
+      "required_state": "FOUNDER_APPROVED"
+    },
+    {
+      "component_id": "CASE19-COPY",
+      "label": "Editable approved four-page copy",
+      "observed_state": "NOT_CREATED",
+      "present": false,
+      "required_state": "FOUNDER_APPROVED"
+    },
+    {
+      "component_id": "CASE19-SVG-TEXT",
+      "label": "Separate editable SVG typography layers",
+      "observed_state": "NOT_CREATED",
+      "present": false,
+      "required_state": "FOUNDER_APPROVED"
+    },
+    {
+      "component_id": "CASE19-LAYOUT",
+      "label": "Case-specific editable layout specification",
+      "observed_state": "NOT_CREATED",
+      "present": false,
+      "required_state": "FOUNDER_APPROVED"
+    }
+  ],
+  "case_id": "CASE_19",
+  "case_title": "Ordinary Mind Is the Way",
+  "compiler_mode": "READINESS_ONLY_NO_ASSEMBLY",
+  "creative_actions_performed": [],
+  "custody_checks": [
+    {
+      "asset_id": "CLGG-C19-001",
+      "bytes": 23986,
+      "sha256": "9c884c998107aae60bb6222db250a09824614d51b1461bccc42568d464439b95",
+      "status": "VERIFIED"
+    },
+    {
+      "asset_id": "CLGG-C19-002",
+      "bytes": 17371,
+      "sha256": "f36e46522206ea970542f341e88a84938c2205c7cd1983dbcd804ea02e68fbec",
+      "status": "VERIFIED"
+    },
+    {
+      "asset_id": "CLGG-C19-003",
+      "bytes": 5956077,
+      "sha256": "f202dec91cefea57586f174616c4254092eae68ae7638fd2431db66741d37494",
+      "status": "VERIFIED"
+    },
+    {
+      "asset_id": "CLGG-C19-004",
+      "bytes": 58769,
+      "sha256": "a47959c25e2fddde46a8c15ed439d835dcd686d97bdc3e68caaa9a5cbc21db04",
+      "status": "VERIFIED"
+    },
+    {
+      "asset_id": "CLGG-C19-005",
+      "bytes": 6712233,
+      "sha256": "6bd9552fe9d2b8fa4296922e02985480051d571527fbc7e79e589e5f7fc52b69",
+      "status": "VERIFIED"
+    },
+    {
+      "asset_id": "CLGG-C19-006",
+      "bytes": 58436,
+      "sha256": "40e0bea8bf496a6d28f317533646bf719619f7cabf0545b7d1ce2ca5d4711865",
+      "status": "VERIFIED"
+    },
+    {
+      "asset_id": "CLGG-C19-007",
+      "bytes": 4071858,
+      "sha256": "3162a7d1614a2b63c153a053e0e1e4f16daa4947e7d8b2be36bc9f50483f2f99",
+      "status": "QUARANTINED"
+    },
+    {
+      "asset_id": "CLGG-C19-008",
+      "bytes": 211113,
+      "sha256": "e4c71d3208dce8c8fbccaa0bd3519aa00a848eaf7c1601a81f6b4533d47f30b7",
+      "status": "VERIFIED"
+    },
+    {
+      "asset_id": "CLGG-C19-009",
+      "bytes": 3068356,
+      "sha256": "4c99e8aa63bb6f3932f3530fc59b9e8b2ed3db31d1e3e238ce4258616f0e34dc",
+      "status": "VERIFIED"
+    },
+    {
+      "asset_id": "CLGG-C19-010",
+      "bytes": 922920,
+      "sha256": "9532107d0ee96bd2ca7d34e2bb8eda1e4ca276d44598942355e38a8ad2c0bdcc",
+      "status": "VERIFIED"
+    },
+    {
+      "asset_id": "CLGG-C19-011",
+      "bytes": 926689,
+      "sha256": "ce5efe26401f4c3bce132f62281017ceed620aec3c4d48ab7d6bc395d27c54ed",
+      "status": "VERIFIED"
+    },
+    {
+      "asset_id": "CLGG-C19-012",
+      "bytes": 939662,
+      "sha256": "277975101c8e6c4093c84c9e37d3a91e8cb110f5b946f6860e86debede347e98",
+      "status": "VERIFIED"
+    },
+    {
+      "asset_id": "CLGG-C19-013",
+      "bytes": 12012,
+      "sha256": "e477c0cee27f9e9dcd86d6fbfaef015367ef8aa379b52a5fb365be3d62f5a4a4",
+      "status": "VERIFIED"
+    },
+    {
+      "asset_id": "CLGG-C19-014",
+      "bytes": 165520,
+      "sha256": "8fd4754f061d9713c742e44f09c36843510f79ddfd865203e2e81ce5190ee7e9",
+      "status": "VERIFIED"
+    }
+  ],
+  "founder_review_gate": "READY",
+  "frozen_specification": {
+    "sha256": "3f8188e9d48c2ba1ff80656a2eca8bb0127c9c243b37a3e2257e383449e90b10",
+    "state": "FOUNDER_APPROVED_METHOD_ANCHOR"
+  },
+  "manufacturing_eligibility": "NOT_ELIGIBLE",
+  "production_gates": {
+    "archive_admission": "NOT_GRANTED",
+    "artifact_generation": "NOT_GRANTED",
+    "final_copy": "NOT_GRANTED",
+    "image_generation": "NOT_GRANTED",
+    "layout": "NOT_GRANTED",
+    "page_composition": "NOT_GRANTED",
+    "pipeline_proof_control_plane": "GRANTED",
+    "publication": "NOT_GRANTED",
+    "rendering": "NOT_GRANTED",
+    "svg_typography": "NOT_GRANTED",
+    "transcription_transformation": "NOT_GRANTED"
+  },
+  "proof_id": "CL-C19-PIPELINE-PROOF-001",
+  "ready_components": [
+    "CASE19-SPECIFICATION",
+    "CASE19-SOURCE-CUSTODY",
+    "CASE19-TRANSCRIPTION-INCISED"
+  ],
+  "recommended_disposition": "ACCEPT_PIPELINE_PROOF_AND_OPEN_BOUNDED_COMPONENT_PRODUCTION",
+  "ruling": "PIPELINE_PROOF_PASS_FAIL_CLOSED",
+  "source_packet": {
+    "registered_assets_verified": 14,
+    "sha256": "99432578a3d8f61f53a8aeababb7680bf712bb9622955212ce6ef6ad8a667402"
+  }
+}
