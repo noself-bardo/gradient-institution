@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thegradient.example/schemas/cl-gg-case-production-record-v1.0.json",
+  "title": "Gateless Gate case production record",
+  "type": "object",
+  "required": [
+    "case_id",
+    "canonical_destination",
+    "authority",
+    "source_custody",
+    "specification",
+    "witness",
+    "objects",
+    "components",
+    "assembly",
+    "qc",
+    "state"
+  ],
+  "properties": {
+    "case_id": {"type": "string", "pattern": "^CASE_[0-9]{2}$"},
+    "canonical_destination": {"type": "string", "pattern": "^CASES/CASE_[0-9]{2}$"},
+    "authority": {
+      "type": "object",
+      "required": ["authorized_stage", "remaining_stages"],
+      "properties": {
+        "authorized_stage": {"type": "string"},
+        "remaining_stages": {"type": "string", "const": "CLOSED"}
+      }
+    },
+    "source_custody": {
+      "type": "object",
+      "required": ["state", "manifest_sha256"],
+      "properties": {
+        "state": {"enum": ["VALIDATED", "HOLD"]},
+        "manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "specification": {
+      "type": "object",
+      "required": ["state", "sha256"],
+      "properties": {
+        "state": {"enum": ["FROZEN", "HOLD"]},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "witness": {
+      "type": "object",
+      "required": ["state"],
+      "properties": {
+        "state": {"enum": ["VERIFIED_SOURCE_LOCKED", "WITNESS_ABSENT", "HOLD"]},
+        "sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "objects": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["object_id", "definition", "views", "founder_disposition"],
+        "properties": {
+          "object_id": {"type": "string", "minLength": 1},
+          "definition": {"type": "string", "minLength": 1},
+          "views": {
+            "type": "object",
+            "required": ["full_evidence", "alternate_or_construction", "macro_or_detail"],
+            "properties": {
+              "full_evidence": {"$ref": "#/$defs/view"},
+              "alternate_or_construction": {"$ref": "#/$defs/viewOrException"},
+              "macro_or_detail": {"$ref": "#/$defs/viewOrException"}
+            }
+          },
+          "founder_disposition": {"enum": ["PENDING", "APPROVED", "PATCH", "REJECTED"]}
+        }
+      }
+    },
+    "components": {
+      "type": "object",
+      "required": ["copy", "svg_typography", "layout", "provenance"],
+      "properties": {
+        "copy": {"enum": ["MISSING", "CANDIDATE", "APPROVED"]},
+        "svg_typography": {"enum": ["MISSING", "CANDIDATE", "APPROVED"]},
+        "layout": {"enum": ["MISSING", "CANDIDATE", "APPROVED"]},
+        "provenance": {"enum": ["MISSING", "COMPLETE"]}
+      }
+    },
+    "assembly": {
+      "type": "object",
+      "required": ["state", "pages", "text_is_editable", "artifact_layers_are_separate"],
+      "properties": {
+        "state": {"enum": ["NOT_AUTHORIZED", "AUTHORIZED", "COMPLETE"]},
+        "pages": {"type": "integer", "minimum": 0, "maximum": 4},
+        "text_is_editable": {"type": "boolean"},
+        "artifact_layers_are_separate": {"type": "boolean"}
+      }
+    },
+    "qc": {
+      "type": "object",
+      "required": ["structural", "rendered_visual", "true_polarity_reviewed"],
+      "properties": {
+        "structural": {"enum": ["NOT_RUN", "PASS", "FAIL"]},
+        "rendered_visual": {"enum": ["NOT_RUN", "PASS", "FAIL"]},
+        "true_polarity_reviewed": {"type": "boolean"}
+      }
+    },
+    "state": {"type": "string"}
+  },
+  "$defs": {
+    "view": {
+      "type": "object",
+      "required": ["state", "filename", "sha256"],
+      "properties": {
+        "state": {"enum": ["CANDIDATE", "FOUNDER_APPROVED"]},
+        "filename": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "contains_typography": {"type": "boolean", "const": false},
+        "role": {"enum": ["PRIMARY_FORENSIC_MASTER"]}
+      }
+    },
+    "viewOrException": {
+      "oneOf": [
+        {"$ref": "#/$defs/view"},
+        {
+          "type": "object",
+          "required": ["state", "justification", "founder_approved"],
+          "properties": {
+            "state": {"const": "NOT_APPLICABLE"},
+            "justification": {"type": "string", "minLength": 1},
+            "founder_approved": {"type": "boolean", "const": true}
+          }
+        }
+      ]
+    }
+  }
+}
