@@ -1,0 +1,26 @@
+{
+  "artifact_lane": "CL-C19-ARTIFACT-PRODUCTION-001",
+  "founder_approval": {
+    "state": "APPROVED",
+    "received": "2026-07-30",
+    "scope": "isolated Case 19 forensic artifact set only"
+  },
+  "approved_masters": {
+    "full": {
+      "filename": "CL_GG_C19_ARTIFACT_FULL_EVIDENCE_v1.0.png",
+      "sha256": "d228bf38f30f098cf857d55f26fab57de0eba4c09bb84364ab394e6ee7cb5275"
+    },
+    "construction": {
+      "filename": "CL_GG_C19_ARTIFACT_CONSTRUCTION_VIEW_v1.0.png",
+      "sha256": "3cac991ac49c5493a183b3fa786b8134805cf1bce79a7905d5306c455981f67a"
+    },
+    "macro": {
+      "filename": "CL_GG_C19_ARTIFACT_MACRO_INTERVENTION_v1.0.png",
+      "sha256": "db504d9c0e4f8edd4ac4c6dba6f7d6ed453e85b86cdec84a19fae4615ebf333d"
+    }
+  },
+  "secondary_vector_plate": {
+    "filename": "CASE19_SECONDARY_VECTOR_PLATE_v1.1.svg",
+    "state": "SECONDARY_DIAGRAMMATIC_LAYER_ONLY"
+  }
+}
