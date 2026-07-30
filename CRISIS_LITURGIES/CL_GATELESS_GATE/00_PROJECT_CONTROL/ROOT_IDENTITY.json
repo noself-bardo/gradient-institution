@@ -1,9 +1,9 @@
 {
   "registry_id": "TG-CL-GG-ROOT-001",
   "record_type": "canonical_project_root",
-  "record_version": "1.7",
+  "record_version": "1.8",
   "registered_at": "2026-07-29T17:13:13-04:00",
-  "reconciled_at": "2026-07-30T09:05:07-04:00",
+  "reconciled_at": "2026-07-30T09:30:55-04:00",
   "project": {
     "program": "Crisis Liturgies",
     "name": "The Gateless Gate",
@@ -72,18 +72,18 @@
     "recovery_architecture": "CLOSED_COMPLETE",
     "compiler_preflight": "PASS_WITH_CARRIED_HOLDS",
     "compiler_state": "READINESS_COMPILER_IMPLEMENTED",
-    "manufacturing_eligibility": "BLOCKED_PENDING_CASE19_FORENSIC_ARTIFACT_APPROVAL",
-    "production_authority": "BOUNDED_CASE19_FORENSIC_ARTIFACT_SET_COMPLETE_FOUNDER_REVIEW_REQUIRED",
+    "manufacturing_eligibility": "PENDING_FOUNDER_REVIEW_CASE19_FORENSIC_ASSEMBLY_REVISION",
+    "production_authority": "BOUNDED_CASE19_FORENSIC_ASSEMBLY_REVISION_COMPLETE_FOUNDER_REVIEW_REQUIRED",
     "image_generation_authorization": "GRANTED_CASE19_FORENSIC_ARTIFACT_SET_COMPLETE",
-    "layout_authorization": "GRANTED_CASE19_SINGLE_REVIEW_PROOF_COMPLETE",
+    "layout_authorization": "GRANTED_CASE19_FORENSIC_ASSEMBLY_REVISION_COMPLETE",
     "render_authorization": "NOT_GRANTED",
     "publication_authorization": "NOT_GRANTED",
     "archive_admission": "NOT_GRANTED",
-    "artifact_component_authorization": "GRANTED_CASE19_FORENSIC_SET_COMPLETE_FOUNDER_REVIEW_REQUIRED",
+    "artifact_component_authorization": "GRANTED_CASE19_FORENSIC_SET_FOUNDER_APPROVED",
     "copy_authorization": "GRANTED_CASE19_PATCH_CANDIDATE_COMPLETE",
     "svg_typography_authorization": "GRANTED_CASE19_CANDIDATE_COMPLETE",
-    "component_review_render_authorization": "GRANTED_CASE19_SINGLE_REVIEW_PROOF_COMPLETE",
-    "page_assembly_authorization": "GRANTED_CASE19_SINGLE_REVIEW_PROOF_COMPLETE"
+    "component_review_render_authorization": "GRANTED_CASE19_FORENSIC_ASSEMBLY_REVISION_COMPLETE",
+    "page_assembly_authorization": "GRANTED_CASE19_FORENSIC_ASSEMBLY_REVISION_COMPLETE"
   },
   "boundary": {
     "allowed_now": [
@@ -95,10 +95,11 @@
       "Case 19 founder-review component candidates",
       "one Case 19 assembled founder-review proof",
       "one isolated Case 19 three-view forensic artifact set",
-      "mandatory forensic-artifact production contract and validator law"
+      "mandatory forensic-artifact production contract and validator law",
+      "one Case 19 forensic artifact assembly revision"
     ],
     "not_authorized_by_this_record": [
-      "inserting the Case 19 forensic artifact into page assembly before founder approval",
+      "additional Case 19 assembly beyond the completed forensic revision",
       "artifact production beyond the completed Case 19 three-view founder-review set",
       "source or transcription-witness transformation",
       "publication",
@@ -169,7 +170,7 @@
     "lane_id": "CL-C19-ARTIFACT-PRODUCTION-001",
     "authorized_at": "2026-07-30T08:45:00-04:00",
     "controlling_instruction": "Make it so and ensure that we are in the right lane for production.",
-    "result": "THREE_VIEW_FORENSIC_ARTIFACT_SET_COMPLETE_FOUNDER_REVIEW_REQUIRED",
+    "result": "THREE_VIEW_FORENSIC_ARTIFACT_SET_FOUNDER_APPROVED",
     "object_id": "CL-GG-C19-OBJ-001",
     "object_definition": "Ordinary load-bearing floor plank with a directional arrow physically removed from the substance of the board",
     "required_views": [
@@ -177,14 +178,37 @@
       "CONSTRUCTION",
       "MACRO_INTERVENTION"
     ],
-    "artifact_state": "FOUNDER_REVIEW_CANDIDATE",
-    "assembly_eligibility": "BLOCKED_PENDING_ARTIFACT_APPROVAL",
+    "artifact_state": "FOUNDER_APPROVED",
+    "assembly_eligibility": "ELIGIBLE_FOR_ONE_BOUNDED_ASSEMBLY_REVISION_COMPLETED",
     "prior_vector_plate": "SECONDARY_DIAGRAMMATIC_LAYER_ONLY",
     "production_contract_path": "CRISIS_LITURGIES/CL_GATELESS_GATE/00_PROJECT_CONTROL/PRODUCTION_CONTRACTS/MANDATORY_FORENSIC_ARTIFACT_STAGE_v1.0.md",
     "repository_control_path": "CRISIS_LITURGIES/CL_GATELESS_GATE/CASES/CASE_19/09_CONTROL/ARTIFACT_PRODUCTION/CL-C19-ARTIFACT-PRODUCTION-001_v1.0",
     "persistent_artifact_folder_id": "1iIK0FeR3OktzGy9Arjk2WToMQShvm6Kp",
     "persistent_artifact_folder_url": "https://drive.google.com/drive/folders/1iIK0FeR3OktzGy9Arjk2WToMQShvm6Kp",
     "packet_sha256": "21c55b0078b6fb6884dbb23c9bd636faba2cf524c3d99b65c12c2a3b555cd90f",
+    "founder_review_gate": "APPROVED"
+  },
+  "assembly_revision": {
+    "lane_id": "CL-C19-ASSEMBLY-REVISION-001",
+    "version": "1.0",
+    "authorized_at": "2026-07-30T09:30:55-04:00",
+    "controlling_instruction": "Make it so",
+    "result": "FOUR_PAGE_FORENSIC_ASSEMBLY_REVISION_COMPLETE_FOUNDER_REVIEW_REQUIRED",
+    "artifact_source": "CL-C19-ARTIFACT-PRODUCTION-001 / FOUNDER_APPROVED",
+    "page_1": "FULL_EVIDENCE_PRIMARY",
+    "page_2": "VECTOR_SECONDARY_NOTATION_ONLY",
+    "page_3": "CONSTRUCTION_VIEW_MATERIAL_COUNTEREVIDENCE",
+    "page_4": "MACRO_INTERVENTION_FORENSIC_RESIDUE",
+    "editable_svg_page_masters": 4,
+    "pdf_sha256": "c88c714e702876a71d3e1e94c6defa9a8cab5cc197cf4649aa303b041990f502",
+    "packet_sha256": "e1d733b6a4908010f60e30b2472b549b7eefaa4eb5d2c7c8016a51a38270cd8b",
+    "validation": "PASS_FAIL_CLOSED",
+    "negative_tests": "6_OF_6_PASS",
+    "persistent_proof_folder_id": "1u-U_J0Ky3gREXpOrTaljXAp89ajg_hj9",
+    "persistent_proof_folder_url": "https://drive.google.com/drive/folders/1u-U_J0Ky3gREXpOrTaljXAp89ajg_hj9",
+    "persistent_layout_folder_id": "17KZM38QqfTXHEB7w90Xrlj6hVCQ3tdYO",
+    "persistent_layout_folder_url": "https://drive.google.com/drive/folders/17KZM38QqfTXHEB7w90Xrlj6hVCQ3tdYO",
+    "repository_path": "CRISIS_LITURGIES/CL_GATELESS_GATE/CASES/CASE_19/09_CONTROL/ASSEMBLY_REVISIONS/CL-C19-ASSEMBLY-REVISION-001_v1.0",
     "founder_review_gate": "READY"
   }
 }
