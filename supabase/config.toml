@@ -1,0 +1,4 @@
+project_id = "gradient-institution"
+
+[storage.buckets.visual-systems-assets]
+public = false
