@@ -1,9 +1,9 @@
 {
   "registry_id": "TG-CL-GG-ROOT-001",
   "record_type": "canonical_project_root",
-  "record_version": "1.5",
+  "record_version": "1.6",
   "registered_at": "2026-07-29T17:13:13-04:00",
-  "reconciled_at": "2026-07-29T21:05:00-04:00",
+  "reconciled_at": "2026-07-29T23:36:00-04:00",
   "project": {
     "program": "Crisis Liturgies",
     "name": "The Gateless Gate",
@@ -72,18 +72,18 @@
     "recovery_architecture": "CLOSED_COMPLETE",
     "compiler_preflight": "PASS_WITH_CARRIED_HOLDS",
     "compiler_state": "READINESS_COMPILER_IMPLEMENTED",
-    "manufacturing_eligibility": "PENDING_FOUNDER_COMPONENT_REVIEW",
-    "production_authority": "BOUNDED_CASE19_COMPONENTS_COMPLETE_ASSEMBLY_CLOSED",
+    "manufacturing_eligibility": "PENDING_FOUNDER_ASSEMBLY_PROOF_REVIEW",
+    "production_authority": "BOUNDED_CASE19_PATCH_PROOF_COMPLETE_FOUNDER_REVIEW_REQUIRED",
     "image_generation_authorization": "NOT_GRANTED",
-    "layout_authorization": "GRANTED_CASE19_CANDIDATE_COMPLETE",
+    "layout_authorization": "GRANTED_CASE19_SINGLE_REVIEW_PROOF_COMPLETE",
     "render_authorization": "NOT_GRANTED",
     "publication_authorization": "NOT_GRANTED",
     "archive_admission": "NOT_GRANTED",
-    "artifact_component_authorization": "GRANTED_CASE19_CANDIDATE_COMPLETE",
-    "copy_authorization": "GRANTED_CASE19_CANDIDATE_COMPLETE",
+    "artifact_component_authorization": "GRANTED_CASE19_PATCH_CANDIDATE_COMPLETE",
+    "copy_authorization": "GRANTED_CASE19_PATCH_CANDIDATE_COMPLETE",
     "svg_typography_authorization": "GRANTED_CASE19_CANDIDATE_COMPLETE",
-    "component_review_render_authorization": "GRANTED_CASE19_CANDIDATE_COMPLETE",
-    "page_assembly_authorization": "NOT_GRANTED"
+    "component_review_render_authorization": "GRANTED_CASE19_SINGLE_REVIEW_PROOF_COMPLETE",
+    "page_assembly_authorization": "GRANTED_CASE19_SINGLE_REVIEW_PROOF_COMPLETE"
   },
   "boundary": {
     "allowed_now": [
@@ -92,16 +92,17 @@
       "validated recovery packages",
       "architecture recovery closeout records",
       "Case 19 control-plane pipeline proof records",
-      "Case 19 founder-review component candidates"
+      "Case 19 founder-review component candidates",
+      "one Case 19 assembled founder-review proof"
     ],
     "not_authorized_by_this_record": [
       "source or transcription-witness transformation",
-      "page composition or assembly",
       "additional artifact, copy, SVG, layout, or render production",
       "publication",
       "release",
       "archive or canon admission",
-      "scaling beyond Case 19"
+      "scaling beyond Case 19",
+      "additional page composition or assembly beyond the single Case 19 review proof"
     ],
     "legacy_roots": "PRESERVED_IN_PLACE / NON_AUTHORITATIVE_FOR_NEW_GATLESS_GATE_WORK"
   },
@@ -142,5 +143,23 @@
     "assembly_attempted": false,
     "founder_review_gate": "READY",
     "repository_path": "CRISIS_LITURGIES/CL_GATELESS_GATE/CASES/CASE_19/09_CONTROL/COMPONENT_PRODUCTION/CL-C19-COMPONENT-PRODUCTION-001"
+  },
+  "component_patch": {
+    "patch_id": "CL-C19-COMPONENT-PATCH-001",
+    "authorized_at": "2026-07-29T23:20:00-04:00",
+    "controlling_instruction": "PATCH_CASE19_COMPONENTS — REJECT ARTIFACT VISUAL; RESTORE BLACK/SILVER PAGE SYSTEM; COMPRESS PAGES 3–4; RETURN ONE FOUR-PAGE ASSEMBLED REVIEW PROOF",
+    "result": "PATCH_COMPLETE_FOUNDER_REVIEW_REQUIRED",
+    "prior_artifact_disposition": "REJECTED_RETAINED_AS_GEOMETRY_WIREFRAME",
+    "corrected_artifact_state": "FOUNDER_REVIEW_CANDIDATE",
+    "palette_state": "MATTE_BLACK_ARGENT_RESTORED",
+    "pages_3_4": "COMPRESSED",
+    "assembled_review_proof": "COMPLETE_ONE_FOUR_PAGE_PROOF",
+    "visual_qc": "PASS",
+    "image_generation_used": false,
+    "transcription_source": "UNTOUCHED_NOT_EMBEDDED",
+    "packet_zip_sha256": "b0c6c583977b75a2314f68dace28addf9365a3364b26330da7c7357cf65cff82",
+    "proof_pdf_sha256": "eeb43a0679abc7734e293bbe2996b80a18d03d29f958527c38b0dd5f1999fe2b",
+    "founder_review_gate": "READY",
+    "repository_path": "CRISIS_LITURGIES/CL_GATELESS_GATE/CASES/CASE_19/09_CONTROL/COMPONENT_PATCH/CL-C19-COMPONENT-PATCH-001"
   }
 }
