@@ -1,0 +1,27 @@
+{
+  "authorization_id": "CL-C19-PIPELINE-PROOF-AUTH-001",
+  "authorized_by": "Steven, Founder",
+  "authorized_on": "2026-07-29",
+  "controlling_instruction": "Approve, move me to the next gate.",
+  "authorized_scope": [
+    "Implement one deterministic Case 19 readiness compiler.",
+    "Verify registered custody assets and the frozen Case 19 specification.",
+    "Run baseline, negative, determinism, and clean-room tests.",
+    "Create and preserve proof code, receipts, manifests, and control records.",
+    "End at one founder review gate."
+  ],
+  "not_authorized": [
+    "Artifact or image generation",
+    "Source or transcription transformation",
+    "Final copy",
+    "SVG typography",
+    "Page composition or layout",
+    "Rendering or export",
+    "Publication or release",
+    "Archive admission",
+    "Any case other than Case 19"
+  ],
+  "production_authority": "CLOSED_EXCEPT_CONTROL_PLANE_PROOF",
+  "founder_review_required": true
+}
+

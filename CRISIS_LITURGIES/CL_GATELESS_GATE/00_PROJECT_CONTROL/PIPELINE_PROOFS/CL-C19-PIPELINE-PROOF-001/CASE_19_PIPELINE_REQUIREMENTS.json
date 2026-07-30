@@ -1,0 +1,107 @@
+{
+  "proof_id": "CL-C19-PIPELINE-PROOF-001",
+  "case_id": "CASE_19",
+  "case_title": "Ordinary Mind Is the Way",
+  "mode": "READINESS_ONLY_NO_ASSEMBLY",
+  "frozen_specification": {
+    "path": "nested/case19/02_PROTOTYPE/CASE_19_FOUR_PAGE_SPECIFICATION_v1.0.md",
+    "sha256": "3f8188e9d48c2ba1ff80656a2eca8bb0127c9c243b37a3e2257e383449e90b10",
+    "state": "FOUNDER_APPROVED_METHOD_ANCHOR"
+  },
+  "custody_requirements": {
+    "required_asset_ids": [
+      "CLGG-C19-001",
+      "CLGG-C19-002",
+      "CLGG-C19-003",
+      "CLGG-C19-004",
+      "CLGG-C19-005",
+      "CLGG-C19-006",
+      "CLGG-C19-008",
+      "CLGG-C19-009",
+      "CLGG-C19-010",
+      "CLGG-C19-011",
+      "CLGG-C19-012",
+      "CLGG-C19-013",
+      "CLGG-C19-014"
+    ],
+    "quarantined_asset_ids": [
+      "CLGG-C19-007"
+    ],
+    "approved_transcription_asset_id": "CLGG-C19-010",
+    "approved_transcription_authority_id": "AUTH-C19-TX-A-001"
+  },
+  "assembly_requirements": [
+    {
+      "component_id": "CASE19-SPECIFICATION",
+      "label": "Frozen four-page specification",
+      "required_state": "FOUNDER_APPROVED",
+      "observed_state": "FOUNDER_APPROVED",
+      "present": true
+    },
+    {
+      "component_id": "CASE19-SOURCE-CUSTODY",
+      "label": "Immutable source and custody graph",
+      "required_state": "VERIFIED",
+      "observed_state": "VERIFIED",
+      "present": true
+    },
+    {
+      "component_id": "CASE19-TRANSCRIPTION-INCISED",
+      "label": "Approved separate transcription derivative",
+      "required_state": "FOUNDER_APPROVED",
+      "observed_state": "FOUNDER_APPROVED",
+      "present": true
+    },
+    {
+      "component_id": "CASE19-ARTIFACT-MASTER",
+      "label": "Standalone editable artifact master",
+      "required_state": "FOUNDER_APPROVED",
+      "observed_state": "NOT_CREATED",
+      "present": false
+    },
+    {
+      "component_id": "CASE19-ARTIFACT-REVIEW",
+      "label": "Artifact review render",
+      "required_state": "FOUNDER_APPROVED",
+      "observed_state": "NOT_CREATED",
+      "present": false
+    },
+    {
+      "component_id": "CASE19-COPY",
+      "label": "Editable approved four-page copy",
+      "required_state": "FOUNDER_APPROVED",
+      "observed_state": "NOT_CREATED",
+      "present": false
+    },
+    {
+      "component_id": "CASE19-SVG-TEXT",
+      "label": "Separate editable SVG typography layers",
+      "required_state": "FOUNDER_APPROVED",
+      "observed_state": "NOT_CREATED",
+      "present": false
+    },
+    {
+      "component_id": "CASE19-LAYOUT",
+      "label": "Case-specific editable layout specification",
+      "required_state": "FOUNDER_APPROVED",
+      "observed_state": "NOT_CREATED",
+      "present": false
+    }
+  ],
+  "authority_gates": {
+    "pipeline_proof_control_plane": "GRANTED",
+    "artifact_generation": "NOT_GRANTED",
+    "image_generation": "NOT_GRANTED",
+    "transcription_transformation": "NOT_GRANTED",
+    "final_copy": "NOT_GRANTED",
+    "svg_typography": "NOT_GRANTED",
+    "page_composition": "NOT_GRANTED",
+    "layout": "NOT_GRANTED",
+    "rendering": "NOT_GRANTED",
+    "publication": "NOT_GRANTED",
+    "archive_admission": "NOT_GRANTED"
+  },
+  "expected_ruling": "PIPELINE_PROOF_PASS_FAIL_CLOSED",
+  "expected_manufacturing_eligibility": "NOT_ELIGIBLE"
+}
+
