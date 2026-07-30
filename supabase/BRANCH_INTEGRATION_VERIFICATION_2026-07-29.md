@@ -1,7 +1,7 @@
 # Systems Visualizer Branch Integration Recovery
 
 **Date:** 2026-07-29
-**Decision:** **RECOVERED LOCALLY; HOSTED TEST PENDING**
+**Decision:** **PUBLISHED; AUTOMATIC PREVIEW NOT TRIGGERED**
 
 The original local infrastructure commit `2b48733` was removed by automated
 workspace maintenance before it could be published. GitHub connectivity is now
@@ -59,6 +59,34 @@ prerequisites (`anon`, `authenticated`, and `service_role`).
 - Production data or Storage objects copied: **0**
 - Preview branch created: **0**
 
-The next action is the already-authorized publication and one automatic
-Supabase preview-branch verification. The preview must be deleted after evidence
-is captured, and work must stop before runtime-table design.
+## Publication result
+
+GitHub publication succeeded after the repository installation was repaired.
+
+- Remote branch: `implementation/systems-visualizer-baseline-integration`
+- Remote commit: `61524ce275d1cd5843f65a285d16f97644fe015f`
+- Parent: `c08b9ce672bdf9484c2905f4e4bc6daf641f9931`
+- Remote tree compared with the recovered local tree: **exact match**
+- GitHub statuses or workflow runs attached to the commit: **0**
+
+## Automatic preview result
+
+Supabase was checked repeatedly after publication. The project continued to
+report only its healthy production `main` branch. No preview branch corresponding
+to the Git branch was created.
+
+- Automatic preview branches created: **0**
+- Preview migrations applied: **0**
+- Preview Storage buckets created: **0**
+- Branch-compute billing started: **no**
+- Production changes: **0**
+
+This does not indicate a migration failure. It means the Git-to-Supabase
+automation did not trigger. Current Supabase documentation requires the
+repository to be connected under Project Settings > Integrations with Automatic
+branching enabled and the working directory set to the parent of `supabase/`
+(`.` for this repository).
+
+The hosted verification remains stopped before runtime-table design. Do not
+substitute a manually created branch for this test; the purpose is to verify the
+automatic Git integration path.
