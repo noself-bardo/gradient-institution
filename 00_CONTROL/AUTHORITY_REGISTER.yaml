@@ -19,5 +19,14 @@
     "locked wording without ratification evidence",
     "imported Letta Matrix"
   ],
-  "records": []
+  "records": [
+    {
+      "record_id": "AUTH-GATELESS-GATE-DELTA-20260729",
+      "subject": "The Gateless Gate repository-local control records",
+      "scope": "Project-local identity, recovery closeout, preflight, and Case 19 pipeline-proof gate only",
+      "current_effect": "The records establish a distinct project-local candidate and carry no institution-wide routing, production, publication, rendering, or archive-admission authority.",
+      "source_refs": ["SRC-GITHUB-MAIN-DELTA-20260729"],
+      "authority_limit": "Repository Orientation directs current institutional routing to the Notion Current-State Index; project-local production remains closed."
+    }
+  ]
 }

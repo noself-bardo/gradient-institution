@@ -3,10 +3,11 @@
   "audit_posture":"REPOSITORY-CONTROLLED CANDIDATE INDEX / NON-CONSTITUTIONAL / NON-EXECUTIVE",
   "direct_notion_pages_inspected":14,
   "direct_github_source_records":1,
-  "portfolio_candidate_rows":22,
+  "portfolio_candidate_rows":23,
   "directly_verified_fields":"limited to authority, location, and gate fields named in NOTION_SOURCE_INVENTORY and FINAL_SOURCE_LOCATION_REGISTER",
   "secondary_baseline_fields":"all remaining imported Letta Matrix claims",
   "inaccessible_evidence":["Google Drive asset custody","ChatGPT lane history"],
   "downgrade_rule":"No whole row is upgraded from a partial source read; unsupported current-status and next-gate claims remain imported candidates.",
-  "validated_separations":["Gradient program versus project-local gates","Crisis Liturgies program versus volume gates","The Container Never Bursts versus The Death of the Bit","persona identity versus independent agency","Notion presence versus general authority","repository absence versus institutional nonexistence"]
+  "validated_separations":["Gradient program versus project-local gates","Crisis Liturgies program versus volume gates","The Container Never Bursts versus The Death of the Bit","The Gateless Gate versus other Crisis Liturgies volumes and pipeline development","persona identity versus independent agency","Notion presence versus general authority","repository absence versus institutional nonexistence"],
+  "post_closure_main_delta":"Six main commits added 15 source files. Repository Orientation is a non-institutional routing pointer; The Gateless Gate is a distinct project-local volume and architecture-recovery workstream with production authority closed and a separate Case 19 founder review gate."
 }

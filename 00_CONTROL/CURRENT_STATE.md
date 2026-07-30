@@ -17,7 +17,7 @@ Before a candidate receives a current status, resolve authority in the ordered m
 ## Candidate posture
 
 - 17 legacy Letta records were imported as candidate source records.
-- Crisis Liturgies (`GRAD-009`) is represented by six boundary-preserving candidate records rather than one inherited parent status.
+- Crisis Liturgies (`GRAD-009`) is represented by six imported boundary-preserving candidate records, plus one separate direct repository candidate for The Gateless Gate; none inherits another record's status or gate.
 - Repository-native stable IDs remain unassigned pending verification and boundary review.
 
 ## Direct audit findings
@@ -26,3 +26,5 @@ Before a candidate receives a current status, resolve authority in the ordered m
 - The Current-State Index is the current primary routing surface. It identifies one active bounded institution-level observational experiment, GPD-001; constitutional-reduction implementation remains closed.
 - The Container Never Bursts is project-local. Its current Concept Control records Stage 09 candidate completion and Founder Gate 8 pending; no rendering, print, publication, or archive admission authority is implied.
 - The Death of the Bit remains separate from The Container Never Bursts. Its Phase 01 closure defers the special-volume profile and permits Phase 02 planning only.
+- Repository Orientation is a routing pointer only and explicitly defers institution-wide routing to the Current-State Index.
+- The Gateless Gate is a separately identified project-local volume and architecture-recovery workstream. Recovery closeout and read-only preflight do not authorize implementation, manufacturing, production, rendering, publication, or archive admission; its Case 19 proof has a separate project-local founder review gate.

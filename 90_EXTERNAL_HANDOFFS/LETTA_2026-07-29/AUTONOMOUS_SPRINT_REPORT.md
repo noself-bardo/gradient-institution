@@ -77,3 +77,13 @@ Excluded: the original Letta ZIP, extracted package, binary archives, credential
 - The final location register distinguishes repository absence from institutional absence and records Drive/ChatGPT dependencies.
 - Projected closure-commit census: 734 tracked files, consisting of 706 base files plus 28 audit-branch additions, with no base-file deletion.
 - PR #6 should be reviewed as non-authoritative audit infrastructure; validators alone are not merger authority.
+
+## Audit-branch refresh and delta reconciliation
+
+- Fetched `origin/main` from `de444af4aecc8f92c8aa6c4a500e9ecea9f8d5e3` to `c08b9ce672bdf9484c2905f4e4bc6daf641f9931`. The actual delta was six commits and 15 files, not the expected five commits/five control files.
+- Conflict-free merge commit: `66598d93d62ad920343a6b79b3644dfc1a47360d`. The 15 incoming `main` files were not edited on the audit branch.
+- `REPOSITORY_ORIENTATION.md` is explicitly a repository routing pointer, not an institutional index or competing constitutional control surface.
+- The Gateless Gate is directly identified as a distinct Crisis Liturgies project-local volume and architecture-recovery workstream. It has a registered root, closed recovery lane, read-only preflight with carried holds, and a Case 19-only founder review gate. It does not inherit or grant authority to The Container Never Bursts, The Death of the Bit, general pipeline work, production, rendering, publication, or archive admission.
+- Added `CAND-009G` as a direct-source candidate with no ratified repository-native identifier. The only limited supersession recorded is of three earlier administrative entry blockers; production authority remains closed.
+- Post-merge census: 706 original-base + 15 `main` additions + 28 audit additions = 749 tracked files; 51 are root-level and 698 are under top-level directories.
+- No new contradiction or Founder Decision Queue item was created. Founder Gate 8 remains the sole queue item. Notion, Google Drive, `main`, and the protected dirty checkout were not written or modified.

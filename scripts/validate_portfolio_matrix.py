@@ -25,7 +25,8 @@ def main() -> int:
         if candidate_id in ids:
             errors.append(f"duplicate candidate_id: {candidate_id}")
         ids.add(candidate_id)
-        legacy_ids.add(row.get("legacy_id"))
+        if row.get("legacy_id") is not None:
+            legacy_ids.add(row["legacy_id"])
         if row.get("status") not in statuses:
             errors.append(f"{candidate_id}: invalid status")
         for source_ref in row.get("source_refs", []):

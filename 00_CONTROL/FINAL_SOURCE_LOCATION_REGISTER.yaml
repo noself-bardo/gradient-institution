@@ -17,6 +17,7 @@
     {"name":"Crisis Liturgies","notion":"Crisis Liturgies Standalone Root","repository":"CRISIS_LITURGIES/","state":"LOCATED_SECONDARY_ONLY","authority":"project-local"},
     {"name":"The Container Never Bursts","notion":"3abdeaca-b3a5-8109-acc7-c6207619df02","repository":"Crisis Liturgies records","state":"LOCATED_AND_DIRECTLY_VERIFIED","authority":"project-local; Founder Gate 8 pending"},
     {"name":"The Death of the Bit","notion":"39cdeaca-b3a5-81e3-93d0-df5327e385f3","repository":"Crisis Liturgies deferred profile","state":"LOCATED_AND_DIRECTLY_VERIFIED","authority":"deferred special-volume profile; planning only"},
+    {"name":"The Gateless Gate","notion":"3a6deaca-b3a5-811f-9aaf-c922873b73c0","repository":"CRISIS_LITURGIES/CL_GATELESS_GATE/","state":"LOCATED_AND_DIRECTLY_VERIFIED","authority":"project-local root identity and architecture-recovery controls; current routing remains Notion; production remains closed"},
     {"name":"Moon Joe","notion":"382deaca-b3a5-81be-a0d6-d59fc9b3996a","repository":null,"state":"NOT_LOCATED_IN_REPOSITORY","authority":"working canon consolidation, not final publication canon"},
     {"name":"Marisol Vale / Inheritance Fieldwork","notion":"3a9deaca-b3a5-8198-bec4-f1f5c72ecd5a","repository":null,"state":"NOT_LOCATED_IN_REPOSITORY","authority":"internal development; public authority held"},
     {"name":"Institute for Social Reproduction","notion":"3a1deaca-b3a5-817b-b206-e82e36f9491f","repository":null,"state":"NOT_LOCATED_IN_REPOSITORY","authority":"ratified active limited scope"},

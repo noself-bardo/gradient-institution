@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "repository_commit": "de444af4aecc8f92c8aa6c4a500e9ecea9f8d5e3",
+  "repository_commit": "c08b9ce672bdf9484c2905f4e4bc6daf641f9931",
   "inspected_branch": "audit/letta-handoff-repository-baseline-20260729",
   "top_level_directories": [
-    {"path":"00_command_center","file_count":1,"classification":"near_placeholder"},
+    {"path":"00_command_center","file_count":2,"classification":"repository_routing_pointer_plus_historical_surface"},
     {"path":"01_constitution","file_count":1,"classification":"governance"},
     {"path":"02_stewardship","file_count":1,"classification":"governance"},
     {"path":"03_governance","file_count":1,"classification":"governance"},
@@ -16,11 +16,11 @@
     {"path":"10_inventories","file_count":4,"classification":"inventory"},
     {"path":"11_receipts","file_count":6,"classification":"receipt"},
     {"path":"12_archive_refs","file_count":1,"classification":"archive_reference"},
-    {"path":"CRISIS_LITURGIES","file_count":287,"classification":"project_root"},
+    {"path":"CRISIS_LITURGIES","file_count":301,"classification":"project_root"},
     {"path":"CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS","file_count":1,"classification":"project_root"},
-    {"path":"00_CONTROL","file_count":9,"classification":"candidate_control_added_on_audit_branch"},
+    {"path":"00_CONTROL","file_count":18,"classification":"candidate_control_added_on_audit_branch"},
     {"path":"90_EXTERNAL_HANDOFFS","file_count":2,"classification":"external_archive_pointer_added_on_audit_branch"},
-    {"path":"scripts","file_count":5,"classification":"candidate_validation_added_on_audit_branch"}
+    {"path":"scripts","file_count":7,"classification":"candidate_validation_added_on_audit_branch"}
   ],
   "material_sources": [
     {"path":"01_constitution","title":"Constitutional repository surface","type":"directory","status":"unclear_from_path","authority_scope":"requires source reading","evidence":"INCOMPLETE","supersession_checked":false,"related_candidates":["CAND-001"]},
@@ -28,7 +28,8 @@
     {"path":"06_visual_language","title":"Graphic Arts and Visual Language","type":"directory","status":"material present","authority_scope":"scope-specific pending record review","evidence":"INCOMPLETE","supersession_checked":false,"related_candidates":["CAND-008"]},
     {"path":"07_publishing","title":"Publishing records","type":"directory","status":"material present","authority_scope":"scope-specific pending record review","evidence":"INCOMPLETE","supersession_checked":false,"related_candidates":["CAND-008","CAND-014"]},
     {"path":"08_platform","title":"VonNeumann and website/platform records","type":"directory","status":"material present","authority_scope":"candidate technical substrate and website surface","evidence":"INCOMPLETE","supersession_checked":false,"related_candidates":["CAND-007","CAND-014"]},
-    {"path":"CRISIS_LITURGIES","title":"Crisis Liturgies active namespace","type":"directory","status":"material present","authority_scope":"project-local","evidence":"DIRECT_SOURCE_VERIFIED","supersession_checked":"partial","related_candidates":["CAND-009A","CAND-009B","CAND-009C","CAND-009D","CAND-009E","CAND-009F"]},
+    {"path":"CRISIS_LITURGIES","title":"Crisis Liturgies active namespace","type":"directory","status":"material present","authority_scope":"project-local","evidence":"DIRECT_SOURCE_VERIFIED","supersession_checked":"partial","related_candidates":["CAND-009A","CAND-009B","CAND-009C","CAND-009D","CAND-009E","CAND-009F","CAND-009G"]},
+    {"path":"CRISIS_LITURGIES/CL_GATELESS_GATE","title":"The Gateless Gate project-local root","type":"directory","status":"registered_and_materialized; recovery closed; production closed","authority_scope":"project-local only","evidence":"DIRECT_SOURCE_VERIFIED","supersession_checked":"partial; only the earlier administrative entry blockers are marked stale","related_candidates":["CAND-009G"]},
     {"path":"CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS","title":"Dual Power Domestics project surface","type":"directory","status":"material present","authority_scope":"project-local pending control reading","evidence":"INCOMPLETE","supersession_checked":false,"related_candidates":["CAND-009A"]},
     {"path":"scripts","title":"Audit validation scripts","type":"directory","status":"new audit controls","authority_scope":"repository validation only","evidence":"DIRECT_SOURCE_VERIFIED","supersession_checked":"not_applicable","related_candidates":[]}
   ],
@@ -46,18 +47,17 @@
     "deterministic_census": {
       "base_commit": "de444af4aecc8f92c8aa6c4a500e9ecea9f8d5e3",
       "tracked_files_at_base": 706,
-      "files_added_on_audit_branch_before_current_pass": 22,
-      "total_tracked_files_on_audit_branch": 728,
-      "projected_files_added_after_current_pass_commit": 23,
-      "projected_total_after_current_pass_commit": 729,
+      "files_added_to_main_after_audit_base": 15,
+      "files_added_on_audit_branch_before_current_pass": 28,
+      "total_tracked_files_on_audit_branch": 749,
       "root_level_tracked_files": 51,
-      "files_by_top_level": {"00_CONTROL":13,"00_command_center":1,"01_constitution":1,"02_stewardship":1,"03_governance":1,"04_registries":1,"05_knowledge_systems":1,"06_visual_language":250,"07_publishing":47,"08_platform":52,"09_agents":1,"10_inventories":4,"11_receipts":6,"12_archive_refs":1,"90_EXTERNAL_HANDOFFS":3,"CRISIS_LITURGIES":287,"CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS":1,"scripts":6},
+      "files_by_top_level": {"00_CONTROL":18,"00_command_center":2,"01_constitution":1,"02_stewardship":1,"03_governance":1,"04_registries":1,"05_knowledge_systems":1,"06_visual_language":250,"07_publishing":47,"08_platform":52,"09_agents":1,"10_inventories":4,"11_receipts":6,"12_archive_refs":1,"90_EXTERNAL_HANDOFFS":3,"CRISIS_LITURGIES":301,"CRISIS_LITURGIES_V_DUAL_POWER_DOMESTICS":1,"scripts":7},
       "binary_file_count": 25,
       "text_file_count_determined": 703,
       "symlink_count": 0,
       "submodule_count": 0,
       "inaccessible_or_checkout_failed_paths": [],
-      "reconciliation_equation": "51 root-level + 677 files under top-level directories = 728 total tracked files"
+      "reconciliation_equation": "706 original-base files + 15 main additions + 28 audit additions = 749 tracked files; equivalently 51 root-level + 698 files under top-level directories = 749"
     },
     "near_placeholder_directories": ["00_command_center","01_constitution","02_stewardship","03_governance","05_knowledge_systems","09_agents","12_archive_refs"],
     "additional_competing_surfaces": [

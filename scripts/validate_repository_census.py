@@ -17,8 +17,13 @@ def main() -> int:
     total = census["root_level_tracked_files"] + sum(top.values())
     if total != census["total_tracked_files_on_audit_branch"]:
         errors.append(f"census arithmetic {total} != {census['total_tracked_files_on_audit_branch']}")
-    if census["tracked_files_at_base"] + census["files_added_on_audit_branch_before_current_pass"] != census["total_tracked_files_on_audit_branch"]:
-        errors.append("base plus added census arithmetic does not balance")
+    expected_total = (
+        census["tracked_files_at_base"]
+        + census.get("files_added_to_main_after_audit_base", 0)
+        + census["files_added_on_audit_branch_before_current_pass"]
+    )
+    if expected_total != census["total_tracked_files_on_audit_branch"]:
+        errors.append("base plus main additions plus audit additions census arithmetic does not balance")
     contradictions = read("CONTRADICTION_REGISTER.yaml")["records"]
     con2 = next((r for r in contradictions if r["record_id"] == "CON-002"), None)
     con3 = next((r for r in contradictions if r["record_id"] == "CON-003"), None)
