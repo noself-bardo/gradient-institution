@@ -1,0 +1,25 @@
+{
+  "result": "PASS_FAIL_CLOSED",
+  "baseline": {
+    "case": "CASE_19",
+    "result": "PASS",
+    "blockers": []
+  },
+  "tests": {
+    "baseline_case19_reference": true,
+    "missing_object_register_is_rejected": true,
+    "missing_full_evidence_is_rejected": true,
+    "vector_substitution_is_rejected": true,
+    "artifact_without_founder_approval_is_rejected": true,
+    "image_baked_text_is_rejected": true,
+    "missing_rendered_visual_qc_is_rejected": true,
+    "terminal_state_matches_reference": true,
+    "publication_is_not_implied": true,
+    "other_case_authority_is_not_implied": true
+  },
+  "negative_tests": "6_OF_6_PASS",
+  "control_tests": "4_OF_4_PASS",
+  "json_syntax": "PASS",
+  "formal_json_schema_execution": "NOT_RUN_DEPENDENCY_NOT_PRESENT",
+  "semantic_contract_validator": "PASS"
+}
