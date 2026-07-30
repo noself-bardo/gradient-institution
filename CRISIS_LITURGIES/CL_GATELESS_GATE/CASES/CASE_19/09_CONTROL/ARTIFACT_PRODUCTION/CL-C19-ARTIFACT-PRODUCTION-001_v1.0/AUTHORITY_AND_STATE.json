@@ -1,0 +1,21 @@
+{
+  "lane_id": "CL-C19-ARTIFACT-PRODUCTION-001",
+  "packet_version": "1.0",
+  "parent_project": "CRISIS_LITURGIES/CL_GATELESS_GATE",
+  "case_id": "CASE_19",
+  "controlling_instruction": "Make it so and ensure that we are in the right lane for production.",
+  "authorized_scope": [
+    "amend the production contract with a mandatory standalone forensic-artifact stage",
+    "produce one isolated Case 19 artifact set",
+    "return the artifact set for founder review"
+  ],
+  "object_production": "COMPLETE_FOUNDER_REVIEW_REQUIRED",
+  "artifact_approval": "PENDING",
+  "prior_four_page_proof": "APPROVED_VISUAL_DIRECTION_ARTIFACT_REQUIREMENT_OUTSTANDING",
+  "assembly_eligibility": "BLOCKED_PENDING_ARTIFACT_APPROVAL",
+  "additional_assembly": "CLOSED",
+  "scaling": "CLOSED",
+  "publication": "CLOSED",
+  "release": "CLOSED",
+  "archive_admission": "CLOSED"
+}
