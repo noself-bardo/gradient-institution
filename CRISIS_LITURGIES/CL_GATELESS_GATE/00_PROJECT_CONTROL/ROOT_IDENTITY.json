@@ -1,9 +1,9 @@
 {
   "registry_id": "TG-CL-GG-ROOT-001",
   "record_type": "canonical_project_root",
-  "record_version": "1.8",
+  "record_version": "1.9",
   "registered_at": "2026-07-29T17:13:13-04:00",
-  "reconciled_at": "2026-07-30T09:30:55-04:00",
+  "reconciled_at": "2026-07-30T10:15:00-04:00",
   "project": {
     "program": "Crisis Liturgies",
     "name": "The Gateless Gate",
@@ -72,8 +72,8 @@
     "recovery_architecture": "CLOSED_COMPLETE",
     "compiler_preflight": "PASS_WITH_CARRIED_HOLDS",
     "compiler_state": "READINESS_COMPILER_IMPLEMENTED",
-    "manufacturing_eligibility": "PENDING_FOUNDER_REVIEW_CASE19_FORENSIC_ASSEMBLY_REVISION",
-    "production_authority": "BOUNDED_CASE19_FORENSIC_ASSEMBLY_REVISION_COMPLETE_FOUNDER_REVIEW_REQUIRED",
+    "manufacturing_eligibility": "CASE_19_PILOT_COMPLETE_REMAINING_CASES_NOT_AUTHORIZED",
+    "production_authority": "CLOSED_PENDING_REUSABLE_CONTRACT_FOUNDER_REVIEW",
     "image_generation_authorization": "GRANTED_CASE19_FORENSIC_ARTIFACT_SET_COMPLETE",
     "layout_authorization": "GRANTED_CASE19_FORENSIC_ASSEMBLY_REVISION_COMPLETE",
     "render_authorization": "NOT_GRANTED",
@@ -96,7 +96,8 @@
       "one Case 19 assembled founder-review proof",
       "one isolated Case 19 three-view forensic artifact set",
       "mandatory forensic-artifact production contract and validator law",
-      "one Case 19 forensic artifact assembly revision"
+      "one Case 19 forensic artifact assembly revision",
+      "reusable case-production contract extracted from the founder-approved Case 19 pilot"
     ],
     "not_authorized_by_this_record": [
       "additional Case 19 assembly beyond the completed forensic revision",
@@ -193,7 +194,7 @@
     "version": "1.0",
     "authorized_at": "2026-07-30T09:30:55-04:00",
     "controlling_instruction": "Make it so",
-    "result": "FOUR_PAGE_FORENSIC_ASSEMBLY_REVISION_COMPLETE_FOUNDER_REVIEW_REQUIRED",
+    "result": "FOUR_PAGE_FORENSIC_ASSEMBLY_REVISION_FOUNDER_APPROVED",
     "artifact_source": "CL-C19-ARTIFACT-PRODUCTION-001 / FOUNDER_APPROVED",
     "page_1": "FULL_EVIDENCE_PRIMARY",
     "page_2": "VECTOR_SECONDARY_NOTATION_ONLY",
@@ -209,6 +210,23 @@
     "persistent_layout_folder_id": "17KZM38QqfTXHEB7w90Xrlj6hVCQ3tdYO",
     "persistent_layout_folder_url": "https://drive.google.com/drive/folders/17KZM38QqfTXHEB7w90Xrlj6hVCQ3tdYO",
     "repository_path": "CRISIS_LITURGIES/CL_GATELESS_GATE/CASES/CASE_19/09_CONTROL/ASSEMBLY_REVISIONS/CL-C19-ASSEMBLY-REVISION-001_v1.0",
-    "founder_review_gate": "READY"
+    "founder_review_gate": "APPROVED",
+    "founder_approved_at": "2026-07-30"
+  },
+  "reusable_production_contract": {
+    "contract_id": "CL-GG-REUSABLE-PRODUCTION-CONTRACT-001",
+    "version": "1.0",
+    "extracted_at": "2026-07-30",
+    "reference_case": "CASE_19",
+    "reference_case_state": "FOUNDER_APPROVED_COMPLETE",
+    "result": "CONTRACT_EXTRACTED_REFERENCE_VALIDATED",
+    "contract_state": "FOUNDER_REVIEW_CANDIDATE",
+    "validation": "PASS_FAIL_CLOSED",
+    "negative_tests": "6_OF_6_PASS",
+    "control_tests": "4_OF_4_PASS",
+    "packet_sha256": "40d67aa073204bd3fb6e563448e7df70e44c9da827e22db5c5a11abd318c6575",
+    "repository_path": "CRISIS_LITURGIES/CL_GATELESS_GATE/00_PROJECT_CONTROL/PRODUCTION_CONTRACTS/CL-GG-REUSABLE-PRODUCTION-CONTRACT-001_v1.0",
+    "remaining_cases": "NOT_AUTHORIZED_FOR_PRODUCTION",
+    "production_boundary": "NO_CASE_OUTPUTS_PRODUCED"
   }
 }
