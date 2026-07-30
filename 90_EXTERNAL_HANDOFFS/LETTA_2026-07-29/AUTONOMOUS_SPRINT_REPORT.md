@@ -87,3 +87,10 @@ Excluded: the original Letta ZIP, extracted package, binary archives, credential
 - Added `CAND-009G` as a direct-source candidate with no ratified repository-native identifier. The only limited supersession recorded is of three earlier administrative entry blockers; production authority remains closed.
 - Post-merge census: 706 original-base + 15 `main` additions + 28 audit additions = 749 tracked files; 51 are root-level and 698 are under top-level directories.
 - No new contradiction or Founder Decision Queue item was created. Founder Gate 8 remains the sole queue item. Notion, Google Drive, `main`, and the protected dirty checkout were not written or modified.
+
+## Founder Gate 8 disposition
+
+- On 2026-07-30, Steven Grisé recorded `BOUNDED_CORRECTION_REVIEW_AUTHORIZED` for The Container Never Bursts Founder Gate 8.
+- The decision permits only exact overflow identification, frozen-specification comparison, reversible correction candidates, review proofs, and a finite recommendation for further founder approval.
+- The eleven Stage 09 hymn masters and their frozen sources remain unmodified. Existing review proofs remain preserved as evidence.
+- No unreviewed master replacement, editorial rewriting beyond strict overflow correction, visual redesign, imagery, prompt engineering, source reproduction, asset admission, final rendering, production layout, printing, publication, release, or archive admission is authorized.

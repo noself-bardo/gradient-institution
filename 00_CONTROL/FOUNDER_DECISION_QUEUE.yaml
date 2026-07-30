@@ -4,14 +4,40 @@
     {
       "decision_id": "FDQ-001",
       "subject": "The Container Never Bursts Founder Gate 8",
+      "status": "DECIDED",
+      "disposition": "BOUNDED_CORRECTION_REVIEW_AUTHORIZED",
+      "decided_at": "2026-07-30",
+      "decision_authority": "Steven Grisé, Founder",
       "exact_question": "What disposition should apply to the completed review proofs that expose horizontal text overflow in eleven Stage 09 hymn masters?",
       "sources_in_conflict": ["CL-RR-2026-07-28 Concept Control: review proofs complete / Founder Gate 8 pending","CL-RR-2026-07-28 Concept Control: no repair was authorized under rendering-only authority"],
-      "operational_consequence": "No master modification, asset admission, rendering, print, publication, or archive admission may proceed until the visual ruling is recorded.",
+      "operational_consequence": "A bounded correction review may develop reversible candidates and proofs only; no frozen-master modification, asset admission, rendering, print, publication, release, or archive admission may proceed.",
       "reversible_options": ["retain the current candidate and close the review with no repair","authorize a separately bounded correction review","decline the candidate and preserve it as review evidence"],
       "recommended_option": "Record a bounded correction-review decision that preserves the frozen source and keeps all downstream production gates closed.",
       "unchanged_under_every_option": "The project remains project-local; no general constitutional authority, source reproduction, publication, or archive admission is opened.",
       "why_human_gate": "The documented source record expressly leaves this visual disposition to Founder Gate 8.",
-      "source_refs": ["NOTION:3abdeaca-b3a5-8109-acc7-c6207619df02"]
+      "source_refs": ["NOTION:3abdeaca-b3a5-8109-acc7-c6207619df02"],
+      "decision_history": {
+        "original_pending_record_preserved": true,
+        "prior_options_preserved_in_reversible_options": true,
+        "pending_state": "Founder Gate 8 was pending until the founder ruling recorded on 2026-07-30."
+      },
+      "authorized_scope": [
+        "identify exact overflow conditions",
+        "compare against frozen master specifications",
+        "develop reversible correction candidates",
+        "produce review proofs demonstrating proposed corrections",
+        "provide a finite recommendation for further founder approval"
+      ],
+      "continuing_holds": [
+        "frozen source remains unmodified",
+        "no unreviewed master replacement",
+        "no editorial rewriting except what is strictly required to correct overflow",
+        "no visual redesign, imagery, prompt engineering, or source reproduction",
+        "no asset admission, final rendering, layout production outside bounded review, printing, publication, release, or archive admission",
+        "corrected candidates remain versioned, reversible, and subordinate to further founder approval before replacing any master",
+        "existing review proofs remain preserved as evidence"
+      ],
+      "next_action": "A separately bounded correction-review task may be proposed; no correction work is authorized by this audit decision record itself."
     }
   ]
 }
