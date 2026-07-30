@@ -1,0 +1,68 @@
+{
+  "case_id": "CASE_00",
+  "canonical_destination": "CASES/CASE_00",
+  "authority": {
+    "authorized_stage": "NONE",
+    "remaining_stages": "CLOSED"
+  },
+  "source_custody": {
+    "state": "HOLD",
+    "manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "specification": {
+    "state": "HOLD",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "witness": {
+    "state": "HOLD",
+    "sha256": null
+  },
+  "objects": [
+    {
+      "object_id": "UNREGISTERED",
+      "definition": "UNRESOLVED",
+      "views": {
+        "full_evidence": {
+          "state": "CANDIDATE",
+          "filename": "MISSING",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "contains_typography": false,
+          "role": "PRIMARY_FORENSIC_MASTER"
+        },
+        "alternate_or_construction": {
+          "state": "CANDIDATE",
+          "filename": "MISSING",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "contains_typography": false,
+          "role": "PRIMARY_FORENSIC_MASTER"
+        },
+        "macro_or_detail": {
+          "state": "CANDIDATE",
+          "filename": "MISSING",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+          "contains_typography": false,
+          "role": "PRIMARY_FORENSIC_MASTER"
+        }
+      },
+      "founder_disposition": "PENDING"
+    }
+  ],
+  "components": {
+    "copy": "MISSING",
+    "svg_typography": "MISSING",
+    "layout": "MISSING",
+    "provenance": "MISSING"
+  },
+  "assembly": {
+    "state": "NOT_AUTHORIZED",
+    "pages": 0,
+    "text_is_editable": false,
+    "artifact_layers_are_separate": false
+  },
+  "qc": {
+    "structural": "NOT_RUN",
+    "rendered_visual": "NOT_RUN",
+    "true_polarity_reviewed": false
+  },
+  "state": "NOT_ELIGIBLE"
+}
