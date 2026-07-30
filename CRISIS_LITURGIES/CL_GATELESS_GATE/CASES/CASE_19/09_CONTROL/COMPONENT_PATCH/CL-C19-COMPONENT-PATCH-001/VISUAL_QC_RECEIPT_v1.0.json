@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "checks": {
+    "page_count_is_four": true,
+    "trim_is_6_25_by_8_25_inches": true,
+    "all_pages_are_black_field": true,
+    "rejected_v1_artifact_not_embedded": true,
+    "no_white_paper_palette": true,
+    "page_3_copy_compressed": true,
+    "page_4_copy_compressed": true,
+    "transcription_source_not_transformed_or_embedded": true,
+    "publication_scaling_and_archive_gates_closed": true
+  },
+  "black_field_ratios": {
+    "CASE19_PAGE_01_REVIEW_v1.0.png": 0.9642,
+    "CASE19_PAGE_02_REVIEW_v1.0.png": 0.9405,
+    "CASE19_PAGE_03_REVIEW_v1.0.png": 0.9544,
+    "CASE19_PAGE_04_REVIEW_v1.0.png": 0.9441
+  }
+}

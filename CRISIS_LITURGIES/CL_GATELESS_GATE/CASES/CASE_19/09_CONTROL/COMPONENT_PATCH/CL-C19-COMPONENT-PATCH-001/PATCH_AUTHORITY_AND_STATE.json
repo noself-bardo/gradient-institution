@@ -1,0 +1,19 @@
+{
+  "patch_id": "CL-C19-COMPONENT-PATCH-001",
+  "state": "FOUNDER_REVIEW_PROOF",
+  "authorized_scope": [
+    "reject prior artifact visual",
+    "restore black/silver page system",
+    "compress pages 3 and 4",
+    "assemble one four-page review proof"
+  ],
+  "prior_artifact_disposition": "REJECTED_RETAINED_AS_GEOMETRY_WIREFRAME",
+  "assembly_count": 1,
+  "assembly_approval": "PENDING_FOUNDER_REVIEW",
+  "image_generation": "NOT_USED",
+  "transcription_source": "UNTOUCHED_NOT_EMBEDDED",
+  "scaling": "CLOSED",
+  "publication": "CLOSED",
+  "release": "CLOSED",
+  "archive_admission": "CLOSED"
+}

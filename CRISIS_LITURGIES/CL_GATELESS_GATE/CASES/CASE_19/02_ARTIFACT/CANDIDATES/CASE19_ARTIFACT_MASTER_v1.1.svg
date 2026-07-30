@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600" role="img" aria-labelledby="title desc">
+  <title id="title">Case 19 incised floor-plank artifact plate</title>
+  <desc id="desc">A restrained forensic line plate. Grain registers break around an arrow-shaped void cut from the same plank.</desc>
+  <rect width="1600" height="600" fill="#000000"/>
+  <g id="plank" fill="none" stroke="#B8C0C8">
+    <rect x="170" y="175" width="1260" height="250" stroke-width="4"/>
+    <g id="grain" stroke-width="1.5">
+      <path d="M218 230 H615 M1010 230 H1382"/>
+      <path d="M218 275 H615 M1010 275 H1382"/>
+      <path d="M218 320 H615 M1010 320 H1382"/>
+      <path d="M218 365 H615 M1010 365 H1382"/>
+    </g>
+    <path id="arrow-cut" d="M640 250 H925 V205 L1110 300 925 395 V350 H640 Z" stroke-width="5"/>
+    <g id="cut-edge-hatching" stroke-width="1.5">
+      <path d="M660 250 l12 12 M710 250 l12 12 M760 250 l12 12 M810 250 l12 12 M860 250 l12 12"/>
+      <path d="M660 350 l12 -12 M710 350 l12 -12 M760 350 l12 -12 M810 350 l12 -12 M860 350 l12 -12"/>
+      <path d="M956 221 l10 12 M986 237 l10 12 M1016 252 l10 12 M1046 268 l10 12"/>
+      <path d="M956 379 l10 -12 M986 363 l10 -12 M1016 348 l10 -12 M1046 332 l10 -12"/>
+    </g>
+  </g>
+</svg>
