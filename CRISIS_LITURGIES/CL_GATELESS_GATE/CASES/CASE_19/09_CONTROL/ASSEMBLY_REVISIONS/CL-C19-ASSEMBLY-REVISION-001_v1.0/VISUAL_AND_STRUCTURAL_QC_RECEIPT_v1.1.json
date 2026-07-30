@@ -1,0 +1,32 @@
+{
+  "result": "PASS_FAIL_CLOSED",
+  "checks": {
+    "artifact_gate_is_founder_approved": true,
+    "four_editable_svg_page_masters_exist": true,
+    "svg_text_layers_are_present": true,
+    "full_evidence_is_primary_on_page_1": true,
+    "vector_is_secondary_only_on_page_2": true,
+    "construction_view_is_present_on_page_3": true,
+    "macro_view_is_present_on_page_4": true,
+    "all_registered_artifact_masters_exist": true,
+    "pdf_has_four_pages": true,
+    "pdf_trim_is_6_25_by_8_25_inches": true,
+    "matte_black_field_remains_dominant": true,
+    "scaling_publication_release_archive_are_closed": true
+  },
+  "negative_tests": {
+    "missing_full_evidence_blocks_assembly": true,
+    "vector_substitution_for_primary_artifact_blocks_assembly": true,
+    "missing_macro_view_blocks_assembly": true,
+    "unapproved_artifact_state_blocks_assembly": true,
+    "missing_svg_typography_layer_blocks_assembly": true,
+    "open_publication_gate_blocks_bounded_review_state": true
+  },
+  "black_field_ratios": {
+    "CASE19_PAGE_01_REVIEW_v1.1.png": 0.842,
+    "CASE19_PAGE_02_REVIEW_v1.1.png": 0.9469,
+    "CASE19_PAGE_03_REVIEW_v1.1.png": 0.8809,
+    "CASE19_PAGE_04_REVIEW_v1.1.png": 0.8727
+  },
+  "visual_review_required": true
+}

@@ -1,0 +1,19 @@
+{
+  "lane_id": "CL-C19-ASSEMBLY-REVISION-001",
+  "parent_project": "CRISIS_LITURGIES/CL_GATELESS_GATE",
+  "case_id": "CASE_19",
+  "authorization": "MAKE_IT_SO_AFTER_FOUNDER_ARTIFACT_APPROVAL",
+  "authorized_scope": [
+    "integrate the founder-approved forensic artifact masters into one four-page review proof",
+    "retain the vector plate only as a secondary diagrammatic layer",
+    "perform rendered visual QC"
+  ],
+  "artifact_set": "FOUNDER_APPROVED",
+  "assembly": "COMPLETE_FOUNDER_REVIEW_REQUIRED",
+  "assembly_proof_sha256": "c88c714e702876a71d3e1e94c6defa9a8cab5cc197cf4649aa303b041990f502",
+  "scaling": "CLOSED",
+  "publication": "CLOSED",
+  "release": "CLOSED",
+  "archive_admission": "CLOSED",
+  "other_cases": "NOT_AUTHORIZED"
+}
