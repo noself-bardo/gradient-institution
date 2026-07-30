@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Case 19 artifact master: floor plank with arrow removed from its surface</title>
+  <desc id="desc">An isolated long floor plank. A directional arrow is a physical void cut through the plank, not a painted or attached sign.</desc>
+  <defs>
+    <linearGradient id="woodTone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d4cdc0"/>
+      <stop offset="0.48" stop-color="#bcb3a5"/>
+      <stop offset="1" stop-color="#a69b8d"/>
+    </linearGradient>
+    <linearGradient id="edgeTone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#81786d"/>
+      <stop offset="1" stop-color="#5f584f"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <mask id="arrowVoid">
+      <rect width="1600" height="1000" fill="white"/>
+      <path d="M585 455 H935 V365 L1135 500 935 635 V545 H585 Z" fill="black"/>
+    </mask>
+    <clipPath id="plankTopClip">
+      <path d="M235 355 L1260 270 L1370 620 L345 705 Z"/>
+    </clipPath>
+  </defs>
+
+  <g id="artifact" aria-label="Editable artifact groups">
+    <g id="shadow">
+      <ellipse cx="810" cy="724" rx="545" ry="88" fill="#000000" opacity="0.18" filter="url(#softShadow)"/>
+    </g>
+
+    <g id="plank">
+      <path id="plank-edge" d="M345 705 L1370 620 L1370 666 L345 751 Z" fill="url(#edgeTone)" stroke="#1b1b1b" stroke-width="8" stroke-linejoin="round"/>
+      <path id="plank-end" d="M1260 270 L1370 620 L1370 666 L1260 316 Z" fill="#70685e" stroke="#1b1b1b" stroke-width="8" stroke-linejoin="round"/>
+      <path id="plank-top" d="M235 355 L1260 270 L1370 620 L345 705 Z" fill="url(#woodTone)" stroke="#1b1b1b" stroke-width="10" stroke-linejoin="round" mask="url(#arrowVoid)"/>
+    </g>
+
+    <g id="grain" clip-path="url(#plankTopClip)" mask="url(#arrowVoid)" fill="none" stroke="#766d63" stroke-linecap="round">
+      <path d="M175 418 C390 350 552 420 735 360 S1090 318 1368 326" stroke-width="8" opacity="0.72"/>
+      <path d="M206 483 C355 439 491 502 656 446 S1008 366 1391 397" stroke-width="5" opacity="0.58"/>
+      <path d="M235 553 C425 481 567 573 781 505 S1136 430 1410 467" stroke-width="7" opacity="0.68"/>
+      <path d="M265 621 C420 575 612 641 824 579 S1166 504 1428 535" stroke-width="5" opacity="0.52"/>
+      <path d="M335 671 C530 618 721 680 932 623 S1197 575 1425 594" stroke-width="4" opacity="0.48"/>
+      <path d="M433 414 C486 392 532 393 581 408 C534 429 481 435 433 414 Z" stroke-width="5" opacity="0.62"/>
+      <path d="M1124 530 C1188 500 1242 505 1291 528 C1238 548 1179 550 1124 530 Z" stroke-width="5" opacity="0.55"/>
+    </g>
+
+    <g id="wear" clip-path="url(#plankTopClip)" mask="url(#arrowVoid)" fill="none" stroke="#e6e0d6" stroke-linecap="round">
+      <path d="M302 399 L467 385" stroke-width="5" opacity="0.55"/>
+      <path d="M744 644 L882 633" stroke-width="4" opacity="0.45"/>
+      <path d="M1188 337 L1288 329" stroke-width="5" opacity="0.5"/>
+      <path d="M472 640 L563 633" stroke-width="3" opacity="0.42"/>
+    </g>
+
+    <g id="cut-cavity" stroke-linejoin="round">
+      <path d="M585 455 H935 V365 L1135 500 935 635 V545 H585 Z" fill="#282624" stroke="#171615" stroke-width="14"/>
+      <path d="M605 476 H955 V402 L1099 500 955 598 V524 H605 Z" fill="#111111" opacity="0.9"/>
+    </g>
+
+    <g id="cut-edges" fill="none" stroke-linejoin="round">
+      <path d="M590 460 H940 V377 L1126 500 940 623 V540 H590 Z" stroke="#777066" stroke-width="7"/>
+      <path d="M601 548 H936 V633 L1133 502" stroke="#ded7cb" stroke-width="4" opacity="0.72"/>
+    </g>
+  </g>
+</svg>

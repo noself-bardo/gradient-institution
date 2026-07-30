@@ -1,0 +1,30 @@
+{
+  "packet_id": "CL-C19-COMPONENT-PRODUCTION-001",
+  "result": "PASS",
+  "tests": [
+    {
+      "result": "PASS",
+      "test": "baseline"
+    },
+    {
+      "result": "PASS",
+      "test": "missing_component"
+    },
+    {
+      "result": "PASS",
+      "test": "illegal_assembly_artifact"
+    },
+    {
+      "result": "PASS",
+      "test": "illegal_authority_advance"
+    },
+    {
+      "result": "PASS",
+      "test": "noncanonical_font"
+    },
+    {
+      "result": "PASS",
+      "test": "embedded_raster_in_master"
+    }
+  ]
+}

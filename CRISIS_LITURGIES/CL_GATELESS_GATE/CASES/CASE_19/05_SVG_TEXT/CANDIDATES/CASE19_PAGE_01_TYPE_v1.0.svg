@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="6.25in" height="8.25in" viewBox="0 0 3750 4950" role="img" aria-labelledby="title desc">
+  <title id="title">Case 19 page 1 editable typography layer</title>
+  <desc id="desc">Typography only. No artifact or page assembly is embedded.</desc>
+  <g id="identity" fill="#000000">
+    <text x="300" y="360" font-family="IBM Plex Mono" font-size="86" letter-spacing="14">VOLUME II / ISSUE 07 / CASE 19</text>
+    <text x="300" y="650" font-family="Source Serif 4" font-size="220">Ordinary Mind</text>
+    <text x="300" y="880" font-family="Source Serif 4" font-size="220">Is the Way</text>
+    <text x="300" y="1110" font-family="IBM Plex Mono" font-size="70" letter-spacing="10">FLOOR PLANK / ARROW CUT-THROUGH</text>
+  </g>
+  <g id="notes" fill="#000000">
+    <text x="2240" y="390" font-family="IBM Plex Mono" font-size="60" letter-spacing="9">MATERIAL</text>
+    <text x="2240" y="500" font-family="Source Serif 4" font-size="66">
+      <tspan x="2240" dy="0">One board carries the load.</tspan>
+      <tspan x="2240" dy="92">The arrow is removed from</tspan>
+      <tspan x="2240" dy="92">the board itself; no sign</tspan>
+      <tspan x="2240" dy="92">remains apart from the surface.</tspan>
+    </text>
+    <text x="2240" y="905" font-family="IBM Plex Mono" font-size="60" letter-spacing="9">CONTRADICTION</text>
+    <text x="2240" y="1015" font-family="Source Serif 4" font-size="66">
+      <tspan x="2240" dy="0">It cannot point anywhere the</tspan>
+      <tspan x="2240" dy="92">floor is not already going.</tspan>
+    </text>
+  </g>
+  <g id="provenance" fill="#000000">
+    <line x1="300" y1="4490" x2="3525" y2="4490" stroke="#000000" stroke-width="8"/>
+    <text x="300" y="4605" font-family="IBM Plex Mono" font-size="48" letter-spacing="5">WORKBOOK v1.1 p.14 / CASE 19 CONSTRUCTION LAW</text>
+    <text x="300" y="4690" font-family="IBM Plex Mono" font-size="42" letter-spacing="4">ARTIFACT CANDIDATE v1.0 / FOUNDER REVIEW PENDING</text>
+  </g>
+</svg>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="6.25in" height="8.25in" viewBox="0 0 3750 4950" role="img" aria-labelledby="title desc">
+  <title id="title">Case 19 page 4 editable typography layer</title>
+  <desc id="desc">Archive Commentary typography only. The transcription zone remains empty and unassembled.</desc>
+  <g id="header" fill="#000000">
+    <text x="225" y="340" font-family="IBM Plex Mono" font-size="64" letter-spacing="10">CASE 19 / ARCHIVE COMMENTARY</text>
+    <text x="225" y="600" font-family="Source Serif 4" font-size="154">
+      <tspan x="225">What the Arrow</tspan>
+      <tspan x="225" dy="170">Cannot Settle</tspan>
+    </text>
+  </g>
+  <g id="source-matrix" fill="#000000">
+    <text x="225" y="1050" font-family="IBM Plex Mono" font-size="54" letter-spacing="7">YAMADA SOURCE</text>
+    <text x="225" y="1160" font-family="Source Serif 4" font-size="56"><tspan x="225">The Gateless Gate, Case 19, PDF pp. 122-125.</tspan><tspan x="225" dy="78">Ordinary mind is held against deliberate turning;</tspan><tspan x="225" dy="78">knowing and not-knowing do not settle the route.</tspan></text>
+    <text x="225" y="1570" font-family="IBM Plex Mono" font-size="54" letter-spacing="7">MUMON LAYER</text>
+    <text x="225" y="1680" font-family="Source Serif 4" font-size="56"><tspan x="225">The commentary refuses premature completion.</tspan><tspan x="225" dy="78">Realization does not make a finished route.</tspan></text>
+    <text x="225" y="1995" font-family="IBM Plex Mono" font-size="54" letter-spacing="7">AITKEN COMPARISON</text>
+    <text x="225" y="2105" font-family="Source Serif 4" font-size="56"><tspan x="225">Case 19 comparative record, source PDF p. 96.</tspan><tspan x="225" dy="78">Structural comparison only; Yamada remains controlling.</tspan></text>
+    <text x="225" y="2420" font-family="IBM Plex Mono" font-size="54" letter-spacing="7">WORKBOOK OBJECT</text>
+    <text x="225" y="2530" font-family="Source Serif 4" font-size="56"><tspan x="225">Workbook v1.1, p. 14. The arrow is cut from the plank.</tspan><tspan x="225" dy="78">The mounted-sign construction is rejected.</tspan></text>
+    <text x="225" y="2845" font-family="IBM Plex Mono" font-size="54" letter-spacing="7">TRANSCRIPTION WITNESS</text>
+    <text x="225" y="2955" font-family="Source Serif 4" font-size="56"><tspan x="225">TW-019-022 is bodily reading evidence, not canonical</tspan><tspan x="225" dy="78">text or decorative script. Treatment A stays separate.</tspan></text>
+    <text x="225" y="3270" font-family="IBM Plex Mono" font-size="54" letter-spacing="7">EDITORIAL INFERENCE</text>
+    <text x="225" y="3380" font-family="Source Serif 4" font-size="56"><tspan x="225">Navigation / compliance is an institutional reading.</tspan><tspan x="225" dy="78">It is not attributed to any source or witness layer.</tspan></text>
+  </g>
+  <g id="reserved-transcription-zone">
+    <rect x="2600" y="980" width="850" height="1160" fill="none" stroke="#B8C0C8" stroke-width="10" stroke-dasharray="28 22"/>
+    <text x="2690" y="1530" font-family="IBM Plex Mono" font-size="46" letter-spacing="5" fill="#000000" transform="rotate(-90 2690 1530)">RESERVED / TREATMENT A / NOT ASSEMBLED</text>
+  </g>
+  <g id="residue" fill="#000000">
+    <line x1="225" y1="3570" x2="2460" y2="3570" stroke="#000000" stroke-width="8"/>
+    <text x="225" y="3700" font-family="IBM Plex Mono" font-size="54" letter-spacing="7">RESIDUE</text>
+    <text x="225" y="3830" font-family="Source Serif 4" font-size="68"><tspan x="225">The remainder is not that the path is already here.</tspan><tspan x="225" dy="96">Every sentence that fixes where “here” is risks</tspan><tspan x="225" dy="96">becoming another arrow.</tspan></text>
+  </g>
+  <g id="turn" fill="#000000">
+    <text x="2600" y="3700" font-family="IBM Plex Mono" font-size="54" letter-spacing="7">TURN</text>
+    <text x="2600" y="3830" font-family="Source Serif 4" font-size="64"><tspan x="2600">Case 20 retains</tspan><tspan x="2600" dy="92">the weight but removes</tspan><tspan x="2600" dy="92">the lifting system.</tspan></text>
+  </g>
+  <g id="provenance" fill="#000000">
+    <line x1="225" y1="4490" x2="3450" y2="4490" stroke="#000000" stroke-width="8"/>
+    <text x="225" y="4610" font-family="IBM Plex Mono" font-size="44" letter-spacing="5">FROZEN CASE 19 METHOD / SIX-LAYER SOURCE SEPARATION</text>
+    <text x="225" y="4695" font-family="IBM Plex Mono" font-size="42" letter-spacing="4">COPY CANDIDATE v1.0 / FOUNDER REVIEW PENDING</text>
+  </g>
+</svg>

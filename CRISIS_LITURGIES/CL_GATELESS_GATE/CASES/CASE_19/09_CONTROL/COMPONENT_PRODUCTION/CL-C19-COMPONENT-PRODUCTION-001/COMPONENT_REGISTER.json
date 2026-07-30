@@ -1,0 +1,50 @@
+{
+  "packet_id": "CL-C19-COMPONENT-PRODUCTION-001",
+  "case_id": "CASE_19",
+  "case_title": "Ordinary Mind Is the Way",
+  "state": "FOUNDER_REVIEW_CANDIDATE",
+  "components": [
+    {
+      "component_id": "CASE19-ARTIFACT-MASTER",
+      "path": "01_ARTIFACT/CASE19_ARTIFACT_MASTER_v1.0.svg",
+      "state": "FOUNDER_REVIEW_CANDIDATE",
+      "editable": true
+    },
+    {
+      "component_id": "CASE19-ARTIFACT-REVIEW",
+      "path": "01_ARTIFACT/CASE19_ARTIFACT_REVIEW_v1.0.png",
+      "state": "FOUNDER_REVIEW_CANDIDATE",
+      "derivative_of": "CASE19-ARTIFACT-MASTER"
+    },
+    {
+      "component_id": "CASE19-COPY",
+      "path": "02_COPY/CASE19_FOUR_PAGE_COPY_v1.0.md",
+      "state": "FOUNDER_REVIEW_CANDIDATE",
+      "editable": true
+    },
+    {
+      "component_id": "CASE19-SVG-TEXT",
+      "paths": [
+        "03_TYPOGRAPHY/CASE19_PAGE_01_TYPE_v1.0.svg",
+        "03_TYPOGRAPHY/CASE19_PAGE_02_TYPE_v1.0.svg",
+        "03_TYPOGRAPHY/CASE19_PAGE_03_TYPE_v1.0.svg",
+        "03_TYPOGRAPHY/CASE19_PAGE_04_TYPE_v1.0.svg"
+      ],
+      "state": "FOUNDER_REVIEW_CANDIDATE",
+      "editable": true
+    },
+    {
+      "component_id": "CASE19-LAYOUT",
+      "path": "04_LAYOUT/CASE19_LAYOUT_SPEC_v1.0.json",
+      "state": "FOUNDER_REVIEW_CANDIDATE",
+      "editable": true
+    }
+  ],
+  "assembly_attempted": false,
+  "manufacturing_eligibility": "PENDING_FOUNDER_COMPONENT_REVIEW",
+  "assembly_authority": "CLOSED",
+  "scaling_authority": "CLOSED",
+  "publication_authority": "CLOSED",
+  "release_authority": "CLOSED",
+  "archive_admission": "CLOSED"
+}
