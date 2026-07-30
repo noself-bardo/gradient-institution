@@ -1,0 +1,27 @@
+{
+  "authorization_id": "CL-C19-COMPONENT-PRODUCTION-AUTH-001",
+  "authorized_by": "Steven, Founder",
+  "authorized_on": "2026-07-29",
+  "controlling_instruction": "ACCEPT_PIPELINE_PROOF_AND_OPEN_BOUNDED_COMPONENT_PRODUCTION",
+  "authorized_scope": [
+    "Create one standalone editable Case 19 artifact master candidate.",
+    "Create one artifact review render candidate.",
+    "Create editable four-page copy candidate.",
+    "Create separate editable SVG typography-layer candidates.",
+    "Create one case-specific editable layout specification candidate.",
+    "Create component manifests, checksums, validation evidence, and a founder review docket."
+  ],
+  "not_authorized": [
+    "Page assembly",
+    "Scaling beyond Case 19",
+    "Publication",
+    "Release",
+    "Archive or canon admission",
+    "Transformation of the transcription witness",
+    "Modification of the approved Treatment A transcription derivative",
+    "Production for any case other than Case 19"
+  ],
+  "component_state_on_return": "FOUNDER_REVIEW_CANDIDATE",
+  "assembly_authority": "CLOSED",
+  "production_authority": "BOUNDED_CASE19_COMPONENTS_ONLY"
+}

@@ -1,0 +1,106 @@
+{
+  "component_id": "CASE19-LAYOUT",
+  "state": "FOUNDER_REVIEW_CANDIDATE",
+  "case_id": "CASE_19",
+  "assembly_authority": "CLOSED",
+  "inherited_standard": {
+    "record": "CL-PROD-SPEC-001 v1.0",
+    "trim_inches": [6, 8],
+    "bleed_inches_each_edge": 0.125,
+    "canvas_inches": [6.25, 8.25],
+    "canvas_pixels_600ppi": [3750, 4950],
+    "trim_pixels_600ppi": [3600, 4800],
+    "trim_origin_pixels": [75, 75],
+    "safe_area_inches": {
+      "top": 0.25,
+      "bottom": 0.25,
+      "outer": 0.25,
+      "inner": 0.375
+    },
+    "typefaces": {
+      "editorial": "Source Serif 4",
+      "utility": "IBM Plex Mono"
+    },
+    "screen_palette": {
+      "profile": "CL-PAL-02_ARGENT_SCREEN",
+      "black": "#000000",
+      "silver": "#B8C0C8",
+      "paper": "#FFFFFF",
+      "maximum_colors": 2,
+      "active_silver_ceiling_percent": 25
+    }
+  },
+  "case_specific_logic": {
+    "artifact_inspected_before_layout": true,
+    "artifact_silhouette": "long, low, right-pointing oblique plank with a high-contrast central cut-through",
+    "shared_page_skeleton_prohibited": true,
+    "semantic_text_separate_from_artifact": true,
+    "transcription_derivative_separate": true
+  },
+  "pages": [
+    {
+      "page": 1,
+      "hand": "RIGHT",
+      "safe_bounds": [300, 225, 3525, 4725],
+      "artifact_zone": [270, 1450, 3480, 3450],
+      "typography_zones": {
+        "identity": [300, 250, 2200, 940],
+        "material_and_contradiction": [2240, 300, 3525, 1190],
+        "provenance_rail": [300, 4510, 3525, 4725]
+      },
+      "rule": "The artifact remains isolated and dominant. The arrow cut-through must not be occupied by text or treated as a label container."
+    },
+    {
+      "page": 2,
+      "hand": "LEFT",
+      "safe_bounds": [225, 225, 3450, 4725],
+      "typography_zones": {
+        "title": [225, 250, 2350, 760],
+        "hymn_primary": [710, 1060, 3020, 4200],
+        "folio": [225, 4510, 3450, 4725]
+      },
+      "rule": "Use stepped vertical intervals, not a uniform stanza grid. The knowing / not-knowing pair shares one axis; the final three lines descend toward the bottom safe boundary."
+    },
+    {
+      "page": 3,
+      "hand": "RIGHT",
+      "safe_bounds": [300, 225, 3525, 4725],
+      "typography_zones": {
+        "title_and_opening": [300, 250, 3300, 1180],
+        "equation": [300, 1420, 3525, 1830],
+        "field_column_left": [300, 2100, 1770, 4120],
+        "field_column_right": [1950, 2100, 3525, 4120],
+        "limit": [1950, 4250, 3525, 4725]
+      },
+      "rule": "The equation is a horizontal control layer that interrupts, rather than repeats, the two-column field structure."
+    },
+    {
+      "page": 4,
+      "hand": "LEFT",
+      "safe_bounds": [225, 225, 3450, 4725],
+      "typography_zones": {
+        "title": [225, 250, 2600, 730],
+        "source_matrix": [225, 980, 3450, 3320],
+        "residue": [225, 3540, 2530, 4200],
+        "turn": [2600, 3540, 3450, 4200],
+        "provenance_rail": [225, 4510, 3450, 4725]
+      },
+      "reserved_nontext_zone": {
+        "component": "CASE19-TRANSCRIPTION-INCISED",
+        "bounds": [2600, 980, 3450, 2140],
+        "placement_state": "SPECIFIED_NOT_ASSEMBLED"
+      },
+      "rule": "Six source layers remain visibly distinct. The approved transcription derivative may later occupy only its reserved zone and may not be used as background texture."
+    }
+  ],
+  "qc": [
+    "No essential evidence outside the safe area.",
+    "No text-artifact collision.",
+    "No text inside the arrow cut-through.",
+    "No silent font substitution.",
+    "No silent color profile conversion.",
+    "No more than two active colors.",
+    "No repeated page skeleton across the four-page sequence.",
+    "No assembly or composite page export at this gate."
+  ]
+}

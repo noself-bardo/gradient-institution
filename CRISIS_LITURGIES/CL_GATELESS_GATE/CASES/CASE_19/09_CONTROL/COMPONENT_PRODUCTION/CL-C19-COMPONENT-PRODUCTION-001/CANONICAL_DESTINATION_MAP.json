@@ -1,0 +1,50 @@
+{
+  "repository": "noself-bardo/gradient-institution",
+  "namespace": "CRISIS_LITURGIES/CL_GATELESS_GATE/CASES/CASE_19",
+  "state": "CANDIDATE_DESTINATIONS_ONLY",
+  "mappings": [
+    {
+      "source": "01_ARTIFACT/CASE19_ARTIFACT_MASTER_v1.0.svg",
+      "destination": "02_ARTIFACT/CANDIDATES/CASE19_ARTIFACT_MASTER_v1.0.svg"
+    },
+    {
+      "source": "01_ARTIFACT/CASE19_ARTIFACT_REVIEW_v1.0.png",
+      "destination": "02_ARTIFACT/CANDIDATES/CASE19_ARTIFACT_REVIEW_v1.0.png"
+    },
+    {
+      "source": "01_ARTIFACT/CASE19_ARTIFACT_MASTER_NOTES_v1.0.md",
+      "destination": "02_ARTIFACT/CANDIDATES/CASE19_ARTIFACT_MASTER_NOTES_v1.0.md"
+    },
+    {
+      "source": "02_COPY/CASE19_FOUR_PAGE_COPY_v1.0.md",
+      "destination": "04_COPY/CANDIDATES/CASE19_FOUR_PAGE_COPY_v1.0.md"
+    },
+    {
+      "source": "03_TYPOGRAPHY/CASE19_PAGE_01_TYPE_v1.0.svg",
+      "destination": "05_SVG_TEXT/CANDIDATES/CASE19_PAGE_01_TYPE_v1.0.svg"
+    },
+    {
+      "source": "03_TYPOGRAPHY/CASE19_PAGE_02_TYPE_v1.0.svg",
+      "destination": "05_SVG_TEXT/CANDIDATES/CASE19_PAGE_02_TYPE_v1.0.svg"
+    },
+    {
+      "source": "03_TYPOGRAPHY/CASE19_PAGE_03_TYPE_v1.0.svg",
+      "destination": "05_SVG_TEXT/CANDIDATES/CASE19_PAGE_03_TYPE_v1.0.svg"
+    },
+    {
+      "source": "03_TYPOGRAPHY/CASE19_PAGE_04_TYPE_v1.0.svg",
+      "destination": "05_SVG_TEXT/CANDIDATES/CASE19_PAGE_04_TYPE_v1.0.svg"
+    },
+    {
+      "source": "04_LAYOUT/CASE19_LAYOUT_SPEC_v1.0.json",
+      "destination": "06_LAYOUT/CANDIDATES/CASE19_LAYOUT_SPEC_v1.0.json"
+    },
+    {
+      "source": "05_REVIEW/CASE19_TYPOGRAPHY_CONTACT_SHEET_v1.0.png",
+      "destination": "07_PROOFS/COMPONENT_REVIEW/CASE19_TYPOGRAPHY_CONTACT_SHEET_v1.0.png"
+    }
+  ],
+  "control_destination": "09_CONTROL/COMPONENT_PRODUCTION/CL-C19-COMPONENT-PRODUCTION-001",
+  "assembly_destination": "NOT_MATERIALIZED",
+  "publication_destination": "NOT_MATERIALIZED"
+}

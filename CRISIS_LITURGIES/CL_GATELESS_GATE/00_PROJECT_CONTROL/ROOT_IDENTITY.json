@@ -1,9 +1,9 @@
 {
   "registry_id": "TG-CL-GG-ROOT-001",
   "record_type": "canonical_project_root",
-  "record_version": "1.4",
+  "record_version": "1.5",
   "registered_at": "2026-07-29T17:13:13-04:00",
-  "reconciled_at": "2026-07-29T20:00:51-04:00",
+  "reconciled_at": "2026-07-29T21:05:00-04:00",
   "project": {
     "program": "Crisis Liturgies",
     "name": "The Gateless Gate",
@@ -72,13 +72,18 @@
     "recovery_architecture": "CLOSED_COMPLETE",
     "compiler_preflight": "PASS_WITH_CARRIED_HOLDS",
     "compiler_state": "READINESS_COMPILER_IMPLEMENTED",
-    "manufacturing_eligibility": "NOT_ELIGIBLE",
-    "production_authority": "CLOSED",
+    "manufacturing_eligibility": "PENDING_FOUNDER_COMPONENT_REVIEW",
+    "production_authority": "BOUNDED_CASE19_COMPONENTS_COMPLETE_ASSEMBLY_CLOSED",
     "image_generation_authorization": "NOT_GRANTED",
-    "layout_authorization": "NOT_GRANTED",
+    "layout_authorization": "GRANTED_CASE19_CANDIDATE_COMPLETE",
     "render_authorization": "NOT_GRANTED",
     "publication_authorization": "NOT_GRANTED",
-    "archive_admission": "NOT_GRANTED"
+    "archive_admission": "NOT_GRANTED",
+    "artifact_component_authorization": "GRANTED_CASE19_CANDIDATE_COMPLETE",
+    "copy_authorization": "GRANTED_CASE19_CANDIDATE_COMPLETE",
+    "svg_typography_authorization": "GRANTED_CASE19_CANDIDATE_COMPLETE",
+    "component_review_render_authorization": "GRANTED_CASE19_CANDIDATE_COMPLETE",
+    "page_assembly_authorization": "NOT_GRANTED"
   },
   "boundary": {
     "allowed_now": [
@@ -86,19 +91,16 @@
       "control receipts",
       "validated recovery packages",
       "architecture recovery closeout records",
-      "Case 19 control-plane pipeline proof records"
+      "Case 19 control-plane pipeline proof records",
+      "Case 19 founder-review component candidates"
     ],
     "not_authorized_by_this_record": [
-      "source transformation",
-      "artifact generation",
-      "page composition",
-      "layout",
-      "rendering",
+      "source or transcription-witness transformation",
+      "page composition or assembly",
+      "additional artifact, copy, SVG, layout, or render production",
       "publication",
-      "archive admission",
-      "image generation",
-      "final copy",
-      "SVG typography",
+      "release",
+      "archive or canon admission",
       "scaling beyond Case 19"
     ],
     "legacy_roots": "PRESERVED_IN_PLACE / NON_AUTHORITATIVE_FOR_NEW_GATLESS_GATE_WORK"
@@ -120,5 +122,25 @@
     ],
     "founder_review_gate": "READY",
     "repository_path": "CRISIS_LITURGIES/CL_GATELESS_GATE/00_PROJECT_CONTROL/PIPELINE_PROOFS/CL-C19-PIPELINE-PROOF-001"
+  },
+  "component_production": {
+    "packet_id": "CL-C19-COMPONENT-PRODUCTION-001",
+    "authorized_at": "2026-07-29T20:45:00-04:00",
+    "controlling_instruction": "ACCEPT_PIPELINE_PROOF_AND_OPEN_BOUNDED_COMPONENT_PRODUCTION",
+    "result": "COMPONENT_PRODUCTION_COMPLETE_FOUNDER_REVIEW_REQUIRED",
+    "component_state": "FOUNDER_REVIEW_CANDIDATE",
+    "components": [
+      "CASE19-ARTIFACT-MASTER",
+      "CASE19-ARTIFACT-REVIEW",
+      "CASE19-COPY",
+      "CASE19-SVG-TEXT",
+      "CASE19-LAYOUT"
+    ],
+    "validation": "PASS_FAIL_CLOSED",
+    "negative_tests": "5_OF_5_PASS",
+    "packet_zip_sha256": "b717b61e44d5e9cee58f5265668422b8318303ad2982aaec9fff44aabf93718f",
+    "assembly_attempted": false,
+    "founder_review_gate": "READY",
+    "repository_path": "CRISIS_LITURGIES/CL_GATELESS_GATE/CASES/CASE_19/09_CONTROL/COMPONENT_PRODUCTION/CL-C19-COMPONENT-PRODUCTION-001"
   }
 }
