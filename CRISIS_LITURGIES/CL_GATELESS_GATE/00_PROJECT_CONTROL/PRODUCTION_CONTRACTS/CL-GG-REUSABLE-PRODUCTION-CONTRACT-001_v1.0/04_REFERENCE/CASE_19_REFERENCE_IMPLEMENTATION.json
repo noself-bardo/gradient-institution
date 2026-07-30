@@ -1,0 +1,91 @@
+{
+  "case_id": "CASE_19",
+  "canonical_destination": "CASES/CASE_19",
+  "reference_role": "FOUNDER_APPROVED_PRODUCTION_METHOD_ANCHOR_NOT_A_LAYOUT_TEMPLATE",
+  "authority": {
+    "authorized_stage": "PILOT_COMPLETE",
+    "remaining_stages": "CLOSED"
+  },
+  "source_custody": {
+    "state": "VALIDATED",
+    "manifest_sha256": "6d4b1d7d44ae8e68f488360d96d74e377e0ee35748af79d4d2bfb442b12dc872"
+  },
+  "specification": {
+    "state": "FROZEN",
+    "sha256": "3f8188e9d48c2ba1ff80656a2eca8bb0127c9c243b37a3e2257e383449e90b10"
+  },
+  "witness": {
+    "state": "VERIFIED_SOURCE_LOCKED",
+    "sha256": "8fd4754f061d9713c742e44f09c36843510f79ddfd865203e2e81ce5190ee7e9"
+  },
+  "objects": [
+    {
+      "object_id": "CL-GG-C19-OBJ-001",
+      "definition": "Ordinary load-bearing floor plank with a directional arrow physically removed from the substance of the board",
+      "views": {
+        "full_evidence": {
+          "state": "FOUNDER_APPROVED",
+          "filename": "CL_GG_C19_ARTIFACT_FULL_EVIDENCE_v1.0.png",
+          "sha256": "d228bf38f30f098cf857d55f26fab57de0eba4c09bb84364ab394e6ee7cb5275",
+          "contains_typography": false,
+          "role": "PRIMARY_FORENSIC_MASTER"
+        },
+        "alternate_or_construction": {
+          "state": "FOUNDER_APPROVED",
+          "filename": "CL_GG_C19_ARTIFACT_CONSTRUCTION_VIEW_v1.0.png",
+          "sha256": "3cac991ac49c5493a183b3fa786b8134805cf1bce79a7905d5306c455981f67a",
+          "contains_typography": false,
+          "role": "PRIMARY_FORENSIC_MASTER"
+        },
+        "macro_or_detail": {
+          "state": "FOUNDER_APPROVED",
+          "filename": "CL_GG_C19_ARTIFACT_MACRO_INTERVENTION_v1.0.png",
+          "sha256": "db504d9c0e4f8edd4ac4c6dba6f7d6ed453e85b86cdec84a19fae4615ebf333d",
+          "contains_typography": false,
+          "role": "PRIMARY_FORENSIC_MASTER"
+        }
+      },
+      "founder_disposition": "APPROVED"
+    }
+  ],
+  "secondary_layers": [
+    {
+      "filename": "CASE19_SECONDARY_VECTOR_PLATE_v1.1.svg",
+      "state": "SECONDARY_DIAGRAMMATIC_LAYER_ONLY",
+      "may_satisfy_artifact_stage": false
+    }
+  ],
+  "components": {
+    "copy": "APPROVED",
+    "svg_typography": "APPROVED",
+    "layout": "APPROVED",
+    "provenance": "COMPLETE"
+  },
+  "assembly": {
+    "state": "COMPLETE",
+    "pages": 4,
+    "text_is_editable": true,
+    "artifact_layers_are_separate": true,
+    "proof_filename": "CASE19_FOUR_PAGE_ASSEMBLED_REVIEW_PROOF_v1.1.pdf",
+    "proof_sha256": "c88c714e702876a71d3e1e94c6defa9a8cab5cc197cf4649aa303b041990f502"
+  },
+  "qc": {
+    "structural": "PASS",
+    "rendered_visual": "PASS",
+    "true_polarity_reviewed": true,
+    "negative_tests": "6_OF_6_PASS"
+  },
+  "founder_assembly_disposition": {
+    "state": "APPROVED",
+    "received": "2026-07-30",
+    "scope": "Case 19 forensic four-page assembly revision only"
+  },
+  "state": "CASE_PROOF_FOUNDER_APPROVED",
+  "does_not_authorize": [
+    "production of any remaining case",
+    "publication",
+    "release",
+    "archive admission",
+    "canon admission"
+  ]
+}
