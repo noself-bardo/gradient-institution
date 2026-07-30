@@ -1,0 +1,39 @@
+{
+  "contract_id": "CL-GG-REUSABLE-PRODUCTION-CONTRACT-001",
+  "version": "1.0",
+  "project": "CRISIS_LITURGIES/CL_GATELESS_GATE",
+  "reference_case": "CASE_19",
+  "authorization_source": "User instruction on 2026-07-30 to extract the proven Case 19 workflow into a reusable production contract without producing remaining cases",
+  "result": "CONTRACT_EXTRACTED_REFERENCE_VALIDATED",
+  "contract_state": "FOUNDER_REVIEW_CANDIDATE",
+  "case_19_pilot": "FOUNDER_APPROVED_COMPLETE",
+  "remaining_cases": "NOT_AUTHORIZED_FOR_PRODUCTION",
+  "image_generation_authorization": "NOT_GRANTED_FOR_REMAINING_CASES",
+  "artifact_production_authorization": "NOT_GRANTED_FOR_REMAINING_CASES",
+  "copy_authorization": "NOT_GRANTED_FOR_REMAINING_CASES",
+  "layout_authorization": "NOT_GRANTED_FOR_REMAINING_CASES",
+  "assembly_authorization": "NOT_GRANTED_FOR_REMAINING_CASES",
+  "render_authorization": "NOT_GRANTED_FOR_REMAINING_CASES",
+  "publication_authorization": "NOT_GRANTED",
+  "release_authorization": "NOT_GRANTED",
+  "archive_admission": "NOT_GRANTED",
+  "allowed_now": [
+    "production-contract extraction",
+    "schema and template creation",
+    "Case 19 reference mapping",
+    "read-only validation",
+    "fail-closed negative testing",
+    "control-record reconciliation"
+  ],
+  "explicitly_excluded": [
+    "creative development of any remaining case",
+    "artifact generation for any remaining case",
+    "copywriting for any remaining case",
+    "transcription transformation",
+    "page composition for any remaining case",
+    "batch manufacturing",
+    "publication",
+    "release",
+    "archive or canon admission"
+  ]
+}
