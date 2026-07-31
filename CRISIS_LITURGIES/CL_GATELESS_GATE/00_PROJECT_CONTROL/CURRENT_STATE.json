@@ -1,0 +1,88 @@
+{
+  "record_id": "TG-CL-GG-CURRENT-STATE-001",
+  "record_type": "project_current_operating_state",
+  "record_version": "1.0",
+  "effective_at": "2026-07-31T14:39:13-04:00",
+  "timezone": "America/New_York",
+  "project": {
+    "program": "Crisis Liturgies",
+    "name": "The Gateless Gate",
+    "project_key": "CL_GATELESS_GATE",
+    "repository": "noself-bardo/gradient-institution",
+    "repository_root": "CRISIS_LITURGIES/CL_GATELESS_GATE",
+    "notion_page_id": "3a6deaca-b3a5-811f-9aaf-c922873b73c0",
+    "notion_page_url": "https://app.notion.com/p/3a6deacab3a5811f9aafc922873b73c0",
+    "drive_root_id": "1yrKBoy4TxdbB9HP2bVEHB3TiiBzUpQzq",
+    "drive_control_folder_id": "1NqWF9hZDgByUJnNjwH6DNGyjQHD6PyM4"
+  },
+  "supersession": {
+    "supersedes_for_current_operating_state": "00_PROJECT_CONTROL/ROOT_IDENTITY.json record_version 1.9 authority_state and boundary",
+    "preservation_rule": "ROOT_IDENTITY.json and the chronological Notion ledger remain historical evidence and are not deleted or rewritten by this record.",
+    "conflict_rule": "For present-tense operating state, this record controls until a later explicitly versioned CURRENT_STATE record is promoted."
+  },
+  "current_state": {
+    "architecture_recovery_lane": "CLOSED_COMPLETE_RETIRE_READ_ONLY",
+    "assembly_wave_04_lane": "COMPLETE_RETIRE_READ_ONLY",
+    "production_architecture": "FROZEN_CONTRACT_v1.1",
+    "pipeline_state": "BUILT_TESTED_FOUNDER_APPROVED_AND_INDEPENDENT_ARCHIVIST_APPROVED_FOR_PRODUCTION",
+    "latest_completed_scope": "ASSEMBLY_WAVE_04_CASES_30_33_34",
+    "active_human_gate": "FOUNDER_ILLUSTRATOR_FINISHING_AND_FINAL_CREATIVE_APPROVAL",
+    "next_operational_lane": "FOUNDER_RETURN_INGESTION_CASES_30_33_34",
+    "next_lane_open_condition": "Steven returns edited Illustrator/SVG masters from Assembly Wave 04.",
+    "next_lane_exit_condition": "Founder-edited masters versioned without overwrite, trim-correct derivatives regenerated, final QC passed, and final creative-approval gate returned."
+  },
+  "authorizations": {
+    "founder_artifact_approval_cases_30_33_34": "GRANTED_COMPLETE",
+    "assembly_wave_04": "GRANTED_COMPLETE",
+    "founder_return_ingestion_after_file_return": "AUTHORIZED_BOUNDED_OPERATION",
+    "new_image_generation": "NOT_AUTHORIZED",
+    "artifact_substitution": "NOT_AUTHORIZED",
+    "architecture_change": "NOT_AUTHORIZED",
+    "publication": "NOT_AUTHORIZED",
+    "release": "NOT_AUTHORIZED",
+    "canon_admission": "NOT_AUTHORIZED",
+    "archive_admission": "NOT_AUTHORIZED"
+  },
+  "governing_contract": {
+    "contract_id": "CL-GG-REUSABLE-PRODUCTION-CONTRACT-001",
+    "version": "1.1",
+    "state": "ACTIVE_FROZEN",
+    "drive_file_id": "1GNVO2hG-4IV6MxuASRH3Tl3-vUqzy8xb",
+    "drive_url": "https://drive.google.com/file/d/1GNVO2hG-4IV6MxuASRH3Tl3-vUqzy8xb/view",
+    "sha256": "970e78d7ba8737babb6b8d47458ca5d1c44104736b879c12299a487c6af4486c"
+  },
+  "approved_artifact_input": {
+    "packet": "CL-GG-ARTIFACT-REPLICATION-WAVE-001_v1.1.zip",
+    "drive_file_id": "13dcf7d8xItFljJ2iss3mFx9MuZf1w18y",
+    "drive_url": "https://drive.google.com/file/d/13dcf7d8xItFljJ2iss3mFx9MuZf1w18y/view",
+    "sha256": "6294afd69cdaebab7c3158b8a76e613354b6e6ee4462477ad2115a919a99d23c"
+  },
+  "latest_assembly": {
+    "packet": "CL-GG-ASSEMBLY-WAVE-04_v1.0.zip",
+    "delivery_alias": "CL-GG-ASSEMBLY-WAVE-04_v1.0-ILLUSTRATOR-READY.zip",
+    "drive_file_id": "11KZjK0jO1-8XIe6PQlmtnU5WZnoDVARE",
+    "drive_url": "https://drive.google.com/file/d/11KZjK0jO1-8XIe6PQlmtnU5WZnoDVARE/view",
+    "size_bytes": 52623268,
+    "external_container_sha256": "c3e79cfad2dc41fd3d4d379056c521c865109ecd928dcc654db63c16495afb73",
+    "internal_manifest": "MANIFEST.sha256",
+    "page_geometry": "450 x 594 pt",
+    "editable_page_masters": 12,
+    "independent_archivist": "PASS",
+    "technical_visual_extraction_reopen_qc": "PASS",
+    "state": "FOUNDER_FINISHING_GATE"
+  },
+  "known_exceptions": [
+    {
+      "id": "DRIVE_WAVE03_V1_6_TRANSFER",
+      "state": "DISCLOSED_UNRESOLVED",
+      "description": "Assembly Wave 03 v1.6 is preserved in Library but its canonical Drive upload timed out twice."
+    },
+    {
+      "id": "FINAL_CONTAINER_SELF_HASH",
+      "state": "RESOLVED_BY_EXTERNAL_SEAL_LAW",
+      "description": "The outer ZIP hash is controlled by an external seal because embedding that hash inside the ZIP would mutate the container. Internal receipts identify reviewed candidate containers; MANIFEST.sha256 seals contents."
+    }
+  ],
+  "lane_rule": "Do not continue work in the architecture/recovery or Assembly Wave 04 production lanes. Open only the bounded founder-return ingestion lane when the edited masters exist."
+}
+

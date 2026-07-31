@@ -1,0 +1,31 @@
+{
+  "seal_id": "CL-GG-AW04-EXTERNAL-CONTAINER-SEAL-001",
+  "seal_version": "1.0",
+  "issued_at": "2026-07-31T14:39:13-04:00",
+  "timezone": "America/New_York",
+  "scope": "outer_zip_container",
+  "file_name": "CL-GG-ASSEMBLY-WAVE-04_v1.0.zip",
+  "accepted_delivery_alias": "CL-GG-ASSEMBLY-WAVE-04_v1.0-ILLUSTRATOR-READY.zip",
+  "size_bytes": 52623268,
+  "algorithm": "SHA-256",
+  "digest": "c3e79cfad2dc41fd3d4d379056c521c865109ecd928dcc654db63c16495afb73",
+  "drive_file_id": "11KZjK0jO1-8XIe6PQlmtnU5WZnoDVARE",
+  "drive_url": "https://drive.google.com/file/d/11KZjK0jO1-8XIe6PQlmtnU5WZnoDVARE/view",
+  "content_seal": {
+    "mechanism": "internal_manifest",
+    "path": "CL-GG-ASSEMBLY-WAVE-04_v1.0/MANIFEST.sha256",
+    "validation": "PASS_AFTER_CLEAN_EXTRACTION"
+  },
+  "validation": {
+    "zip_integrity": "PASS",
+    "clean_extraction": "PASS",
+    "manifest_recomputation": "PASS",
+    "svg_reopen": "PASS",
+    "pdf_trim_geometry": "PASS_12_OF_12_AT_450_X_594_PT",
+    "independent_archivist": "PASS"
+  },
+  "self_reference_law": "The final outer-container digest is recorded outside the sealed ZIP. It must not be inserted into that ZIP, because doing so changes the container bytes and invalidates the digest.",
+  "receipt_reconciliation": "Embedded receipts document pre-final reviewed containers. This external seal identifies the exact delivered container; the internal manifest identifies its contents.",
+  "authority_state": "CONTROLLING_EXTERNAL_SEAL_FOR_ASSEMBLY_WAVE_04_v1.0"
+}
+
