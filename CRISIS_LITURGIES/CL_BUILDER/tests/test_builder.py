@@ -14,14 +14,103 @@ from cl_builder.schema import validate_instance
 
 
 ROOT = Path(__file__).resolve().parents[1]
-VOLUME_PATH = ROOT / "volumes" / "CL-EV-001" / "volume.yaml"
 PROFILE_PATH = ROOT / "profiles" / "crisis-liturgies-expansion-v1.yaml"
+FUNCTIONS = ["RELIC_ENTRY", "WITNESS_RECORD", "SYSTEM_TRANSLATION", "ARCHIVE_DISPOSITION"]
+LABELS = ["Encounter", "Mechanism / Witness", "Institution / Expansion", "Residue / Turn"]
+
+
+def make_page(issue_number: int, page_number: int) -> dict:
+    partial = issue_number == 1 and page_number == 1
+    return {
+        "page_id": f"CL-PM-I{issue_number:02d}-P{page_number}",
+        "issue_number": issue_number,
+        "issue": f"ISSUE {issue_number:02d}",
+        "page_number": page_number,
+        "display_label": LABELS[page_number - 1],
+        "function_code": FUNCTIONS[page_number - 1],
+        "title": f"PAGE {page_number}",
+        "production_intent": "A controlled relic plate with meaningful negative space.",
+        "source_prompt": "Create an archival plate. IMAGE GATE CLOSED. INTIFADA.",
+        "source_negative_prompt": "white background, humanoid robot",
+        "copy": {
+            "source_document_id": "copy-source",
+            "copy_register_id": "copy-register",
+            "locked": True,
+            "word_count": 20,
+            "source_trace": "CONDITIONAL",
+            "relic_status": "ACTIVE",
+            "authoritative_text_in_image": False,
+        },
+        "render_overrides": {
+            "human_presence": {
+                "mode": "partial_evidence" if partial else "none",
+                "identifiable": False,
+                "cinematic": False,
+                "subordinate_to_relic": True,
+            },
+            "material_translation_terms": ["mirror"],
+            "allow_environment": False,
+            "allow_cast_shadow": False,
+            "allow_transparency": False,
+        },
+    }
+
+
+def make_volume() -> dict:
+    pages = [make_page(issue, page) for issue in range(1, 13) for page in range(1, 5)]
+    return {
+        "schema_version": "1.0.0",
+        "volume_id": "CL-EV-001",
+        "working_id": "CL-PM",
+        "title": "THE PYGMALION MACHINE",
+        "subtitle": "Projection, Artificial Intimacy, and the Mirror That Learned to Speak",
+        "core_line": "AI is Pygmalion's mirror learning to speak.",
+        "state": "BUILD_VALIDATED",
+        "render_authorization": {
+            "status": "NOT_APPROVED_FOR_RENDER",
+            "authorized": False,
+            "authorization_record": None,
+        },
+        "authority": {
+            "canon": "Crisis Liturgies Canon v1.1",
+            "generation_standard": "CL-GEN-STD-001 v1.0",
+            "builder_amendment": "CCR-CL-002",
+            "function_palette_amendment": "CCR-CL-003",
+            "volume_ccr": "CL-PM_CANON_CHANGE_REPORT",
+        },
+        "release_profile": "crisis-liturgies-expansion-v1",
+        "page_profile": {
+            "name": "expansion-volume",
+            "mapping": dict(zip(LABELS, FUNCTIONS)),
+        },
+        "canvas": {
+            "master_width": 3750,
+            "master_height": 4950,
+            "reader_width": 1086,
+            "reader_height": 1448,
+            "orientation": "portrait",
+            "background_hex": "#000000",
+            "transparent_background": False,
+        },
+        "visual_doctrine": {
+            "speaking_mirror_not_living_machine": True,
+            "object_as_witness": True,
+            "canvas": "matte_black",
+            "ink_family": "metallic_silver_tonal",
+            "max_foreground_coverage": 0.25,
+            "authoritative_typography_stage": "layout",
+            "prohibited_canvas_terms": ["white", "cream", "ivory", "transparent"],
+        },
+        "issues": [{"number": n, "title": f"ISSUE {n:02d}"} for n in range(1, 13)],
+        "sources": [{"name": "fixture", "provider_id": "fixture", "sha256": None, "role": "test"}],
+        "pages": pages,
+    }
 
 
 class BuilderTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.volume = load_structured(VOLUME_PATH)
+        cls.volume = make_volume()
         cls.profile = load_structured(PROFILE_PATH)
 
     def test_volume_and_page_schema(self) -> None:
