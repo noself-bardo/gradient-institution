@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "corpus_page_count": 48,
+  "dimensions": [{"width": 1086, "height": 1448}],
+  "metrics": {
+    "black_coverage": {"min": 0.3643897, "p05": 0.40023122, "median": 0.51732306, "p95": 0.71486437, "max": 0.78919739},
+    "white_field_fraction": {"min": 0.0, "p05": 0.0, "median": 0.00000827, "p95": 0.00015968, "max": 0.00089219},
+    "foreground_coverage": {"min": 0.21080261, "p05": 0.28513563, "median": 0.48267694, "p95": 0.59976878, "max": 0.6356103},
+    "edge_black_coverage": {"min": 1.0, "p05": 1.0, "median": 1.0, "p95": 1.0, "max": 1.0},
+    "mean_channel_delta": {"min": 0.486372, "p05": 1.76821175, "median": 5.3718925, "p95": 7.680177, "max": 8.420048},
+    "chroma_fraction": {"min": 0.0, "p05": 0.0, "median": 0.00000382, "p95": 0.00027758, "max": 0.00243303}
+  },
+  "recommended_qc": {
+    "black_rgb_tolerance": 12,
+    "white_rgb_threshold": 242,
+    "minimum_black_coverage": 0.34,
+    "maximum_white_field_fraction": 0.0015,
+    "maximum_foreground_coverage": 0.66,
+    "maximum_alpha_violation_fraction": 0.0,
+    "minimum_edge_black_coverage": 0.995,
+    "chroma_delta_threshold": 24,
+    "maximum_chroma_fraction": 0.003,
+    "maximum_mean_channel_delta": 9.0
+  },
+  "source_document": {
+    "file": "crisis-liturgies-iv-depressive-infrastructure-v1.0-screen.pdf",
+    "drive_file_id": "1QrUyqxGOLPilQu9bWLoQPheovIBYuWe8",
+    "sha256": "168e2c958b55cbc9f3641f16110dbd5c21789a6908e2830587206c54799f41fe"
+  },
+  "note": "Per-page measurements are preserved in the sealed Engineering Stage 02 package; Git stores the complete corpus envelope and source checksum."
+}

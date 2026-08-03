@@ -4,6 +4,7 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
+import numpy as np
 from PIL import Image
 
 
@@ -19,49 +20,46 @@ class ImageQCResult:
     foreground_coverage: float
     alpha_violation_fraction: float
     edge_black_coverage: float
+    mean_channel_delta: float
+    chroma_fraction: float
     failures: list[str]
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
 
 
-def _is_black(pixel: tuple[int, int, int], tolerance: int) -> bool:
-    return max(pixel) <= tolerance
-
-
-def _is_white(pixel: tuple[int, int, int], threshold: int) -> bool:
-    return min(pixel) >= threshold
-
-
 def inspect_image(path: str | Path, validation: dict[str, Any], canvas: dict[str, Any]) -> ImageQCResult:
     image = Image.open(path).convert("RGBA")
     width, height = image.size
-    getter = getattr(image, "get_flattened_data", image.getdata)
-    pixels = list(getter())
-    total = max(len(pixels), 1)
+    array = np.asarray(image, dtype=np.int16)
+    rgb = array[:, :, :3]
+    alpha = array[:, :, 3]
+    maximum = rgb.max(axis=2)
+    minimum = rgb.min(axis=2)
+    channel_delta = maximum - minimum
+
     black_tolerance = int(validation["black_rgb_tolerance"])
     white_threshold = int(validation["white_rgb_threshold"])
+    chroma_threshold = int(validation.get("chroma_delta_threshold", 24))
 
-    rgb = [(r, g, b) for r, g, b, _ in pixels]
-    black_count = sum(_is_black(p, black_tolerance) for p in rgb)
-    white_count = sum(_is_white(p, white_threshold) for p in rgb)
-    alpha_violations = sum(a < 255 for _, _, _, a in pixels)
+    black_mask = maximum <= black_tolerance
+    white_mask = minimum >= white_threshold
+    alpha_mask = alpha < 255
 
     edge_width = max(1, int(min(width, height) * 0.02))
-    edge_pixels: list[tuple[int, int, int]] = []
-    rgba = image.load()
-    for y in range(height):
-        for x in range(width):
-            if x < edge_width or x >= width - edge_width or y < edge_width or y >= height - edge_width:
-                r, g, b, _ = rgba[x, y]
-                edge_pixels.append((r, g, b))
-    edge_black_count = sum(_is_black(p, black_tolerance) for p in edge_pixels)
+    edge_mask = np.zeros((height, width), dtype=bool)
+    edge_mask[:edge_width, :] = True
+    edge_mask[-edge_width:, :] = True
+    edge_mask[:, :edge_width] = True
+    edge_mask[:, -edge_width:] = True
 
-    black_coverage = black_count / total
-    white_fraction = white_count / total
+    black_coverage = float(black_mask.mean())
+    white_fraction = float(white_mask.mean())
     foreground_coverage = 1.0 - black_coverage
-    alpha_fraction = alpha_violations / total
-    edge_black_coverage = edge_black_count / max(len(edge_pixels), 1)
+    alpha_fraction = float(alpha_mask.mean())
+    edge_black_coverage = float(black_mask[edge_mask].mean())
+    mean_channel_delta = float(channel_delta.mean())
+    chroma_fraction = float((channel_delta > chroma_threshold).mean())
 
     failures: list[str] = []
     expected_width = int(canvas["master_width"])
@@ -78,6 +76,10 @@ def inspect_image(path: str | Path, validation: dict[str, Any], canvas: dict[str
         failures.append("transparency detected")
     if edge_black_coverage < float(validation["minimum_edge_black_coverage"]):
         failures.append("edge contamination detected")
+    if chroma_fraction > float(validation.get("maximum_chroma_fraction", 1.0)):
+        failures.append("chromatic drift detected")
+    if mean_channel_delta > float(validation.get("maximum_mean_channel_delta", 255.0)):
+        failures.append("mean channel delta above maximum")
 
     return ImageQCResult(
         passed=not failures,
@@ -90,5 +92,7 @@ def inspect_image(path: str | Path, validation: dict[str, Any], canvas: dict[str
         foreground_coverage=round(foreground_coverage, 6),
         alpha_violation_fraction=round(alpha_fraction, 6),
         edge_black_coverage=round(edge_black_coverage, 6),
+        mean_channel_delta=round(mean_channel_delta, 6),
+        chroma_fraction=round(chroma_fraction, 6),
         failures=failures,
     )

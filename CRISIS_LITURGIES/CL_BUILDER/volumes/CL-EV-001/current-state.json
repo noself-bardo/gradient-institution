@@ -5,7 +5,7 @@
   "blocked_on": [
     "APPROVED_FOR_RENDER"
   ],
-  "current_spec": "generated:volume.yaml",
-  "last_event": "SPEC_NORMALIZATION_AND_PREFLIGHT_PASS",
-  "updated_at": "2026-08-03T07:53:00-04:00"
+  "current_spec": "volume.yaml",
+  "last_event": "ENGINEERING_STAGE_02_COMPLETE",
+  "updated_at": "2026-08-03T18:06:00-04:00"
 }

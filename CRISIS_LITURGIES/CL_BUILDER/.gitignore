@@ -3,4 +3,5 @@ __pycache__/
 .venv/
 build/*.render-packets.json
 build/qc/
-source_exports/
+build/*_TYPOGRAPHY_TECHNICAL_PROOF_*.pdf
+build/*_RENDER_PLAN_*/
