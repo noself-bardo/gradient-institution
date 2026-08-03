@@ -1,0 +1,11 @@
+{
+  "volume_id": "CL-EV-001",
+  "state": "BUILD_VALIDATED",
+  "render_authorized": false,
+  "blocked_on": [
+    "APPROVED_FOR_RENDER"
+  ],
+  "current_spec": "generated:volume.yaml",
+  "last_event": "SPEC_NORMALIZATION_AND_PREFLIGHT_PASS",
+  "updated_at": "2026-08-03T07:53:00-04:00"
+}
