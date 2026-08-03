@@ -1,0 +1,23 @@
+volume_id: CL-EV-001
+working_id: CL-PM
+status: SOURCE_EXPORTS_REQUIRED_FOR_REGENERATION
+sources:
+  visual_prompt_register:
+    provider: google_drive
+    document_id: 1voVahSydR2cjws5I_s6B2pCJkMk6z-OcS7g36i7JNo4
+    expected_filename: CL-EV-001_48_PRODUCTION_PACKETS_VISUAL_PROMPTS.txt
+    sha256: 98f763ba773d6f60f1c248c82ff7286d1aa83dc23df403833abda1d5a17da932
+  copy_register:
+    provider: google_drive
+    document_id: 1-cGDIUQmK2xsFW0u89LwInWp_GGflOBcsv5Vsyea3Xc
+    expected_filename: CL-PM_48_PAGE_COPY_REGISTER.txt
+    sha256: e2c2ac1b0d4e7a6a20bd90e72c04e1d064c2647063d1295f527bab356ccfcdd7
+  authoritative_copy:
+    provider: google_drive
+    document_id: 1bc1q2G0Ai7WJzB9qNsthvuSxnNfiSnbRVZ364sWsIUY
+    expected_filename: CL-PM_DF_FINAL_PROSE_MANUSCRIPT.txt
+normalization_command: >-
+  python tools/normalize_pygmalion.py
+  --prompt-export source_exports/CL-EV-001_48_PRODUCTION_PACKETS_VISUAL_PROMPTS.txt
+  --copy-register source_exports/CL-PM_48_PAGE_COPY_REGISTER.txt
+render_authorization: NOT_APPROVED_FOR_RENDER
