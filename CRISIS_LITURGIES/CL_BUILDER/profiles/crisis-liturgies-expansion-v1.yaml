@@ -1,0 +1,45 @@
+profile_id: crisis-liturgies-expansion-v1
+version: 1.0.0
+authority:
+  - CCR-CL-002
+  - CL-GEN-STD-001
+  - CCR-CL-003
+visual:
+  mode: archival_relic_plate
+  canvas: matte_black
+  ink_family: metallic_silver_tonal
+  object_as_witness: true
+  one_dominant_symbol: true
+  maximum_supporting_symbols: 2
+  residual_motif_count: 1
+  authoritative_typography_in_renderer: false
+  prohibited_modes:
+    - white_canvas
+    - paper_canvas
+    - transparent_canvas
+    - photorealism
+    - lifestyle_scene
+    - cinematic_lighting
+    - cast_shadow
+    - page_mockup
+    - humanoid_machine
+qc:
+  black_rgb_tolerance: 12
+  white_rgb_threshold: 242
+  minimum_black_coverage: 0.75
+  maximum_white_field_fraction: 0.02
+  maximum_foreground_coverage: 0.25
+  maximum_alpha_violation_fraction: 0.0
+  minimum_edge_black_coverage: 0.92
+repair_policy:
+  maximum_attempts: 3
+  asset_failures:
+    white_field: RBP-002
+    palette_drift: RBP-003
+    typography_contamination: RBP-004
+    composition_drift: RBP-005
+    density_excess: RBP-006
+    border_contamination: RBP-007
+  batch_style_contamination:
+    action: invalidate_and_restart_scope
+    allow_failed_output_as_base: false
