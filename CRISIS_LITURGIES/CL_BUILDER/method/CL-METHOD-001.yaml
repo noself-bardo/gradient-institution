@@ -1,0 +1,36 @@
+method_id: CL-METHOD-001
+version: 1.0
+status: LOCKED_TWO_REFERENCE_PROOF
+references:
+  - id: CL-REF-001
+    issue: MIRROR
+    pages: 4
+    rerenders: 1
+  - id: CL-REF-002
+    issue: IVORY
+    pages: 4
+    rerenders: 0
+page_functions:
+  - RELIC_ENTRY
+  - WITNESS_RECORD
+  - SYSTEM_TRANSLATION
+  - ARCHIVE_DISPOSITION
+renderer:
+  visual_only: true
+  authoritative_text_allowed: false
+canvas:
+  background_hex: '#000000'
+  transparency_allowed: false
+palette:
+  family: metallic_silver_tonal
+  prohibited_canvas_terms: [white, cream, beige, ivory, transparent]
+human_presence:
+  identifiable: false
+  cinematic: false
+  subordinate_to_evidence: true
+repair:
+  scope: page_bounded
+  preserve_accepted_pages: true
+founder_gates:
+  - BOUNDED_RENDER_AUTHORIZATION
+  - COMPLETED_ISSUE_PROOF_REVIEW
