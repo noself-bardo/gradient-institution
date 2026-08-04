@@ -1,6 +1,6 @@
 method_id: CL-METHOD-001
 version: 1.0
-status: LOCKED_TWO_REFERENCE_PROOF
+status: LOCKED_THREE_REFERENCE_PROOF
 references:
   - id: CL-REF-001
     issue: MIRROR
@@ -10,6 +10,11 @@ references:
     issue: IVORY
     pages: 4
     rerenders: 0
+  - id: CL-REF-003
+    issue: REFUSAL
+    cover: 1
+    pages: 4
+    rerenders: 2
 page_functions:
   - RELIC_ENTRY
   - WITNESS_RECORD
@@ -21,6 +26,16 @@ renderer:
 canvas:
   background_hex: '#000000'
   transparency_allowed: false
+density:
+  interior_minimum_black_coverage: 0.75
+  interior_maximum_foreground_coverage: 0.25
+  cover_exceptions:
+    CL-REF-003:
+      applies_only_to: CL-PM-I02-COVER
+      classification: ISSUE_COVER
+      minimum_black_coverage: 0.70
+      maximum_foreground_coverage: 0.30
+      canonical_page_function_member: false
 palette:
   family: metallic_silver_tonal
   prohibited_canvas_terms: [white, cream, beige, ivory, transparent]

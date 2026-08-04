@@ -286,13 +286,15 @@ class ProvenMethodRegressionTests(unittest.TestCase):
         cls.method = load_structured(ROOT / "method" / "CL-METHOD-001.yaml")
         cls.fixtures = json.loads((ROOT / "references" / "golden" / "CL-METHOD-001_REGRESSION_FIXTURES_v1.0.json").read_text(encoding="utf-8"))
 
-    def test_method_lock_has_two_distinct_references(self) -> None:
+    def test_method_lock_has_three_distinct_references(self) -> None:
         refs = self.fixtures["references"]
-        self.assertEqual([r["reference_id"] for r in refs], ["CL-REF-001", "CL-REF-002"])
-        self.assertEqual({r["issue"] for r in refs}, {"MIRROR", "IVORY"})
-        self.assertEqual(sum(r["page_count"] for r in refs), 8)
+        self.assertEqual([r["reference_id"] for r in refs], ["CL-REF-001", "CL-REF-002", "CL-REF-003"])
+        self.assertEqual({r["issue"] for r in refs}, {"MIRROR", "IVORY", "REFUSAL"})
+        self.assertEqual(sum(r["page_count"] for r in refs), 12)
         self.assertEqual(refs[0]["repair_count"], 1)
         self.assertEqual(refs[1]["repair_count"], 0)
+        self.assertEqual(refs[2]["repair_count"], 2)
+        self.assertEqual([r["id"] for r in self.method["references"]], [r["reference_id"] for r in refs])
 
     def test_method_keeps_renderer_visual_only(self) -> None:
         self.assertTrue(self.method["renderer"]["visual_only"])
@@ -319,6 +321,82 @@ class ProvenMethodRegressionTests(unittest.TestCase):
             self.assertIsInstance(digest, str)
             self.assertEqual(len(digest), 64)
             int(digest, 16)
+
+    def test_refusal_cover_is_separate_from_canonical_function_order(self) -> None:
+        refusal = self.fixtures["refusal"]
+        cover = refusal["cover"]
+        self.assertEqual(cover["classification"], "ISSUE_COVER")
+        self.assertFalse(cover["canonical_page_function_member"])
+        functions = [page["function"] for page in refusal["interior_pages"].values()]
+        self.assertEqual(functions, FUNCTIONS)
+        self.assertEqual(refusal["canonical_function_order"], FUNCTIONS)
+        self.assertEqual(len(refusal["interior_pages"]), 4)
+
+    def test_refusal_cover_density_exception_is_narrow_and_isolated(self) -> None:
+        refusal = self.fixtures["refusal"]
+        density = self.method["density"]
+        exception = density["cover_exceptions"]["CL-REF-003"]
+        self.assertEqual(exception["applies_only_to"], refusal["cover"]["page_id"])
+        self.assertEqual(exception["classification"], "ISSUE_COVER")
+        self.assertFalse(exception["canonical_page_function_member"])
+        self.assertGreater(refusal["cover"]["foreground_coverage"], density["interior_maximum_foreground_coverage"])
+        self.assertLessEqual(refusal["cover"]["foreground_coverage"], exception["maximum_foreground_coverage"])
+        self.assertGreaterEqual(refusal["cover"]["black_coverage"], exception["minimum_black_coverage"])
+        for page in refusal["interior_pages"].values():
+            self.assertGreaterEqual(page["black_coverage"], density["interior_minimum_black_coverage"])
+            self.assertLessEqual(page["foreground_coverage"], density["interior_maximum_foreground_coverage"])
+
+    def test_refusal_qc_preserves_black_edges_and_zero_chroma_transparency(self) -> None:
+        refusal = self.fixtures["refusal"]
+        pages = [refusal["cover"], *refusal["interior_pages"].values()]
+        for page in pages:
+            self.assertGreater(page["black_coverage"], 0.0)
+            self.assertEqual(page["edge_black_coverage"], 1.0)
+            self.assertEqual(page["chroma_fraction"], 0.0)
+            self.assertEqual(page["alpha_violation_fraction"], 0.0)
+            self.assertLessEqual(page["white_coverage"], 0.01)
+
+    def test_refusal_typography_and_svg_editability_are_owned_deterministically(self) -> None:
+        refusal = self.fixtures["refusal"]
+        typography = refusal["typography"]
+        svg = refusal["editable_svg"]
+        self.assertEqual(typography["owner"], "deterministic_layout")
+        self.assertFalse(typography["authoritative_text_in_renderer"])
+        self.assertTrue(svg["required"])
+        self.assertTrue(svg["all_named_layers"])
+        self.assertTrue(svg["all_live_text"])
+        self.assertTrue(svg["all_vector_tonal_paths"])
+        self.assertEqual(svg["embedded_raster_image_nodes"], 0)
+        self.assertEqual(len(svg["path_nodes"]), 5)
+        self.assertEqual(len(svg["named_layers"]), 5)
+        self.assertTrue(all(count > 0 for count in svg["path_nodes"]))
+        self.assertTrue(all(count > 0 for count in svg["named_layers"]))
+
+    def test_refusal_package_manifest_and_checksums_are_locked(self) -> None:
+        package = self.fixtures["refusal"]["package"]
+        self.assertEqual(package["proof_page_count"], 5)
+        self.assertEqual(package["checksum_entry_count"], 16)
+        self.assertEqual(package["checksum_mismatch_count"], 0)
+        for key in (
+            "proof_pdf_sha256",
+            "package_zip_sha256",
+            "package_manifest_sha256",
+            "qc_manifest_sha256",
+            "checksums_sha256",
+        ):
+            digest = package[key]
+            self.assertEqual(len(digest), 64, key)
+            int(digest, 16)
+        ref = next(item for item in self.fixtures["references"] if item["reference_id"] == "CL-REF-003")
+        self.assertEqual(ref["proof_pdf_sha256"], package["proof_pdf_sha256"])
+        self.assertEqual(ref["package_zip_sha256"], package["package_zip_sha256"])
+
+    def test_refusal_does_not_authorize_unrelated_rendering(self) -> None:
+        authorization = self.fixtures["refusal"]["render_authorization"]
+        self.assertEqual(authorization["authorized_issue"], "CL-EV-001-I02")
+        self.assertFalse(authorization["unrelated_issues_authorized"])
+        self.assertFalse(authorization["full_volume_authorized"])
+        self.assertEqual(self.method["founder_gates"], ["BOUNDED_RENDER_AUTHORIZATION", "COMPLETED_ISSUE_PROOF_REVIEW"])
 
 
 if __name__ == "__main__":
