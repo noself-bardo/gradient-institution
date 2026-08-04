@@ -1,0 +1,34 @@
+{
+  "method_id": "CL-METHOD-001",
+  "version": "1.0",
+  "references": [
+    {
+      "reference_id": "CL-REF-001",
+      "issue": "MIRROR",
+      "page_count": 4,
+      "proof_pdf_sha256": "d3238da1a29895e32396c2a201d7e22af54b9da04052e9f4aeb84a9fc08f08a1",
+      "repair_count": 1,
+      "status": "PASS_WITH_PATCHES"
+    },
+    {
+      "reference_id": "CL-REF-002",
+      "issue": "IVORY",
+      "page_count": 4,
+      "proof_pdf_sha256": "1d5c578163125499ba248a015fe569bcf527c0027d48ad694d7bf5deb53ad984",
+      "repair_count": 0,
+      "status": "PASS"
+    }
+  ],
+  "invariants": {
+    "canvas_background_hex": "#000000",
+    "authoritative_text_in_image": false,
+    "page_function_count": 4,
+    "visual_only_renderer": true
+  },
+  "ivory_qc": {
+    "P1": {"black_coverage": 0.752617, "foreground_coverage": 0.247383, "white_coverage": 0.000007, "edge_black_coverage": 0.870761, "status": "PASS", "dimensions": "1086x1448"},
+    "P2": {"black_coverage": 0.805560, "foreground_coverage": 0.194440, "white_coverage": 0.000032, "edge_black_coverage": 0.981511, "status": "PASS", "dimensions": "1086x1448"},
+    "P3": {"black_coverage": 0.753116, "foreground_coverage": 0.246884, "white_coverage": 0.000602, "edge_black_coverage": 0.866252, "status": "PASS", "dimensions": "1086x1448"},
+    "P4": {"black_coverage": 0.909422, "foreground_coverage": 0.090578, "white_coverage": 0.000065, "edge_black_coverage": 0.962886, "status": "PASS", "dimensions": "1086x1448"}
+  }
+}
