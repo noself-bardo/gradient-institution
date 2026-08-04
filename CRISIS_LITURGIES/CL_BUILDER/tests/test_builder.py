@@ -280,5 +280,46 @@ class EngineeringStageTests(unittest.TestCase):
             self.assertTrue(receipt_path.exists())
 
 
+class ProvenMethodRegressionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.method = load_structured(ROOT / "method" / "CL-METHOD-001.yaml")
+        cls.fixtures = json.loads((ROOT / "references" / "golden" / "CL-METHOD-001_REGRESSION_FIXTURES_v1.0.json").read_text(encoding="utf-8"))
+
+    def test_method_lock_has_two_distinct_references(self) -> None:
+        refs = self.fixtures["references"]
+        self.assertEqual([r["reference_id"] for r in refs], ["CL-REF-001", "CL-REF-002"])
+        self.assertEqual({r["issue"] for r in refs}, {"MIRROR", "IVORY"})
+        self.assertEqual(sum(r["page_count"] for r in refs), 8)
+        self.assertEqual(refs[0]["repair_count"], 1)
+        self.assertEqual(refs[1]["repair_count"], 0)
+
+    def test_method_keeps_renderer_visual_only(self) -> None:
+        self.assertTrue(self.method["renderer"]["visual_only"])
+        self.assertFalse(self.method["renderer"]["authoritative_text_allowed"])
+        self.assertEqual(self.method["canvas"]["background_hex"], "#000000")
+        self.assertFalse(self.method["canvas"]["transparency_allowed"])
+        self.assertEqual(self.method["repair"]["scope"], "page_bounded")
+        self.assertTrue(self.method["repair"]["preserve_accepted_pages"])
+
+    def test_method_preserves_four_page_function_order(self) -> None:
+        self.assertEqual(self.method["page_functions"], FUNCTIONS)
+
+    def test_ivory_reference_qc_remains_inside_locked_envelope(self) -> None:
+        for page_id, metrics in self.fixtures["ivory_qc"].items():
+            self.assertEqual(metrics["status"], "PASS", page_id)
+            self.assertGreaterEqual(metrics["black_coverage"], 0.65, page_id)
+            self.assertLessEqual(metrics["white_coverage"], 0.01, page_id)
+            self.assertGreaterEqual(metrics["edge_black_coverage"], 0.85, page_id)
+            self.assertEqual(metrics["dimensions"], "1086x1448")
+
+    def test_frozen_proof_hashes_are_present(self) -> None:
+        for ref in self.fixtures["references"]:
+            digest = ref["proof_pdf_sha256"]
+            self.assertIsInstance(digest, str)
+            self.assertEqual(len(digest), 64)
+            int(digest, 16)
+
+
 if __name__ == "__main__":
     unittest.main()
