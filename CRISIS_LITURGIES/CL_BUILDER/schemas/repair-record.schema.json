@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thegradient.example/schemas/cl/repair-record.schema.json",
+  "title": "Crisis Liturgies Repair Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["asset_id", "failed_test", "measured_value", "required_value", "probable_cause", "patch_id", "attempt", "disposition"],
+  "properties": {
+    "asset_id": {"type": "string"},
+    "failed_test": {"type": "string"},
+    "measured_value": {},
+    "required_value": {},
+    "probable_cause": {"type": "string"},
+    "patch_id": {"type": "string"},
+    "attempt": {"type": "integer", "minimum": 1},
+    "disposition": {"enum": ["RERENDER", "PASS", "QUARANTINE", "ESCALATE"]}
+  }
+}

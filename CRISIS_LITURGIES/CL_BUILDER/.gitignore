@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+build/*.render-packets.json
+build/qc/
+build/*_TYPOGRAPHY_TECHNICAL_PROOF_*.pdf
+build/*_RENDER_PLAN_*/

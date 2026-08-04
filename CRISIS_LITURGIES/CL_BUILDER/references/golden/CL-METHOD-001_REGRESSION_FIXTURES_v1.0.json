@@ -1,0 +1,100 @@
+{
+  "method_id": "CL-METHOD-001",
+  "version": "1.0",
+  "references": [
+    {
+      "reference_id": "CL-REF-001",
+      "issue": "MIRROR",
+      "page_count": 4,
+      "proof_pdf_sha256": "d3238da1a29895e32396c2a201d7e22af54b9da04052e9f4aeb84a9fc08f08a1",
+      "repair_count": 1,
+      "status": "PASS_WITH_PATCHES"
+    },
+    {
+      "reference_id": "CL-REF-002",
+      "issue": "IVORY",
+      "page_count": 4,
+      "proof_pdf_sha256": "1d5c578163125499ba248a015fe569bcf527c0027d48ad694d7bf5deb53ad984",
+      "repair_count": 0,
+      "status": "PASS"
+    },
+    {
+      "reference_id": "CL-REF-003",
+      "issue": "REFUSAL",
+      "page_count": 4,
+      "cover_count": 1,
+      "proof_pdf_sha256": "b6f2a74bcea3be94cfe108c1b10adcfe0e223515f6753f5a36809589f6ebd721",
+      "package_zip_sha256": "5baebe4e73f363474de3ceb3708ed3c4a00498762f8ec220a72b9853a5ec2d6f",
+      "repair_count": 2,
+      "status": "PASS_WITH_COVER_EXCEPTION"
+    }
+  ],
+  "invariants": {
+    "canvas_background_hex": "#000000",
+    "authoritative_text_in_image": false,
+    "page_function_count": 4,
+    "visual_only_renderer": true
+  },
+  "ivory_qc": {
+    "P1": {"black_coverage": 0.752617, "foreground_coverage": 0.247383, "white_coverage": 0.000007, "edge_black_coverage": 0.870761, "status": "PASS", "dimensions": "1086x1448"},
+    "P2": {"black_coverage": 0.805560, "foreground_coverage": 0.194440, "white_coverage": 0.000032, "edge_black_coverage": 0.981511, "status": "PASS", "dimensions": "1086x1448"},
+    "P3": {"black_coverage": 0.753116, "foreground_coverage": 0.246884, "white_coverage": 0.000602, "edge_black_coverage": 0.866252, "status": "PASS", "dimensions": "1086x1448"},
+    "P4": {"black_coverage": 0.909422, "foreground_coverage": 0.090578, "white_coverage": 0.000065, "edge_black_coverage": 0.962886, "status": "PASS", "dimensions": "1086x1448"}
+  },
+  "refusal": {
+    "issue": "REFUSAL",
+    "cover": {
+      "page_id": "CL-PM-I02-COVER",
+      "classification": "ISSUE_COVER",
+      "canonical_page_function_member": false,
+      "density_exception": "CL-REF-003",
+      "black_coverage": 0.7111943316748573,
+      "foreground_coverage": 0.2888056683251427,
+      "white_coverage": 0.0000019077561734989773,
+      "edge_black_coverage": 1.0,
+      "chroma_fraction": 0.0,
+      "alpha_violation_fraction": 0.0
+    },
+    "canonical_function_order": [
+      "RELIC_ENTRY",
+      "WITNESS_RECORD",
+      "SYSTEM_TRANSLATION",
+      "ARCHIVE_DISPOSITION"
+    ],
+    "interior_pages": {
+      "CL-PM-I02-P1": {"function": "RELIC_ENTRY", "black_coverage": 0.8517151999837205, "foreground_coverage": 0.14828480001627953, "white_coverage": 0.00023274625316687525, "edge_black_coverage": 1.0, "chroma_fraction": 0.0, "alpha_violation_fraction": 0.0},
+      "CL-PM-I02-P2": {"function": "WITNESS_RECORD", "black_coverage": 0.8547599788366248, "foreground_coverage": 0.14524002116337514, "white_coverage": 0.00007758208438895842, "edge_black_coverage": 1.0, "chroma_fraction": 0.0, "alpha_violation_fraction": 0.0},
+      "CL-PM-I02-P3": {"function": "SYSTEM_TRANSLATION", "black_coverage": 0.813455785842923, "foreground_coverage": 0.186544214157077, "white_coverage": 0.00003561144857198091, "edge_black_coverage": 1.0, "chroma_fraction": 0.0, "alpha_violation_fraction": 0.0},
+      "CL-PM-I02-P4": {"function": "ARCHIVE_DISPOSITION", "black_coverage": 0.8439582633822736, "foreground_coverage": 0.15604173661772636, "white_coverage": 0.0003230467120458268, "edge_black_coverage": 1.0, "chroma_fraction": 0.0, "alpha_violation_fraction": 0.0}
+    },
+    "typography": {
+      "owner": "deterministic_layout",
+      "authoritative_text_in_renderer": false
+    },
+    "editable_svg": {
+      "required": true,
+      "all_named_layers": true,
+      "all_live_text": true,
+      "all_vector_tonal_paths": true,
+      "embedded_raster_image_nodes": 0,
+      "path_nodes": [2286, 1531, 1067, 1765, 2078],
+      "named_layers": [9, 11, 12, 12, 11]
+    },
+    "package": {
+      "drive_folder": "https://drive.google.com/drive/folders/1-cKq_hP3qwZgeAu5dnRazajarxnBxcpX",
+      "proof_page_count": 5,
+      "proof_pdf_sha256": "b6f2a74bcea3be94cfe108c1b10adcfe0e223515f6753f5a36809589f6ebd721",
+      "package_zip_sha256": "5baebe4e73f363474de3ceb3708ed3c4a00498762f8ec220a72b9853a5ec2d6f",
+      "package_manifest_sha256": "5c6be8cbeeed6141156bd7e577af468ff1959bcbd9d3f24cd93adb33af91f9d5",
+      "qc_manifest_sha256": "274d876f86d110f835ab90d72bcbe5bdd848273bda68a78e4780b8ba404e85e5",
+      "checksums_sha256": "eb1a88b649adffcf76c34daa52e61e4a023e218a8f83fb0508852e30ec59f9a8",
+      "checksum_entry_count": 16,
+      "checksum_mismatch_count": 0
+    },
+    "render_authorization": {
+      "authorized_issue": "CL-EV-001-I02",
+      "unrelated_issues_authorized": false,
+      "full_volume_authorized": false
+    }
+  }
+}

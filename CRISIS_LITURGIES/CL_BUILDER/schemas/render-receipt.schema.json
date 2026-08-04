@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "render-receipt.schema.json",
+  "title": "Crisis Liturgies Render Receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["asset_id", "adapter", "status", "source_path", "accepted_path", "sha256", "qc"],
+  "properties": {
+    "asset_id": {"type": "string", "minLength": 1},
+    "adapter": {"type": "string", "minLength": 1},
+    "status": {"enum": ["ACCEPTED", "REJECTED"]},
+    "source_path": {"type": "string", "minLength": 1},
+    "accepted_path": {"type": ["string", "null"]},
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "qc": {
+      "type": "object",
+      "required": ["passed", "failures"],
+      "properties": {
+        "passed": {"type": "boolean"},
+        "failures": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    }
+  }
+}
