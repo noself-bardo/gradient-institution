@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thegradient.example/schemas/cl/corpus-intake.schema.json",
+  "title": "Crisis Liturgies Corpus Intake Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "corpus_id", "title", "source_mode", "source_root", "declared_scope", "authority", "privacy"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "corpus_id": {"type": "string", "pattern": "^CL-CORPUS-[A-Z0-9-]+$"},
+    "title": {"type": "string", "minLength": 1},
+    "source_mode": {"enum": ["VOICE_MEMO_TRANSCRIPT", "THERAPY_OR_REFLECTIVE_NOTES", "PROJECT_POSTMORTEM", "REPORT", "CONVERSATION_EXPORT", "MIXED_PROJECT_BUNDLE", "OTHER_DECLARED"]},
+    "source_root": {"type": "string", "minLength": 1},
+    "declared_scope": {"type": "string", "minLength": 1},
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["submitter", "submitter_authorized", "processing_consent_recorded", "consent_record"],
+      "properties": {
+        "submitter": {"type": "string", "minLength": 1},
+        "submitter_authorized": {"type": "boolean"},
+        "processing_consent_recorded": {"type": "boolean"},
+        "consent_record": {"type": ["string", "null"]}
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["classification", "handling_protocol", "contains_third_party_material"],
+      "properties": {
+        "classification": {"enum": ["PUBLIC", "INTERNAL", "SENSITIVE", "HIGHLY_SENSITIVE"]},
+        "handling_protocol": {"type": ["string", "null"]},
+        "contains_third_party_material": {"type": "boolean"}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"authority": {"properties": {"processing_consent_recorded": {"const": true}}}}},
+      "then": {"properties": {"authority": {"properties": {"consent_record": {"type": "string", "minLength": 1}}}}}
+    }
+  ]
+}

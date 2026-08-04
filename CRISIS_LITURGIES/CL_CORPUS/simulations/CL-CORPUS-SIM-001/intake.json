@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_id": "CL-CORPUS-SIM-001",
+  "title": "Fictional Project Postmortem Cold Simulation",
+  "source_mode": "MIXED_PROJECT_BUNDLE",
+  "source_root": "raw",
+  "declared_scope": "Exercise intake, normalization, custody, and the CL-CONV-001 handoff without interpreting canon or authorizing production.",
+  "authority": {
+    "submitter": "simulation-fixture",
+    "submitter_authorized": true,
+    "processing_consent_recorded": true,
+    "consent_record": "SIMULATION-NONPERSONAL-001"
+  },
+  "privacy": {
+    "classification": "INTERNAL",
+    "handling_protocol": "FICTIONAL_TEST_DATA_ONLY",
+    "contains_third_party_material": false
+  }
+}

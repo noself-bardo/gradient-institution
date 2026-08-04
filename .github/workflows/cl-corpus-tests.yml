@@ -1,0 +1,31 @@
+name: Crisis Liturgies Corpus Tests
+
+on:
+  pull_request:
+    paths:
+      - "CRISIS_LITURGIES/CL_CORPUS/**"
+      - ".github/workflows/cl-corpus-tests.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "CRISIS_LITURGIES/CL_CORPUS/**"
+      - ".github/workflows/cl-corpus-tests.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: CRISIS_LITURGIES/CL_CORPUS
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install corpus intake
+        run: python -m pip install -e .
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+      - name: Run deterministic cold simulation
+        run: python -m cl_corpus.cli run simulations/CL-CORPUS-SIM-001/intake.json --output build/CL-CORPUS-SIM-001 --created-at 2026-08-04T20:00:00Z

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thegradient.example/schemas/cl/corpus-handoff.schema.json",
+  "title": "Canonical Crisis Liturgies Corpus Handoff",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "package_class", "corpus_id", "title", "created_at", "source_mode", "intended_recipient", "next_required_state", "authority", "privacy", "declared_scope", "source_inventory", "corpus", "production_gates", "prohibitions", "handoff_sha256"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "package_class": {"const": "CL-CORPUS-HANDOFF-1.0.0"},
+    "corpus_id": {"type": "string", "pattern": "^CL-CORPUS-[A-Z0-9-]+$"},
+    "title": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "minLength": 1},
+    "source_mode": {"type": "string", "minLength": 1},
+    "intended_recipient": {"const": "CL-CONV-001"},
+    "next_required_state": {"const": "CONVERSION_ARCHITECT_REVIEW"},
+    "authority": {"type": "object"},
+    "privacy": {"type": "object"},
+    "declared_scope": {"type": "string", "minLength": 1},
+    "source_inventory": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_id", "relative_path", "media_type", "byte_count", "sha256", "extraction_status"],
+        "properties": {
+          "source_id": {"type": "string"},
+          "relative_path": {"type": "string"},
+          "media_type": {"type": "string"},
+          "byte_count": {"type": "integer", "minimum": 0},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "extraction_status": {"const": "EXTRACTED"}
+        }
+      }
+    },
+    "corpus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["normalized_filename", "sha256", "source_count"],
+      "properties": {
+        "normalized_filename": {"const": "normalized-corpus.txt"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "source_count": {"type": "integer", "minimum": 1}
+      }
+    },
+    "production_gates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canon_authorized", "volume_spec_frozen", "builder_handoff_authorized", "render_authorized", "publication_authorized"],
+      "properties": {
+        "canon_authorized": {"const": false},
+        "volume_spec_frozen": {"const": false},
+        "builder_handoff_authorized": {"const": false},
+        "render_authorized": {"const": false},
+        "publication_authorized": {"const": false}
+      }
+    },
+    "prohibitions": {"const": ["NO_CANON_INFERENCE", "NO_VOLUME_SPEC_GENERATION", "NO_RENDERING", "NO_PUBLICATION", "NO_SOURCE_MUTATION"]},
+    "handoff_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}
