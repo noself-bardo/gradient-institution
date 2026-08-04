@@ -1,0 +1,13 @@
+{
+  "release_id": "CL-BUILDER-1.0",
+  "schema_validation": "PASS",
+  "fixture_validation": "PASS",
+  "manifest_validation": "PASS",
+  "closed_gate_render_plan": "BLOCKED_AS_REQUIRED",
+  "closed_gate_job_packet_count": 4,
+  "deterministic_assembly": "PASS",
+  "deterministic_proof_page_count": 4,
+  "deterministic_proof_sha256": "354a11dde9b533dfe816dce28cbe76bc77c457e5ba0a4f0235a5660af60894a1",
+  "approved_masters_mutated": false,
+  "render_gate": "CLOSED"
+}

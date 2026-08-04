@@ -1,0 +1,24 @@
+{
+  "release_id": "CL-BUILDER-1.0",
+  "repository_suite": {
+    "tests_run": 28,
+    "passed": 28,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "unpacked_distribution_suite": {
+    "tests_run": 28,
+    "passed": 28,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "permitted_skip": "external Volume IV corpus is not mounted at /tmp/cliv_native",
+  "committed_calibration_regression": "PASS",
+  "reference_fixtures": {
+    "MIRROR": "PASS",
+    "IVORY": "PASS",
+    "REFUSAL": "PASS"
+  }
+}

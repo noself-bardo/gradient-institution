@@ -1,0 +1,31 @@
+{
+  "release_id": "CL-BUILDER-1.0",
+  "version": "1.0",
+  "status": "RELEASE_CANDIDATE",
+  "founder_review_state": "PENDING",
+  "authority": [
+    "CCR-CL-002",
+    "CL-GEN-STD-001",
+    "CCR-CL-003",
+    "CL-METHOD-001"
+  ],
+  "source_repository": "noself-bardo/gradient-institution",
+  "source_base_commit": "f225d9382bb70a3599423e8f6876181c3843bdc1",
+  "repository_branch": "release/cl-builder-1.0",
+  "render_gate": "CLOSED",
+  "approved_masters_mutated": false,
+  "self_contained": true,
+  "canonical_issue_page_count": 4,
+  "canonical_volume_page_count": 48,
+  "reference_fixtures": [
+    "CL-REF-001",
+    "CL-REF-002",
+    "CL-REF-003"
+  ],
+  "content_manifest": "CHECKSUMS_v1.0.sha256",
+  "content_file_count_excluding_checksum_manifest": 55,
+  "content_byte_count_excluding_checksum_manifest": 125367,
+  "exceptions": [
+    "Optional external Volume IV corpus-mount test may skip when /tmp/cliv_native is unavailable."
+  ]
+}

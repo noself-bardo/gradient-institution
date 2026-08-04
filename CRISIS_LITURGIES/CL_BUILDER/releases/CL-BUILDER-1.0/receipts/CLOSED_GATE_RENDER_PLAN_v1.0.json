@@ -1,0 +1,11 @@
+{
+  "adapter": "manifest-renderer-v1",
+  "volume_id": "CL-999",
+  "render_authorized": false,
+  "page_count": 4,
+  "compiled_sha256": "600af93a7ded5b2819d1c584d403f3e81d873021363b35ebab39057f53695f28",
+  "execution_status": "BLOCKED",
+  "blockers": [
+    "APPROVED_FOR_RENDER"
+  ]
+}

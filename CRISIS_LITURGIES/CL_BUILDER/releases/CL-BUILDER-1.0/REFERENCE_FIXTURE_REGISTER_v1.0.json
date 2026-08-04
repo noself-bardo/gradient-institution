@@ -1,0 +1,48 @@
+{
+  "release_id": "CL-BUILDER-1.0",
+  "method_id": "CL-METHOD-001",
+  "fixtures": [
+    {
+      "reference_id": "CL-REF-001",
+      "issue": "MIRROR",
+      "role": "golden_production_reference",
+      "frozen": true,
+      "page_count": 4,
+      "proof_pdf_sha256": "d3238da1a29895e32396c2a201d7e22af54b9da04052e9f4aeb84a9fc08f08a1",
+      "repair_count": 1,
+      "authorized_exceptions": []
+    },
+    {
+      "reference_id": "CL-REF-002",
+      "issue": "IVORY",
+      "role": "contrast_production_reference",
+      "frozen": true,
+      "page_count": 4,
+      "proof_pdf_sha256": "1d5c578163125499ba248a015fe569bcf527c0027d48ad694d7bf5deb53ad984",
+      "repair_count": 0,
+      "authorized_exceptions": []
+    },
+    {
+      "reference_id": "CL-REF-003",
+      "issue": "REFUSAL",
+      "role": "governance_stress_reference",
+      "frozen": true,
+      "page_count": 4,
+      "cover_count": 1,
+      "proof_pdf_sha256": "b6f2a74bcea3be94cfe108c1b10adcfe0e223515f6753f5a36809589f6ebd721",
+      "package_zip_sha256": "5baebe4e73f363474de3ceb3708ed3c4a00498762f8ec220a72b9853a5ec2d6f",
+      "repair_count": 2,
+      "authorized_exceptions": [
+        "separate_issue_cover",
+        "cover_only_density_exception"
+      ]
+    }
+  ],
+  "canonical_function_order": [
+    "RELIC_ENTRY",
+    "WITNESS_RECORD",
+    "SYSTEM_TRANSLATION",
+    "ARCHIVE_DISPOSITION"
+  ],
+  "unrelated_issue_render_authorized": false
+}

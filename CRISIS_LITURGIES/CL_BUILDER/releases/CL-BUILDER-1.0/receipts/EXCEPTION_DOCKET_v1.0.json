@@ -1,0 +1,13 @@
+{
+  "release_id": "CL-BUILDER-1.0",
+  "exceptions": [
+    {
+      "id": "EXT-CORPUS-MOUNT",
+      "status": "PERMITTED_SKIP",
+      "condition": "/tmp/cliv_native is unavailable",
+      "effect": "Only the optional external Volume IV corpus-mount test skips; committed calibration regression remains mandatory."
+    }
+  ],
+  "render_exceptions_opened": false,
+  "refusal_cover_exception_broadened": false
+}
