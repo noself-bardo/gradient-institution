@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "source_id": "SRC-LETTA-HANDOFF-20260729",
+      "source_system": "Letta handoff package",
+      "source_title": "Gradient Portfolio and Authority Matrix v0.1 (package/handoff describe v0.2)",
+      "stable_source_id": "sha256:0B9242A4D69BFA3183DC4FB5CA9CE41C3DE59CE46359387583546EDE91607444",
+      "source_path_or_url": "90_EXTERNAL_HANDOFFS/LETTA_2026-07-29/extracted-package/reference/gradient/portfolio-matrix.md",
+      "inspected_at": "2026-07-29T16:05:00-04:00",
+      "authority_scope": "Historical consulting source only; no current authority",
+      "verification_method": "Copied without modification from checksum-verified handoff package",
+      "supersession_check": "NOT_PERFORMED",
+      "archive_reference": {
+        "archival_path": "C:\\Users\\steve\\My Drive\\The Gradient\\90_EXTERNAL_HANDOFFS\\LETTA_2026-07-29",
+        "zip_filename": "gradient-handoff-20260729.zip",
+        "zip_sha256": "042D229B40B951F8DAA75AA634EE8AFFB1AE7B31DE439321207A5DA0FDA3922F",
+        "classification": "HISTORICAL CONSULTING STATE / NON-AUTHORITATIVE OPERATIONAL MIRROR",
+        "intake_date": "2026-07-29"
+      }
+    },
+    {
+      "source_id": "SRC-LETTA-RESTORATION-20260729",
+      "source_system": "Letta handoff package",
+      "source_title": "RESTORATION INSTRUCTIONS FOR CURSOR",
+      "stable_source_id": "sha256:665AE35E02E6D28389B9B0C9E1A5912777D5092B7850627D3C771844C6EAC15E",
+      "source_path_or_url": "90_EXTERNAL_HANDOFFS/LETTA_2026-07-29/extracted-package/handoff-docs/RESTORATION-INSTRUCTIONS.txt",
+      "inspected_at": "2026-07-29T16:05:00-04:00",
+      "authority_scope": "Historical consulting source only; no current authority",
+      "verification_method": "Copied without modification from checksum-verified handoff package",
+      "supersession_check": "NOT_PERFORMED"
+    },
+    {
+      "source_id": "SRC-GITHUB-AUDIT-20260729",
+      "source_system": "GitHub API",
+      "source_title": "noself-bardo/gradient-institution branch and pull-request audit",
+      "stable_source_id": "github:noself-bardo/gradient-institution@b8d34643252ecc65b3dc9c26a2d2d3e4227bbdb3",
+      "source_path_or_url": "https://github.com/noself-bardo/gradient-institution",
+      "inspected_at": "2026-07-29T17:50:00-04:00",
+      "authority_scope": "Current repository branch and pull-request observation only",
+      "verification_method": "GitHub CLI API: branches endpoint, pull-request list, and commit endpoint",
+      "supersession_check": "NOT_APPLICABLE",
+      "branches": ["audit/letta-handoff-repository-baseline-20260729","cl-mig-002-recovery-20260717","main","sprint-001/tg-web-test-001"],
+      "pull_request_head_branches": ["audit/letta-handoff-repository-baseline-20260729","fix/tg-web-001-zero-broken-pdf-actions","fix/tg-web-001-pdf-cors-probe","sprint-001/tg-web-001-vol-iii-publish","sprint-001/tg-web-test-001"],
+      "reconciliation_status": "TEMPORAL_DIFFERENCE_PARTIALLY_RECONCILED"
+    },
+    {
+      "source_id": "SRC-GITHUB-MAIN-DELTA-20260729",
+      "source_system": "GitHub canonical repository",
+      "source_title": "Current main delta after audit closure readiness",
+      "stable_source_id": "github:noself-bardo/gradient-institution@c08b9ce672bdf9484c2905f4e4bc6daf641f9931",
+      "source_path_or_url": "https://github.com/noself-bardo/gradient-institution/tree/c08b9ce672bdf9484c2905f4e4bc6daf641f9931",
+      "inspected_at": "2026-07-29T20:47:00-04:00",
+      "authority_scope": "Repository-local routing and The Gateless Gate project-control records only; no general constitutional authority",
+      "verification_method": "Fetched origin/main and read the added files at their canonical Git commit before merge",
+      "supersession_check": "Repository Orientation explicitly defers institutional routing to the Notion Current-State Index; Gateless Gate entry-condition reconciliation marks only three earlier administrative blockers stale.",
+      "commit_range_from_audit_base": "de444af4aecc8f92c8aa6c4a500e9ecea9f8d5e3..c08b9ce672bdf9484c2905f4e4bc6daf641f9931",
+      "added_commit_count": 6,
+      "added_file_count": 15
+    }
+  ]
+}

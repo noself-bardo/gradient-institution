@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "audit_date": "2026-07-29",
+  "scope": "read-only repository and Notion evidence pass",
+  "repository_base_commit": "de444af4aecc8f92c8aa6c4a500e9ecea9f8d5e3",
+  "notion_pages_directly_inspected": 10,
+  "portfolio_records": {"legacy_records":17,"candidate_records":23,"crisis_liturgies_candidates":7},
+  "field_evidence_totals": {"DIRECT_SOURCE_VERIFIED":10,"SECONDARY_BASELINE":22,"INCOMPLETE":8,"INACCESSIBLE":2,"SUPERSEDED_HISTORICAL_RECORD":5,"VOID_FOR_PRODUCTION":3,"PENDING_HUMAN_GATE":4},
+  "directly_verified_findings": [
+    "Current Kernel is current general constitutional center.",
+    "Founding Constitution is preserved and superseded for current general governance.",
+    "Current-State Index is primary routing index.",
+    "Knowledge Ecology Watch is the remaining active general automation.",
+    "The Container Never Bursts and The Death of the Bit have distinct project-local control records."
+  ],
+  "unresolved": [
+    "Google Drive asset custody was not accessed.",
+    "ChatGPT lane history was not accessed.",
+    "Institute for Social Reproduction authority scope requires direct content review.",
+    "Signal Keeper was not located in directly inspected sources."
+  ],
+  "main_delta_reconciliation": {"main_commit":"c08b9ce672bdf9484c2905f4e4bc6daf641f9931","main_commits_added":6,"main_files_added":15,"repository_orientation":"ROUTING_POINTER_NOT_INSTITUTIONAL_INDEX","gateless_gate":"DISTINCT_PROJECT_LOCAL_VOLUME_AND_ARCHITECTURE_RECOVERY_WORKSTREAM","new_direct_repository_candidate":"CAND-009G"},
+  "no_external_writes": true
+}

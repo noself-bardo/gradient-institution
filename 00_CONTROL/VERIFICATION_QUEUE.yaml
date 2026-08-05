@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "items": [
+    {"priority": 1, "item": "Establish applicable human ratification and current constitutional sources before assigning current statuses.", "source_refs": ["SRC-LETTA-HANDOFF-20260729"]},
+    {"priority": 2, "item": "Read GR-SR ratification and activation page contents to determine GRAD-017 scope.", "source_refs": ["SRC-LETTA-HANDOFF-20260729"]},
+    {"priority": 3, "item": "Separate Crisis Liturgies records by program, pipeline, volume, and reconciliation track using current project-local sources.", "source_refs": ["SRC-LETTA-HANDOFF-20260729"]},
+    {"priority": 4, "item": "Verify Google Drive asset custody and provenance for archive, visual, Crisis Liturgies, and Marisol records.", "source_refs": ["SRC-LETTA-HANDOFF-20260729"]},
+    {"priority": 5, "item": "Locate and verify Moon Joe canon and Signal Keeper documentation.", "source_refs": ["SRC-LETTA-HANDOFF-20260729"]},
+    {"priority": 6, "item": "Perform a recursive canonical repository tree audit and reconcile historic branch counts.", "source_refs": ["SRC-LETTA-HANDOFF-20260729"]}
+  ]
+}

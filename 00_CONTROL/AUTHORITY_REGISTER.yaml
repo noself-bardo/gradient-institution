@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "resolution_order": [
+    "explicit_human_ratification",
+    "current_general_constitutional_law",
+    "project_local_constitution_or_production_law",
+    "explicit_supersession_and_continuity_records",
+    "current_project_control_or_closure_records",
+    "canonical_repository_evidence",
+    "historical_and_secondary_sources"
+  ],
+  "prohibited_inference": [
+    "recency alone",
+    "filenames",
+    "directory placement",
+    "numbering",
+    "document length",
+    "confident language",
+    "locked wording without ratification evidence",
+    "imported Letta Matrix"
+  ],
+  "records": [
+    {
+      "record_id": "AUTH-GATELESS-GATE-DELTA-20260729",
+      "subject": "The Gateless Gate repository-local control records",
+      "scope": "Project-local identity, recovery closeout, preflight, and Case 19 pipeline-proof gate only",
+      "current_effect": "The records establish a distinct project-local candidate and carry no institution-wide routing, production, publication, rendering, or archive-admission authority.",
+      "source_refs": ["SRC-GITHUB-MAIN-DELTA-20260729"],
+      "authority_limit": "Repository Orientation directs current institutional routing to the Notion Current-State Index; project-local production remains closed."
+    }
+  ]
+}

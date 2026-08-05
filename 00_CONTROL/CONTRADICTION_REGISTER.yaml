@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "records": [
+    {
+      "record_id": "CON-001",
+      "title": "Imported Matrix version discrepancy",
+      "classification": "METADATA_INCONSISTENCY",
+      "status": "RESOLVED_AS_PRESERVED_METADATA_INCONSISTENCY",
+      "description": "Package/handoff identify v0.2 while internal Matrix metadata identifies v0.1; no current portfolio or authority field depends on either label.",
+      "source_refs": ["SRC-LETTA-HANDOFF-20260729"],
+      "resolution_rule": "Preserve unchanged; do not infer authority or project state from either label."
+    },
+    {
+      "record_id": "CON-002",
+      "title": "GitHub branch-count difference",
+      "classification": "BOUNDED_TEMPORAL_DIFFERENCE / HISTORICAL_COUNTING_METHOD_UNVERIFIED",
+      "status": "CLOSED_AS_NONCURRENT_REPOSITORY_CONFLICT",
+      "description": "Historical Letta material reports seven branches. Direct GitHub audit observed four current branches and five historical pull-request head-branch names; several merged/closed heads are no longer current branches.",
+      "source_refs": ["SRC-LETTA-HANDOFF-20260729","SRC-GITHUB-AUDIT-20260729"],
+      "resolution_rule": "The original count cannot be reconstructed exactly without the earlier counting method; it does not affect current repository state."
+    },
+    {
+      "record_id": "CON-003",
+      "title": "Competing repository control surfaces (superseded umbrella)",
+      "classification": "SUPERSEDED_HISTORICAL_RECORD",
+      "status": "DECOMPOSED",
+      "description": "Decomposed into CON-005 through CON-009 for source-type and scope analysis.",
+      "source_refs": ["REPOSITORY_SOURCE_INVENTORY.yaml@b8d34643252ecc65b3dc9c26a2d2d3e4227bbdb3","SRC-LETTA-HANDOFF-20260729"],
+      "resolution_rule": "Use individual records; do not treat this umbrella as a decision."
+    },
+    {
+      "record_id": "CON-004",
+      "title": "Phase 00 evidence-register hash drift and destination split",
+      "classification": "DISPUTED",
+      "status": "PENDING_VERIFICATION",
+      "description": "Two current Markdown copies are identical and two current JSON copies are identical, but both current pairs differ from hashes and byte counts recorded in duplicate package manifests, ratification registers, and admission sidecars. Ratification and migration maps also target different directories.",
+      "source_refs": ["REPOSITORY_SOURCE_INVENTORY.yaml@b01f68e92b7f2cbe41c6f8b7b2d4b11a7b6d8df8"],
+      "resolution_rule": "Do not copy, overwrite, promote, or select an operative register until the project-local evidence-custody record reconciles recorded and current hashes."
+    },
+    {
+      "record_id":"CON-005","title":"Status-vocabulary surfaces","classification":"RESOLVED_BY_SCOPE","status":"CLOSED","description":"Audit YAML is operational validation vocabulary; repository Markdown is DRAFT / FOR REVIEW production vocabulary with zero label overlap.","source_refs":["REPOSITORY_SOURCE_INVENTORY.yaml@b01f68e92b7f2cbe41c6f8b7b2d4b11a7b6d8df8"],"resolution_rule":"No consolidation or founder decision required."
+    },
+    {
+      "record_id":"CON-006","title":"Crisis Liturgies namespace split","classification":"INCOMPLETE","status":"PENDING_VERIFICATION","description":"Main Crisis Liturgies root is project-local architecture; Dual Power Domestics has one tracked current-state file referencing absent assets.","source_refs":["REPOSITORY_SOURCE_INVENTORY.yaml@b01f68e92b7f2cbe41c6f8b7b2d4b11a7b6d8df8"],"resolution_rule":"Source recovery required; no namespace move or merge authorized."
+    },
+    {
+      "record_id":"CON-007","title":"Netlify configuration surfaces","classification":"RESOLVED_BY_SCOPE","status":"CLOSED","description":"Root config is repo-linked deployment configuration; nested config is folder-scoped CLI configuration; shared headers match.","source_refs":["REPOSITORY_SOURCE_INVENTORY.yaml@b01f68e92b7f2cbe41c6f8b7b2d4b11a7b6d8df8"],"resolution_rule":"No deployment or founder decision required."
+    },
+    {
+      "record_id":"CON-008","title":"Engine registry and website-data surfaces","classification":"RESOLVED_BY_SOURCE_TYPE","status":"CLOSED","description":"Notion 05 Engine Registry is the registry authority for status; SOURCE_REVIEW is noncanonical; engines.json is website derivative.","source_refs":["NOTION:391deaca-b3a5-815d-9202-faf327430ede","REPOSITORY_SOURCE_INVENTORY.yaml@b01f68e92b7f2cbe41c6f8b7b2d4b11a7b6d8df8"],"resolution_rule":"Do not use website JSON or source-review text as governing authority."
+    },
+    {
+      "record_id":"CON-009","title":"Phase 00 evidence-register copies","classification":"TECHNICAL_PROVENANCE_BLOCK / NO_FOUNDER_DECISION_REQUIRED","status":"PENDING_SOURCE_RECOVERY","description":"Duplicate copies are byte-identical but their recorded hash lineage and destination authority diverge.","source_refs":["00_CONTROL/CON-004_TECHNICAL_RECONCILIATION.md"],"resolution_rule":"Perform custody reconciliation; do not select or promote a copy."
+    }
+  ]
+}
