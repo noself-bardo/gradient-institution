@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thegradient.example/schemas/cl/volume.schema.json",
+  "title": "Crisis Liturgies Volume Specification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "volume_id", "working_id", "title", "subtitle", "core_line",
+    "state", "render_authorization", "authority", "release_profile", "page_profile",
+    "canvas", "visual_doctrine", "issues", "sources", "pages"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "volume_id": {"type": "string", "pattern": "^CL-(EV-)?[0-9]{3}$"},
+    "working_id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "subtitle": {"type": "string", "minLength": 1},
+    "core_line": {"type": "string", "minLength": 1},
+    "state": {
+      "enum": [
+        "CONCEPT_DRAFT", "CONCEPT_APPROVED", "EDITORIAL_PACKAGE_COMPLETE",
+        "VISUAL_PACKAGE_COMPLETE", "PROMPT_PACKAGE_COMPLETE", "PREPRESS_SPEC_COMPLETE",
+        "SPEC_NORMALIZATION", "BUILD_VALIDATED", "APPROVED_FOR_RENDER", "RENDERING",
+        "AUTOMATED_QC", "REPAIR_QUEUE", "ASSEMBLY", "FINAL_QC",
+        "RELEASE_CANDIDATE", "FROZEN_RELEASE"
+      ]
+    },
+    "render_authorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "authorized", "authorization_record"],
+      "properties": {
+        "status": {"enum": ["NOT_APPROVED_FOR_RENDER", "APPROVED_FOR_RENDER"]},
+        "authorized": {"type": "boolean"},
+        "authorization_record": {"type": ["string", "null"]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"authorized": {"const": true}}},
+          "then": {
+            "properties": {
+              "status": {"const": "APPROVED_FOR_RENDER"},
+              "authorization_record": {"type": "string", "minLength": 1}
+            }
+          },
+          "else": {"properties": {"status": {"const": "NOT_APPROVED_FOR_RENDER"}}}
+        }
+      ]
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": {"type": "string"},
+      "required": ["canon", "generation_standard", "builder_amendment", "function_palette_amendment", "volume_ccr"]
+    },
+    "release_profile": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "page_profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "mapping"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "mapping": {
+          "type": "object",
+          "minProperties": 4,
+          "additionalProperties": {
+            "enum": ["RELIC_ENTRY", "WITNESS_RECORD", "SYSTEM_TRANSLATION", "ARCHIVE_DISPOSITION"]
+          }
+        }
+      }
+    },
+    "canvas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "master_width", "master_height", "reader_width", "reader_height",
+        "orientation", "background_hex", "transparent_background"
+      ],
+      "properties": {
+        "master_width": {"type": "integer", "minimum": 1},
+        "master_height": {"type": "integer", "minimum": 1},
+        "reader_width": {"type": "integer", "minimum": 1},
+        "reader_height": {"type": "integer", "minimum": 1},
+        "orientation": {"const": "portrait"},
+        "background_hex": {"const": "#000000"},
+        "transparent_background": {"const": false}
+      }
+    },
+    "visual_doctrine": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "speaking_mirror_not_living_machine", "object_as_witness", "canvas",
+        "ink_family", "max_foreground_coverage", "authoritative_typography_stage",
+        "prohibited_canvas_terms"
+      ],
+      "properties": {
+        "speaking_mirror_not_living_machine": {"const": true},
+        "object_as_witness": {"const": true},
+        "canvas": {"const": "matte_black"},
+        "ink_family": {"const": "metallic_silver_tonal"},
+        "max_foreground_coverage": {"type": "number", "minimum": 0, "maximum": 0.25},
+        "authoritative_typography_stage": {"const": "layout"},
+        "prohibited_canvas_terms": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+      }
+    },
+    "issues": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["number", "title"],
+        "properties": {
+          "number": {"type": "integer", "minimum": 1},
+          "title": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "provider_id", "sha256", "role"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "provider_id": {"type": "string", "minLength": 1},
+          "sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+          "role": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "pages": {
+      "type": "array",
+      "minItems": 4,
+      "items": {"type": "object"}
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thegradient.example/schemas/cl/build-lock.schema.json",
+  "title": "Crisis Liturgies Build Lock",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "volume_id", "canon_version", "generation_standard_version", "release_profile_version",
+    "volume_spec_sha256", "compiled_sha256", "approval_record", "built_at", "output_checksums",
+    "final_disposition"
+  ],
+  "properties": {
+    "volume_id": {"type": "string"},
+    "canon_version": {"type": "string"},
+    "generation_standard_version": {"type": "string"},
+    "release_profile_version": {"type": "string"},
+    "volume_spec_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "compiled_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "approval_record": {"type": "string", "minLength": 1},
+    "built_at": {"type": "string", "format": "date-time"},
+    "output_checksums": {"type": "object", "additionalProperties": {"type": "string", "pattern": "^[a-f0-9]{64}$"}},
+    "repair_history": {"type": "array", "items": {"type": "object"}},
+    "final_disposition": {"enum": ["RELEASE_CANDIDATE", "FROZEN_RELEASE", "REJECTED"]}
+  }
+}

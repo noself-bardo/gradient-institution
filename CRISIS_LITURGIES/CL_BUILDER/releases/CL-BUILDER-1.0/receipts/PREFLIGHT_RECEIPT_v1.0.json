@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "volume_id": "CL-999",
+  "state": "BUILD_VALIDATED",
+  "render_authorized": false,
+  "page_count": 4,
+  "issue_count": 1,
+  "expected_page_counts": [
+    4,
+    48
+  ],
+  "volume_spec_sha256": "46c510e75ce44e487ef145a28861a66191696f7c45d1acf15e8a149ab155750b",
+  "compiled_sha256": "600af93a7ded5b2819d1c584d403f3e81d873021363b35ebab39057f53695f28",
+  "blockers": [
+    "APPROVED_FOR_RENDER"
+  ]
+}

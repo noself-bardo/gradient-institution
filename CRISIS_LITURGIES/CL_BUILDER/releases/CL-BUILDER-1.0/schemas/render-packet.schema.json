@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thegradient.example/schemas/cl/render-packet.schema.json",
+  "title": "Crisis Liturgies Render Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "asset_id", "volume_id", "issue_number", "page_number",
+    "function_code", "display_label", "title", "approval", "canvas", "visual",
+    "prompt", "negative_prompt", "typography", "validation", "repair_policy",
+    "source", "packet_sha256"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "asset_id": {"type": "string", "minLength": 1},
+    "volume_id": {"type": "string", "minLength": 1},
+    "issue_number": {"type": "integer", "minimum": 1},
+    "page_number": {"type": "integer", "minimum": 1, "maximum": 4},
+    "function_code": {
+      "enum": ["RELIC_ENTRY", "WITNESS_RECORD", "SYSTEM_TRANSLATION", "ARCHIVE_DISPOSITION"]
+    },
+    "display_label": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "approval": {
+      "type": "object",
+      "required": ["volume_state", "render_authorized"],
+      "properties": {
+        "volume_state": {"type": "string"},
+        "render_authorized": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "canvas": {
+      "type": "object",
+      "required": ["master_width", "master_height", "background_hex", "transparent_background"],
+      "properties": {
+        "master_width": {"type": "integer", "minimum": 1},
+        "master_height": {"type": "integer", "minimum": 1},
+        "reader_width": {"type": "integer", "minimum": 1},
+        "reader_height": {"type": "integer", "minimum": 1},
+        "orientation": {"const": "portrait"},
+        "background_hex": {"const": "#000000"},
+        "transparent_background": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "visual": {
+      "type": "object",
+      "required": [
+        "mode", "canvas", "ink_family", "object_as_witness", "human_presence",
+        "allow_environment", "allow_cast_shadow", "allow_transparency"
+      ],
+      "properties": {
+        "mode": {"const": "archival_relic_plate"},
+        "canvas": {"const": "matte_black"},
+        "ink_family": {"const": "metallic_silver_tonal"},
+        "object_as_witness": {"const": true},
+        "human_presence": {"type": "object"},
+        "allow_environment": {"const": false},
+        "allow_cast_shadow": {"const": false},
+        "allow_transparency": {"const": false}
+      },
+      "additionalProperties": true
+    },
+    "prompt": {"type": "string", "minLength": 1, "not": {"pattern": "(?i)INTIFADA|IMAGE GATE CLOSED|IMAGE GENERATION NOT AUTHORIZED"}},
+    "negative_prompt": {"type": "string", "minLength": 1},
+    "typography": {
+      "type": "object",
+      "required": ["authoritative_text_allowed", "composition_stage", "reserved_zones"],
+      "properties": {
+        "authoritative_text_allowed": {"const": false},
+        "composition_stage": {"const": "layout"},
+        "reserved_zones": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "validation": {"type": "object"},
+    "repair_policy": {"type": "object"},
+    "source": {
+      "type": "object",
+      "required": ["prompt_sha256", "page_spec_sha256"],
+      "properties": {
+        "prompt_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "page_spec_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "packet_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}

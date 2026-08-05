@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thegradient.example/schemas/cl/page.schema.json",
+  "title": "Crisis Liturgies Page Specification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "page_id", "issue_number", "issue", "page_number", "display_label",
+    "function_code", "title", "production_intent", "source_prompt",
+    "source_negative_prompt", "copy", "render_overrides"
+  ],
+  "properties": {
+    "page_id": {"type": "string", "pattern": "^CL-[A-Z0-9-]+-I[0-9]{2}-P[1-4]$"},
+    "issue_number": {"type": "integer", "minimum": 1},
+    "issue": {"type": "string", "minLength": 1},
+    "page_number": {"type": "integer", "minimum": 1, "maximum": 4},
+    "display_label": {"type": "string", "minLength": 1},
+    "function_code": {
+      "enum": ["RELIC_ENTRY", "WITNESS_RECORD", "SYSTEM_TRANSLATION", "ARCHIVE_DISPOSITION"]
+    },
+    "title": {"type": "string", "minLength": 1},
+    "production_intent": {"type": "string", "minLength": 1},
+    "source_prompt": {"type": "string", "minLength": 1},
+    "source_negative_prompt": {"type": "string", "minLength": 1},
+    "copy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_document_id", "copy_register_id", "locked", "word_count",
+        "source_trace", "relic_status", "authoritative_text_in_image"
+      ],
+      "properties": {
+        "source_document_id": {"type": "string", "minLength": 1},
+        "copy_register_id": {"type": "string", "minLength": 1},
+        "locked": {"const": true},
+        "word_count": {"type": ["integer", "null"], "minimum": 0},
+        "source_trace": {"type": "string", "minLength": 1},
+        "relic_status": {"type": "string", "minLength": 1},
+        "authoritative_text_in_image": {"const": false}
+      }
+    },
+    "render_overrides": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "human_presence", "material_translation_terms", "allow_environment",
+        "allow_cast_shadow", "allow_transparency"
+      ],
+      "properties": {
+        "human_presence": {
+          "type": "object",
+          "required": ["mode", "identifiable", "cinematic", "subordinate_to_relic"],
+          "properties": {
+            "mode": {"enum": ["none", "partial_evidence"]},
+            "identifiable": {"const": false},
+            "cinematic": {"const": false},
+            "subordinate_to_relic": {"const": true}
+          },
+          "additionalProperties": false
+        },
+        "material_translation_terms": {
+          "type": "array",
+          "items": {"type": "string"},
+          "uniqueItems": true
+        },
+        "allow_environment": {"const": false},
+        "allow_cast_shadow": {"const": false},
+        "allow_transparency": {"const": false}
+      }
+    }
+  }
+}

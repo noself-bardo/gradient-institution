@@ -1,0 +1,46 @@
+{
+  "status": "ASSEMBLED",
+  "volume_id": "CL-999",
+  "page_count": 4,
+  "output_pdf": "examples/FOUR_PAGE_DETERMINISTIC_PROOF_v1.0.pdf",
+  "output_sha256": "354a11dde9b533dfe816dce28cbe76bc77c457e5ba0a4f0235a5660af60894a1",
+  "authoritative_text_in_image": false,
+  "records": [
+    {
+      "page_id": "CL-EXAMPLE-I01-P1",
+      "asset": null,
+      "copy_sha256": "d5a9c423d776654b2a595af014db6bee1b513f8df12d601b1bb33b9c829dcf78",
+      "body_font": "Times-Roman",
+      "metadata_font": "Courier",
+      "body_size": 18.0,
+      "body_leading": 24.839999999999996
+    },
+    {
+      "page_id": "CL-EXAMPLE-I01-P2",
+      "asset": null,
+      "copy_sha256": "f10567646e053366b9752a05082c87a08b7fde161e5696baddefafdf1cb66fc8",
+      "body_font": "Times-Roman",
+      "metadata_font": "Courier",
+      "body_size": 18.0,
+      "body_leading": 24.839999999999996
+    },
+    {
+      "page_id": "CL-EXAMPLE-I01-P3",
+      "asset": null,
+      "copy_sha256": "69e8a3fdcdf3e5dca5e97450353f9552b26bf1150b3ed49f5d4a8e41355dd7d1",
+      "body_font": "Times-Roman",
+      "metadata_font": "Courier",
+      "body_size": 18.0,
+      "body_leading": 24.839999999999996
+    },
+    {
+      "page_id": "CL-EXAMPLE-I01-P4",
+      "asset": null,
+      "copy_sha256": "a2ad3113a5c117e5162862588a138145903c2b5538cd4f7dde86cec6aa509f7f",
+      "body_font": "Times-Roman",
+      "metadata_font": "Courier",
+      "body_size": 18.0,
+      "body_leading": 24.839999999999996
+    }
+  ]
+}

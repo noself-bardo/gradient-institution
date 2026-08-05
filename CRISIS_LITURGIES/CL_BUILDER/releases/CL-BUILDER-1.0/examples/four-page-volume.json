@@ -1,0 +1,210 @@
+{
+  "schema_version": "1.0.0",
+  "volume_id": "CL-999",
+  "working_id": "CL-EXAMPLE",
+  "title": "FOUR-PAGE CLOSED-GATE EXAMPLE",
+  "subtitle": "Portable structural validation fixture",
+  "core_line": "AI is Pygmalion's mirror learning to speak.",
+  "state": "BUILD_VALIDATED",
+  "render_authorization": {
+    "status": "NOT_APPROVED_FOR_RENDER",
+    "authorized": false,
+    "authorization_record": null
+  },
+  "authority": {
+    "canon": "Crisis Liturgies Canon v1.1",
+    "generation_standard": "CL-GEN-STD-001 v1.0",
+    "builder_amendment": "CCR-CL-002",
+    "function_palette_amendment": "CCR-CL-003",
+    "volume_ccr": "CL-PM_CANON_CHANGE_REPORT"
+  },
+  "release_profile": "crisis-liturgies-expansion-v1",
+  "page_profile": {
+    "name": "expansion-volume",
+    "mapping": {
+      "Encounter": "RELIC_ENTRY",
+      "Mechanism / Witness": "WITNESS_RECORD",
+      "Institution / Expansion": "SYSTEM_TRANSLATION",
+      "Residue / Turn": "ARCHIVE_DISPOSITION"
+    }
+  },
+  "canvas": {
+    "master_width": 3750,
+    "master_height": 4950,
+    "reader_width": 1086,
+    "reader_height": 1448,
+    "orientation": "portrait",
+    "background_hex": "#000000",
+    "transparent_background": false
+  },
+  "visual_doctrine": {
+    "speaking_mirror_not_living_machine": true,
+    "object_as_witness": true,
+    "canvas": "matte_black",
+    "ink_family": "metallic_silver_tonal",
+    "max_foreground_coverage": 0.25,
+    "authoritative_typography_stage": "layout",
+    "prohibited_canvas_terms": [
+      "white",
+      "cream",
+      "ivory",
+      "transparent"
+    ]
+  },
+  "issues": [
+    {
+      "number": 1,
+      "title": "ISSUE 01"
+    }
+  ],
+  "sources": [
+    {
+      "name": "fixture",
+      "provider_id": "fixture",
+      "sha256": null,
+      "role": "test"
+    }
+  ],
+  "pages": [
+    {
+      "page_id": "CL-EXAMPLE-I01-P1",
+      "issue_number": 1,
+      "issue": "ISSUE 01",
+      "page_number": 1,
+      "display_label": "Encounter",
+      "function_code": "RELIC_ENTRY",
+      "title": "PAGE 1",
+      "production_intent": "A controlled relic plate with meaningful negative space.",
+      "source_prompt": "Create an archival plate. IMAGE GATE CLOSED. INTIFADA.",
+      "source_negative_prompt": "white background, humanoid robot",
+      "copy": {
+        "source_document_id": "copy-source",
+        "copy_register_id": "copy-register",
+        "locked": true,
+        "word_count": 20,
+        "source_trace": "CONDITIONAL",
+        "relic_status": "ACTIVE",
+        "authoritative_text_in_image": false
+      },
+      "render_overrides": {
+        "human_presence": {
+          "mode": "partial_evidence",
+          "identifiable": false,
+          "cinematic": false,
+          "subordinate_to_relic": true
+        },
+        "material_translation_terms": [
+          "mirror"
+        ],
+        "allow_environment": false,
+        "allow_cast_shadow": false,
+        "allow_transparency": false
+      }
+    },
+    {
+      "page_id": "CL-EXAMPLE-I01-P2",
+      "issue_number": 1,
+      "issue": "ISSUE 01",
+      "page_number": 2,
+      "display_label": "Mechanism / Witness",
+      "function_code": "WITNESS_RECORD",
+      "title": "PAGE 2",
+      "production_intent": "A controlled relic plate with meaningful negative space.",
+      "source_prompt": "Create an archival plate. IMAGE GATE CLOSED. INTIFADA.",
+      "source_negative_prompt": "white background, humanoid robot",
+      "copy": {
+        "source_document_id": "copy-source",
+        "copy_register_id": "copy-register",
+        "locked": true,
+        "word_count": 20,
+        "source_trace": "CONDITIONAL",
+        "relic_status": "ACTIVE",
+        "authoritative_text_in_image": false
+      },
+      "render_overrides": {
+        "human_presence": {
+          "mode": "none",
+          "identifiable": false,
+          "cinematic": false,
+          "subordinate_to_relic": true
+        },
+        "material_translation_terms": [
+          "mirror"
+        ],
+        "allow_environment": false,
+        "allow_cast_shadow": false,
+        "allow_transparency": false
+      }
+    },
+    {
+      "page_id": "CL-EXAMPLE-I01-P3",
+      "issue_number": 1,
+      "issue": "ISSUE 01",
+      "page_number": 3,
+      "display_label": "Institution / Expansion",
+      "function_code": "SYSTEM_TRANSLATION",
+      "title": "PAGE 3",
+      "production_intent": "A controlled relic plate with meaningful negative space.",
+      "source_prompt": "Create an archival plate. IMAGE GATE CLOSED. INTIFADA.",
+      "source_negative_prompt": "white background, humanoid robot",
+      "copy": {
+        "source_document_id": "copy-source",
+        "copy_register_id": "copy-register",
+        "locked": true,
+        "word_count": 20,
+        "source_trace": "CONDITIONAL",
+        "relic_status": "ACTIVE",
+        "authoritative_text_in_image": false
+      },
+      "render_overrides": {
+        "human_presence": {
+          "mode": "none",
+          "identifiable": false,
+          "cinematic": false,
+          "subordinate_to_relic": true
+        },
+        "material_translation_terms": [
+          "mirror"
+        ],
+        "allow_environment": false,
+        "allow_cast_shadow": false,
+        "allow_transparency": false
+      }
+    },
+    {
+      "page_id": "CL-EXAMPLE-I01-P4",
+      "issue_number": 1,
+      "issue": "ISSUE 01",
+      "page_number": 4,
+      "display_label": "Residue / Turn",
+      "function_code": "ARCHIVE_DISPOSITION",
+      "title": "PAGE 4",
+      "production_intent": "A controlled relic plate with meaningful negative space.",
+      "source_prompt": "Create an archival plate. IMAGE GATE CLOSED. INTIFADA.",
+      "source_negative_prompt": "white background, humanoid robot",
+      "copy": {
+        "source_document_id": "copy-source",
+        "copy_register_id": "copy-register",
+        "locked": true,
+        "word_count": 20,
+        "source_trace": "CONDITIONAL",
+        "relic_status": "ACTIVE",
+        "authoritative_text_in_image": false
+      },
+      "render_overrides": {
+        "human_presence": {
+          "mode": "none",
+          "identifiable": false,
+          "cinematic": false,
+          "subordinate_to_relic": true
+        },
+        "material_translation_terms": [
+          "mirror"
+        ],
+        "allow_environment": false,
+        "allow_cast_shadow": false,
+        "allow_transparency": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thegradient.example/schemas/cl/release.schema.json",
+  "title": "Crisis Liturgies Release Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["volume_id", "state", "page_count", "assets", "pdfs", "manifest_sha256"],
+  "properties": {
+    "volume_id": {"type": "string"},
+    "state": {"enum": ["RELEASE_CANDIDATE", "FROZEN_RELEASE"]},
+    "page_count": {"type": "integer", "minimum": 4},
+    "assets": {"type": "array", "items": {"type": "object"}},
+    "pdfs": {"type": "array", "items": {"type": "object"}},
+    "manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}

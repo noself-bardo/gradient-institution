@@ -1,0 +1,14 @@
+{
+  "release_id": "CL-BUILDER-1.0",
+  "package": "CL-BUILDER-1.0_RELEASE_CANDIDATE_v1.0.zip",
+  "zip_sha256": "5d6d2716b0ab52a1369607170eefb21fa4e4d6a607fe13fc54df54eaea94a1c5",
+  "content_set_sha256": "995a1e36ee2aaba95d73794eea74a85b19f233caaad1eb0deccb5845b8036479",
+  "release_file_count_including_checksum_manifest": 56,
+  "release_byte_count_including_checksum_manifest": 130888,
+  "zip_byte_count": 57278,
+  "repository_tests": "28 PASS / 1 PERMITTED SKIP",
+  "unpacked_tests": "28 PASS / 1 PERMITTED SKIP",
+  "render_gate": "CLOSED",
+  "approved_masters_mutated": false,
+  "founder_review_state": "PENDING"
+}
