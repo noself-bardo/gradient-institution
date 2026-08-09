@@ -1,3 +1,6 @@
+Exit code: 0
+Wall time: 0.6 seconds
+Output:
 from __future__ import annotations
 
 import json
@@ -116,7 +119,7 @@ def run_intake(config_path: Path, output_dir: Path, *, created_at: str | None = 
         "render_authorized": False,
     }
     output_dir.mkdir(parents=True, exist_ok=True)
-    (output_dir / "run-report.json").write_text(json.dumps(report, ensure_ascii=False, sort_keys=True, indent=2) + "\n", encoding="utf-8")
+    (output_dir / "run-report.json").write_text(json.dumps(report, ensure_ascii=False, sort_keys=True, indent=2) + "\n", encoding="utf-8", newline="\n")
     if blockers:
         return report
 
@@ -125,7 +128,7 @@ def run_intake(config_path: Path, output_dir: Path, *, created_at: str | None = 
     handoff = _handoff(config, captured, corpus_sha, timestamp)
     validate_instance(handoff, root / "schemas" / "handoff.schema.json")
     (output_dir / "normalized-corpus.txt").write_text(corpus, encoding="utf-8", newline="\n")
-    (output_dir / "handoff.json").write_text(json.dumps(handoff, ensure_ascii=False, sort_keys=True, indent=2) + "\n", encoding="utf-8")
+    (output_dir / "handoff.json").write_text(json.dumps(handoff, ensure_ascii=False, sort_keys=True, indent=2) + "\n", encoding="utf-8", newline="\n")
     checksums = {
         "handoff.json": sha256_bytes((output_dir / "handoff.json").read_bytes()),
         "normalized-corpus.txt": corpus_sha,
@@ -144,3 +147,4 @@ def run_intake(config_path: Path, output_dir: Path, *, created_at: str | None = 
     }
     (output_dir / "custody-receipt.json").write_text(canonical_json(package_receipt) + "\n", encoding="utf-8", newline="\n")
     return report
+
