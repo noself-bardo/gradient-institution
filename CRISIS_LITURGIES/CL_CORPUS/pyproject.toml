@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crisis-liturgies-corpus"
+version = "0.1.0"
+description = "Fail-closed raw-reality intake and canonical handoff orchestration for Crisis Liturgies"
+requires-python = ">=3.11"
+dependencies = ["jsonschema>=4.21"]
+
+[project.scripts]
+cl-corpus = "cl_corpus.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cl_corpus*"]
