@@ -12,8 +12,8 @@ Status: **PASS / HANDOFF READY / PRODUCTION GATES CLOSED**
 - Source inventory SHA-256: `5d624f7adfa59fd1840fdc554e49adb2df82306eec167fc52a81f20a7a58f6ed`
 - Normalized corpus SHA-256: `f3a5c43b8f7c4c9fd306cd277d4af5c263cbb5e289c5de9180b9e5450b30000d`
 - Handoff object SHA-256: `00d088196b0774f4e9c56a21ae8f0ae852223e16a0e2b7b3ad802cc5fb674365`
-- Serialized handoff file SHA-256: `a3797609e53b57a0b10c828263d5179d3c262356e6d69b6f066c22e9e5e86fd2`
-- Package manifest SHA-256: `02efb94a6a8c34cd16c99c93403bfd0de29626cc38275fa711e15d498b2ad027`
+- Serialized handoff file SHA-256: `bac85c94fc6c905bed844975d95d5be2e4e060446544734c266c8a455df71fd9`
+- Package manifest SHA-256: `f754a91be0f84196262e8c47a42eb2e17ed03773f98ba05705bf82857ae8628d`
 
 ## Result
 
